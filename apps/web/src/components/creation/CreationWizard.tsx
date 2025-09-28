@@ -1,4 +1,5 @@
-'use client';
+"use client";
+
 import { useMemo, useState } from "react";
 
 import { StepList } from "./StepList";
@@ -58,7 +59,8 @@ export function CreationWizard(): JSX.Element {
   const steps = useMemo(() => DEFAULT_STEPS, []);
   const [activeStepId, setActiveStepId] = useState<string>(steps[0]?.id ?? "ancestry");
   const activeStep = steps.find((step) => step.id === activeStepId) ?? steps[0];
-    const isDesktop = typeof window !== "undefined" && !!window.penPaperRpg;
+  const { state: builderState, status, error, refresh } = useCharacterBuilder();
+  const isDesktop = typeof window !== "undefined" && Boolean(window.penPaperRpg);
   const isLoading = status === "idle" || status === "loading";
   const hasError = status === "error";
 
@@ -73,8 +75,19 @@ export function CreationWizard(): JSX.Element {
         />
       </aside>
       <main>
-        {builderState && (
-          <section style={{ display: "flex", alignItems: "center", gap: "1rem", padding: "0.75rem 1rem", marginBottom: "1rem", border: "1px solid #e5e7eb", borderRadius: 8, background: "#fafafa" }}>
+        {builderState ? (
+          <section
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "1rem",
+              padding: "0.75rem 1rem",
+              marginBottom: "1rem",
+              border: "1px solid #e5e7eb",
+              borderRadius: 8,
+              background: "#fafafa",
+            }}
+          >
             <span style={{ fontWeight: 600 }}>Catalog</span>
             <span style={{ color: "#4b5563" }}>
               Entities: {builderState.catalog.entities.length}
@@ -84,17 +97,28 @@ export function CreationWizard(): JSX.Element {
             </span>
             {isDesktop && (
               <>
-                <span style={{ marginLeft: "auto", fontStyle: "italic", color: "#065f46" }}>Desktop mode</span>
-                <button type="button" onClick={() => window.penPaperRpg?.openPacksDirectory()} style={{ padding: "0.25rem 0.5rem" }}>
+                <span style={{ marginLeft: "auto", fontStyle: "italic", color: "#065f46" }}>
+                  Desktop mode
+                </span>
+                <button
+                  type="button"
+                  onClick={() => window.penPaperRpg?.openPacksDirectory()}
+                  style={{ padding: "0.25rem 0.5rem" }}
+                >
                   Open Packs
                 </button>
-                <button type="button" onClick={() => window.penPaperRpg?.selectPacksDirectory()} style={{ padding: "0.25rem 0.5rem" }}>
+                <button
+                  type="button"
+                  onClick={() => window.penPaperRpg?.selectPacksDirectory()}
+                  style={{ padding: "0.25rem 0.5rem" }}
+                >
                   Change Packs...
                 </button>
               </>
             )}
           </section>
-        )}        {isLoading && <p>Loading catalog�</p>}
+        ) : null}
+        {isLoading && <p>Loading catalog...</p>}
         {hasError && (
           <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
             <p role="alert" style={{ color: "#b91c1c" }}>
@@ -105,15 +129,13 @@ export function CreationWizard(): JSX.Element {
             </button>
           </div>
         )}
-        {status === "ready" && builderState && (
+        {status === "ready" && builderState ? (
           <WizardViewport
             step={activeStep}
             builderState={builderState}
           />
-        )}
+        ) : null}
       </main>
     </div>
   );
 }
-
-

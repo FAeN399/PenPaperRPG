@@ -1,4 +1,4 @@
-import type { DesktopBridge } from "../../../apps/desktop/src/preload.js";
+import type { DesktopBridge, SelectPacksResult } from "../../../apps/desktop/src/preload.js";
 
 declare global {
   interface Window {
@@ -6,4 +6,4 @@ declare global {
   }
 }
 
-export {};
+export type { DesktopBridge, SelectPacksResult };

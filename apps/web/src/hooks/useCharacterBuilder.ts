@@ -6,6 +6,7 @@ import type { CatalogIndex, Character } from "@pen-paper-rpg/schemas";
 import { buildCatalogLookup, createCharacter } from "@pen-paper-rpg/engine";
 import type { CatalogLookup } from "@pen-paper-rpg/engine";
 import { fetchCatalogIndex } from "@/lib/catalog-client";
+import type { DesktopBridge, SelectPacksResult } from "@/types/desktop";
 import type {
   AbilityScoreBlock,
   ChoiceDefinition,
@@ -26,6 +27,13 @@ interface BuilderHookResult {
   state: CharacterBuilderState | null;
   error: Error | null;
   refresh: () => Promise<void>;
+}
+
+function getDesktopBridge(): DesktopBridge | undefined {
+  if (typeof window === "undefined") {
+    return undefined;
+  }
+  return window.penPaperRpg;
 }
 
 export function useCharacterBuilder(): BuilderHookResult {
@@ -60,13 +68,13 @@ export function useCharacterBuilder(): BuilderHookResult {
 
   useEffect(() => {
     // Desktop bridge present? Subscribe to catalog events instead of fetching.
-    const bridge = typeof window !== "undefined" ? window.penPaperRpg : undefined;
+    const bridge = getDesktopBridge();
     if (bridge) {
       setStatus("loading");
       setError(null);
-      const unsubscribe = bridge.onCatalogLoaded((incoming) => {
+      const unsubscribe = bridge.onCatalogLoaded((incoming: CatalogIndex) => {
         try {
-          applyCatalog(incoming as CatalogIndex);
+          applyCatalog(incoming);
         } catch (e) {
           setError(e instanceof Error ? e : new Error("Catalog event error"));
           setStatus("error");
@@ -91,13 +99,13 @@ export function useCharacterBuilder(): BuilderHookResult {
     state,
     error,
     refresh: async () => {
-      const bridge = typeof window !== "undefined" ? window.penPaperRpg : undefined;
+      const bridge = getDesktopBridge();
       if (bridge) {
         // Let the user reselect packs; main process returns a catalog and we rely on the event for updates.
         try {
-          const res = await bridge.selectPacksDirectory();
-          if (res && !res.canceled && (res as any).catalog) {
-            applyCatalog((res as any).catalog as CatalogIndex);
+          const res: SelectPacksResult = await bridge.selectPacksDirectory();
+          if (!res.canceled && res.catalog) {
+            applyCatalog(res.catalog);
           }
         } catch (e) {
           // surface as error but do not crash

@@ -3,6 +3,7 @@ import fs from "fs-extra";
 import path from "node:path";
 import Store from "electron-store";
 import { buildCatalogIndex } from "../../packages/catalog/src/index.js";
+import type { CatalogBuildResult } from "../../packages/catalog/src/index.js";
 
 const store = new Store<{ packsDir: string | null }>({
   name: "pen-paper-rpg",
@@ -32,7 +33,7 @@ async function ensurePacksDirectory(): Promise<string> {
   return defaultPath;
 }
 
-async function loadCatalog(packsDir: string) {
+async function loadCatalog(packsDir: string): Promise<CatalogBuildResult> {
   return buildCatalogIndex({ packRoots: [packsDir] });
 }
 
@@ -60,8 +61,8 @@ async function createWindow(): Promise<void> {
   });
 
   const packsDir = await ensurePacksDirectory();
-  const catalog = await loadCatalog(packsDir);
-  mainWindow.webContents.send("catalog:loaded", catalog);
+  const catalogResult = await loadCatalog(packsDir);
+  mainWindow.webContents.send("catalog:loaded", catalogResult.index);
 }
 
 app.whenReady().then(async () => {
@@ -92,8 +93,14 @@ ipcMain.handle("packs:select", async () => {
 
   const selectedPath = result.filePaths[0];
   store.set("packsDir", selectedPath);
-  const catalog = await loadCatalog(selectedPath);
-  return { canceled: false, path: selectedPath, catalog };
+  const catalogResult = await loadCatalog(selectedPath);
+  return {
+    canceled: false,
+    path: selectedPath,
+    catalog: catalogResult.index,
+    warnings: catalogResult.warnings,
+    errors: catalogResult.errors,
+  };
 });
 
 ipcMain.handle("packs:open", async () => {
