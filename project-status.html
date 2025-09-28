@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PenPaperRPG - Project Status Dashboard</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+
+        :root {
+            --mythic-gold: #d4af37;
+            --mythic-bronze: #cd7f32;
+            --mythic-copper: #b87333;
+            --deep-purple: #4c1d95;
+            --royal-purple: #6b46c1;
+            --dark-stone: #1c1917;
+            --medium-stone: #292524;
+            --light-stone: #44403c;
+            --parchment: #fef7cd;
+            --aged-parchment: #f59e0b;
+            --blood-red: #dc2626;
+            --forest-green: #166534;
+            --shadow: rgba(0, 0, 0, 0.8);
+            --glow: rgba(212, 175, 55, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Crimson Text', serif;
+            background: linear-gradient(135deg, var(--dark-stone) 0%, var(--medium-stone) 50%, var(--deep-purple) 100%);
+            background-attachment: fixed;
+            color: var(--parchment);
+            line-height: 1.6;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(107, 70, 193, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(184, 115, 51, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .header::before {
+            content: '⚔️';
+            position: absolute;
+            left: 50%;
+            top: -2rem;
+            transform: translateX(-50%);
+            font-size: 2rem;
+            filter: drop-shadow(0 0 10px var(--mythic-gold));
+        }
+
+        .header h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--mythic-gold), var(--mythic-bronze), var(--mythic-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 20px var(--glow);
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .header p {
+            font-size: 1.25rem;
+            color: var(--aged-parchment);
+            font-style: italic;
+            text-shadow: 0 2px 4px var(--shadow);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            background: linear-gradient(145deg, rgba(44, 37, 36, 0.9), rgba(41, 37, 36, 0.8));
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow:
+                0 8px 32px rgba(0, 0, 0, 0.4),
+                inset 0 1px 0 rgba(212, 175, 55, 0.2),
+                0 0 0 1px rgba(212, 175, 55, 0.3);
+            border: 2px solid var(--mythic-bronze);
+            position: relative;
+            backdrop-filter: blur(10px);
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--mythic-gold), transparent);
+        }
+
+        .card::after {
+            content: '';
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            width: 8px;
+            height: 8px;
+            background: var(--mythic-gold);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--mythic-gold);
+        }
+
+        .card h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--mythic-gold);
+            text-shadow: 0 2px 4px var(--shadow);
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .progress-circle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 12px;
+            background: linear-gradient(90deg, var(--dark-stone), var(--medium-stone));
+            border-radius: 6px;
+            overflow: hidden;
+            margin: 0.5rem 0;
+            border: 1px solid var(--mythic-bronze);
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--forest-green), #22c55e, var(--forest-green));
+            background-size: 200% 100%;
+            animation: shimmer 2s infinite;
+            transition: width 0.8s cubic-bezier(0.4, 0.0, 0.2, 1);
+            box-shadow: 0 0 10px rgba(34, 197, 94, 0.5);
+        }
+
+        .progress-fill.in-progress {
+            background: linear-gradient(90deg, var(--aged-parchment), #fbbf24, var(--aged-parchment));
+            box-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
+        }
+
+        .progress-fill.blocked {
+            background: linear-gradient(90deg, var(--blood-red), #f87171, var(--blood-red));
+            box-shadow: 0 0 10px rgba(220, 38, 38, 0.5);
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        .metric {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .metric:hover {
+            padding-left: 0.5rem;
+            border-left: 3px solid var(--mythic-gold);
+        }
+
+        .metric:last-child {
+            border-bottom: none;
+        }
+
+        .metric-label {
+            font-family: 'Cinzel', serif;
+            font-weight: 500;
+            color: var(--parchment);
+            text-shadow: 0 1px 2px var(--shadow);
+        }
+
+        .metric-value {
+            font-size: 1.125rem;
+            font-weight: 700;
+            text-shadow: 0 1px 2px var(--shadow);
+        }
+
+        .status-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .status-item {
+            padding: 1.5rem;
+            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(28, 25, 23, 0.8), rgba(41, 37, 36, 0.6));
+            border: 1px solid var(--light-stone);
+            border-left: 4px solid var(--light-stone);
+            position: relative;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        .status-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(212, 175, 55, 0.05) 50%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .status-item:hover::before {
+            opacity: 1;
+        }
+
+        .status-item.completed {
+            border-left-color: var(--forest-green);
+            background: linear-gradient(135deg, rgba(22, 101, 52, 0.2), rgba(28, 25, 23, 0.8));
+            box-shadow: 0 0 20px rgba(22, 101, 52, 0.3);
+        }
+
+        .status-item.in-progress {
+            border-left-color: var(--aged-parchment);
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(28, 25, 23, 0.8));
+            box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
+        }
+
+        .status-item.pending {
+            border-left-color: var(--light-stone);
+            background: linear-gradient(135deg, rgba(68, 64, 60, 0.3), rgba(28, 25, 23, 0.8));
+        }
+
+        .status-item h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--mythic-gold);
+            text-shadow: 0 1px 2px var(--shadow);
+        }
+
+        .status-item p {
+            font-size: 0.875rem;
+            color: var(--parchment);
+            opacity: 0.9;
+        }
+
+        .feature-list {
+            list-style: none;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--gray-100);
+        }
+
+        .feature-item:last-child {
+            border-bottom: none;
+        }
+
+        .feature-status {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            margin-right: 1rem;
+            flex-shrink: 0;
+            position: relative;
+            border: 2px solid var(--mythic-bronze);
+        }
+
+        .feature-status::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+        }
+
+        .feature-status.completed {
+            background: var(--forest-green);
+            border-color: var(--forest-green);
+            box-shadow: 0 0 10px rgba(22, 101, 52, 0.5);
+        }
+
+        .feature-status.completed::before {
+            background: var(--mythic-gold);
+            box-shadow: 0 0 5px var(--mythic-gold);
+        }
+
+        .feature-status.in-progress {
+            background: var(--aged-parchment);
+            border-color: var(--aged-parchment);
+            box-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
+            animation: pulse 2s infinite;
+        }
+
+        .feature-status.in-progress::before {
+            background: var(--mythic-gold);
+            animation: pulse 2s infinite;
+        }
+
+        .feature-status.pending {
+            background: var(--light-stone);
+            border-color: var(--light-stone);
+        }
+
+        .feature-status.pending::before {
+            background: var(--medium-stone);
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 1rem;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, var(--mythic-gold), var(--mythic-bronze), var(--mythic-copper));
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            padding: 1rem;
+            background: linear-gradient(135deg, rgba(28, 25, 23, 0.6), rgba(41, 37, 36, 0.4));
+            border-radius: 12px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .timeline-marker {
+            position: absolute;
+            left: -1.75rem;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--forest-green);
+            border: 3px solid var(--mythic-gold);
+            box-shadow: 0 0 15px rgba(22, 101, 52, 0.7);
+        }
+
+        .timeline-marker.pending {
+            background: var(--light-stone);
+            border-color: var(--mythic-bronze);
+            box-shadow: 0 0 10px rgba(68, 64, 60, 0.5);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, rgba(76, 29, 149, 0.3), rgba(28, 25, 23, 0.8));
+            border-radius: 12px;
+            border: 1px solid var(--mythic-bronze);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+            transform: rotate(45deg);
+            transition: transform 0.6s ease;
+        }
+
+        .stat-card:hover::before {
+            transform: rotate(45deg) translateY(-100%);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+        }
+
+        .stat-number {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--mythic-gold), var(--mythic-bronze));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 20px var(--glow);
+            position: relative;
+            z-index: 1;
+        }
+
+        .stat-label {
+            font-family: 'Cinzel', serif;
+            font-size: 0.75rem;
+            color: var(--parchment);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-top: 0.5rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>⚔️ PenPaperRPG ⚔️</h1>
+            <p>Pathfinder 2e Remaster Character Creation Toolkit<br>
+            <em style="color: var(--mythic-bronze); font-size: 0.9em;">~ Project Status Chronicle ~</em></p>
+        </header>
+
+        <div class="grid">
+            <!-- Overall Progress -->
+            <div class="card">
+                <h2>⚡ Quest Progress ⚡</h2>
+                <div class="progress-circle">
+                    <svg width="140" height="140" viewBox="0 0 140 140">
+                        <defs>
+                            <filter id="glow">
+                                <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                            <linearGradient id="progressGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:#d4af37;stop-opacity:1" />
+                                <stop offset="50%" style="stop-color:#cd7f32;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#d4af37;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="70" cy="70" r="55" fill="none" stroke="rgba(68, 64, 60, 0.5)" stroke-width="6"/>
+                        <circle cx="70" cy="70" r="55" fill="none" stroke="url(#progressGrad)" stroke-width="8"
+                                stroke-dasharray="138.24 207.36" stroke-dashoffset="0" transform="rotate(-90 70 70)"
+                                filter="url(#glow)"/>
+                        <text x="70" y="78" text-anchor="middle" font-family="Cinzel, serif" font-size="24" font-weight="bold" fill="#d4af37" filter="url(#glow)">40%</text>
+                    </svg>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">35</div>
+                        <div class="stat-label">Source Files</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">5</div>
+                        <div class="stat-label">Packages</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">Apps</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Component Progress -->
+            <div class="card">
+                <h2>🏰 Guild Mastery 🏰</h2>
+                <div class="metric">
+                    <span class="metric-label">Infrastructure</span>
+                    <span class="metric-value" style="color: var(--green);">✅ 95%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 95%;"></div>
+                </div>
+
+                <div class="metric">
+                    <span class="metric-label">Schemas & Data Models</span>
+                    <span class="metric-value" style="color: var(--green);">✅ 80%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 80%;"></div>
+                </div>
+
+                <div class="metric">
+                    <span class="metric-label">Rules Engine</span>
+                    <span class="metric-value" style="color: var(--yellow);">🔄 30%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill in-progress" style="width: 30%;"></div>
+                </div>
+
+                <div class="metric">
+                    <span class="metric-label">UI/UX Components</span>
+                    <span class="metric-value" style="color: var(--yellow);">🔄 20%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill in-progress" style="width: 20%;"></div>
+                </div>
+
+                <div class="metric">
+                    <span class="metric-label">SRD Data Integration</span>
+                    <span class="metric-value" style="color: var(--red);">⏳ 5%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill blocked" style="width: 5%;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid">
+            <!-- Build Status -->
+            <div class="card">
+                <h2>🛡️ Fortress Status 🛡️</h2>
+                <div class="status-grid">
+                    <div class="status-item completed">
+                        <h3>Schemas Package</h3>
+                        <p>✅ Build passing, tests green</p>
+                    </div>
+                    <div class="status-item completed">
+                        <h3>Catalog Loader</h3>
+                        <p>✅ Build passing, YAML validation working</p>
+                    </div>
+                    <div class="status-item completed">
+                        <h3>Engine Package</h3>
+                        <p>✅ Build passing, basic effects functional</p>
+                    </div>
+                    <div class="status-item in-progress">
+                        <h3>Web Application</h3>
+                        <p>🔄 Next.js running, wizard skeleton complete</p>
+                    </div>
+                    <div class="status-item in-progress">
+                        <h3>Desktop App</h3>
+                        <p>⏳ Electron shell ready, integration pending</p>
+                    </div>
+                    <div class="status-item in-progress">
+                        <h3>CI/CD Pipeline</h3>
+                        <p>⏳ CI configured (build/lint/typecheck/test) via GitHub Actions</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Priority Features -->
+            <div class="card">
+                <h2>⚔️ Legendary Quests ⚔️</h2>
+                <ul class="feature-list">
+                    <li class="feature-item">
+                        <div class="feature-status in-progress"></div>
+                        <span>Effect Application Engine</span>
+                    </li>
+                    <li class="feature-item">
+                        <div class="feature-status pending"></div>
+                        <span>Choice Handling System</span>
+                    </li>
+                    <li class="feature-item">
+                        <div class="feature-status pending"></div>
+                        <span>Trait & Tag Propagation</span>
+                    </li>
+                    <li class="feature-item">
+                        <div class="feature-status pending"></div>
+                        <span>Validation & Conflict Detection</span>
+                    </li>
+                    <li class="feature-item">
+                        <div class="feature-status pending"></div>
+                        <span>Leveling Progression Rules</span>
+                    </li>
+                    <li class="feature-item">
+                        <div class="feature-status pending"></div>
+                        <span>UI Data Flow for Creation Wizard</span>
+                    </li>
+                    <li class="feature-item">
+                        <div class="feature-status pending"></div>
+                        <span>Spellcasting Support</span>
+                    </li>
+                    <li class="feature-item">
+                        <div class="feature-status pending"></div>
+                        <span>Attack Profiles & Equipment</span>
+                    </li>
+                    <li class="feature-item">
+                        <div class="feature-status pending"></div>
+                        <span>History & Persistence</span>
+                    </li>
+                    <li class="feature-item">
+                        <div class="feature-status pending"></div>
+                        <span>Character Export (PDF)</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📜 Chronicle of Ages 📜</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <h3>✅ Phase 1: Foundation (Completed)</h3>
+                    <p>Monorepo setup, TypeScript configuration, basic schemas, catalog loader, testing infrastructure</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <h3>✅ Phase 2: Core Architecture (Completed)</h3>
+                    <p>Effect engine skeleton, wizard UI foundation, character builder hook, basic data flows</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker pending"></div>
+                    <h3>🔄 Phase 3: Choice & Validation (In Progress)</h3>
+                    <p>Choice handling system, effect application, validation engine, real character creation</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker pending"></div>
+                    <h3>⏳ Phase 4: Advanced Features (Upcoming)</h3>
+                    <p>Spellcasting, equipment integration, leveling rules, advanced UI components</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker pending"></div>
+                    <h3>⏳ Phase 5: Polish & Distribution (Future)</h3>
+                    <p>PDF exports, desktop app, CI/CD, documentation, performance optimization</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid">
+            <!-- Technical Debt -->
+            <div class="card">
+                <h2>🔮 Arcane Concerns 🔮</h2>
+                <div class="metric">
+                    <span class="metric-label">Schema Distribution</span>
+                    <span class="metric-value" style="color: var(--yellow);">Needs Automation</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">Performance Testing</span>
+                    <span class="metric-value" style="color: var(--red);">Not Started</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">Error Handling</span>
+                    <span class="metric-value" style="color: var(--yellow);">Basic Only</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">Accessibility</span>
+                    <span class="metric-value" style="color: var(--red);">Not Audited</span>
+                </div>
+            </div>
+
+            <!-- Scope Estimate -->
+            <div class="card">
+                <h2>🎲 Divination Oracle 🎲</h2>
+                <div class="metric">
+                    <span class="metric-label">Solo Developer (Full-time)</span>
+                    <span class="metric-value">12-18 months</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">Small Team (2-3 people)</span>
+                    <span class="metric-value">6-12 months</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">MVP Version</span>
+                    <span class="metric-value">3-6 months</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">Current Velocity</span>
+                    <span class="metric-value" style="color: var(--green);">Strong Foundation</span>
+                </div>
+            </div>
+        </div>
+
+        <footer style="text-align: center; margin-top: 3rem; padding: 2rem; color: var(--aged-parchment); border-top: 1px solid rgba(212, 175, 55, 0.3);">
+            <p style="font-family: 'Cinzel', serif; margin-bottom: 0.5rem;">⚜️ Chronicle Last Inscribed: <span id="lastUpdated"></span> ⚜️</p>
+            <p style="font-style: italic; opacity: 0.8;">~ May your dice roll high and your characters thrive ~</p>
+        </footer>
+    </div>
+
+    <script>
+        // Update last modified date
+        document.getElementById('lastUpdated').textContent = new Date().toLocaleDateString();
+
+        // Add some interactivity
+        document.querySelectorAll('.status-item').forEach(item => {
+            item.addEventListener('click', function() {
+                if (this.style.transform === 'scale(1.05)') {
+                    this.style.transform = 'scale(1)';
+                    this.style.boxShadow = 'none';
+                } else {
+                    this.style.transform = 'scale(1.05)';
+                    this.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+                    this.style.transition = 'all 0.2s ease';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+
