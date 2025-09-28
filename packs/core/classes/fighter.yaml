@@ -1,0 +1,45 @@
+id: pf2e.class.fighter
+type: class
+name: Fighter
+source:
+  id: orc-remaster
+  page: 72
+keyAbility: [STR, DEX]
+hitPointsPerLevel: 10
+proficiencies:
+  perception: expert
+  savingThrows:
+    fortitude: expert
+    reflex: expert
+    will: trained
+  skills:
+    trained: 3
+    additionalChoices: []
+  attacks:
+    simple: expert
+    martial: expert
+    advanced: trained
+    unarmed: expert
+  defense:
+    unarmored: trained
+    light: trained
+    medium: trained
+    heavy: trained
+    shields: trained
+  classDC: trained
+progression:
+  "1":
+    featureRefs:
+      - classfeat:1
+      - fighterfeatures:attack-of-opportunity
+    proficiencyBumps:
+      - target: weapons:martial
+        rank: trained
+      - target: armor:medium
+        rank: trained
+  "2":
+    featureRefs:
+      - classfeat:1
+      - skillfeat:1
+      - fighterfeatures:bravery
+    proficiencyBumps: []

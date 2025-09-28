@@ -1,0 +1,26 @@
+id: pf2e.ancestry.human
+type: ancestry
+name: Human
+summary: Versatile folk that excel through determination.
+source:
+  id: orc-remaster
+  page: 26
+hitPoints: 8
+size: medium
+speed: 25
+boosts:
+  - type: choice
+    count: 2
+    options: [STR, DEX, CON, INT, WIS, CHA]
+    value: 2
+  - type: any
+    count: 1
+    value: 2
+flaws: []
+languages:
+  granted: [Common]
+  choices:
+    count: 1
+    options: [Any]
+features:
+  - ancestryfeat:1

@@ -1,0 +1,17 @@
+id: pf2e.feat.power-attack
+type: feat
+name: Power Attack
+summary: Make a forceful strike that deals extra damage.
+source:
+  id: orc-remaster
+  page: 147
+level: 1
+category: class
+traits: [Fighter, Press]
+actionCost:
+  type: two
+prerequisites:
+  type: all
+  predicates:
+    - type: hasClass
+      classId: pf2e.class.fighter

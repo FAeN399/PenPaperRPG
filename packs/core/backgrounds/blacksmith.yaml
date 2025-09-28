@@ -1,0 +1,19 @@
+id: pf2e.background.blacksmith
+type: background
+name: Blacksmith
+source:
+  id: orc-remaster
+  page: 52
+boosts:
+  - type: choice
+    count: 1
+    options: [STR, INT]
+    value: 2
+  - type: any
+    count: 1
+    value: 2
+skillTraining:
+  - Crafting
+  - Athletics
+feat: pf2e.feat.specialty-crafting
+summary: You apprenticed at the forge and learned the value of hard work.

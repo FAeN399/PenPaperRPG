@@ -1,0 +1,45 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "NodeNext",
+    "lib": [
+      "ES2023"
+    ],
+    "types": [
+      "node"
+    ],
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "sourceMap": true,
+    "noEmit": false,
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "@pen-paper-rpg/schemas": [
+        "packages/schemas/dist/index.d.ts"
+      ],
+      "@pen-paper-rpg/shared": [
+        "packages/shared/src/index.ts"
+      ],
+      "@pen-paper-rpg/catalog": [
+        "packages/catalog/src/index.ts"
+      ],
+      "@pen-paper-rpg/engine": [
+        "packages/engine/src/index.ts"
+      ],
+      "@pen-paper-rpg/pdf": [
+        "packages/pdf/src/index.tsx"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build"
+  ]
+}

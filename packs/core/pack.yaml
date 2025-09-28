@@ -1,0 +1,8 @@
+id: core
+name: Core Sample Pack
+license: ORC
+includes:
+  - ancestries
+  - backgrounds
+  - classes
+  - feats

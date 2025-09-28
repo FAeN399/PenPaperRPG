@@ -1,0 +1,49 @@
+
+> @pen-paper-rpg/catalog@0.1.0 test D:\Projects\PenPaperRPG\packages\catalog
+> pnpm -w run schemas:publish && tsc -p tsconfig.build.json && vitest
+
+
+> pen-paper-rpg@0.1.0 schemas:publish D:\Projects\PenPaperRPG
+> pnpm run schemas:build && pnpm run schemas:sync
+
+
+> pen-paper-rpg@0.1.0 schemas:build D:\Projects\PenPaperRPG
+> pnpm --dir packages/schemas run build
+
+
+> @pen-paper-rpg/schemas@0.1.0 build D:\Projects\PenPaperRPG\packages\schemas
+> tsc -p tsconfig.build.json
+
+
+> pen-paper-rpg@0.1.0 schemas:sync D:\Projects\PenPaperRPG
+> node ./scripts/sync-schemas.mjs
+
+Synced schemas dist → D:\Projects\PenPaperRPG\node_modules\@pen-paper-rpg\schemas
+
+[1m[46m RUN [49m[22m [36mv3.2.4 [39m[90mD:/Projects/PenPaperRPG/packages/catalog[39m
+
+ [31m❯[39m test/catalog-build.test.ts [2m([22m[2m1 test[22m[2m | [22m[31m1 failed[39m[2m)[22m[32m 18[2mms[22m[39m
+[31m   [31m×[31m catalog builder[2m > [22mloads the sample pack without validation errors[39m[32m 17[2mms[22m[39m
+[31m     → expected 0 to be greater than 0[39m
+
+[31m⎯⎯⎯⎯⎯⎯⎯[39m[1m[41m Failed Tests 1 [49m[22m[31m⎯⎯⎯⎯⎯⎯⎯[39m
+
+[41m[1m FAIL [22m[49m test/catalog-build.test.ts[2m > [22mcatalog builder[2m > [22mloads the sample pack without validation errors
+[31m[1mAssertionError[22m: expected 0 to be greater than 0[39m
+[36m [2m❯[22m test/catalog-build.test.ts:[2m12:42[22m[39m
+    [90m 10| [39m    [34mexpect[39m(result[33m.[39merrors)[33m.[39m[34mtoHaveLength[39m([34m0[39m)[33m;[39m
+    [90m 11| [39m    [34mexpect[39m(result[33m.[39mwarnings)[33m.[39m[34mtoEqual[39m([])[33m;[39m
+    [90m 12| [39m    [34mexpect[39m(result[33m.[39mindex[33m.[39mentities[33m.[39mlength)[33m.[39m[34mtoBeGreaterThan[39m([34m0[39m)[33m;[39m
+    [90m   | [39m                                         [31m^[39m
+    [90m 13| [39m    const fighterEntry = result.index.entities.find((entry) => entry.e…
+    [90m 14| [39m    [34mexpect[39m(fighterEntry)[33m.[39m[34mtoBeDefined[39m()[33m;[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯[22m[39m
+
+
+[2m Test Files [22m [1m[31m1 failed[39m[22m[90m (1)[39m
+[2m      Tests [22m [1m[31m1 failed[39m[22m[90m (1)[39m
+[2m   Start at [22m 05:37:03
+[2m   Duration [22m 2.13s[2m (transform 44ms, setup 0ms, collect 231ms, tests 18ms, environment 0ms, prepare 793ms)[22m
+
+ ELIFECYCLE  Test failed. See above for more details.

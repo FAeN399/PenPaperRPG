@@ -1,0 +1,27 @@
+{
+  "name": "@pen-paper-rpg/engine",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "pnpm -w run schemas:publish && tsc -p tsconfig.build.json",
+    "dev": "pnpm -w run schemas:publish && tsc -p tsconfig.build.json --watch",
+    "lint": "eslint src --ext .ts",
+    "test": "pnpm -w run schemas:publish && tsc -p tsconfig.build.json && vitest",
+    "typecheck": "pnpm -w run schemas:publish && tsc --noEmit"
+  },
+  "dependencies": {
+    "fast-deep-equal": "^3.1.3"
+  }
+}
