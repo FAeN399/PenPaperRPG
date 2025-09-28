@@ -95,7 +95,10 @@ export function useCharacterBuilder(): BuilderHookResult {
       if (bridge) {
         // Let the user reselect packs; main process returns a catalog and we rely on the event for updates.
         try {
-          await bridge.selectPacksDirectory();
+          const res = await bridge.selectPacksDirectory();
+          if (res && !res.canceled && (res as any).catalog) {
+            applyCatalog((res as any).catalog as CatalogIndex);
+          }
         } catch (e) {
           // surface as error but do not crash
           setError(e instanceof Error ? e : new Error("Select packs failed"));
