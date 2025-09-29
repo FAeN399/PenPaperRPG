@@ -4,7 +4,9 @@ import { useMemo, useState } from "react";
 
 import { StepList } from "./StepList";
 import { WizardViewport } from "./WizardViewport";
+
 import { useCharacterBuilder } from "@/hooks/useCharacterBuilder";
+import type { DesktopBridge } from "@/types/desktop";
 
 export type CreationStep = {
   id: string;
@@ -59,8 +61,17 @@ export function CreationWizard(): JSX.Element {
   const steps = useMemo(() => DEFAULT_STEPS, []);
   const [activeStepId, setActiveStepId] = useState<string>(steps[0]?.id ?? "ancestry");
   const activeStep = steps.find((step) => step.id === activeStepId) ?? steps[0];
-  const { state: builderState, status, error, refresh } = useCharacterBuilder();
-  const isDesktop = typeof window !== "undefined" && Boolean(window.penPaperRpg);
+  const {
+    state: builderState,
+    status,
+    error,
+    refresh,
+    selectAncestry,
+    selectBackground,
+    selectClass,
+  } = useCharacterBuilder();
+  const desktopBridge = getDesktopBridge();
+  const isDesktop = Boolean(desktopBridge);
   const isLoading = status === "idle" || status === "loading";
   const hasError = status === "error";
 
@@ -95,27 +106,31 @@ export function CreationWizard(): JSX.Element {
             <span style={{ color: "#4b5563" }}>
               Packs: {Object.keys(builderState.catalog.packs ?? {}).length}
             </span>
-            {isDesktop && (
+            {isDesktop && desktopBridge ? (
               <>
                 <span style={{ marginLeft: "auto", fontStyle: "italic", color: "#065f46" }}>
                   Desktop mode
                 </span>
                 <button
                   type="button"
-                  onClick={() => window.penPaperRpg?.openPacksDirectory()}
+                  onClick={() => {
+                    void desktopBridge.openPacksDirectory();
+                  }}
                   style={{ padding: "0.25rem 0.5rem" }}
                 >
                   Open Packs
                 </button>
                 <button
                   type="button"
-                  onClick={() => window.penPaperRpg?.selectPacksDirectory()}
+                  onClick={() => {
+                    void desktopBridge.selectPacksDirectory();
+                  }}
                   style={{ padding: "0.25rem 0.5rem" }}
                 >
                   Change Packs...
                 </button>
               </>
-            )}
+            ) : null}
           </section>
         ) : null}
         {isLoading && <p>Loading catalog...</p>}
@@ -124,7 +139,13 @@ export function CreationWizard(): JSX.Element {
             <p role="alert" style={{ color: "#b91c1c" }}>
               Failed to load catalog data. {error?.message ?? "Unknown error"}
             </p>
-            <button type="button" onClick={() => refresh()} style={{ alignSelf: "start" }}>
+            <button
+              type="button"
+              onClick={() => {
+                void refresh();
+              }}
+              style={{ alignSelf: "start" }}
+            >
               Retry
             </button>
           </div>
@@ -133,9 +154,20 @@ export function CreationWizard(): JSX.Element {
           <WizardViewport
             step={activeStep}
             builderState={builderState}
+            onSelectAncestry={selectAncestry}
+            onSelectBackground={selectBackground}
+            onSelectClass={selectClass}
           />
         ) : null}
       </main>
     </div>
   );
 }
+
+function getDesktopBridge(): DesktopBridge | undefined {
+  if (typeof window === "undefined") {
+    return undefined;
+  }
+  return window.penPaperRpg;
+}
+

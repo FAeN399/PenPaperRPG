@@ -4,12 +4,12 @@ import {
   abilityModifier,
   applyAbilityAdjustments,
   computeDerivedStats,
-} from "../dist/index.js";
+} from "../src/index.js";
 import type {
   AbilityAdjustmentLogEntry,
   AbilityScoreBlock,
   ProficiencySummary,
-} from "../../schem../dist/index.js";
+} from "@pen-paper-rpg/schemas";
 
 describe("engine derived calculations", () => {
   const baseAbilities: AbilityScoreBlock = {

@@ -1,25 +1,67 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "module": "ESNext",
     "moduleResolution": "Bundler",
-    "lib": ["DOM", "DOM.Iterable", "ES2023"],
-    "types": ["node"],
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ES2023"
+    ],
+    "types": [
+      "node"
+    ],
     "baseUrl": ".",
     "paths": {
-      "@/components/*": ["./src/components/*"],
-      "@/app/*": ["./src/app/*"],
-      "@/hooks/*": ["./src/hooks/*"],
-      "@/lib/*": ["./src/lib/*"],
-      "@/types/*": ["./src/types/*"],
-      "@pen-paper-rpg/schemas": ["../../packages/schemas/src/index.ts"],
-      "@pen-paper-rpg/engine": ["../../packages/engine/src/index.ts"],
-      "@pen-paper-rpg/catalog": ["../../packages/catalog/src/index.ts"],
-      "@pen-paper-rpg/shared": ["../../packages/shared/src/index.ts"],
-      "@pen-paper-rpg/pdf": ["../../packages/pdf/src/index.tsx"]
-    }
+      "@/components/*": [
+        "./src/components/*"
+      ],
+      "@/app/*": [
+        "./src/app/*"
+      ],
+      "@/hooks/*": [
+        "./src/hooks/*"
+      ],
+      "@/lib/*": [
+        "./src/lib/*"
+      ],
+      "@/types/*": [
+        "./src/types/*"
+      ],
+      "@pen-paper-rpg/schemas": [
+        "../../packages/schemas/src/index.ts"
+      ],
+      "@pen-paper-rpg/engine": [
+        "../../packages/engine/src/index.ts"
+      ],
+      "@pen-paper-rpg/catalog": [
+        "../../packages/catalog/src/index.ts"
+      ],
+      "@pen-paper-rpg/shared": [
+        "../../packages/shared/src/index.ts"
+      ],
+      "@pen-paper-rpg/pdf": [
+        "../../packages/pdf/src/index.tsx"
+      ]
+    },
+    "allowJs": true,
+    "incremental": true,
+    "isolatedModules": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
-  "include": ["next-env.d.ts", "src/**/*.ts", "src/**/*.tsx", "src/**/*.d.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.d.ts",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

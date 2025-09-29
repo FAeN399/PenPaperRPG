@@ -8,3 +8,8 @@ apps/web/.next
 apps/web/out
 .DS_Store
 Thumbs.db
+
+# Turbo cache
+.turbo
+**/.turbo
+
