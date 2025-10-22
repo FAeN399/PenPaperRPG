@@ -44,27 +44,68 @@
     "wait-on": "^7.2.0"
   },
   "build": {
-    "appId": "com.penpaperRPG.app",
+    "appId": "com.penpaperrpg.app",
     "productName": "PenPaperRPG",
+    "artifactName": "${productName}-${version}-${os}-${arch}.${ext}",
     "files": [
       "dist/**/*",
-      "dist-electron/**/*"
+      "dist-electron/**/*",
+      "package.json"
     ],
     "directories": {
       "buildResources": "assets",
       "output": "release"
     },
+    "compression": "normal",
     "win": {
       "target": [
-        "nsis"
-      ]
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        },
+        {
+          "target": "portable",
+          "arch": ["x64"]
+        }
+      ],
+      "icon": "assets/icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "PenPaperRPG"
     },
     "linux": {
       "target": [
-        "AppImage",
-        "deb"
+        {
+          "target": "AppImage",
+          "arch": ["x64"]
+        },
+        {
+          "target": "deb",
+          "arch": ["x64"]
+        }
       ],
-      "category": "Game"
+      "category": "Game",
+      "icon": "assets/icon.png",
+      "description": "Pathfinder 2e Character Creator - A comprehensive character creation tool for Pathfinder Second Edition",
+      "desktop": {
+        "Name": "PenPaperRPG",
+        "Comment": "Pathfinder 2e Character Creator",
+        "Categories": "Game;RolePlaying;"
+      }
+    },
+    "mac": {
+      "target": [
+        {
+          "target": "dmg",
+          "arch": ["x64", "arm64"]
+        }
+      ],
+      "category": "public.app-category.games",
+      "icon": "assets/icon.png"
     }
   }
 }
