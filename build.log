@@ -1,0 +1,63 @@
+
+> penpaperrpg@0.1.0 build
+> tsc && vite build && electron-builder
+
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+vite v5.4.21 building for production...
+transforming...
+(node:16436) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/user/PenPaperRPG/postcss.config.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /home/user/PenPaperRPG/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✓ 76 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.49 kB │ gzip:   0.33 kB
+dist/assets/index-B0J7BnPM.css   19.63 kB │ gzip:   4.07 kB
+dist/assets/index-CZKO7o91.js   447.51 kB │ gzip: 112.50 kB
+✓ built in 1.82s
+vite v5.4.21 building for production...
+transforming...
+✓ 1 modules transformed.
+rendering chunks...
+computing gzip size...
+dist-electron/main.js  0.99 kB │ gzip: 0.56 kB
+✓ built in 15ms
+vite v5.4.21 building for production...
+transforming...
+✓ 1 modules transformed.
+rendering chunks...
+computing gzip size...
+dist-electron/preload.js  0.34 kB │ gzip: 0.21 kB
+✓ built in 9ms
+  • electron-builder  version=24.13.3 os=4.4.0
+  • loaded configuration  file=package.json ("build" field)
+  • packaging       platform=linux arch=x64 electron=28.3.3 appOutDir=release/linux-unpacked
+  • Failed to download using specified CAs, retrying with default System CAs only  
+  ⨯ cannot resolve https://github.com/electron/electron/releases/download/v28.3.3/electron-v28.3.3-linux-x64.zip: status code 403
+github.com/develar/app-builder/pkg/download.(*Downloader).follow
+	/Volumes/data/Documents/app-builder/pkg/download/downloader.go:237
+github.com/develar/app-builder/pkg/download.(*Downloader).DownloadNoRetry
+	/Volumes/data/Documents/app-builder/pkg/download/downloader.go:128
+github.com/develar/app-builder/pkg/download.(*Downloader).Download
+	/Volumes/data/Documents/app-builder/pkg/download/downloader.go:118
+github.com/develar/app-builder/pkg/electron.(*ElectronDownloader).doDownload
+	/Volumes/data/Documents/app-builder/pkg/electron/electronDownloader.go:192
+github.com/develar/app-builder/pkg/electron.(*ElectronDownloader).Download
+	/Volumes/data/Documents/app-builder/pkg/electron/electronDownloader.go:177
+github.com/develar/app-builder/pkg/electron.downloadElectron.func1.1
+	/Volumes/data/Documents/app-builder/pkg/electron/electronDownloader.go:73
+github.com/develar/app-builder/pkg/util.MapAsyncConcurrency.func2
+	/Volumes/data/Documents/app-builder/pkg/util/async.go:68
+runtime.goexit
+	/usr/local/Cellar/go/1.17/libexec/src/runtime/asm_amd64.s:1581  
+  ⨯ /home/user/PenPaperRPG/node_modules/app-builder-bin/linux/x64/app-builder process failed ERR_ELECTRON_BUILDER_CANNOT_EXECUTE
+Exit code:
+1  failedTask=build stackTrace=Error: /home/user/PenPaperRPG/node_modules/app-builder-bin/linux/x64/app-builder process failed ERR_ELECTRON_BUILDER_CANNOT_EXECUTE
+Exit code:
+1
+    at ChildProcess.<anonymous> (/home/user/PenPaperRPG/node_modules/builder-util/src/util.ts:252:14)
+    at Object.onceWrapper (node:events:634:26)
+    at ChildProcess.emit (node:events:519:28)
+    at maybeClose (node:internal/child_process:1101:16)
+    at Process.ChildProcess._handle.onexit (node:internal/child_process:304:5)
