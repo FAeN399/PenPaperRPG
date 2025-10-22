@@ -1,4 +1,5 @@
 import { Character } from '@/types/character'
+import { getAbilityModifier, formatModifier } from '@/utils/modifiers'
 
 interface SidebarProps {
   character: Character
@@ -6,8 +7,7 @@ interface SidebarProps {
 
 export default function Sidebar({ character }: SidebarProps) {
   const abilityModifier = (score: number): string => {
-    const mod = Math.floor((score - 10) / 2)
-    return mod >= 0 ? `+${mod}` : `${mod}`
+    return formatModifier(getAbilityModifier(score))
   }
 
   return (

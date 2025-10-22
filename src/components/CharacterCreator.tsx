@@ -4,12 +4,13 @@ import Sidebar from './layout/Sidebar'
 import Footer from './layout/Footer'
 import StepIndicator from './layout/StepIndicator'
 import Card from './shared/Card'
-import { Character, createEmptyCharacter } from '@/types/character'
+import Button from './shared/Button'
+import Input from './shared/Input'
+import { useCharacter } from '@/hooks/useCharacter'
 import { CharacterCreationStep, CREATION_STEPS } from '@/types/steps'
 
 export default function CharacterCreator() {
-  const [character] = useState<Character>(createEmptyCharacter())
-  // setCharacter will be used in Phase 5 when implementing step content
+  const { character, updateBasics, updateAbilityScores } = useCharacter()
   const [currentStep, setCurrentStep] = useState<CharacterCreationStep>(
     CharacterCreationStep.Basics
   )
@@ -62,36 +63,92 @@ export default function CharacterCreator() {
             </h2>
             <p className="text-pf-text-muted mb-6">{currentStepInfo?.description}</p>
 
-            {/* Placeholder content for each step */}
-            <Card className="p-8">
-              <div className="text-center">
-                <p className="text-lg text-pf-text mb-4">
-                  {currentStep === CharacterCreationStep.Basics &&
-                    'Enter your character\'s basic information'}
-                  {currentStep === CharacterCreationStep.Ancestry &&
-                    'Choose your character\'s ancestry and heritage'}
-                  {currentStep === CharacterCreationStep.Background &&
-                    'Select a background for your character'}
-                  {currentStep === CharacterCreationStep.Class &&
-                    'Choose your character\'s class'}
-                  {currentStep === CharacterCreationStep.Abilities &&
-                    'Assign ability score boosts'}
-                  {currentStep === CharacterCreationStep.Skills &&
-                    'Select skill proficiencies'}
-                  {currentStep === CharacterCreationStep.Feats &&
-                    'Choose your feats'}
-                  {currentStep === CharacterCreationStep.Spells &&
-                    'Select spells (if applicable)'}
-                  {currentStep === CharacterCreationStep.Equipment &&
-                    'Choose starting equipment'}
-                  {currentStep === CharacterCreationStep.Review &&
-                    'Review your character'}
-                </p>
-                <p className="text-sm text-pf-text-muted">
-                  Step content will be implemented in Phase 5
-                </p>
-              </div>
-            </Card>
+            {/* Step content */}
+            {currentStep === CharacterCreationStep.Basics && (
+              <Card className="p-6">
+                <div className="max-w-md mx-auto space-y-4">
+                  <Input
+                    label="Character Name"
+                    value={character.basics.name}
+                    onChange={(value) => updateBasics({ name: value })}
+                    placeholder="Enter character name"
+                    required
+                  />
+                  <Input
+                    label="Player Name"
+                    value={character.basics.playerName}
+                    onChange={(value) => updateBasics({ playerName: value })}
+                    placeholder="Enter player name"
+                  />
+                  <div className="pt-4 border-t border-gray-700">
+                    <p className="text-sm text-pf-text-muted mb-2">
+                      Level: {character.basics.level}
+                    </p>
+                    <p className="text-xs text-pf-text-muted">
+                      Watch the sidebar update as you enter information!
+                    </p>
+                  </div>
+                </div>
+              </Card>
+            )}
+
+            {currentStep === CharacterCreationStep.Abilities && (
+              <Card className="p-6">
+                <div className="text-center mb-6">
+                  <p className="text-pf-text mb-4">
+                    Test the live stat calculation system
+                  </p>
+                  <Button
+                    onClick={() => {
+                      // Randomize ability scores for demo
+                      const randomScore = () => Math.floor(Math.random() * 9) + 10
+                      updateAbilityScores({
+                        strength: randomScore(),
+                        dexterity: randomScore(),
+                        constitution: randomScore(),
+                        intelligence: randomScore(),
+                        wisdom: randomScore(),
+                        charisma: randomScore(),
+                      })
+                    }}
+                  >
+                    🎲 Randomize Ability Scores
+                  </Button>
+                  <p className="text-xs text-pf-text-muted mt-4">
+                    Click to see HP, AC, and saves update automatically!
+                  </p>
+                </div>
+              </Card>
+            )}
+
+            {currentStep !== CharacterCreationStep.Basics &&
+              currentStep !== CharacterCreationStep.Abilities && (
+                <Card className="p-8">
+                  <div className="text-center">
+                    <p className="text-lg text-pf-text mb-4">
+                      {currentStep === CharacterCreationStep.Ancestry &&
+                        'Choose your character\'s ancestry and heritage'}
+                      {currentStep === CharacterCreationStep.Background &&
+                        'Select a background for your character'}
+                      {currentStep === CharacterCreationStep.Class &&
+                        'Choose your character\'s class'}
+                      {currentStep === CharacterCreationStep.Skills &&
+                        'Select skill proficiencies'}
+                      {currentStep === CharacterCreationStep.Feats &&
+                        'Choose your feats'}
+                      {currentStep === CharacterCreationStep.Spells &&
+                        'Select spells (if applicable)'}
+                      {currentStep === CharacterCreationStep.Equipment &&
+                        'Choose starting equipment'}
+                      {currentStep === CharacterCreationStep.Review &&
+                        'Review your character'}
+                    </p>
+                    <p className="text-sm text-pf-text-muted">
+                      Step content will be implemented in Phase 5
+                    </p>
+                  </div>
+                </Card>
+              )}
           </div>
         </main>
       </div>
