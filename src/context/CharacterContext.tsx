@@ -1,6 +1,7 @@
 import { createContext, ReactNode, useState, useEffect } from 'react'
-import { Character, createEmptyCharacter } from '@/types/character'
+import { Character, createEmptyCharacter, AbilityBoost } from '@/types/character'
 import { calculateDerivedStats } from '@/services/calculations'
+import { calculateAllAbilityScores } from '@/utils/abilityBoosts'
 
 interface CharacterContextType {
   character: Character
@@ -10,6 +11,9 @@ interface CharacterContextType {
   updateClass: (classData: Character['class']) => void
   updateAbilityScore: (ability: keyof Character['abilityScores'], value: number) => void
   updateAbilityScores: (scores: Partial<Character['abilityScores']>) => void
+  addAbilityBoost: (boost: AbilityBoost) => void
+  removeAbilityBoost: (boost: AbilityBoost) => void
+  applyAbilityBoosts: (boosts: AbilityBoost[]) => void
   updateSkill: (skill: string, proficiency: Character['skills'][string]) => void
   addFeat: (type: keyof Character['feats'], feat: string) => void
   removeFeat: (type: keyof Character['feats'], feat: string) => void
@@ -148,6 +152,38 @@ export function CharacterProvider({ children }: CharacterProviderProps) {
     setCharacter(createEmptyCharacter())
   }
 
+  const addAbilityBoost = (boost: AbilityBoost) => {
+    setCharacter((prev) => {
+      const newBoosts = [...prev.abilityScores.boosts, boost]
+      const newScores = calculateAllAbilityScores(newBoosts)
+      return {
+        ...prev,
+        abilityScores: newScores,
+      }
+    })
+  }
+
+  const removeAbilityBoost = (boost: AbilityBoost) => {
+    setCharacter((prev) => {
+      const newBoosts = prev.abilityScores.boosts.filter(
+        (b) => !(b.ability === boost.ability && b.source === boost.source)
+      )
+      const newScores = calculateAllAbilityScores(newBoosts)
+      return {
+        ...prev,
+        abilityScores: newScores,
+      }
+    })
+  }
+
+  const applyAbilityBoosts = (boosts: AbilityBoost[]) => {
+    const newScores = calculateAllAbilityScores(boosts)
+    setCharacter((prev) => ({
+      ...prev,
+      abilityScores: newScores,
+    }))
+  }
+
   const value: CharacterContextType = {
     character,
     updateBasics,
@@ -156,6 +192,9 @@ export function CharacterProvider({ children }: CharacterProviderProps) {
     updateClass,
     updateAbilityScore,
     updateAbilityScores,
+    addAbilityBoost,
+    removeAbilityBoost,
+    applyAbilityBoosts,
     updateSkill,
     addFeat,
     removeFeat,

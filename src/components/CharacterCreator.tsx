@@ -4,16 +4,16 @@ import Sidebar from './layout/Sidebar'
 import Footer from './layout/Footer'
 import StepIndicator from './layout/StepIndicator'
 import Card from './shared/Card'
-import Button from './shared/Button'
 import Input from './shared/Input'
 import StepAncestry from './character-creation/StepAncestry'
 import StepBackground from './character-creation/StepBackground'
 import StepClass from './character-creation/StepClass'
+import StepAbilities from './character-creation/StepAbilities'
 import { useCharacter } from '@/hooks/useCharacter'
 import { CharacterCreationStep, CREATION_STEPS } from '@/types/steps'
 
 export default function CharacterCreator() {
-  const { character, updateBasics, updateAbilityScores } = useCharacter()
+  const { character, updateBasics } = useCharacter()
   const [currentStep, setCurrentStep] = useState<CharacterCreationStep>(
     CharacterCreationStep.Basics
   )
@@ -95,34 +95,7 @@ export default function CharacterCreator() {
               </Card>
             )}
 
-            {currentStep === CharacterCreationStep.Abilities && (
-              <Card className="p-6">
-                <div className="text-center mb-6">
-                  <p className="text-pf-text mb-4">
-                    Test the live stat calculation system
-                  </p>
-                  <Button
-                    onClick={() => {
-                      // Randomize ability scores for demo
-                      const randomScore = () => Math.floor(Math.random() * 9) + 10
-                      updateAbilityScores({
-                        strength: randomScore(),
-                        dexterity: randomScore(),
-                        constitution: randomScore(),
-                        intelligence: randomScore(),
-                        wisdom: randomScore(),
-                        charisma: randomScore(),
-                      })
-                    }}
-                  >
-                    🎲 Randomize Ability Scores
-                  </Button>
-                  <p className="text-xs text-pf-text-muted mt-4">
-                    Click to see HP, AC, and saves update automatically!
-                  </p>
-                </div>
-              </Card>
-            )}
+            {currentStep === CharacterCreationStep.Abilities && <StepAbilities />}
 
             {currentStep === CharacterCreationStep.Ancestry && <StepAncestry />}
 

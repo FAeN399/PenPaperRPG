@@ -1,4 +1,4 @@
-import { Character, DerivedStats, ProficiencyLevel } from '@/types/character'
+import { Character, DerivedStats, ProficiencyLevel, AbilityType } from '@/types/character'
 import { getAbilityModifier } from '@/utils/modifiers'
 import { getProficiencyBonus } from '@/utils/proficiency'
 import { GameDataService } from './gameData'
@@ -175,7 +175,7 @@ function calculateSpeed(character: Character): number {
 export function calculateSkillModifier(
   character: Character,
   skill: string,
-  keyAbility: keyof Character['abilityScores']
+  keyAbility: AbilityType
 ): number {
   const abilityMod = getAbilityModifier(character.abilityScores[keyAbility])
   const level = character.basics.level

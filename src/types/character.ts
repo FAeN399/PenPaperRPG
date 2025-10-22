@@ -33,6 +33,15 @@ export interface CharacterClass {
   classFeat: string | null
 }
 
+export type AbilityType = 'strength' | 'dexterity' | 'constitution' | 'intelligence' | 'wisdom' | 'charisma'
+
+export type BoostSource = 'ancestry' | 'background' | 'class' | 'free'
+
+export interface AbilityBoost {
+  ability: AbilityType
+  source: BoostSource
+}
+
 export interface AbilityScores {
   strength: number
   dexterity: number
@@ -40,6 +49,7 @@ export interface AbilityScores {
   intelligence: number
   wisdom: number
   charisma: number
+  boosts: AbilityBoost[]
 }
 
 export enum ProficiencyLevel {
@@ -111,6 +121,7 @@ export function createEmptyCharacter(): Character {
       intelligence: 10,
       wisdom: 10,
       charisma: 10,
+      boosts: [],
     },
     skills: {},
     feats: {

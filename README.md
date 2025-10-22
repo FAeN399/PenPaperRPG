@@ -2,11 +2,11 @@
 
 A comprehensive desktop character creator for Pathfinder 2nd Edition (Remastered), built with Electron, React, and TypeScript.
 
-![Phase 5: Character Creation Steps - Complete](https://img.shields.io/badge/Phase%205-Complete-brightgreen)
+![Phase 6: Ability Score Builder - Complete](https://img.shields.io/badge/Phase%206-Complete-brightgreen)
 
 ## Features
 
-### ✨ Current Features (Phase 5 Complete)
+### ✨ Current Features (Phase 6 Complete)
 
 - **Complete Character Creation Workflow**
   - 10-step wizard with progress tracking
@@ -14,7 +14,13 @@ A comprehensive desktop character creator for Pathfinder 2nd Edition (Remastered
   - Step 2: Ancestry selection (6 ancestries, 12 heritages)
   - Step 3: Background selection (12 backgrounds)
   - Step 4: Class selection (all 12 core classes)
-  - Step 5: Ability score management
+  - Step 5: Ability score builder with proper PF2e boost system
+    - All abilities start at 10
+    - Automatic application of ancestry, background, and class boosts
+    - Interactive 4 free boost selection
+    - Proper PF2e rules: Boosts add +2 (or +1 if ability is 18+)
+    - Validation: Can't use 2 free boosts on same ability at level 1
+    - Live calculation showing boost breakdown by source
 
 - **Live Character Stats**
   - Real-time calculation of all derived stats
@@ -44,6 +50,11 @@ A comprehensive desktop character creator for Pathfinder 2nd Edition (Remastered
 ### 🎯 Accurate PF2e Mechanics
 
 All calculations follow official Pathfinder 2e rules:
+- **Ability Boost System:**
+  - All abilities start at 10
+  - Each boost adds +2 (or +1 if ability is already 18+)
+  - Ancestry boosts + Background boosts + Class boost + 4 Free boosts
+  - Cannot apply more than one free boost to same ability at level 1
 - Ability modifiers: `(score - 10) / 2` rounded down
 - HP: Ancestry HP + (Class HP + Con mod) × level
 - AC: 10 + Dex mod + proficiency
@@ -72,7 +83,8 @@ PenPaperRPG/
 │   │   ├── character-creation/ # Step components
 │   │   │   ├── StepAncestry.tsx
 │   │   │   ├── StepBackground.tsx
-│   │   │   └── StepClass.tsx
+│   │   │   ├── StepClass.tsx
+│   │   │   └── StepAbilities.tsx
 │   │   ├── layout/            # Layout components
 │   │   │   ├── Header.tsx
 │   │   │   ├── Sidebar.tsx
@@ -102,6 +114,7 @@ PenPaperRPG/
 │   │   ├── gameData.ts
 │   │   └── steps.ts
 │   ├── utils/
+│   │   ├── abilityBoosts.ts   # Ability boost system
 │   │   ├── modifiers.ts       # Ability modifier calculations
 │   │   └── proficiency.ts     # Proficiency system
 │   └── styles/
@@ -157,12 +170,23 @@ npm run build:linux  # Linux
 - Updated calculations using actual game data
 - Complete character creation flow (Steps 1-4)
 
-### 🚧 Future Phases (Planned)
+### ✅ Phase 6: Ability Score Builder
+- **Proper PF2e Ability Boost System**
+  - All abilities start at 10
+  - Automatic application of ancestry/background/class boosts
+  - Interactive free boost selection (4 boosts)
+  - Visual tracking showing boost sources
+  - Validation rules (no duplicate free boosts)
+  - 18+ rule (boosts add +1 instead of +2)
+- **New Components:**
+  - StepAbilities with card-based boost interface
+- **New Utilities:**
+  - abilityBoosts.ts (boost calculation and validation)
+- **Enhanced State Management:**
+  - addAbilityBoost/removeAbilityBoost methods
+  - Automatic score calculation from boost array
 
-- **Phase 6:** Ability Score Builder
-  - Interactive ability boost selection
-  - Ancestry/background/class/free boosts
-  - Visual boost tracking
+### 🚧 Future Phases (Planned)
 
 - **Phase 7:** Skills & Feats
   - Skill proficiency selection
@@ -209,9 +233,9 @@ Descriptions are original content to avoid copyright issues.
 
 ## Stats
 
-- **56 modules** bundled
-- **185KB** JavaScript bundle
-- **15KB** CSS bundle
+- **58 modules** bundled
+- **190.57KB** JavaScript bundle
+- **15.59KB** CSS bundle
 - **Zero** TypeScript errors
 - **100%** type-safe code
 
@@ -222,4 +246,4 @@ Pathfinder and associated marks are trademarks of Paizo Inc.
 
 ---
 
-**Status:** Phase 5 Complete - Core character creation workflow functional with real PF2e data!
+**Status:** Phase 6 Complete - Proper PF2e ability boost system implemented! Character creation now includes accurate ancestry/background/class boost application with interactive free boost selection.
