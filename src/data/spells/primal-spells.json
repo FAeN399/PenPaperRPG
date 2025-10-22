@@ -804,6 +804,376 @@
           "effect": "The damage increases by 2d6"
         }
       ]
+    },
+    {
+      "id": "barkskin",
+      "name": "Barkskin",
+      "level": 2,
+      "tradition": ["primal"],
+      "traits": ["Abjuration", "Plant"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 willing creature",
+      "duration": "10 minutes",
+      "description": "The target's skin becomes as tough as bark. The target gains a +2 status bonus to AC and gains resistance 2 to bludgeoning and piercing damage.",
+      "heightened": [
+        {
+          "level": 4,
+          "effect": "AC bonus increases to +3 and resistance increases to 5"
+        }
+      ]
+    },
+    {
+      "id": "enlarge-primal",
+      "name": "Enlarge",
+      "level": 2,
+      "tradition": ["primal"],
+      "traits": ["Polymorph", "Transmutation"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 willing creature",
+      "duration": "5 minutes",
+      "description": "The target grows to Large size. It gains a +2 status bonus to melee damage, a +10-foot status bonus to Speed, and is clumsy 1. The creature takes a -2 status penalty to AC and Reflex saves.",
+      "heightened": [
+        {
+          "level": 4,
+          "effect": "The target can grow to Huge size instead"
+        }
+      ]
+    },
+    {
+      "id": "flaming-sphere-primal",
+      "name": "Flaming Sphere",
+      "level": 2,
+      "tradition": ["primal"],
+      "traits": ["Evocation", "Fire"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "duration": "sustained up to 1 minute",
+      "savingThrow": "Reflex",
+      "description": "You create a 5-foot-diameter sphere of fire that rolls where you direct it. Each creature in the sphere's space takes 3d6 fire damage with a basic Reflex save. You can Sustain the spell to move the sphere up to 30 feet.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "Damage increases by 1d6"
+        }
+      ]
+    },
+    {
+      "id": "resist-energy-primal",
+      "name": "Resist Energy",
+      "level": 2,
+      "tradition": ["primal"],
+      "traits": ["Abjuration"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 creature",
+      "duration": "10 minutes",
+      "description": "Choose acid, cold, electricity, fire, or sonic when you cast this spell. The target gains resistance 5 against damage of the chosen type.",
+      "heightened": [
+        {
+          "level": 4,
+          "effect": "Resistance increases to 10"
+        },
+        {
+          "level": 7,
+          "effect": "Resistance increases to 15"
+        }
+      ]
+    },
+    {
+      "id": "spider-climb",
+      "name": "Spider Climb",
+      "level": 2,
+      "tradition": ["primal"],
+      "traits": ["Transmutation"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 creature",
+      "duration": "10 minutes",
+      "description": "The target gains a climb Speed equal to its land Speed and can move along vertical surfaces and upside down on ceilings. The target doesn't need to use its hands to climb.",
+      "heightened": [
+        {
+          "level": 5,
+          "effect": "Duration increases to 1 hour"
+        }
+      ]
+    },
+    {
+      "id": "summon-animal-2",
+      "name": "Summon Animal",
+      "level": 2,
+      "tradition": ["primal"],
+      "traits": ["Conjuration", "Summon"],
+      "castTime": "3 actions",
+      "range": "30 feet",
+      "duration": "sustained up to 1 minute",
+      "description": "You conjure a natural animal to fight on your behalf. You summon a common creature that has the animal trait and whose rank is 1. This creature appears in a space within range and acts on your turn.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "Summon a rank 2 animal"
+        },
+        {
+          "level": 4,
+          "effect": "Summon a rank 3 animal"
+        }
+      ]
+    },
+    {
+      "id": "tree-shape",
+      "name": "Tree Shape",
+      "level": 2,
+      "tradition": ["primal"],
+      "traits": ["Plant", "Polymorph", "Transmutation"],
+      "castTime": "2 actions",
+      "range": "self",
+      "duration": "8 hours",
+      "description": "You transform into a Large tree. While in this form, you gain resistance 5 to physical damage and can use Seek and Perception. You can't move, attack, or cast spells. You can Dismiss the spell.",
+      "heightened": [
+        {
+          "level": 4,
+          "effect": "You can become a Huge tree, and resistance increases to 10"
+        }
+      ]
+    },
+    {
+      "id": "water-breathing",
+      "name": "Water Breathing",
+      "level": 2,
+      "tradition": ["primal"],
+      "traits": ["Transmutation", "Water"],
+      "castTime": "1 minute",
+      "range": "30 feet",
+      "targets": "up to 5 willing creatures",
+      "duration": "1 hour",
+      "description": "The targets can breathe underwater. This doesn't grant the ability to breathe air if the creature can't normally do so.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "Duration increases to 8 hours"
+        }
+      ]
+    },
+    {
+      "id": "web-primal",
+      "name": "Web",
+      "level": 2,
+      "tradition": ["primal"],
+      "traits": ["Conjuration"],
+      "castTime": "3 actions",
+      "range": "30 feet",
+      "area": "10-foot burst",
+      "duration": "1 minute",
+      "savingThrow": "Reflex",
+      "description": "You create a sticky mass of webbing that fills the area. Creatures in the area when you cast the spell or that enter the area must attempt a Reflex save. On a failure, they're immobilized until they Escape. The webs are difficult terrain.",
+      "heightened": [
+        {
+          "level": 4,
+          "effect": "Area increases to 20-foot burst"
+        }
+      ]
+    },
+    {
+      "id": "animal-messenger",
+      "name": "Animal Messenger",
+      "level": 2,
+      "tradition": ["primal"],
+      "traits": ["Enchantment", "Mental"],
+      "castTime": "1 minute",
+      "range": "120 feet",
+      "targets": "1 Tiny animal",
+      "duration": "see text",
+      "description": "You compel a Tiny animal to carry a message to a location you specify. Describe the recipient or location in detail. The animal does its best to reach the location within 24 hours and waits up to 1 day for someone matching the description to approach.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "You can target a Small animal"
+        }
+      ]
+    },
+    {
+      "id": "earthbind",
+      "name": "Earthbind",
+      "level": 3,
+      "tradition": ["primal"],
+      "traits": ["Transmutation"],
+      "castTime": "2 actions",
+      "range": "120 feet",
+      "targets": "1 flying creature",
+      "duration": "varies",
+      "savingThrow": "Fortitude",
+      "description": "You pull a flying creature down to earth. The target must attempt a Fortitude save. On a failure, the target falls 60 feet and can't Fly for 1 minute. On a critical failure, the target falls 120 feet and can't Fly for 1 minute.",
+      "heightened": [
+        {
+          "level": 5,
+          "effect": "Duration increases to 10 minutes"
+        }
+      ]
+    },
+    {
+      "id": "lightning-storm",
+      "name": "Lightning Storm",
+      "level": 3,
+      "tradition": ["primal"],
+      "traits": ["Electricity", "Evocation"],
+      "castTime": "2 actions",
+      "range": "120 feet",
+      "area": "20-foot burst",
+      "duration": "instant",
+      "savingThrow": "basic Reflex",
+      "description": "You call down a localized lightning storm. Creatures in the area take 4d12 electricity damage with a basic Reflex save.",
+      "heightened": [
+        {
+          "level": 4,
+          "effect": "Damage increases by 1d12"
+        }
+      ]
+    },
+    {
+      "id": "wall-of-thorns",
+      "name": "Wall of Thorns",
+      "level": 3,
+      "tradition": ["primal"],
+      "traits": ["Conjuration", "Plant"],
+      "castTime": "3 actions",
+      "range": "120 feet",
+      "duration": "1 minute",
+      "description": "You create a wall of writhing, thorny vines. The wall is up to 60 feet long, 10 feet high, and 5 feet thick. Creatures that pass through the wall take 3d8 piercing damage with a basic Reflex save. The wall provides standard cover.",
+      "heightened": [
+        {
+          "level": 5,
+          "effect": "Damage increases to 5d8"
+        }
+      ]
+    },
+    {
+      "id": "wall-of-wind",
+      "name": "Wall of Wind",
+      "level": 3,
+      "tradition": ["primal"],
+      "traits": ["Air", "Evocation"],
+      "castTime": "3 actions",
+      "range": "120 feet",
+      "duration": "1 minute",
+      "description": "You create a wall of strong wind. The wall is up to 60 feet long, 20 feet high, and 5 feet thick. Ranged attacks can't pass through the wall. Creatures that move through the wall must succeed at a Fortitude save or be pushed back 10 feet. The wall disperses gas and fog.",
+      "heightened": [
+        {
+          "level": 5,
+          "effect": "Height increases to 30 feet"
+        }
+      ]
+    },
+    {
+      "id": "meld-into-stone",
+      "name": "Meld into Stone",
+      "level": 3,
+      "tradition": ["primal"],
+      "traits": ["Earth", "Transmutation"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 willing creature",
+      "duration": "10 minutes",
+      "description": "The target melds into a stone object large enough to hold them, such as a boulder or wall. While melded, the target can see and hear but can't move or take any actions. The target can end the effect early as a free action.",
+      "heightened": [
+        {
+          "level": 5,
+          "effect": "Duration increases to 1 hour"
+        }
+      ]
+    },
+    {
+      "id": "neutralize-poison",
+      "name": "Neutralize Poison",
+      "level": 3,
+      "tradition": ["primal"],
+      "traits": ["Healing", "Necromancy"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 creature",
+      "duration": "instant",
+      "description": "You remove poison from the target. Attempt a counteract check against each poison affecting the target. On a success, you reduce the poison's stage by 1. On a critical success, you reduce the poison's stage by 2 or cure it if it's at stage 1.",
+      "heightened": [
+        {
+          "level": 5,
+          "effect": "Your counteract rank increases by 1"
+        }
+      ]
+    },
+    {
+      "id": "speak-with-plants",
+      "name": "Speak with Plants",
+      "level": 3,
+      "tradition": ["primal"],
+      "traits": ["Divination", "Plant"],
+      "castTime": "2 actions",
+      "range": "self",
+      "area": "30-foot emanation",
+      "duration": "10 minutes",
+      "description": "You can communicate with plants within the area. Plants can answer questions about recent events they've witnessed. Most plants have limited perspective and vocabulary. This doesn't make plants friendly or cooperative.",
+      "heightened": [
+        {
+          "level": 5,
+          "effect": "Area increases to 60-foot emanation"
+        }
+      ]
+    },
+    {
+      "id": "summon-plant-or-fungus",
+      "name": "Summon Plant or Fungus",
+      "level": 3,
+      "tradition": ["primal"],
+      "traits": ["Conjuration", "Plant"],
+      "castTime": "3 actions",
+      "range": "30 feet",
+      "duration": "sustained up to 1 minute",
+      "description": "You conjure a plant or fungus creature to fight on your behalf. You summon a common creature with the plant or fungus trait whose level is 2. The creature appears in an unoccupied space within range, acts on your turn, and follows your mental commands.",
+      "heightened": [
+        {
+          "level": 4,
+          "effect": "Summon a level 3 plant or fungus"
+        },
+        {
+          "level": 5,
+          "effect": "Summon a level 5 plant or fungus"
+        }
+      ]
+    },
+    {
+      "id": "animal-vision",
+      "name": "Animal Vision",
+      "level": 3,
+      "tradition": ["primal"],
+      "traits": ["Divination", "Mental"],
+      "castTime": "1 minute",
+      "range": "120 feet",
+      "targets": "1 animal",
+      "duration": "1 hour",
+      "savingThrow": "Will",
+      "description": "You tap into an animal's senses, seeing and hearing what it experiences. The animal can attempt a Will save to resist. On a failure, you can see and hear through the animal's senses for the duration. You can switch between your senses and the animal's as a free action.",
+      "heightened": [
+        {
+          "level": 5,
+          "effect": "Duration increases to 8 hours and range increases to 1 mile"
+        }
+      ]
+    },
+    {
+      "id": "insect-form",
+      "name": "Insect Form",
+      "level": 3,
+      "tradition": ["primal"],
+      "traits": ["Polymorph", "Transmutation"],
+      "castTime": "2 actions",
+      "range": "self",
+      "duration": "1 minute",
+      "description": "You transform into a Tiny insect. You gain a fly Speed of 25 feet, a +2 status bonus to AC, and a +10 status bonus to Stealth checks. You can fit through tiny gaps. Your attacks deal 2d4 damage. You can Dismiss the spell.",
+      "heightened": [
+        {
+          "level": 5,
+          "effect": "Duration increases to 10 minutes and fly Speed increases to 30 feet"
+        }
+      ]
     }
   ]
 }

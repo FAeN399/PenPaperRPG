@@ -617,6 +617,118 @@
       "hands": "1+",
       "bulk": "1",
       "price": "3 gp"
+    },
+    {
+      "id": "dogslicer",
+      "name": "Dogslicer",
+      "category": "martial",
+      "group": "sword",
+      "damage": "1d6",
+      "damageType": "slashing",
+      "traits": ["agile", "backstabber", "finesse", "goblin", "uncommon"],
+      "hands": "1",
+      "bulk": "L",
+      "price": "1 gp"
+    },
+    {
+      "id": "horsechopper",
+      "name": "Horsechopper",
+      "category": "martial",
+      "group": "polearm",
+      "damage": "1d8",
+      "damageType": "slashing",
+      "traits": ["reach", "trip", "versatile P", "goblin", "uncommon"],
+      "hands": "2",
+      "bulk": "2",
+      "price": "9 sp"
+    },
+    {
+      "id": "elven-curve-blade",
+      "name": "Elven Curve Blade",
+      "category": "martial",
+      "group": "sword",
+      "damage": "1d8",
+      "damageType": "slashing",
+      "traits": ["finesse", "forceful", "elf", "uncommon"],
+      "hands": "2",
+      "bulk": "2",
+      "price": "4 gp"
+    },
+    {
+      "id": "elven-composite-longbow",
+      "name": "Elven Composite Longbow",
+      "category": "martial",
+      "group": "bow",
+      "damage": "1d8",
+      "damageType": "piercing",
+      "traits": ["deadly d10", "propulsive", "volley 30 ft.", "elf", "uncommon"],
+      "range": 100,
+      "reload": "0",
+      "hands": "1+",
+      "bulk": "1",
+      "price": "20 gp"
+    },
+    {
+      "id": "dwarven-waraxe",
+      "name": "Dwarven Waraxe",
+      "category": "martial",
+      "group": "axe",
+      "damage": "1d8",
+      "damageType": "slashing",
+      "traits": ["sweep", "two-hand d12", "dwarf", "uncommon"],
+      "hands": "1",
+      "bulk": "2",
+      "price": "3 gp"
+    },
+    {
+      "id": "clan-dagger",
+      "name": "Clan Dagger",
+      "category": "martial",
+      "group": "knife",
+      "damage": "1d4",
+      "damageType": "piercing",
+      "traits": ["agile", "dwarf", "parry", "versatile B", "uncommon"],
+      "hands": "1",
+      "bulk": "L",
+      "price": "2 gp"
+    },
+    {
+      "id": "gnome-hooked-hammer",
+      "name": "Gnome Hooked Hammer",
+      "category": "martial",
+      "group": "hammer",
+      "damage": "1d6",
+      "damageType": "bludgeoning",
+      "traits": ["gnome", "trip", "two-hand d10", "uncommon"],
+      "hands": "1",
+      "bulk": "1",
+      "price": "2 gp"
+    },
+    {
+      "id": "gnome-flickmace",
+      "name": "Gnome Flickmace",
+      "category": "martial",
+      "group": "flail",
+      "damage": "1d8",
+      "damageType": "bludgeoning",
+      "traits": ["gnome", "reach", "uncommon"],
+      "hands": "2",
+      "bulk": "3",
+      "price": "3 gp"
+    },
+    {
+      "id": "halfling-sling-staff",
+      "name": "Halfling Sling Staff",
+      "category": "martial",
+      "group": "sling",
+      "damage": "1d10",
+      "damageType": "bludgeoning",
+      "traits": ["halfling", "propulsive", "uncommon"],
+      "range": 80,
+      "reload": "1",
+      "hands": "2",
+      "bulk": "1",
+      "price": "5 gp"
     }
   ]
 }

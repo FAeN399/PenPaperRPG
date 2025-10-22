@@ -82,5 +82,145 @@
     "name": "Unbreakable Goblin",
     "description": "You bounce back from injuries quickly.",
     "benefits": ["Reduce dying value from falls by 1"]
+  },
+  {
+    "id": "half-elf-heritage",
+    "ancestryId": "human",
+    "name": "Half-Elf Heritage",
+    "description": "One of your parents was an elf, or one or both were half-elves. You have pointed ears and other telltale signs of elf heritage.",
+    "benefits": ["Gain Low-Light Vision", "Can select elf ancestry feats in addition to human ancestry feats"]
+  },
+  {
+    "id": "half-orc-heritage",
+    "ancestryId": "human",
+    "name": "Half-Orc Heritage",
+    "description": "One of your parents was an orc, or one or both were half-orcs. You have a green tinge to your skin and other indicators of orc heritage.",
+    "benefits": ["Gain Low-Light Vision", "Can select orc ancestry feats in addition to human ancestry feats"]
+  },
+  {
+    "id": "arctic-elf",
+    "ancestryId": "elf",
+    "name": "Arctic Elf",
+    "description": "You dwell in the frozen reaches of the world, where ice and snow are constant companions. Your body has adapted to the harsh cold.",
+    "benefits": ["Resistance 1 to cold damage", "Trained in Survival"]
+  },
+  {
+    "id": "cavern-elf",
+    "ancestryId": "elf",
+    "name": "Cavern Elf",
+    "description": "You were born or spent many years in underground tunnels and caverns where light is scarce. You've adapted to life in darkness.",
+    "benefits": ["Gain Darkvision", "Trained in Athletics or Stealth"]
+  },
+  {
+    "id": "seer-elf",
+    "ancestryId": "elf",
+    "name": "Seer Elf",
+    "description": "You have an inborn ability to detect the presence of magic. Your bloodline carries an innate connection to the arcane.",
+    "benefits": ["Gain the detect magic cantrip as an arcane innate spell"]
+  },
+  {
+    "id": "whisper-elf",
+    "ancestryId": "elf",
+    "name": "Whisper Elf",
+    "description": "Your ears are finely tuned, and you move with an unnatural grace. You excel at moving silently and reacting quickly to danger.",
+    "benefits": ["Trained in Stealth", "+1 circumstance bonus to initiative rolls"]
+  },
+  {
+    "id": "ancient-blooded-dwarf",
+    "ancestryId": "dwarf",
+    "name": "Ancient-Blooded Dwarf",
+    "description": "Dwarven heroes of old passed down their power through bloodlines, and you carry that ancient legacy. You can rally allies with a call to arms.",
+    "benefits": ["Gain a +1 circumstance bonus to saving throws against magic", "Gain the Call to Arms reaction"]
+  },
+  {
+    "id": "death-warden-dwarf",
+    "ancestryId": "dwarf",
+    "name": "Death Warden Dwarf",
+    "description": "Your ancestors have been tomb guardians for generations, and it shows in your blood. You are resistant to the powers of death and undeath.",
+    "benefits": ["Resistance 1 to negative damage", "+1 circumstance bonus to saves against negative effects and death effects"]
+  },
+  {
+    "id": "oathkeeper-dwarf",
+    "ancestryId": "dwarf",
+    "name": "Oathkeeper Dwarf",
+    "description": "Growing up, you were exposed to dwarven traditions of promises and oaths. Your mental fortitude is legendary among your people.",
+    "benefits": ["Gain expert proficiency in Will saves instead of trained"]
+  },
+  {
+    "id": "strong-blooded-dwarf",
+    "ancestryId": "dwarf",
+    "name": "Strong-Blooded Dwarf",
+    "description": "Your blood runs strong and hearty, allowing you to shake off toxins that would fell others. You are hardy and resistant to poison and disease.",
+    "benefits": ["Resistance 1 to poison damage", "+1 circumstance bonus to saves against diseases"]
+  },
+  {
+    "id": "chameleon-gnome",
+    "ancestryId": "gnome",
+    "name": "Chameleon Gnome",
+    "description": "The color of your hair and skin can shift based on your mood or environment. You can use this ability to blend in or deceive others.",
+    "benefits": ["Can change the color of your hair and skin as a free action", "+1 circumstance bonus to Deception checks"]
+  },
+  {
+    "id": "fey-touched-gnome",
+    "ancestryId": "gnome",
+    "name": "Fey-Touched Gnome",
+    "description": "Your connection to the First World and the fey realm is stronger than most gnomes. The blood of the fey runs powerfully through your veins.",
+    "benefits": ["Gain faerie fire as a 2nd-level primal innate spell once per day"]
+  },
+  {
+    "id": "wellspring-gnome",
+    "ancestryId": "gnome",
+    "name": "Wellspring Gnome",
+    "description": "You have an innate connection to the vital energies of life. This power allows you to stabilize the dying and mend wounds.",
+    "benefits": ["Gain the stabilize cantrip as a primal innate spell", "+1 circumstance bonus to Medicine checks"]
+  },
+  {
+    "id": "hillock-halfling",
+    "ancestryId": "halfling",
+    "name": "Hillock Halfling",
+    "description": "You are accustomed to living in the settlements of larger folk, often in cities or towns. Your hardy nature helps you thrive in urban environments.",
+    "benefits": ["Gain a boost to Constitution", "Trained in Society"]
+  },
+  {
+    "id": "nomadic-halfling",
+    "ancestryId": "halfling",
+    "name": "Nomadic Halfling",
+    "description": "You have spent your life traveling from place to place, never settling down for long. You know how to survive in the wilderness.",
+    "benefits": ["Gain the Assurance skill feat with Survival", "Trained in Survival"]
+  },
+  {
+    "id": "wildwood-halfling",
+    "ancestryId": "halfling",
+    "name": "Wildwood Halfling",
+    "description": "You hail from deep in the forest and have learned to navigate the trees with ease. Climbing is as natural to you as walking.",
+    "benefits": ["Gain a climb Speed of 10 feet", "Trained in Nature"]
+  },
+  {
+    "id": "irongut-goblin",
+    "ancestryId": "goblin",
+    "name": "Irongut Goblin",
+    "description": "You can subsist on food that would sicken or kill other creatures. Your stomach is capable of digesting practically anything.",
+    "benefits": ["Can safely eat and drink spoiled food and beverages without becoming sickened"]
+  },
+  {
+    "id": "razortooth-goblin",
+    "ancestryId": "goblin",
+    "name": "Razortooth Goblin",
+    "description": "Your family's teeth are formidable weapons. Your mouth contains rows of razor-sharp teeth that you can use in combat.",
+    "benefits": ["Gain a jaws unarmed attack that deals 1d6 piercing damage"]
+  },
+  {
+    "id": "snow-goblin",
+    "ancestryId": "goblin",
+    "name": "Snow Goblin",
+    "description": "You come from frozen lands where snow and ice are constant. Your body has adapted to thrive in frigid environments.",
+    "benefits": ["Resistance 1 to cold damage", "Trained in Survival"]
+  },
+  {
+    "id": "treedweller-goblin",
+    "ancestryId": "goblin",
+    "name": "Treedweller Goblin",
+    "description": "You live in the treetops, swinging through the canopy with ease. Your climbing abilities are unmatched among your kin.",
+    "benefits": ["Gain a climb Speed of 10 feet", "Trained in Nature"]
   }
 ]

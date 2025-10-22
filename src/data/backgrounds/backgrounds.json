@@ -214,5 +214,329 @@
     "skillTraining": "Survival",
     "featGranted": "Forager",
     "traits": []
+  },
+  {
+    "id": "acrobat",
+    "name": "Acrobat",
+    "description": "You've trained your body to perform incredible feats of balance and agility, whether in a circus, as a street performer, or through rigorous athletic training.",
+    "abilityBoosts": [
+      {
+        "type": "choice",
+        "abilities": ["dexterity", "strength"]
+      },
+      {
+        "type": "free",
+        "count": 1
+      }
+    ],
+    "skillTraining": "Acrobatics",
+    "featGranted": "Steady Balance",
+    "traits": []
+  },
+  {
+    "id": "animal-whisperer",
+    "name": "Animal Whisperer",
+    "description": "You have an innate connection with animals, understanding their behavior and communicating with them in ways others find mysterious.",
+    "abilityBoosts": [
+      {
+        "type": "choice",
+        "abilities": ["wisdom", "charisma"]
+      },
+      {
+        "type": "free",
+        "count": 1
+      }
+    ],
+    "skillTraining": "Nature",
+    "featGranted": "Train Animal",
+    "traits": []
+  },
+  {
+    "id": "artist",
+    "name": "Artist",
+    "description": "You express yourself through visual arts, creating beautiful works that inspire and move those who view them.",
+    "abilityBoosts": [
+      {
+        "type": "choice",
+        "abilities": ["dexterity", "charisma"]
+      },
+      {
+        "type": "free",
+        "count": 1
+      }
+    ],
+    "skillTraining": "Crafting",
+    "featGranted": "Specialty Crafting (Art)",
+    "traits": []
+  },
+  {
+    "id": "barkeep",
+    "name": "Barkeep",
+    "description": "You've spent years serving drinks and listening to patrons, learning the art of conversation and the secrets people share over ale.",
+    "abilityBoosts": [
+      {
+        "type": "choice",
+        "abilities": ["constitution", "charisma"]
+      },
+      {
+        "type": "free",
+        "count": 1
+      }
+    ],
+    "skillTraining": "Diplomacy",
+    "featGranted": "Hobnobber",
+    "traits": []
+  },
+  {
+    "id": "barrister",
+    "name": "Barrister",
+    "description": "You're trained in the law and skilled at arguing cases, using your knowledge and charisma to sway opinions and defend clients.",
+    "abilityBoosts": [
+      {
+        "type": "choice",
+        "abilities": ["intelligence", "charisma"]
+      },
+      {
+        "type": "free",
+        "count": 1
+      }
+    ],
+    "skillTraining": "Diplomacy",
+    "featGranted": "Group Impression",
+    "traits": []
+  },
+  {
+    "id": "bounty-hunter",
+    "name": "Bounty Hunter",
+    "description": "You track down fugitives and criminals for profit, honing your skills in pursuit and survival.",
+    "abilityBoosts": [
+      {
+        "type": "choice",
+        "abilities": ["strength", "wisdom"]
+      },
+      {
+        "type": "free",
+        "count": 1
+      }
+    ],
+    "skillTraining": "Survival",
+    "featGranted": "Experienced Tracker",
+    "traits": []
+  },
+  {
+    "id": "charlatan",
+    "name": "Charlatan",
+    "description": "You've made your way through life using deception and charm, convincing others to believe your elaborate fabrications.",
+    "abilityBoosts": [
+      {
+        "type": "choice",
+        "abilities": ["intelligence", "charisma"]
+      },
+      {
+        "type": "free",
+        "count": 1
+      }
+    ],
+    "skillTraining": "Deception",
+    "featGranted": "Charming Liar",
+    "traits": []
+  },
+  {
+    "id": "detective",
+    "name": "Detective",
+    "description": "You solve mysteries and investigate crimes, using keen observation and logical deduction to uncover the truth.",
+    "abilityBoosts": [
+      {
+        "type": "choice",
+        "abilities": ["intelligence", "wisdom"]
+      },
+      {
+        "type": "free",
+        "count": 1
+      }
+    ],
+    "skillTraining": "Society",
+    "featGranted": "Streetwise",
+    "traits": []
+  },
+  {
+    "id": "emissary",
+    "name": "Emissary",
+    "description": "You served as a diplomatic representative, traveling to foreign lands and negotiating on behalf of your people or organization.",
+    "abilityBoosts": [
+      {
+        "type": "choice",
+        "abilities": ["intelligence", "charisma"]
+      },
+      {
+        "type": "free",
+        "count": 1
+      }
+    ],
+    "skillTraining": "Society",
+    "featGranted": "Multilingual",
+    "traits": []
+  },
+  {
+    "id": "fortune-teller",
+    "name": "Fortune Teller",
+    "description": "You claim to see the future and understand mystical forces, whether through genuine insight or clever deception.",
+    "abilityBoosts": [
+      {
+        "type": "choice",
+        "abilities": ["intelligence", "charisma"]
+      },
+      {
+        "type": "free",
+        "count": 1
+      }
+    ],
+    "skillTraining": "Occultism",
+    "featGranted": "Oddity Identification",
+    "traits": []
+  },
+  {
+    "id": "gambler",
+    "name": "Gambler",
+    "description": "You've lived by games of chance and skill, learning to read people and knowing when they're bluffing.",
+    "abilityBoosts": [
+      {
+        "type": "choice",
+        "abilities": ["dexterity", "charisma"]
+      },
+      {
+        "type": "free",
+        "count": 1
+      }
+    ],
+    "skillTraining": "Deception",
+    "featGranted": "Lie to Me",
+    "traits": []
+  },
+  {
+    "id": "gladiator",
+    "name": "Gladiator",
+    "description": "You fought in arenas for the entertainment of crowds, learning to make combat a spectacular show.",
+    "abilityBoosts": [
+      {
+        "type": "choice",
+        "abilities": ["strength", "charisma"]
+      },
+      {
+        "type": "free",
+        "count": 1
+      }
+    ],
+    "skillTraining": "Performance",
+    "featGranted": "Impressive Performance",
+    "traits": []
+  },
+  {
+    "id": "hunter",
+    "name": "Hunter",
+    "description": "You've tracked and hunted game for survival or sport, learning the ways of animals and wilderness.",
+    "abilityBoosts": [
+      {
+        "type": "choice",
+        "abilities": ["dexterity", "wisdom"]
+      },
+      {
+        "type": "free",
+        "count": 1
+      }
+    ],
+    "skillTraining": "Survival",
+    "featGranted": "Survey Wildlife",
+    "traits": []
+  },
+  {
+    "id": "laborer",
+    "name": "Laborer",
+    "description": "You've performed hard physical work your whole life, developing great strength and endurance through manual labor.",
+    "abilityBoosts": [
+      {
+        "type": "choice",
+        "abilities": ["strength", "constitution"]
+      },
+      {
+        "type": "free",
+        "count": 1
+      }
+    ],
+    "skillTraining": "Athletics",
+    "featGranted": "Hefty Hauler",
+    "traits": []
+  },
+  {
+    "id": "miner",
+    "name": "Miner",
+    "description": "You've worked deep underground, extracting valuable minerals and navigating the dark tunnels beneath the earth.",
+    "abilityBoosts": [
+      {
+        "type": "choice",
+        "abilities": ["strength", "wisdom"]
+      },
+      {
+        "type": "free",
+        "count": 1
+      }
+    ],
+    "skillTraining": "Survival",
+    "featGranted": "Terrain Expertise (Underground)",
+    "traits": []
+  },
+  {
+    "id": "nomad",
+    "name": "Nomad",
+    "description": "You've wandered from place to place, never settling down, surviving in various terrains and climates.",
+    "abilityBoosts": [
+      {
+        "type": "choice",
+        "abilities": ["constitution", "wisdom"]
+      },
+      {
+        "type": "free",
+        "count": 1
+      }
+    ],
+    "skillTraining": "Survival",
+    "featGranted": "Assurance (Survival)",
+    "traits": []
+  },
+  {
+    "id": "prisoner",
+    "name": "Prisoner",
+    "description": "You spent time incarcerated, learning to hide contraband and move unseen in confined spaces.",
+    "abilityBoosts": [
+      {
+        "type": "choice",
+        "abilities": ["strength", "constitution"]
+      },
+      {
+        "type": "free",
+        "count": 1
+      }
+    ],
+    "skillTraining": "Stealth",
+    "featGranted": "Experienced Smuggler",
+    "traits": []
+  },
+  {
+    "id": "sailor",
+    "name": "Sailor",
+    "description": "You've lived at sea, working aboard ships and learning to navigate both calm waters and violent storms.",
+    "abilityBoosts": [
+      {
+        "type": "choice",
+        "abilities": ["strength", "dexterity"]
+      },
+      {
+        "type": "free",
+        "count": 1
+      }
+    ],
+    "skillTraining": "Athletics",
+    "featGranted": "Underwater Marauder",
+    "traits": []
   }
 ]
