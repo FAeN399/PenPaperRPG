@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Toaster } from 'react-hot-toast'
 import { CharacterProvider } from './context/CharacterContext'
 import CharacterCreator from './components/CharacterCreator'
 import CharacterSheet from './components/CharacterSheet'
@@ -6,33 +7,27 @@ import Button from './components/shared/Button'
 
 type AppView = 'landing' | 'creator' | 'sheet'
 
-function App() {
+function AppContent() {
   const [currentView, setCurrentView] = useState<AppView>('landing')
 
   if (currentView === 'creator') {
-    return (
-      <CharacterProvider>
-        <CharacterCreator onViewSheet={() => setCurrentView('sheet')} />
-      </CharacterProvider>
-    )
+    return <CharacterCreator onViewSheet={() => setCurrentView('sheet')} />
   }
 
   if (currentView === 'sheet') {
     return (
-      <CharacterProvider>
-        <div className="min-h-screen flex flex-col bg-pf-bg">
-          <header className="bg-pf-bg-card border-b border-pf-border px-6 py-4 flex justify-between items-center">
-            <div>
-              <h1 className="text-pf-accent">PenPaperRPG</h1>
-              <p className="text-sm text-pf-text-muted">Character Sheet</p>
-            </div>
-            <Button onClick={() => setCurrentView('creator')}>
-              Back to Creator
-            </Button>
-          </header>
-          <CharacterSheet />
-        </div>
-      </CharacterProvider>
+      <div className="min-h-screen flex flex-col bg-pf-bg">
+        <header className="bg-pf-bg-card border-b border-pf-border px-6 py-4 flex justify-between items-center">
+          <div>
+            <h1 className="text-pf-accent">PenPaperRPG</h1>
+            <p className="text-sm text-pf-text-muted">Character Sheet</p>
+          </div>
+          <Button onClick={() => setCurrentView('creator')}>
+            Back to Creator
+          </Button>
+        </header>
+        <CharacterSheet />
+      </div>
     )
   }
 
@@ -94,6 +89,37 @@ function App() {
         </p>
       </footer>
     </div>
+  )
+}
+
+function App() {
+  return (
+    <CharacterProvider>
+      <AppContent />
+      <Toaster
+        position="top-right"
+        toastOptions={{
+          duration: 4000,
+          style: {
+            background: '#2d1b4e',
+            color: '#f3f4f6',
+            border: '1px solid #4c1d95',
+          },
+          success: {
+            iconTheme: {
+              primary: '#8b5cf6',
+              secondary: '#f3f4f6',
+            },
+          },
+          error: {
+            iconTheme: {
+              primary: '#ef4444',
+              secondary: '#f3f4f6',
+            },
+          },
+        }}
+      />
+    </CharacterProvider>
   )
 }
 

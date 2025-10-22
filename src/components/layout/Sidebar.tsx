@@ -50,20 +50,22 @@ export default function Sidebar({ character }: SidebarProps) {
       <div className="mb-6">
         <h4 className="text-sm font-semibold text-pf-accent mb-2">Ability Scores</h4>
         <div className="grid grid-cols-2 gap-2">
-          {Object.entries(character.abilityScores).map(([ability, score]) => (
-            <div
-              key={ability}
-              className="bg-pf-bg-dark rounded px-2 py-1 text-center"
-            >
-              <div className="text-xs text-pf-text-muted capitalize">
-                {ability.slice(0, 3)}
+          {Object.entries(character.abilityScores)
+            .filter(([ability]) => ability !== 'boosts')
+            .map(([ability, score]) => (
+              <div
+                key={ability}
+                className="bg-pf-bg-dark rounded px-2 py-1 text-center"
+              >
+                <div className="text-xs text-pf-text-muted capitalize">
+                  {ability.slice(0, 3)}
+                </div>
+                <div className="text-lg font-bold text-pf-text">
+                  {abilityModifier(score as number)}
+                </div>
+                <div className="text-xs text-pf-text-muted">{score}</div>
               </div>
-              <div className="text-lg font-bold text-pf-text">
-                {abilityModifier(score)}
-              </div>
-              <div className="text-xs text-pf-text-muted">{score}</div>
-            </div>
-          ))}
+            ))}
         </div>
       </div>
 
