@@ -1,10 +1,11 @@
-import { Ancestry, Heritage, Background, Class } from '@/types/gameData'
+import { Ancestry, Heritage, Background, Class, Skill } from '@/types/gameData'
 
 // Import JSON data
 import ancestriesData from '@/data/ancestries/ancestries.json'
 import heritagesData from '@/data/ancestries/heritages.json'
 import backgroundsData from '@/data/backgrounds/backgrounds.json'
 import classesData from '@/data/classes/classes.json'
+import skillsData from '@/data/skills/skills.json'
 
 // Game Data Service
 export class GameDataService {
@@ -12,6 +13,7 @@ export class GameDataService {
   private static heritages: Heritage[] = heritagesData as Heritage[]
   private static backgrounds: Background[] = backgroundsData as Background[]
   private static classes: Class[] = classesData as Class[]
+  private static skills: Skill[] = skillsData as Skill[]
 
   // Ancestry Methods
   static getAllAncestries(): Ancestry[] {
@@ -46,6 +48,19 @@ export class GameDataService {
 
   static getClassById(id: string): Class | undefined {
     return this.classes.find((c) => c.id === id)
+  }
+
+  // Skill Methods
+  static getAllSkills(): Skill[] {
+    return this.skills
+  }
+
+  static getSkillById(id: string): Skill | undefined {
+    return this.skills.find((s) => s.id === id)
+  }
+
+  static getSkillByName(name: string): Skill | undefined {
+    return this.skills.find((s) => s.name.toLowerCase() === name.toLowerCase())
   }
 
   // Utility Methods

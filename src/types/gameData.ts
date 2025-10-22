@@ -88,6 +88,14 @@ export interface SpellcastingInfo {
   keyAbility: 'intelligence' | 'wisdom' | 'charisma'
 }
 
+// Skill Types
+export interface Skill {
+  id: string
+  name: string
+  ability: 'strength' | 'dexterity' | 'constitution' | 'intelligence' | 'wisdom' | 'charisma'
+  description: string
+}
+
 // Feat Types
 export interface Feat {
   id: string
