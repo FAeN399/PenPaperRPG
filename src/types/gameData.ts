@@ -88,6 +88,14 @@ export interface SpellcastingInfo {
   keyAbility: 'intelligence' | 'wisdom' | 'charisma'
 }
 
+// Skill Types
+export interface Skill {
+  id: string
+  name: string
+  ability: 'strength' | 'dexterity' | 'constitution' | 'intelligence' | 'wisdom' | 'charisma'
+  description: string
+}
+
 // Feat Types
 export interface Feat {
   id: string
@@ -144,9 +152,9 @@ export interface Weapon {
 export interface Armor {
   id: string
   name: string
-  category: 'unarmored' | 'light' | 'medium' | 'heavy'
+  category: 'unarmored' | 'light' | 'medium' | 'heavy' | 'shield'
   acBonus: number
-  dexCap: number
+  dexCap: number | null
   checkPenalty: number
   speedPenalty: number
   strength: number

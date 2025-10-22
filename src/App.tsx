@@ -1,15 +1,37 @@
 import { useState } from 'react'
 import { CharacterProvider } from './context/CharacterContext'
 import CharacterCreator from './components/CharacterCreator'
+import CharacterSheet from './components/CharacterSheet'
 import Button from './components/shared/Button'
 
-function App() {
-  const [showCreator, setShowCreator] = useState(false)
+type AppView = 'landing' | 'creator' | 'sheet'
 
-  if (showCreator) {
+function App() {
+  const [currentView, setCurrentView] = useState<AppView>('landing')
+
+  if (currentView === 'creator') {
     return (
       <CharacterProvider>
-        <CharacterCreator />
+        <CharacterCreator onViewSheet={() => setCurrentView('sheet')} />
+      </CharacterProvider>
+    )
+  }
+
+  if (currentView === 'sheet') {
+    return (
+      <CharacterProvider>
+        <div className="min-h-screen flex flex-col bg-pf-bg">
+          <header className="bg-pf-bg-card border-b border-pf-border px-6 py-4 flex justify-between items-center">
+            <div>
+              <h1 className="text-pf-accent">PenPaperRPG</h1>
+              <p className="text-sm text-pf-text-muted">Character Sheet</p>
+            </div>
+            <Button onClick={() => setCurrentView('creator')}>
+              Back to Creator
+            </Button>
+          </header>
+          <CharacterSheet />
+        </div>
       </CharacterProvider>
     )
   }
@@ -17,7 +39,7 @@ function App() {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Header */}
-      <header className="bg-pf-bg-card border-b border-gray-700 px-6 py-4">
+      <header className="bg-pf-bg-card border-b border-pf-border px-6 py-4">
         <h1 className="text-pf-accent">PenPaperRPG</h1>
         <p className="text-sm text-pf-text-muted">Pathfinder 2e Character Creator</p>
       </header>
@@ -33,7 +55,7 @@ function App() {
             <p className="text-sm text-pf-text-muted mb-8">
               Phase 5: Character Creation Steps - Complete
             </p>
-            <Button onClick={() => setShowCreator(true)}>
+            <Button onClick={() => setCurrentView('creator')}>
               Create New Character
             </Button>
           </div>
@@ -63,7 +85,7 @@ function App() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-pf-bg-card border-t border-gray-700 px-6 py-4 text-center text-sm text-pf-text-muted">
+      <footer className="bg-pf-bg-card border-t border-pf-border px-6 py-4 text-center text-sm text-pf-text-muted">
         <p>
           This application uses the Pathfinder Second Edition system under the ORC License
         </p>

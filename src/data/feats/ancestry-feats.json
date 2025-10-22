@@ -1,0 +1,188 @@
+{
+  "feats": [
+    {
+      "id": "natural-ambition",
+      "name": "Natural Ambition",
+      "type": "ancestry",
+      "level": 1,
+      "description": "Your ambitious nature drives you to master your chosen profession more quickly than others.",
+      "prerequisites": ["Human"],
+      "traits": ["Human"],
+      "benefit": "You gain a 1st-level class feat for your class. You must meet the prerequisites for this feat."
+    },
+    {
+      "id": "unconventional-weaponry",
+      "name": "Unconventional Weaponry",
+      "type": "ancestry",
+      "level": 1,
+      "description": "You've trained with a weapon that's uncommon in your homeland, making it part of your fighting style.",
+      "prerequisites": ["Human"],
+      "traits": ["Human"],
+      "benefit": "Choose one uncommon simple or martial weapon with a trait corresponding to an ancestry. You gain access to that weapon, and for the purpose of determining your proficiency, that weapon is a simple weapon."
+    },
+    {
+      "id": "adapted-cantrip",
+      "name": "Adapted Cantrip",
+      "type": "ancestry",
+      "level": 1,
+      "description": "Through study or innate talent, you've learned a simple magical trick from another tradition.",
+      "prerequisites": ["Human"],
+      "traits": ["Human"],
+      "benefit": "Choose a cantrip from the arcane, divine, occult, or primal spell list. You can cast this cantrip as an innate spell at will, heightened to a spell rank equal to half your level rounded up."
+    },
+    {
+      "id": "nimble-elf",
+      "name": "Nimble Elf",
+      "type": "ancestry",
+      "level": 1,
+      "description": "Your movements are swift and graceful, allowing you to cover ground with remarkable speed.",
+      "prerequisites": ["Elf"],
+      "traits": ["Elf"],
+      "benefit": "Your Speed increases by 5 feet."
+    },
+    {
+      "id": "ancestral-longevity",
+      "name": "Ancestral Longevity",
+      "type": "ancestry",
+      "level": 1,
+      "description": "Your long lifespan has granted you time to master skills that others might never perfect.",
+      "prerequisites": ["Elf"],
+      "traits": ["Elf"],
+      "benefit": "You gain training in one skill of your choice. After your next daily preparations, you can swap this skill proficiency for training in a different skill. You can't retrain this proficiency using other methods."
+    },
+    {
+      "id": "elven-weapon-familiarity",
+      "name": "Elven Weapon Familiarity",
+      "type": "ancestry",
+      "level": 1,
+      "description": "You've trained with weapons revered by elven warriors, mastering their elegant techniques.",
+      "prerequisites": ["Elf"],
+      "traits": ["Elf"],
+      "benefit": "You are trained with longbows, composite longbows, longswords, rapiers, shortbows, and composite shortbows. In addition, you gain access to all uncommon elf weapons. For the purpose of determining your proficiency, martial elf weapons are simple weapons and advanced elf weapons are martial weapons."
+    },
+    {
+      "id": "rock-runner",
+      "name": "Rock Runner",
+      "type": "ancestry",
+      "level": 1,
+      "description": "Your people have adapted to navigating treacherous mountain terrain and crumbling stone passages.",
+      "prerequisites": ["Dwarf"],
+      "traits": ["Dwarf"],
+      "benefit": "You can ignore difficult terrain caused by rubble and uneven ground made of stone and earth. In addition, when you use the Acrobatics skill to Balance on narrow surfaces or uneven ground made of stone or earth, you aren't off-guard, and when you roll a success at one of these Acrobatics checks, you get a critical success instead."
+    },
+    {
+      "id": "stonecunning",
+      "name": "Stonecunning",
+      "type": "ancestry",
+      "level": 1,
+      "description": "Your innate understanding of stonework allows you to notice even subtle irregularities in masonry.",
+      "prerequisites": ["Dwarf"],
+      "traits": ["Dwarf"],
+      "benefit": "You gain a +2 circumstance bonus to Perception checks to notice unusual stonework. This bonus applies to checks to discover mechanical traps made of stone or hidden in stone. If you aren't actively searching but come within 10 feet of unusual stonework, you can attempt a secret check to notice it anyway."
+    },
+    {
+      "id": "dwarven-weapon-familiarity",
+      "name": "Dwarven Weapon Familiarity",
+      "type": "ancestry",
+      "level": 1,
+      "description": "You've been trained in the traditional weapons favored by dwarven warriors throughout the ages.",
+      "prerequisites": ["Dwarf"],
+      "traits": ["Dwarf"],
+      "benefit": "You are trained with the battle axe, pick, and warhammer. In addition, you gain access to all uncommon dwarf weapons. For the purpose of determining your proficiency, martial dwarf weapons are simple weapons and advanced dwarf weapons are martial weapons."
+    },
+    {
+      "id": "animal-accomplice",
+      "name": "Animal Accomplice",
+      "type": "ancestry",
+      "level": 1,
+      "description": "Your connection to nature has granted you a loyal animal companion who assists you in your adventures.",
+      "prerequisites": ["Gnome"],
+      "traits": ["Gnome"],
+      "benefit": "You gain a familiar. The familiar must be an animal appropriate to your nature."
+    },
+    {
+      "id": "burrow-elocutionist",
+      "name": "Burrow Elocutionist",
+      "type": "ancestry",
+      "level": 1,
+      "description": "Your natural affinity for underground creatures allows you to communicate with burrowing animals.",
+      "prerequisites": ["Gnome"],
+      "traits": ["Gnome"],
+      "benefit": "You can speak with burrowing animals, such as badgers, ground squirrels, moles, and similar creatures. This doesn't make them friendly, but they can communicate with you and you with them."
+    },
+    {
+      "id": "fey-fellowship",
+      "name": "Fey Fellowship",
+      "type": "ancestry",
+      "level": 1,
+      "description": "Your fey heritage makes you naturally attuned to dealing with other creatures of the First World.",
+      "prerequisites": ["Gnome"],
+      "traits": ["Gnome"],
+      "benefit": "You gain a +2 circumstance bonus to Diplomacy checks to Make an Impression on or make a Request of fey creatures, and to their DC to Make an Impression on you or make a Request of you."
+    },
+    {
+      "id": "distracting-shadows",
+      "name": "Distracting Shadows",
+      "type": "ancestry",
+      "level": 1,
+      "description": "You've learned to use larger creatures as mobile cover, darting between their legs to avoid attacks.",
+      "prerequisites": ["Halfling"],
+      "traits": ["Halfling"],
+      "benefit": "You can use larger creatures as cover against attacks and to Hide. You can use the Take Cover action while adjacent to a larger creature. If you do, you gain lesser cover against all attacks until you move or the creature moves, whichever comes first."
+    },
+    {
+      "id": "halfling-luck",
+      "name": "Halfling Luck",
+      "type": "ancestry",
+      "level": 1,
+      "description": "Fortune favors you at the most opportune moments, helping you avoid disaster.",
+      "prerequisites": ["Halfling"],
+      "traits": ["Halfling", "Fortune"],
+      "frequency": "once per day",
+      "trigger": "You fail a skill check or saving throw.",
+      "benefit": "You can reroll the triggering check and use the second result."
+    },
+    {
+      "id": "sure-feet",
+      "name": "Sure Feet",
+      "type": "ancestry",
+      "level": 1,
+      "description": "Your natural balance and agility help you maintain your footing in precarious situations.",
+      "prerequisites": ["Halfling"],
+      "traits": ["Halfling"],
+      "benefit": "When you roll a success on an Acrobatics check to Balance, you get a critical success instead. You're not off-guard when you attempt to Balance on narrow surfaces and uneven ground. Thanks to your diminutive stature, you can treat such surfaces as one category less difficult than normal."
+    },
+    {
+      "id": "burn-it",
+      "name": "Burn It!",
+      "type": "ancestry",
+      "level": 1,
+      "description": "Your goblin love of fire manifests as enhanced destructive capabilities with flame.",
+      "prerequisites": ["Goblin"],
+      "traits": ["Goblin"],
+      "benefit": "When you deal fire damage, you gain a +1 status bonus to the damage roll. You also gain a +1 status bonus to any persistent fire damage you deal."
+    },
+    {
+      "id": "city-scavenger",
+      "name": "City Scavenger",
+      "type": "ancestry",
+      "level": 1,
+      "description": "You've mastered the art of surviving in urban environments by finding discarded food and useful items.",
+      "prerequisites": ["Goblin"],
+      "traits": ["Goblin"],
+      "benefit": "You can find food and shelter in settlements with ease. You can use Society or Survival when you Subsist in a settlement. When you critically succeed at Subsisting in a settlement, you also find a minor item worth 1 gp or less."
+    },
+    {
+      "id": "goblin-scuttle",
+      "name": "Goblin Scuttle",
+      "type": "ancestry",
+      "level": 1,
+      "description": "You dart away from danger whenever an ally moves into position, using their presence as a distraction.",
+      "prerequisites": ["Goblin"],
+      "traits": ["Goblin"],
+      "frequency": "once per round",
+      "trigger": "An ally ends a move action adjacent to you.",
+      "benefit": "You Step."
+    }
+  ]
+}

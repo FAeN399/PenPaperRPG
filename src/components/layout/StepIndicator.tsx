@@ -15,7 +15,7 @@ export default function StepIndicator({
     steps.find((s) => s.id === currentStep)?.order || 1
 
   return (
-    <div className="bg-pf-bg-card border-b border-gray-700 px-6 py-3">
+    <div className="bg-pf-bg-card border-b border-pf-border px-6 py-3">
       <div className="flex items-center justify-between max-w-6xl mx-auto">
         {steps.map((step, index) => {
           const isActive = step.id === currentStep
@@ -28,10 +28,10 @@ export default function StepIndicator({
               <div
                 className={`flex items-center justify-center w-10 h-10 rounded-full border-2 transition-all ${
                   isActive
-                    ? 'border-pf-accent bg-pf-accent text-white font-bold'
+                    ? 'border-pf-accent bg-pf-accent text-white font-bold shadow-glow'
                     : isCompleted
                       ? 'border-pf-accent bg-pf-bg-dark text-pf-accent'
-                      : 'border-gray-600 bg-pf-bg-dark text-pf-text-muted'
+                      : 'border-pf-border bg-pf-bg-dark text-pf-text-muted'
                 } ${isClickable ? 'cursor-pointer hover:scale-110' : ''}`}
                 onClick={isClickable ? () => onStepClick(step.id) : undefined}
                 title={step.label}
@@ -54,7 +54,7 @@ export default function StepIndicator({
               {index < steps.length - 1 && (
                 <div
                   className={`flex-1 h-0.5 mx-2 ${
-                    isCompleted ? 'bg-pf-accent' : 'bg-gray-600'
+                    isCompleted ? 'bg-pf-accent' : 'bg-pf-border'
                   }`}
                 />
               )}

@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-pf-bg-dark text-pf-text;
+    @apply bg-pf-bg text-pf-text;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
       sans-serif;
@@ -17,36 +17,40 @@
   }
 
   h1 {
-    @apply text-3xl font-bold;
+    @apply text-3xl font-bold text-pf-accent;
   }
 
   h2 {
-    @apply text-2xl font-semibold;
+    @apply text-2xl font-semibold text-pf-accent;
   }
 
   h3 {
-    @apply text-xl font-semibold;
+    @apply text-xl font-semibold text-pf-accent-light;
   }
 
   h4 {
-    @apply text-lg font-medium;
+    @apply text-lg font-medium text-pf-text;
   }
 }
 
 @layer components {
   .card {
-    @apply bg-pf-bg-card rounded-lg p-4 shadow-md border border-gray-700;
+    @apply bg-pf-bg-card rounded-xl p-4 shadow-lg border border-pf-border transition-all hover:shadow-glow;
   }
 
   .btn-primary {
-    @apply bg-pf-secondary hover:bg-pf-primary text-white font-medium py-2 px-4 rounded transition-colors;
+    @apply bg-gradient-purple hover:opacity-90 text-white font-semibold py-2.5 px-6 rounded-lg transition-all shadow-md hover:shadow-glow;
   }
 
   .btn-secondary {
-    @apply bg-gray-700 hover:bg-gray-600 text-white font-medium py-2 px-4 rounded transition-colors;
+    @apply bg-pf-bg-card hover:bg-pf-hover border border-pf-border text-pf-text font-medium py-2.5 px-6 rounded-lg transition-all;
   }
 
   .input-field {
-    @apply bg-pf-bg-dark border border-gray-600 rounded px-3 py-2 text-pf-text focus:outline-none focus:border-pf-accent;
+    @apply bg-pf-bg-dark border border-pf-border rounded-lg px-4 py-2.5 text-pf-text focus:outline-none focus:border-pf-accent focus:ring-2 focus:ring-pf-accent/30 transition-all;
+  }
+
+  .badge {
+    @apply bg-pf-primary/20 border border-pf-primary text-pf-accent px-3 py-1 rounded-full text-sm font-medium;
   }
 }

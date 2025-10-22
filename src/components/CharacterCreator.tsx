@@ -9,11 +9,24 @@ import StepAncestry from './character-creation/StepAncestry'
 import StepBackground from './character-creation/StepBackground'
 import StepClass from './character-creation/StepClass'
 import StepAbilities from './character-creation/StepAbilities'
+import StepSkills from './character-creation/StepSkills'
+import StepFeats from './character-creation/StepFeats'
+import StepSpells from './character-creation/StepSpells'
+import StepEquipment from './character-creation/StepEquipment'
 import { useCharacter } from '@/hooks/useCharacter'
 import { CharacterCreationStep, CREATION_STEPS } from '@/types/steps'
+import {
+  saveCharacterToFile,
+  loadCharacterFromFile,
+  downloadTextExport,
+} from '@/utils/fileOperations'
 
-export default function CharacterCreator() {
-  const { character, updateBasics } = useCharacter()
+interface CharacterCreatorProps {
+  onViewSheet?: () => void
+}
+
+export default function CharacterCreator({ onViewSheet }: CharacterCreatorProps) {
+  const { character, updateBasics, loadCharacter, resetCharacter } = useCharacter()
   const [currentStep, setCurrentStep] = useState<CharacterCreationStep>(
     CharacterCreationStep.Basics
   )
@@ -37,9 +50,52 @@ export default function CharacterCreator() {
     setCurrentStep(step)
   }
 
-  const handleSave = () => {
-    console.log('Saving character...', character)
-    // TODO: Implement save functionality
+  const handleNewCharacter = () => {
+    if (
+      confirm(
+        'Are you sure you want to create a new character? All unsaved progress will be lost.'
+      )
+    ) {
+      resetCharacter()
+      setCurrentStep(CharacterCreationStep.Basics)
+    }
+  }
+
+  const handleSave = async () => {
+    try {
+      await saveCharacterToFile(character)
+    } catch (error) {
+      console.error('Error saving character:', error)
+      alert('Failed to save character. Please try again.')
+    }
+  }
+
+  const handleLoad = async () => {
+    if (
+      confirm(
+        'Loading a character will replace your current character. Continue?'
+      )
+    ) {
+      try {
+        const loadedCharacter = await loadCharacterFromFile()
+        if (loadedCharacter) {
+          loadCharacter(loadedCharacter)
+          setCurrentStep(CharacterCreationStep.Basics)
+        }
+      } catch (error) {
+        console.error('Error loading character:', error)
+        alert('Failed to load character. Please check the file format.')
+      }
+    }
+  }
+
+  const handleExportText = () => {
+    try {
+      downloadTextExport(character)
+    } catch (error) {
+      console.error('Error exporting character:', error)
+      alert('Failed to export character. Please try again.')
+    }
   }
 
   return (
@@ -48,6 +104,10 @@ export default function CharacterCreator() {
         characterName={character.basics.name}
         currentStep={currentStepInfo?.order.toString()}
         totalSteps={CREATION_STEPS.length}
+        onNewCharacter={handleNewCharacter}
+        onSaveCharacter={handleSave}
+        onLoadCharacter={handleLoad}
+        onExportText={handleExportText}
       />
 
       <StepIndicator
@@ -83,7 +143,7 @@ export default function CharacterCreator() {
                     onChange={(value) => updateBasics({ playerName: value })}
                     placeholder="Enter player name"
                   />
-                  <div className="pt-4 border-t border-gray-700">
+                  <div className="pt-4 border-t border-pf-border">
                     <p className="text-sm text-pf-text-muted mb-2">
                       Level: {character.basics.level}
                     </p>
@@ -103,21 +163,26 @@ export default function CharacterCreator() {
 
             {currentStep === CharacterCreationStep.Class && <StepClass />}
 
+            {currentStep === CharacterCreationStep.Skills && <StepSkills />}
+
+            {currentStep === CharacterCreationStep.Feats && <StepFeats />}
+
+            {currentStep === CharacterCreationStep.Spells && <StepSpells />}
+
+            {currentStep === CharacterCreationStep.Equipment && <StepEquipment />}
+
             {currentStep !== CharacterCreationStep.Basics &&
               currentStep !== CharacterCreationStep.Abilities &&
               currentStep !== CharacterCreationStep.Ancestry &&
               currentStep !== CharacterCreationStep.Background &&
-              currentStep !== CharacterCreationStep.Class && (
+              currentStep !== CharacterCreationStep.Class &&
+              currentStep !== CharacterCreationStep.Skills &&
+              currentStep !== CharacterCreationStep.Feats &&
+              currentStep !== CharacterCreationStep.Spells &&
+              currentStep !== CharacterCreationStep.Equipment && (
                 <Card className="p-8">
                   <div className="text-center">
                     <p className="text-lg text-pf-text mb-4">
-                      {currentStep === CharacterCreationStep.Skills &&
-                        'Select skill proficiencies'}
-                      {currentStep === CharacterCreationStep.Feats && 'Choose your feats'}
-                      {currentStep === CharacterCreationStep.Spells &&
-                        'Select spells (if applicable)'}
-                      {currentStep === CharacterCreationStep.Equipment &&
-                        'Choose starting equipment'}
                       {currentStep === CharacterCreationStep.Review &&
                         'Review your character'}
                     </p>
@@ -135,6 +200,7 @@ export default function CharacterCreator() {
         onBack={handleBack}
         onNext={handleNext}
         onSave={handleSave}
+        onViewSheet={onViewSheet}
         canGoBack={currentStepIndex > 0}
         canGoNext={currentStepIndex < CREATION_STEPS.length - 1}
         isFirstStep={currentStepIndex === 0}

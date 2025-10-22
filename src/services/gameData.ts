@@ -1,10 +1,22 @@
-import { Ancestry, Heritage, Background, Class } from '@/types/gameData'
+import { Ancestry, Heritage, Background, Class, Skill, Feat, Spell, Weapon, Armor, Item } from '@/types/gameData'
 
 // Import JSON data
 import ancestriesData from '@/data/ancestries/ancestries.json'
 import heritagesData from '@/data/ancestries/heritages.json'
 import backgroundsData from '@/data/backgrounds/backgrounds.json'
 import classesData from '@/data/classes/classes.json'
+import skillsData from '@/data/skills/skills.json'
+import ancestryFeatsData from '@/data/feats/ancestry-feats.json'
+import classFeatsData from '@/data/feats/class-feats.json'
+import generalFeatsData from '@/data/feats/general-feats.json'
+import skillFeatsData from '@/data/feats/skill-feats.json'
+import arcaneSpellsData from '@/data/spells/arcane-spells.json'
+import divineSpellsData from '@/data/spells/divine-spells.json'
+import occultSpellsData from '@/data/spells/occult-spells.json'
+import primalSpellsData from '@/data/spells/primal-spells.json'
+import weaponsData from '@/data/equipment/weapons.json'
+import armorData from '@/data/equipment/armor.json'
+import itemsData from '@/data/equipment/items.json'
 
 // Game Data Service
 export class GameDataService {
@@ -12,6 +24,22 @@ export class GameDataService {
   private static heritages: Heritage[] = heritagesData as Heritage[]
   private static backgrounds: Background[] = backgroundsData as Background[]
   private static classes: Class[] = classesData as Class[]
+  private static skills: Skill[] = skillsData as Skill[]
+  private static feats: Feat[] = [
+    ...((ancestryFeatsData as any).feats as Feat[]),
+    ...((classFeatsData as any).feats as Feat[]),
+    ...((generalFeatsData as any).feats as Feat[]),
+    ...((skillFeatsData as any).feats as Feat[]),
+  ]
+  private static spells: Spell[] = [
+    ...((arcaneSpellsData as any).spells as Spell[]),
+    ...((divineSpellsData as any).spells as Spell[]),
+    ...((occultSpellsData as any).spells as Spell[]),
+    ...((primalSpellsData as any).spells as Spell[]),
+  ]
+  private static weapons: Weapon[] = ((weaponsData as any).weapons as Weapon[])
+  private static armor: Armor[] = ((armorData as any).armor as Armor[])
+  private static items: Item[] = ((itemsData as any).items as Item[])
 
   // Ancestry Methods
   static getAllAncestries(): Ancestry[] {
@@ -48,6 +76,76 @@ export class GameDataService {
     return this.classes.find((c) => c.id === id)
   }
 
+  // Skill Methods
+  static getAllSkills(): Skill[] {
+    return this.skills
+  }
+
+  static getSkillById(id: string): Skill | undefined {
+    return this.skills.find((s) => s.id === id)
+  }
+
+  static getSkillByName(name: string): Skill | undefined {
+    return this.skills.find((s) => s.name.toLowerCase() === name.toLowerCase())
+  }
+
+  // Feat Methods
+  static getAllFeats(): Feat[] {
+    return this.feats
+  }
+
+  static getFeatById(id: string): Feat | undefined {
+    return this.feats.find((f) => f.id === id)
+  }
+
+  static getFeatsByType(type: 'ancestry' | 'class' | 'skill' | 'general'): Feat[] {
+    return this.feats.filter((f) => f.type === type)
+  }
+
+  static searchFeats(query: string): Feat[] {
+    const lowerQuery = query.toLowerCase()
+    return this.feats.filter(
+      (f) =>
+        f.name.toLowerCase().includes(lowerQuery) ||
+        f.description.toLowerCase().includes(lowerQuery) ||
+        f.benefit.toLowerCase().includes(lowerQuery)
+    )
+  }
+
+  // Spell Methods
+  static getAllSpells(): Spell[] {
+    return this.spells
+  }
+
+  static getSpellById(id: string): Spell | undefined {
+    return this.spells.find((s) => s.id === id)
+  }
+
+  static getSpellsByTradition(tradition: 'arcane' | 'divine' | 'occult' | 'primal'): Spell[] {
+    return this.spells.filter((s) => s.tradition.includes(tradition))
+  }
+
+  static getSpellsByLevel(level: number): Spell[] {
+    return this.spells.filter((s) => s.level === level)
+  }
+
+  static getSpellsByTraditionAndLevel(
+    tradition: 'arcane' | 'divine' | 'occult' | 'primal',
+    level: number
+  ): Spell[] {
+    return this.spells.filter((s) => s.tradition.includes(tradition) && s.level === level)
+  }
+
+  static searchSpells(query: string): Spell[] {
+    const lowerQuery = query.toLowerCase()
+    return this.spells.filter(
+      (s) =>
+        s.name.toLowerCase().includes(lowerQuery) ||
+        s.description.toLowerCase().includes(lowerQuery) ||
+        s.traits.some((t) => t.toLowerCase().includes(lowerQuery))
+    )
+  }
+
   // Utility Methods
   static searchAncestries(query: string): Ancestry[] {
     const lowerQuery = query.toLowerCase()
@@ -74,5 +172,49 @@ export class GameDataService {
         c.name.toLowerCase().includes(lowerQuery) ||
         c.description.toLowerCase().includes(lowerQuery)
     )
+  }
+
+  // Equipment Methods
+  static getAllWeapons(): Weapon[] {
+    return this.weapons
+  }
+
+  static getWeaponById(id: string): Weapon | undefined {
+    return this.weapons.find((w) => w.id === id)
+  }
+
+  static getWeaponsByCategory(category: 'simple' | 'martial'): Weapon[] {
+    return this.weapons.filter((w) => w.category === category)
+  }
+
+  static getAllArmor(): Armor[] {
+    return this.armor
+  }
+
+  static getArmorById(id: string): Armor | undefined {
+    return this.armor.find((a) => a.id === id)
+  }
+
+  static getArmorByCategory(category: 'unarmored' | 'light' | 'medium' | 'heavy' | 'shield'): Armor[] {
+    return this.armor.filter((a) => a.category === category)
+  }
+
+  static getAllItems(): Item[] {
+    return this.items
+  }
+
+  static getItemById(id: string): Item | undefined {
+    return this.items.find((i) => i.id === id)
+  }
+
+  static searchEquipment(query: string): (Weapon | Armor | Item)[] {
+    const lowerQuery = query.toLowerCase()
+    const matchingWeapons = this.weapons.filter((w) => w.name.toLowerCase().includes(lowerQuery))
+    const matchingArmor = this.armor.filter((a) => a.name.toLowerCase().includes(lowerQuery))
+    const matchingItems = this.items.filter((i) =>
+      i.name.toLowerCase().includes(lowerQuery) ||
+      i.description.toLowerCase().includes(lowerQuery)
+    )
+    return [...matchingWeapons, ...matchingArmor, ...matchingItems]
   }
 }

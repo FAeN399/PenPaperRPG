@@ -1,0 +1,676 @@
+{
+  "spells": [
+    {
+      "id": "acid-splash",
+      "name": "Acid Splash",
+      "level": 0,
+      "tradition": ["arcane"],
+      "traits": ["Acid", "Attack", "Cantrip", "Evocation"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 creature",
+      "duration": "instant",
+      "description": "You splash a glob of acid that splatters your target and nearby surfaces. Make a spell attack roll. On a success, you deal acid damage equal to 1d6 plus your spellcasting ability modifier.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "Damage increases to 2d6"
+        },
+        {
+          "level": 5,
+          "effect": "Damage increases to 3d6"
+        }
+      ]
+    },
+    {
+      "id": "chill-touch",
+      "name": "Chill Touch",
+      "level": 0,
+      "tradition": ["arcane"],
+      "traits": ["Cantrip", "Necromancy", "Negative"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 living or undead creature",
+      "duration": "1 round",
+      "description": "Your touch freezes the target with negative energy. Make a spell attack roll. On a success, the target takes negative damage equal to 1d4 plus your spellcasting ability modifier.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "Damage increases to 2d4"
+        },
+        {
+          "level": 5,
+          "effect": "Damage increases to 3d4"
+        }
+      ]
+    },
+    {
+      "id": "daze",
+      "name": "Daze",
+      "level": 0,
+      "tradition": ["arcane"],
+      "traits": ["Cantrip", "Enchantment", "Mental", "Nonlethal"],
+      "castTime": "2 actions",
+      "range": "60 feet",
+      "targets": "1 creature",
+      "duration": "instant",
+      "savingThrow": "Will",
+      "description": "You cloud the target's mind with confusion and befuddlement. The target must attempt a Will save. On a failure, it takes mental damage equal to 1d6 plus your spellcasting ability modifier and is dazed until the end of your next turn.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "Damage increases to 2d6"
+        },
+        {
+          "level": 5,
+          "effect": "Damage increases to 3d6"
+        }
+      ]
+    },
+    {
+      "id": "detect-magic",
+      "name": "Detect Magic",
+      "level": 0,
+      "tradition": ["arcane"],
+      "traits": ["Cantrip", "Detection", "Divination"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "area": "30-foot emanation",
+      "duration": "sustained up to 1 minute",
+      "description": "You send out a pulse of magical energy that reveals the presence of magic. You detect magical auras within the area and can sense their general location. Each time you sustain the spell, you can turn to face a different direction."
+    },
+    {
+      "id": "electric-arc",
+      "name": "Electric Arc",
+      "level": 0,
+      "tradition": ["arcane"],
+      "traits": ["Cantrip", "Electricity", "Evocation"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 or 2 creatures",
+      "duration": "instant",
+      "savingThrow": "basic Reflex",
+      "description": "An arc of lightning leaps from your hands to shock one or two targets. The targets must each attempt a basic Reflex save. On a failure, each target takes electricity damage equal to 1d4 plus your spellcasting ability modifier.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "Damage increases to 2d4"
+        },
+        {
+          "level": 5,
+          "effect": "Damage increases to 3d4"
+        }
+      ]
+    },
+    {
+      "id": "light",
+      "name": "Light",
+      "level": 0,
+      "tradition": ["arcane"],
+      "traits": ["Cantrip", "Evocation", "Light"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 object of 1 Bulk or less",
+      "duration": "until your next daily preparations",
+      "description": "The object glows, casting bright light in a 20-foot radius and dim light for another 20 feet. The effect is identical to a torch. The spell ends if you cast it again."
+    },
+    {
+      "id": "mage-hand",
+      "name": "Mage Hand",
+      "level": 0,
+      "tradition": ["arcane"],
+      "traits": ["Cantrip", "Evocation"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "duration": "sustained",
+      "description": "You create a floating, spectral hand that can manipulate objects at a distance. The hand can move up to 30 feet and can lift, carry, push, or pull objects of light Bulk. It can't perform tasks requiring fine manipulation.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "Range increases to 60 feet"
+        },
+        {
+          "level": 5,
+          "effect": "Range increases to 90 feet"
+        }
+      ]
+    },
+    {
+      "id": "prestidigitation",
+      "name": "Prestidigitation",
+      "level": 0,
+      "tradition": ["arcane"],
+      "traits": ["Cantrip", "Evocation"],
+      "castTime": "2 actions",
+      "range": "10 feet",
+      "targets": "1 object or creature",
+      "duration": "sustained",
+      "description": "You perform a minor magical trick. You can create a harmless sensory effect, clean or soil an item, warm or chill unattended material, color or mark an object, or create a small, obviously magical item. These effects last 1 hour."
+    },
+    {
+      "id": "produce-flame",
+      "name": "Produce Flame",
+      "level": 0,
+      "tradition": ["arcane"],
+      "traits": ["Attack", "Cantrip", "Evocation", "Fire"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 creature",
+      "duration": "instant",
+      "description": "A small ball of flame appears in your hand, and you can either hurl it at an enemy or hold it aloft for light. Make a spell attack roll against the target. On a success, you deal fire damage equal to 1d4 plus your spellcasting ability modifier.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "Damage increases to 2d4"
+        },
+        {
+          "level": 5,
+          "effect": "Damage increases to 3d4"
+        }
+      ]
+    },
+    {
+      "id": "ray-of-frost",
+      "name": "Ray of Frost",
+      "level": 0,
+      "tradition": ["arcane"],
+      "traits": ["Attack", "Cantrip", "Cold", "Evocation"],
+      "castTime": "2 actions",
+      "range": "120 feet",
+      "targets": "1 creature",
+      "duration": "instant",
+      "description": "You blast an icy ray at your target. Make a spell attack roll. On a success, you deal cold damage equal to 1d4 plus your spellcasting ability modifier, and the target takes a -10-foot status penalty to its Speed until the start of your next turn.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "Damage increases to 2d4"
+        },
+        {
+          "level": 5,
+          "effect": "Damage increases to 3d4"
+        }
+      ]
+    },
+    {
+      "id": "read-aura",
+      "name": "Read Aura",
+      "level": 0,
+      "tradition": ["arcane"],
+      "traits": ["Cantrip", "Detection", "Divination"],
+      "castTime": "1 minute",
+      "range": "30 feet",
+      "targets": "1 object",
+      "duration": "instant",
+      "description": "You focus on the target object, attempting to discern magical properties and auras surrounding it. You learn whether the object is magical, and if so, you learn its school of magic."
+    },
+    {
+      "id": "shield",
+      "name": "Shield",
+      "level": 0,
+      "tradition": ["arcane"],
+      "traits": ["Abjuration", "Cantrip", "Force"],
+      "castTime": "1 action",
+      "range": "self",
+      "duration": "until the start of your next turn",
+      "description": "You raise a magical shield of force. This grants you a +1 circumstance bonus to AC. You can use the Shield Block reaction with this spell. The shield has Hardness 5 and 20 Hit Points. After the shield is destroyed, the spell ends.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "Hardness increases to 10 and HP to 40"
+        },
+        {
+          "level": 5,
+          "effect": "Hardness increases to 15 and HP to 60"
+        }
+      ]
+    },
+    {
+      "id": "tanglefoot",
+      "name": "Tanglefoot",
+      "level": 0,
+      "tradition": ["arcane"],
+      "traits": ["Attack", "Cantrip", "Conjuration"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 creature",
+      "duration": "1 round",
+      "savingThrow": "Reflex",
+      "description": "You create a mass of sticky webbing that attempts to adhere to the target. Make a spell attack roll. On a hit, the target takes a -10-foot status penalty to its Speed and takes a -2 circumstance penalty to Reflex saves.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "Duration increases to 2 rounds"
+        }
+      ]
+    },
+    {
+      "id": "telekinetic-projectile",
+      "name": "Telekinetic Projectile",
+      "level": 0,
+      "tradition": ["arcane"],
+      "traits": ["Attack", "Cantrip", "Evocation"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 creature",
+      "duration": "instant",
+      "description": "You hurl a loose, unattended object within range at the target. Make a spell attack roll against the target. On a success, you deal bludgeoning, piercing, or slashing damage (depending on the object) equal to 1d6 plus your spellcasting ability modifier.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "Damage increases to 2d6"
+        },
+        {
+          "level": 5,
+          "effect": "Damage increases to 3d6"
+        }
+      ]
+    },
+    {
+      "id": "air-bubble",
+      "name": "Air Bubble",
+      "level": 1,
+      "tradition": ["arcane"],
+      "traits": ["Air", "Conjuration"],
+      "castTime": "1 action",
+      "range": "60 feet",
+      "targets": "1 willing creature",
+      "duration": "1 minute",
+      "description": "A bubble of pure air appears around the target's head, allowing them to breathe normally even in water, toxic gases, or airless environments. The bubble moves with the target.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "Duration increases to 10 minutes and you can target up to 4 creatures"
+        }
+      ]
+    },
+    {
+      "id": "ant-haul",
+      "name": "Ant Haul",
+      "level": 1,
+      "tradition": ["arcane"],
+      "traits": ["Transmutation"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 creature",
+      "duration": "8 hours",
+      "description": "You reinforce the target's musculature and core strength, granting them the ability to carry more. The target's maximum and encumbered Bulk limits increase by 3, and their maximum and encumbered Bulk limits for Dragging and Lifting increase by 6.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "Limits increase by 5 and 10 respectively"
+        }
+      ]
+    },
+    {
+      "id": "burning-hands",
+      "name": "Burning Hands",
+      "level": 1,
+      "tradition": ["arcane"],
+      "traits": ["Evocation", "Fire"],
+      "castTime": "2 actions",
+      "range": "self",
+      "area": "15-foot cone",
+      "duration": "instant",
+      "savingThrow": "basic Reflex",
+      "description": "Gouts of flame rush from your hands. You deal 2d6 fire damage to creatures in the area. Creatures must attempt a basic Reflex save.",
+      "heightened": [
+        {
+          "level": 2,
+          "effect": "Damage increases by 2d6"
+        }
+      ]
+    },
+    {
+      "id": "charm",
+      "name": "Charm",
+      "level": 1,
+      "tradition": ["arcane"],
+      "traits": ["Emotion", "Enchantment", "Incapacitation", "Mental"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 creature",
+      "duration": "1 hour",
+      "savingThrow": "Will",
+      "description": "To the target, your words are honey and your visage seems bathed in a dreamy haze. It must attempt a Will save. On a failure, the target's attitude toward you improves by one step for the duration.",
+      "heightened": [
+        {
+          "level": 4,
+          "effect": "Duration increases to 1 day"
+        }
+      ]
+    },
+    {
+      "id": "color-spray",
+      "name": "Color Spray",
+      "level": 1,
+      "tradition": ["arcane"],
+      "traits": ["Illusion", "Incapacitation", "Visual"],
+      "castTime": "2 actions",
+      "range": "self",
+      "area": "15-foot cone",
+      "duration": "1 or more rounds",
+      "savingThrow": "Will",
+      "description": "Swirling colors burst from your hand in a chaotic spray. Each creature in the area must attempt a Will save. On a failure, the creature is dazzled for 1 round. On a critical failure, it's also stunned 1.",
+      "heightened": [
+        {
+          "level": 5,
+          "effect": "Dazzled duration increases to 1 minute"
+        }
+      ]
+    },
+    {
+      "id": "fleet-step",
+      "name": "Fleet Step",
+      "level": 1,
+      "tradition": ["arcane"],
+      "traits": ["Transmutation"],
+      "castTime": "1 action",
+      "range": "self",
+      "duration": "1 minute",
+      "description": "You gain a +30-foot status bonus to your Speed. This bonus applies to all your movement types."
+    },
+    {
+      "id": "floating-disk",
+      "name": "Floating Disk",
+      "level": 1,
+      "tradition": ["arcane"],
+      "traits": ["Conjuration", "Force"],
+      "castTime": "2 actions",
+      "range": "self",
+      "duration": "8 hours",
+      "description": "You create a circular, horizontal disk of force that floats 3 feet above the ground and follows you. It has a 2-foot diameter and can hold up to 5 Bulk of objects. The disk winks out if you move more than 30 feet away from it."
+    },
+    {
+      "id": "grease",
+      "name": "Grease",
+      "level": 1,
+      "tradition": ["arcane"],
+      "traits": ["Conjuration"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "area": "four 5-foot squares or one 10-foot square",
+      "duration": "1 minute",
+      "savingThrow": "Reflex",
+      "description": "You conjure slippery grease that coats the ground. Creatures entering or standing in the area must succeed at a Reflex save or fall prone. Those who succeed treat the area as difficult terrain.",
+      "heightened": [
+        {
+          "level": 2,
+          "effect": "Area increases to eight 5-foot squares or two 10-foot squares"
+        }
+      ]
+    },
+    {
+      "id": "grim-tendrils",
+      "name": "Grim Tendrils",
+      "level": 1,
+      "tradition": ["arcane"],
+      "traits": ["Necromancy", "Negative"],
+      "castTime": "2 actions",
+      "range": "self",
+      "area": "30-foot line",
+      "duration": "instant",
+      "savingThrow": "Fortitude",
+      "description": "Tendrils of darkness curl out from your fingertips and race along the ground. You deal 2d4 negative damage to living creatures in the line. Creatures must attempt a Fortitude save.",
+      "heightened": [
+        {
+          "level": 2,
+          "effect": "Damage increases by 1d4"
+        }
+      ]
+    },
+    {
+      "id": "illusory-disguise",
+      "name": "Illusory Disguise",
+      "level": 1,
+      "tradition": ["arcane"],
+      "traits": ["Illusion", "Visual"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 creature",
+      "duration": "1 hour",
+      "description": "You create an illusion that causes the target to appear as another creature of the same size and body shape. The disguise holds up to casual inspection but not close examination. The target can dismiss the disguise.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "Duration increases to 8 hours"
+        }
+      ]
+    },
+    {
+      "id": "illusory-object",
+      "name": "Illusory Object",
+      "level": 1,
+      "tradition": ["arcane"],
+      "traits": ["Illusion", "Visual"],
+      "castTime": "2 actions",
+      "range": "500 feet",
+      "duration": "10 minutes",
+      "description": "You create an illusory object of Medium size or smaller. The illusion includes visual aspects but not sound, smell, or temperature. Physical interaction with the object reveals it to be an illusion.",
+      "heightened": [
+        {
+          "level": 2,
+          "effect": "Object can be Large or smaller"
+        }
+      ]
+    },
+    {
+      "id": "item-facade",
+      "name": "Item Facade",
+      "level": 1,
+      "tradition": ["arcane"],
+      "traits": ["Illusion", "Visual"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 object of 5 Bulk or less",
+      "duration": "1 hour",
+      "description": "You disguise the appearance of an item, making it look like a different item of the same size and general shape. The illusion can't change the basic nature of the object.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "Duration increases to 8 hours"
+        }
+      ]
+    },
+    {
+      "id": "jump",
+      "name": "Jump",
+      "level": 1,
+      "tradition": ["arcane"],
+      "traits": ["Transmutation"],
+      "castTime": "1 action",
+      "range": "touch",
+      "targets": "1 creature",
+      "duration": "1 minute",
+      "description": "The target can jump 5 feet vertically as a single action without attempting an Athletics check. They can jump up to 15 feet horizontally as a 2-action activity without attempting an Athletics check.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "Vertical jump increases to 10 feet and horizontal to 30 feet"
+        }
+      ]
+    },
+    {
+      "id": "lock",
+      "name": "Lock",
+      "level": 1,
+      "tradition": ["arcane"],
+      "traits": ["Abjuration"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 lock or 1 door",
+      "duration": "until your next daily preparations",
+      "description": "You magically lock a door, chest, or other object with a lock. The DC to Pick the Lock or Force Open the object increases by 5. Anyone with the key can still open it normally.",
+      "heightened": [
+        {
+          "level": 2,
+          "effect": "DC increase becomes 10"
+        }
+      ]
+    },
+    {
+      "id": "mage-armor",
+      "name": "Mage Armor",
+      "level": 1,
+      "tradition": ["arcane"],
+      "traits": ["Abjuration", "Force"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 creature",
+      "duration": "until your next daily preparations",
+      "description": "You ward yourself or an ally with shimmering magical energy, granting a +1 item bonus to AC. The target also gains a Dex cap of +5 while unarmored.",
+      "heightened": [
+        {
+          "level": 4,
+          "effect": "Item bonus increases to +2"
+        },
+        {
+          "level": 7,
+          "effect": "Item bonus increases to +3"
+        }
+      ]
+    },
+    {
+      "id": "magic-missile",
+      "name": "Magic Missile",
+      "level": 1,
+      "tradition": ["arcane"],
+      "traits": ["Evocation", "Force"],
+      "castTime": "1 to 3 actions",
+      "range": "120 feet",
+      "targets": "1 creature",
+      "duration": "instant",
+      "description": "You send a magical projectile that unerringly strikes your target, dealing 1d4+1 force damage. For each additional action spent casting this spell, you fire one additional missile at the same or different target.",
+      "heightened": [
+        {
+          "level": 2,
+          "effect": "+1 missile"
+        }
+      ]
+    },
+    {
+      "id": "phantom-pain",
+      "name": "Phantom Pain",
+      "level": 1,
+      "tradition": ["arcane"],
+      "traits": ["Illusion", "Mental", "Nonlethal"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 creature",
+      "duration": "1 minute",
+      "savingThrow": "Will",
+      "description": "You send a phantom spike of terrible pain into the target's mind. The target must attempt a Will save. On a failure, it takes 2d4 mental damage and is sickened 1. On a critical failure, it's also stunned 1.",
+      "heightened": [
+        {
+          "level": 2,
+          "effect": "Damage increases by 2d4"
+        }
+      ]
+    },
+    {
+      "id": "shocking-grasp",
+      "name": "Shocking Grasp",
+      "level": 1,
+      "tradition": ["arcane"],
+      "traits": ["Attack", "Electricity", "Evocation"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 creature",
+      "duration": "instant",
+      "description": "You shroud your hands in electricity and make a melee spell attack. On a success, the target takes 2d12 electricity damage. If the target is wearing metal armor or is made of metal, you gain a +1 circumstance bonus to your attack roll.",
+      "heightened": [
+        {
+          "level": 2,
+          "effect": "Damage increases by 1d12"
+        }
+      ]
+    },
+    {
+      "id": "sleep",
+      "name": "Sleep",
+      "level": 1,
+      "tradition": ["arcane"],
+      "traits": ["Enchantment", "Incapacitation", "Mental", "Sleep"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "area": "5-foot burst",
+      "duration": "1 minute",
+      "savingThrow": "Will",
+      "description": "Each creature in the area becomes drowsy and might fall asleep. Creatures must attempt a Will save. On a failure, the creature falls unconscious. The spell ends if the creature takes damage or is shaken awake.",
+      "heightened": [
+        {
+          "level": 4,
+          "effect": "Creatures get a -2 penalty to their save and are harder to wake"
+        }
+      ]
+    },
+    {
+      "id": "spider-sting",
+      "name": "Spider Sting",
+      "level": 1,
+      "tradition": ["arcane"],
+      "traits": ["Attack", "Necromancy", "Poison"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 creature",
+      "duration": "1 round",
+      "description": "You magically duplicate the venomous sting of a spider. Make a melee spell attack against the target. On a success, you deal 1d4 piercing damage and the target is afflicted with spider venom.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "Piercing damage increases to 2d4"
+        }
+      ]
+    },
+    {
+      "id": "true-strike",
+      "name": "True Strike",
+      "level": 1,
+      "tradition": ["arcane"],
+      "traits": ["Divination", "Fortune"],
+      "castTime": "1 action",
+      "range": "self",
+      "duration": "until the end of your turn",
+      "description": "A glimpse into the future ensures your next blow strikes true. Your next attack roll gains a +1 status bonus and ignores concealment. This bonus increases to +2 if the attack is against a flat-footed target.",
+      "heightened": [
+        {
+          "level": 4,
+          "effect": "Bonus increases to +2, or +3 against flat-footed targets"
+        }
+      ]
+    },
+    {
+      "id": "unseen-servant",
+      "name": "Unseen Servant",
+      "level": 1,
+      "tradition": ["arcane"],
+      "traits": ["Conjuration"],
+      "castTime": "3 actions",
+      "range": "60 feet",
+      "duration": "sustained",
+      "description": "You summon an invisible, mindless servant. It has AC 10 and can perform simple tasks. It can lift 1 Bulk and follow simple commands. The servant can't attack, use magic items, or speak.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "Duration no longer needs to be sustained; lasts 1 hour"
+        }
+      ]
+    },
+    {
+      "id": "ventriloquism",
+      "name": "Ventriloquism",
+      "level": 1,
+      "tradition": ["arcane"],
+      "traits": ["Auditory", "Illusion"],
+      "castTime": "2 actions",
+      "range": "60 feet",
+      "duration": "10 minutes",
+      "description": "You create an auditory illusion, causing sounds to emanate from a point you choose within range. The sound can be any noise you wish, including speech in any language you know. Anyone hearing the sound can attempt a Perception check against your spell DC to disbelieve.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "Range increases to 120 feet"
+        }
+      ]
+    }
+  ]
+}

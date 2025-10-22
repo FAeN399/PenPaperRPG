@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PenPaperRPG - Character Sheet Demo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Pathfinder 2e Theme Colors */
+    :root {
+      --pf-bg: #1a1a1a;
+      --pf-bg-dark: #0f0f0f;
+      --pf-bg-card: #232323;
+      --pf-accent: #c59b6d;
+      --pf-accent-light: #d4b78c;
+      --pf-text: #e8e8e8;
+      --pf-text-muted: #a0a0a0;
+    }
+
+    body {
+      background-color: var(--pf-bg);
+      color: var(--pf-text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    }
+
+    .bg-pf-bg { background-color: var(--pf-bg); }
+    .bg-pf-bg-dark { background-color: var(--pf-bg-dark); }
+    .bg-pf-bg-card { background-color: var(--pf-bg-card); }
+    .text-pf-accent { color: var(--pf-accent); }
+    .text-pf-accent-light { color: var(--pf-accent-light); }
+    .text-pf-text { color: var(--pf-text); }
+    .text-pf-text-muted { color: var(--pf-text-muted); }
+    .border-gray-700 { border-color: #3f3f3f; }
+  </style>
+</head>
+<body class="min-h-screen p-8">
+  <div class="max-w-7xl mx-auto">
+
+    <!-- Header -->
+    <div class="bg-pf-bg-card rounded-lg border border-gray-700 p-6 mb-6">
+      <div class="grid grid-cols-2 gap-8">
+        <div>
+          <h1 class="text-3xl font-bold text-pf-accent mb-2">Valeros</h1>
+          <p class="text-pf-text-muted text-lg">Level 1 Human Fighter</p>
+        </div>
+        <div class="space-y-1 text-right">
+          <div class="text-sm">
+            <span class="text-pf-text-muted">Player: </span>
+            <span class="text-pf-text">Sample Character</span>
+          </div>
+          <div class="text-sm">
+            <span class="text-pf-text-muted">Heritage: </span>
+            <span class="text-pf-text">Versatile Heritage</span>
+          </div>
+          <div class="text-sm">
+            <span class="text-pf-text-muted">Background: </span>
+            <span class="text-pf-text">Warrior</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-3 gap-6 mb-6">
+      <!-- Ability Scores -->
+      <div class="bg-pf-bg-card rounded-lg border border-gray-700 p-6">
+        <h2 class="text-xl font-bold text-pf-accent mb-4">Ability Scores</h2>
+        <div class="grid grid-cols-2 gap-3">
+          <div class="bg-pf-bg-dark rounded-lg p-3 text-center border border-gray-700">
+            <div class="text-xs text-pf-text-muted uppercase mb-1">STR</div>
+            <div class="text-2xl font-bold text-pf-accent">+3</div>
+            <div class="text-sm text-pf-text-muted">16</div>
+          </div>
+          <div class="bg-pf-bg-dark rounded-lg p-3 text-center border border-gray-700">
+            <div class="text-xs text-pf-text-muted uppercase mb-1">DEX</div>
+            <div class="text-2xl font-bold text-pf-accent">+2</div>
+            <div class="text-sm text-pf-text-muted">14</div>
+          </div>
+          <div class="bg-pf-bg-dark rounded-lg p-3 text-center border border-gray-700">
+            <div class="text-xs text-pf-text-muted uppercase mb-1">CON</div>
+            <div class="text-2xl font-bold text-pf-accent">+2</div>
+            <div class="text-sm text-pf-text-muted">14</div>
+          </div>
+          <div class="bg-pf-bg-dark rounded-lg p-3 text-center border border-gray-700">
+            <div class="text-xs text-pf-text-muted uppercase mb-1">INT</div>
+            <div class="text-2xl font-bold text-pf-accent">+0</div>
+            <div class="text-sm text-pf-text-muted">10</div>
+          </div>
+          <div class="bg-pf-bg-dark rounded-lg p-3 text-center border border-gray-700">
+            <div class="text-xs text-pf-text-muted uppercase mb-1">WIS</div>
+            <div class="text-2xl font-bold text-pf-accent">+1</div>
+            <div class="text-sm text-pf-text-muted">12</div>
+          </div>
+          <div class="bg-pf-bg-dark rounded-lg p-3 text-center border border-gray-700">
+            <div class="text-xs text-pf-text-muted uppercase mb-1">CHA</div>
+            <div class="text-2xl font-bold text-pf-accent">+0</div>
+            <div class="text-sm text-pf-text-muted">10</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Combat Stats -->
+      <div class="bg-pf-bg-card rounded-lg border border-gray-700 p-6">
+        <h2 class="text-xl font-bold text-pf-accent mb-4">Combat Stats</h2>
+        <div class="space-y-3">
+          <div class="bg-pf-bg-dark rounded-lg p-3 border border-gray-700">
+            <div class="text-xs text-pf-text-muted mb-1">Hit Points</div>
+            <div class="text-2xl font-bold text-pf-accent">22</div>
+          </div>
+          <div class="bg-pf-bg-dark rounded-lg p-3 border border-gray-700">
+            <div class="text-xs text-pf-text-muted mb-1">Armor Class</div>
+            <div class="text-2xl font-bold text-pf-accent">16</div>
+          </div>
+          <div class="flex gap-3">
+            <div class="bg-pf-bg-dark rounded-lg p-3 border border-gray-700 flex-1">
+              <div class="text-xs text-pf-text-muted mb-1">Speed</div>
+              <div class="text-lg font-bold text-pf-text">25 ft</div>
+            </div>
+            <div class="bg-pf-bg-dark rounded-lg p-3 border border-gray-700 flex-1">
+              <div class="text-xs text-pf-text-muted mb-1">Perception</div>
+              <div class="text-lg font-bold text-pf-text">+5</div>
+            </div>
+          </div>
+          <div class="bg-pf-bg-dark rounded-lg p-3 border border-gray-700">
+            <div class="text-xs text-pf-text-muted mb-1">Class DC</div>
+            <div class="text-lg font-bold text-pf-text">17</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Saving Throws -->
+      <div class="bg-pf-bg-card rounded-lg border border-gray-700 p-6">
+        <h2 class="text-xl font-bold text-pf-accent mb-4">Saving Throws</h2>
+        <div class="space-y-3">
+          <div class="bg-pf-bg-dark rounded-lg p-3 border border-gray-700">
+            <div class="text-xs text-pf-text-muted mb-1">Fortitude</div>
+            <div class="text-2xl font-bold text-pf-accent">+6</div>
+          </div>
+          <div class="bg-pf-bg-dark rounded-lg p-3 border border-gray-700">
+            <div class="text-xs text-pf-text-muted mb-1">Reflex</div>
+            <div class="text-2xl font-bold text-pf-accent">+6</div>
+          </div>
+          <div class="bg-pf-bg-dark rounded-lg p-3 border border-gray-700">
+            <div class="text-xs text-pf-text-muted mb-1">Will</div>
+            <div class="text-2xl font-bold text-pf-accent">+5</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Skills -->
+    <div class="bg-pf-bg-card rounded-lg border border-gray-700 p-6 mb-6">
+      <h2 class="text-xl font-bold text-pf-accent mb-4">Skills</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="bg-pf-bg-dark rounded-lg p-3 border border-gray-700 flex justify-between items-center">
+          <span class="text-sm text-pf-text capitalize">Acrobatics</span>
+          <span class="text-lg font-bold text-pf-accent">+6</span>
+        </div>
+        <div class="bg-pf-bg-dark rounded-lg p-3 border border-gray-700 flex justify-between items-center">
+          <span class="text-sm text-pf-text capitalize">Athletics</span>
+          <span class="text-lg font-bold text-pf-accent">+7</span>
+        </div>
+        <div class="bg-pf-bg-dark rounded-lg p-3 border border-gray-700 flex justify-between items-center">
+          <span class="text-sm text-pf-text capitalize">Crafting</span>
+          <span class="text-lg font-bold text-pf-accent">+4</span>
+        </div>
+        <div class="bg-pf-bg-dark rounded-lg p-3 border border-gray-700 flex justify-between items-center">
+          <span class="text-sm text-pf-text capitalize">Intimidation</span>
+          <span class="text-lg font-bold text-pf-accent">+4</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feats & Features -->
+    <div class="bg-pf-bg-card rounded-lg border border-gray-700 p-6 mb-6">
+      <h2 class="text-xl font-bold text-pf-accent mb-4">Feats & Features</h2>
+      <div class="grid grid-cols-2 gap-6">
+        <!-- Ancestry -->
+        <div>
+          <h3 class="text-lg font-semibold text-pf-accent-light mb-3">Ancestry</h3>
+          <div class="bg-pf-bg-dark rounded-lg p-4 border border-gray-700 mb-3">
+            <div class="font-semibold text-pf-text mb-1">Versatile Heritage</div>
+            <div class="text-sm text-pf-text-muted">Humanity's adaptability and ambition have fueled its ascendance. You gain a general feat.</div>
+          </div>
+          <div class="bg-pf-bg-dark rounded-lg p-4 border border-gray-700 mb-3">
+            <div class="font-semibold text-pf-text mb-1">Natural Ambition</div>
+            <div class="text-xs text-pf-accent-light mb-2">Human</div>
+            <div class="text-sm text-pf-text-muted">You were raised to be ambitious and always reach for the stars.</div>
+            <div class="text-sm text-pf-text mt-2">
+              <span class="font-semibold">Benefit: </span>You gain a 1st-level class feat for your class.
+            </div>
+          </div>
+        </div>
+
+        <!-- Class -->
+        <div>
+          <h3 class="text-lg font-semibold text-pf-accent-light mb-3">Class</h3>
+          <div class="bg-pf-bg-dark rounded-lg p-4 border border-gray-700 mb-3">
+            <div class="font-semibold text-pf-text mb-1">Power Attack</div>
+            <div class="text-xs text-pf-accent-light mb-2">Fighter, Flourish</div>
+            <div class="text-sm text-pf-text-muted">You unleash a particularly powerful attack.</div>
+            <div class="text-sm text-pf-text mt-2">
+              <span class="font-semibold">Benefit: </span>Make a melee Strike. Add an extra damage die to the attack.
+            </div>
+          </div>
+          <div class="bg-pf-bg-dark rounded-lg p-4 border border-gray-700">
+            <div class="font-semibold text-pf-text mb-1">Sudden Charge</div>
+            <div class="text-xs text-pf-accent-light mb-2">Fighter, Flourish, Open</div>
+            <div class="text-sm text-pf-text-muted">With a quick sprint, you dash up to your foe and swing.</div>
+            <div class="text-sm text-pf-text mt-2">
+              <span class="font-semibold">Benefit: </span>Stride twice and make a melee Strike at the end.
+            </div>
+          </div>
+        </div>
+
+        <!-- General Feat -->
+        <div>
+          <h3 class="text-lg font-semibold text-pf-accent-light mb-3">General Feats</h3>
+          <div class="bg-pf-bg-dark rounded-lg p-4 border border-gray-700">
+            <div class="font-semibold text-pf-text mb-1">Toughness</div>
+            <div class="text-xs text-pf-accent-light mb-2">General</div>
+            <div class="text-sm text-pf-text-muted">You can withstand more punishment than most.</div>
+            <div class="text-sm text-pf-text mt-2">
+              <span class="font-semibold">Benefit: </span>Increase your maximum HP by your level. When you gain this feat, you immediately gain hit points equal to your level.
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill Feat -->
+        <div>
+          <h3 class="text-lg font-semibold text-pf-accent-light mb-3">Skill Feats</h3>
+          <div class="bg-pf-bg-dark rounded-lg p-4 border border-gray-700">
+            <div class="font-semibold text-pf-text mb-1">Intimidating Glare</div>
+            <div class="text-xs text-pf-accent-light mb-2">General, Skill</div>
+            <div class="text-sm text-pf-text-muted">You can Demoralize with a mere glare.</div>
+            <div class="text-sm text-pf-text mt-2">
+              <span class="font-semibold">Benefit: </span>When you Demoralize, you can use a glare instead of words, removing the auditory and linguistic traits.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Info Footer -->
+    <div class="text-center text-sm text-pf-text-muted mt-8 p-4 border-t border-gray-700">
+      <p class="mb-2"><strong class="text-pf-accent">PenPaperRPG - Character Sheet Demo</strong></p>
+      <p>This is a visual demonstration of the character sheet component.</p>
+      <p class="mt-2">Built with Electron, React, TypeScript, and Tailwind CSS</p>
+      <p class="mt-4 text-xs">
+        This application uses the Pathfinder Second Edition system under the ORC License.<br>
+        Pathfinder and associated marks are trademarks of Paizo Inc.
+      </p>
+    </div>
+
+  </div>
+</body>
+</html>

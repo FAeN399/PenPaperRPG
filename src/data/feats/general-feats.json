@@ -1,0 +1,155 @@
+[
+  {
+    "id": "toughness",
+    "name": "Toughness",
+    "type": "general",
+    "level": 1,
+    "description": "Your body is hardy and resilient, allowing you to withstand punishment that would fell others.",
+    "prerequisites": [],
+    "traits": ["General"],
+    "benefit": "Increase your maximum Hit Points by your level. When you gain this feat, you immediately gain Hit Points equal to your level, and you gain additional Hit Points equal to your new level each time you gain a level thereafter."
+  },
+  {
+    "id": "fleet",
+    "name": "Fleet",
+    "type": "general",
+    "level": 1,
+    "description": "You move with exceptional speed and agility.",
+    "prerequisites": [],
+    "traits": ["General"],
+    "benefit": "Your Speed increases by 5 feet."
+  },
+  {
+    "id": "shield-block",
+    "name": "Shield Block",
+    "type": "general",
+    "level": 1,
+    "description": "You know how to use your shield to absorb devastating blows.",
+    "prerequisites": [],
+    "traits": ["General"],
+    "trigger": "While you have your shield raised, you would take damage from a physical attack.",
+    "benefit": "You snap your shield into place to deflect the blow. Your shield prevents you from taking an amount of damage up to the shield's Hardness. You and the shield each take any remaining damage, possibly breaking or destroying the shield."
+  },
+  {
+    "id": "incredible-initiative",
+    "name": "Incredible Initiative",
+    "type": "general",
+    "level": 1,
+    "description": "Your reflexes are lightning-fast, allowing you to react to danger before others.",
+    "prerequisites": [],
+    "traits": ["General"],
+    "benefit": "You gain a +2 circumstance bonus to initiative rolls."
+  },
+  {
+    "id": "diehard",
+    "name": "Diehard",
+    "type": "general",
+    "level": 1,
+    "description": "You have an incredible will to live, fighting on even when at death's door.",
+    "prerequisites": [],
+    "traits": ["General"],
+    "benefit": "It takes more to kill you than most. You die from the dying condition at dying 5, rather than dying 4."
+  },
+  {
+    "id": "expeditious-search",
+    "name": "Expeditious Search",
+    "type": "general",
+    "level": 1,
+    "description": "You search with practiced efficiency, finding hidden objects and dangers quickly.",
+    "prerequisites": [],
+    "traits": ["General"],
+    "benefit": "You take no penalty to Perception checks when you Search in a hurry. You can still Search for only one object or feature at a time."
+  },
+  {
+    "id": "incredible-improvisation",
+    "name": "Incredible Improvisation",
+    "type": "general",
+    "level": 1,
+    "description": "You have a knack for making things up as you go, finding creative solutions on the fly.",
+    "prerequisites": [],
+    "traits": ["General"],
+    "benefit": "You gain a +4 circumstance bonus to skill checks you attempt with skills in which you're untrained. This bonus applies only to checks that use your Intelligence, Wisdom, or Charisma modifiers."
+  },
+  {
+    "id": "canny-acumen",
+    "name": "Canny Acumen",
+    "type": "general",
+    "level": 1,
+    "description": "Your instincts and awareness make you difficult to catch off guard in one specific area.",
+    "prerequisites": [],
+    "traits": ["General"],
+    "special": "You can select this feat multiple times. Each time you select it, choose a different Perception or saving throw category (Fortitude, Reflex, or Will).",
+    "benefit": "Choose Perception or a saving throw category. Your proficiency rank for the chosen statistic increases to expert if it was trained, or to master if it was expert."
+  },
+  {
+    "id": "ride",
+    "name": "Ride",
+    "type": "general",
+    "level": 1,
+    "description": "You are skilled at riding mounts in both casual and combat situations.",
+    "prerequisites": [],
+    "traits": ["General"],
+    "benefit": "When you Command an Animal that's your mount to take a move action, you can choose to ignore the command cost. You can still take two actions on your turn even if you do so. You also gain a +1 circumstance bonus to Nature checks to use Command an Animal on a mount."
+  },
+  {
+    "id": "untrained-improvisation",
+    "name": "Untrained Improvisation",
+    "type": "general",
+    "level": 1,
+    "description": "You've learned a little about everything, making you surprisingly capable even with skills you haven't formally studied.",
+    "prerequisites": [],
+    "traits": ["General"],
+    "benefit": "You can attempt skill actions that normally require you to be trained, even if you're untrained. When you make a skill check using a skill you're untrained in, your proficiency bonus is equal to your level instead of 0."
+  },
+  {
+    "id": "armor-assist",
+    "name": "Armor Assist",
+    "type": "general",
+    "level": 1,
+    "description": "You've practiced helping others don and doff their armor efficiently.",
+    "prerequisites": [],
+    "traits": ["General"],
+    "benefit": "After practicing with a suit of armor, you can assist another creature to don or remove that armor. You can do this either by spending a 10-minute activity to prepare the armor for the other creature to don or remove, or by helping the other creature don or remove the armor, halving the time it takes them to do so."
+  },
+  {
+    "id": "ancestral-paragon",
+    "name": "Ancestral Paragon",
+    "type": "general",
+    "level": 1,
+    "description": "You embody the pinnacle of your ancestry's potential, displaying traits that exemplify your heritage.",
+    "prerequisites": [],
+    "traits": ["General"],
+    "benefit": "You gain a 1st-level ancestry feat from your ancestry. This feat represents natural development within your ancestry, rather than specialized training."
+  },
+  {
+    "id": "adopted-ancestry",
+    "name": "Adopted Ancestry",
+    "type": "general",
+    "level": 1,
+    "description": "You were raised by or spent significant time among members of another ancestry, adopting their cultural practices and mannerisms.",
+    "prerequisites": [],
+    "traits": ["General"],
+    "special": "You can select this feat multiple times. Each time you select it, choose a different ancestry.",
+    "benefit": "Choose an ancestry. You can take ancestry feats from the chosen ancestry in addition to those from your own ancestry. You must meet the ancestry feat's prerequisites, and you can't select ancestry feats that specify another physiological requirement that you don't meet."
+  },
+  {
+    "id": "breath-control",
+    "name": "Breath Control",
+    "type": "general",
+    "level": 1,
+    "description": "You have exceptional lung capacity and control over your breathing.",
+    "prerequisites": [],
+    "traits": ["General"],
+    "benefit": "You can hold your breath for 25 times as long as normal before you start suffocating. You also gain a +1 circumstance bonus to saving throws against effects that would cause you to suffocate or inhale harmful substances."
+  },
+  {
+    "id": "combat-climber",
+    "name": "Combat Climber",
+    "type": "general",
+    "level": 1,
+    "description": "You maintain your combat readiness even while scaling walls and cliffs.",
+    "prerequisites": [],
+    "traits": ["General"],
+    "benefit": "Your climbing doesn't trigger reactions based on your movement, such as Attacks of Opportunity. You aren't off-guard when you Climb."
+  }
+]

@@ -1,0 +1,590 @@
+{
+  "spells": [
+    {
+      "id": "stabilize",
+      "name": "Stabilize",
+      "level": 0,
+      "tradition": ["divine", "primal"],
+      "traits": ["Cantrip", "Healing", "Vitality"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 dying creature",
+      "duration": "instant",
+      "description": "You channel vitality energy into a dying creature to stabilize them. The target loses the dying condition but remains unconscious at 0 Hit Points."
+    },
+    {
+      "id": "light",
+      "name": "Light",
+      "level": 0,
+      "tradition": ["arcane", "divine", "occult", "primal"],
+      "traits": ["Cantrip", "Light"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 object of 1 Bulk or less",
+      "duration": "until your next daily preparations",
+      "description": "The target glows with bright light in a 20-foot radius and dim light for the next 20 feet. The light is bright enough to read and work by. You can Dismiss the spell."
+    },
+    {
+      "id": "divine-lance",
+      "name": "Divine Lance",
+      "level": 0,
+      "tradition": ["divine"],
+      "traits": ["Cantrip", "Attack"],
+      "castTime": "2 actions",
+      "range": "120 feet",
+      "targets": "1 creature",
+      "duration": "instant",
+      "savingThrow": "Fortitude",
+      "description": "You unleash a lance of pure energy aligned with your deity's sanctification. Make a spell attack roll. On a success, the target takes 1d4 spirit damage plus 1 good or evil damage. On a critical success, the target takes double damage and is enfeebled 1 until the start of your next turn.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "Damage increases to 2d4 spirit damage plus 2 good or evil damage"
+        },
+        {
+          "level": 5,
+          "effect": "Damage increases to 3d4 spirit damage plus 3 good or evil damage"
+        }
+      ]
+    },
+    {
+      "id": "shield",
+      "name": "Shield",
+      "level": 0,
+      "tradition": ["arcane", "divine", "occult"],
+      "traits": ["Cantrip"],
+      "castTime": "1 action",
+      "range": "self",
+      "duration": "until the start of your next turn",
+      "description": "You raise a magical shield that grants a +1 circumstance bonus to AC. You can Shield Block with this spell, which has Hardness 5. After a Shield Block, the spell ends. The Hardness increases by 5 at 5th, 9th, 13th, and 17th levels."
+    },
+    {
+      "id": "guidance",
+      "name": "Guidance",
+      "level": 0,
+      "tradition": ["divine", "primal"],
+      "traits": ["Cantrip"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 creature",
+      "duration": "until the start of your next turn",
+      "description": "You bless the target with divine wisdom. Once before the duration ends, the target can roll a d20 and use the higher result on a single attack roll, saving throw, or skill check. The target then becomes temporarily immune for 1 hour."
+    },
+    {
+      "id": "detect-magic",
+      "name": "Detect Magic",
+      "level": 0,
+      "tradition": ["arcane", "divine", "occult", "primal"],
+      "traits": ["Cantrip", "Detection"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "area": "30-foot emanation",
+      "duration": "sustained up to 1 minute",
+      "description": "You sense the presence of magical auras within the area. Each time you Sustain the spell, you can turn to detect magic in a different direction. The spell detects only the presence and location of magic, not the type."
+    },
+    {
+      "id": "read-aura",
+      "name": "Read Aura",
+      "level": 0,
+      "tradition": ["arcane", "divine", "occult", "primal"],
+      "traits": ["Cantrip", "Detection"],
+      "castTime": "1 minute",
+      "range": "30 feet",
+      "targets": "1 object",
+      "duration": "instant",
+      "description": "You study the aura of an object to determine if it is magical. You learn whether the object is magical and, if so, the school of magic."
+    },
+    {
+      "id": "daze",
+      "name": "Daze",
+      "level": 0,
+      "tradition": ["arcane", "divine", "occult"],
+      "traits": ["Cantrip", "Mental"],
+      "castTime": "2 actions",
+      "range": "60 feet",
+      "targets": "1 creature",
+      "duration": "instant",
+      "savingThrow": "Will",
+      "description": "You overwhelm the target's mind with psychic energy. The target takes 1d6 mental damage with a basic Will save. On a critical failure, the target is also stunned 1.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "Damage increases to 2d6"
+        },
+        {
+          "level": 5,
+          "effect": "Damage increases to 3d6"
+        }
+      ]
+    },
+    {
+      "id": "forbidding-ward",
+      "name": "Forbidding Ward",
+      "level": 0,
+      "tradition": ["divine", "occult"],
+      "traits": ["Cantrip"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 ally",
+      "duration": "until the start of your next turn",
+      "description": "You ward an ally with protective energy. The target gains a +1 status bonus to AC until the start of your next turn."
+    },
+    {
+      "id": "know-the-way",
+      "name": "Know the Way",
+      "level": 0,
+      "tradition": ["divine", "occult"],
+      "traits": ["Cantrip", "Detection"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 creature",
+      "duration": "sustained up to 1 minute",
+      "description": "You guide an ally toward a known destination. The target intuitively knows which direction leads most directly to the destination, including around obstacles and through branching passages. This doesn't reveal traps or other dangers."
+    },
+    {
+      "id": "message",
+      "name": "Message",
+      "level": 0,
+      "tradition": ["arcane", "divine", "occult"],
+      "traits": ["Cantrip", "Auditory", "Linguistic", "Mental"],
+      "castTime": "1 action",
+      "range": "120 feet",
+      "targets": "1 creature",
+      "duration": "see text",
+      "description": "You mouth words quietly to send a telepathic message to a creature within range. The target can reply with their own message. Each message can be up to 25 words. The spell lasts 1 round, during which you can send one message and receive one reply."
+    },
+    {
+      "id": "prestidigitation",
+      "name": "Prestidigitation",
+      "level": 0,
+      "tradition": ["arcane", "divine", "occult", "primal"],
+      "traits": ["Cantrip"],
+      "castTime": "2 actions",
+      "range": "10 feet",
+      "targets": "1 object (cook, lift, or tidy only)",
+      "duration": "sustained up to 1 minute",
+      "description": "You perform a minor magical trick. You can lift 1 pound of material, color an object, clean or soil an item, chill or warm material, or create a minor sensory effect."
+    },
+    {
+      "id": "sigil",
+      "name": "Sigil",
+      "level": 0,
+      "tradition": ["arcane", "divine", "occult", "primal"],
+      "traits": ["Cantrip"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 object or 10-foot-by-10-foot area",
+      "duration": "unlimited",
+      "description": "You mark a surface with a glowing symbol. The sigil can be visible or invisible, and you can decide what message it conveys. You can set a password to make the sigil visible or invisible. You can Dismiss the spell."
+    },
+    {
+      "id": "heal",
+      "name": "Heal",
+      "level": 1,
+      "tradition": ["divine", "primal"],
+      "traits": ["Healing", "Vitality"],
+      "castTime": "1 to 3 actions",
+      "range": "varies",
+      "targets": "1 willing living creature or 1 undead",
+      "duration": "instant",
+      "description": "You channel vitality energy to restore Hit Points. If the target is living, it regains 1d8 Hit Points. If the target is undead, it takes 1d8 void damage with a basic Fortitude save. The number of actions changes the spell's range and area: 1 action (touch), 2 actions (30 feet), 3 actions (30-foot emanation healing all living creatures for 1d8).",
+      "heightened": [
+        {
+          "level": 2,
+          "effect": "Healing or damage increases to 2d8 + 8"
+        },
+        {
+          "level": 3,
+          "effect": "Healing or damage increases to 3d8 + 16"
+        }
+      ]
+    },
+    {
+      "id": "harm",
+      "name": "Harm",
+      "level": 1,
+      "tradition": ["divine"],
+      "traits": ["Void"],
+      "castTime": "1 to 3 actions",
+      "range": "varies",
+      "targets": "1 living creature or 1 willing undead",
+      "duration": "instant",
+      "savingThrow": "Fortitude",
+      "description": "You channel void energy to harm the living or heal undead. A living creature takes 1d8 void damage with a basic Fortitude save. An undead creature regains 1d8 Hit Points. The number of actions changes the spell's range and area: 1 action (touch), 2 actions (30 feet), 3 actions (30-foot emanation damaging all living creatures for 1d8).",
+      "heightened": [
+        {
+          "level": 2,
+          "effect": "Damage or healing increases to 2d8 + 8"
+        },
+        {
+          "level": 3,
+          "effect": "Damage or healing increases to 3d8 + 16"
+        }
+      ]
+    },
+    {
+      "id": "bless",
+      "name": "Bless",
+      "level": 1,
+      "tradition": ["divine", "occult"],
+      "traits": ["Mental"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "area": "15-foot emanation",
+      "duration": "1 minute",
+      "description": "You bless all allies in the area with divine fortune. Whenever an ally makes an attack roll or saves against fear, they gain a +1 status bonus to the roll."
+    },
+    {
+      "id": "bane",
+      "name": "Bane",
+      "level": 1,
+      "tradition": ["divine", "occult"],
+      "traits": ["Mental"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "area": "15-foot emanation",
+      "duration": "1 minute",
+      "savingThrow": "Will",
+      "description": "You curse all enemies in the area with misfortune. Whenever an affected creature makes an attack roll or saving throw, it must roll twice and use the lower result."
+    },
+    {
+      "id": "sanctuary",
+      "name": "Sanctuary",
+      "level": 1,
+      "tradition": ["divine", "occult"],
+      "traits": [],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 creature",
+      "duration": "1 minute",
+      "savingThrow": "Will",
+      "description": "You ward a creature with protective magic. Enemies must succeed at a Will save to target the warded creature with attacks, spells, or other hostile actions. On a failure, they must choose a new target or waste the action. The spell ends if the target uses a hostile action.",
+      "heightened": [
+        {
+          "level": 4,
+          "effect": "Duration increases to 10 minutes"
+        }
+      ]
+    },
+    {
+      "id": "command",
+      "name": "Command",
+      "level": 1,
+      "tradition": ["divine", "occult"],
+      "traits": ["Auditory", "Linguistic", "Mental"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 creature",
+      "duration": "until the end of the target's next turn",
+      "savingThrow": "Will",
+      "description": "You issue a simple command that the target must follow. On a failed save, the target must spend its first action on its next turn obeying your command. Commands include approach, drop, flee, grovel, halt, or leave."
+    },
+    {
+      "id": "protection",
+      "name": "Protection",
+      "level": 1,
+      "tradition": ["divine", "occult"],
+      "traits": [],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 creature",
+      "duration": "1 minute",
+      "description": "You ward a creature against the attacks of a particular alignment. Choose good, evil, lawful, or chaotic. The target gains a +1 status bonus to AC and saves against creatures of the chosen alignment.",
+      "heightened": [
+        {
+          "level": 4,
+          "effect": "Duration increases to 10 minutes"
+        }
+      ]
+    },
+    {
+      "id": "spirit-link",
+      "name": "Spirit Link",
+      "level": 1,
+      "tradition": ["divine", "occult"],
+      "traits": ["Healing"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 willing creature",
+      "duration": "10 minutes",
+      "description": "You form a spiritual link with another creature. The target can use an action to transfer any number of its current Hit Points to you, or you can transfer any number of your Hit Points to the target as an action. Hit Points transferred this way ignore any temporary Hit Points.",
+      "heightened": [
+        {
+          "level": 2,
+          "effect": "You can target 2 willing creatures"
+        }
+      ]
+    },
+    {
+      "id": "heroism",
+      "name": "Heroism",
+      "level": 1,
+      "tradition": ["divine", "occult"],
+      "traits": ["Mental"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 creature",
+      "duration": "10 minutes",
+      "description": "You fill the target with confidence and heroism. The target gains a +1 status bonus to attack rolls, Perception checks, saving throws, and skill checks.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "Bonus increases to +2"
+        },
+        {
+          "level": 5,
+          "effect": "Bonus increases to +3"
+        }
+      ]
+    },
+    {
+      "id": "fear",
+      "name": "Fear",
+      "level": 1,
+      "tradition": ["arcane", "divine", "occult", "primal"],
+      "traits": ["Emotion", "Fear", "Mental"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 creature",
+      "duration": "varies",
+      "savingThrow": "Will",
+      "description": "You instill intense fear in the target. On a failed save, the target is frightened 1, or frightened 2 on a critical failure. The target is then temporarily immune for 1 minute."
+    },
+    {
+      "id": "magic-weapon",
+      "name": "Magic Weapon",
+      "level": 1,
+      "tradition": ["arcane", "divine", "occult"],
+      "traits": [],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 non-magical weapon",
+      "duration": "1 minute",
+      "description": "The weapon becomes a +1 striking weapon, gaining a +1 item bonus to attack rolls and increasing its damage to two dice. This doesn't stack with existing runes.",
+      "heightened": [
+        {
+          "level": 4,
+          "effect": "Weapon becomes a +2 striking weapon"
+        }
+      ]
+    },
+    {
+      "id": "create-water",
+      "name": "Create Water",
+      "level": 1,
+      "tradition": ["arcane", "divine", "primal"],
+      "traits": ["Water"],
+      "castTime": "2 actions",
+      "range": "0 feet",
+      "duration": "instant",
+      "description": "You create 2 gallons of fresh, pure water. The water appears in a container within range, or it falls to the ground and is lost if no container is present.",
+      "heightened": [
+        {
+          "level": 2,
+          "effect": "You create 4 gallons of water"
+        }
+      ]
+    },
+    {
+      "id": "purify-food-and-drink",
+      "name": "Purify Food and Drink",
+      "level": 1,
+      "tradition": ["divine", "primal"],
+      "traits": [],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 cubic foot of contaminated food or water",
+      "duration": "instant",
+      "description": "You remove all poisons and diseases from food or drink. This spell doesn't prevent future contamination. The spell can purify 1 cubic foot of liquid or 5 pounds of food.",
+      "heightened": [
+        {
+          "level": 2,
+          "effect": "You can purify twice as much food or drink"
+        }
+      ]
+    },
+    {
+      "id": "detect-alignment",
+      "name": "Detect Alignment",
+      "level": 1,
+      "tradition": ["divine", "occult"],
+      "traits": ["Detection"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "area": "30-foot emanation",
+      "duration": "sustained up to 1 minute",
+      "description": "Choose good, evil, lawful, or chaotic when you cast this spell. You sense the presence of creatures and objects with the chosen alignment trait within the area. Each time you Sustain the spell, you can rotate to detect in a different direction."
+    },
+    {
+      "id": "disrupting-weapons",
+      "name": "Disrupting Weapons",
+      "level": 1,
+      "tradition": ["divine"],
+      "traits": [],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "up to 2 weapons",
+      "duration": "1 minute",
+      "description": "The weapons shine with holy light. On a successful Strike against an undead creature, the weapon deals an additional 1d4 vitality damage. On a critical hit, the undead is also enfeebled 1 until the end of your next turn."
+    },
+    {
+      "id": "mindlink",
+      "name": "Mindlink",
+      "level": 1,
+      "tradition": ["divine", "occult"],
+      "traits": ["Detection", "Mental"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "yourself and 1 willing creature",
+      "duration": "10 minutes",
+      "description": "You form a mental link with the target. You can communicate telepathically with each other, sharing words, emotions, and mental images. This doesn't require line of sight or a shared language, but you must both be on the same plane.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "Duration increases to 1 hour"
+        }
+      ]
+    },
+    {
+      "id": "soothe",
+      "name": "Soothe",
+      "level": 1,
+      "tradition": ["occult"],
+      "traits": ["Emotion", "Healing", "Mental"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 willing living creature",
+      "duration": "1 minute",
+      "description": "You calm the target's emotions and restore its mental fortitude. The target regains 1d10 + 4 Hit Points and can immediately attempt a new save against one mental effect currently afflicting it. It gains a +2 status bonus to Will saves against mental effects for the duration.",
+      "heightened": [
+        {
+          "level": 2,
+          "effect": "Healing increases to 2d10 + 8"
+        }
+      ]
+    },
+    {
+      "id": "alarm",
+      "name": "Alarm",
+      "level": 1,
+      "tradition": ["arcane", "divine", "occult", "primal"],
+      "traits": [],
+      "castTime": "10 minutes",
+      "range": "touch",
+      "area": "20-foot burst",
+      "duration": "8 hours",
+      "description": "You set an alarm in an area. When a Small or larger creature enters the area, the spell alerts you with a mental ping if you're within 1 mile, or an audible alarm that can be heard up to 60 feet away. You can designate creatures that don't trigger the alarm."
+    },
+    {
+      "id": "ant-haul",
+      "name": "Ant Haul",
+      "level": 1,
+      "tradition": ["arcane", "divine", "primal"],
+      "traits": [],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 creature",
+      "duration": "1 minute",
+      "description": "You strengthen the target's muscles for carrying loads. The target can carry 3 extra Bulk before becoming encumbered and 6 extra Bulk before becoming overburdened.",
+      "heightened": [
+        {
+          "level": 2,
+          "effect": "Duration increases to 10 minutes"
+        }
+      ]
+    },
+    {
+      "id": "detect-poison",
+      "name": "Detect Poison",
+      "level": 1,
+      "tradition": ["divine", "primal"],
+      "traits": ["Detection"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "area": "30-foot emanation",
+      "duration": "sustained up to 1 minute",
+      "description": "You sense the presence of poisons, venoms, and poisonous creatures within the area. You don't learn the specific type of poison. Each time you Sustain the spell, you can rotate to detect in a different direction."
+    },
+    {
+      "id": "remove-fear",
+      "name": "Remove Fear",
+      "level": 1,
+      "tradition": ["divine", "occult", "primal"],
+      "traits": [],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 creature",
+      "duration": "10 minutes",
+      "description": "You remove fear from the target's mind. The target immediately reduces its frightened condition by 1. For the duration, the target gains a +1 status bonus to saves against fear effects.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "Target reduces frightened by 2"
+        }
+      ]
+    },
+    {
+      "id": "summon-construct",
+      "name": "Summon Construct",
+      "level": 1,
+      "tradition": ["arcane", "divine"],
+      "traits": [],
+      "castTime": "3 actions",
+      "range": "30 feet",
+      "duration": "sustained up to 1 minute",
+      "description": "You summon a level -1 construct. It appears in an unoccupied space within range, acts on your turn, and follows your mental commands. The construct vanishes when the spell ends or when reduced to 0 Hit Points.",
+      "heightened": [
+        {
+          "level": 2,
+          "effect": "Summon a level 1 construct"
+        },
+        {
+          "level": 3,
+          "effect": "Summon a level 2 construct"
+        }
+      ]
+    },
+    {
+      "id": "summon-fey",
+      "name": "Summon Fey",
+      "level": 1,
+      "tradition": ["occult", "primal"],
+      "traits": [],
+      "castTime": "3 actions",
+      "range": "30 feet",
+      "duration": "sustained up to 1 minute",
+      "description": "You summon a level -1 fey creature. It appears in an unoccupied space within range, acts on your turn, and follows your mental commands. The fey vanishes when the spell ends or when reduced to 0 Hit Points.",
+      "heightened": [
+        {
+          "level": 2,
+          "effect": "Summon a level 1 fey"
+        },
+        {
+          "level": 3,
+          "effect": "Summon a level 2 fey"
+        }
+      ]
+    },
+    {
+      "id": "summon-animal",
+      "name": "Summon Animal",
+      "level": 1,
+      "tradition": ["primal"],
+      "traits": [],
+      "castTime": "3 actions",
+      "range": "30 feet",
+      "duration": "sustained up to 1 minute",
+      "description": "You summon a level -1 animal. It appears in an unoccupied space within range, acts on your turn, and follows your mental commands. The animal vanishes when the spell ends or when reduced to 0 Hit Points.",
+      "heightened": [
+        {
+          "level": 2,
+          "effect": "Summon a level 1 animal"
+        },
+        {
+          "level": 3,
+          "effect": "Summon a level 2 animal"
+        }
+      ]
+    }
+  ]
+}

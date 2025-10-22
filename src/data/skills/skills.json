@@ -1,0 +1,98 @@
+[
+  {
+    "id": "acrobatics",
+    "name": "Acrobatics",
+    "ability": "dexterity",
+    "description": "Balance, tumble, maneuver in mid-air, and squeeze through tight spaces."
+  },
+  {
+    "id": "arcana",
+    "name": "Arcana",
+    "ability": "intelligence",
+    "description": "Recall knowledge about arcane magic, magical traditions, and creatures."
+  },
+  {
+    "id": "athletics",
+    "name": "Athletics",
+    "ability": "strength",
+    "description": "Climb, force open objects, grapple, shove, swim, and similar physical feats."
+  },
+  {
+    "id": "crafting",
+    "name": "Crafting",
+    "ability": "intelligence",
+    "description": "Create and repair items, identify alchemical objects, and assess structural weaknesses."
+  },
+  {
+    "id": "deception",
+    "name": "Deception",
+    "ability": "charisma",
+    "description": "Lie, feint in combat, impersonate, and disguise yourself."
+  },
+  {
+    "id": "diplomacy",
+    "name": "Diplomacy",
+    "ability": "charisma",
+    "description": "Influence others, make requests, gather information, and negotiate."
+  },
+  {
+    "id": "intimidation",
+    "name": "Intimidation",
+    "ability": "charisma",
+    "description": "Threaten, coerce, and demoralize others through fear."
+  },
+  {
+    "id": "medicine",
+    "name": "Medicine",
+    "ability": "wisdom",
+    "description": "Diagnose ailments, treat wounds, and provide long-term care."
+  },
+  {
+    "id": "nature",
+    "name": "Nature",
+    "ability": "wisdom",
+    "description": "Recall knowledge about natural creatures, weather, plants, and geography."
+  },
+  {
+    "id": "occultism",
+    "name": "Occultism",
+    "ability": "intelligence",
+    "description": "Recall knowledge about occult traditions, mysteries, and esoteric creatures."
+  },
+  {
+    "id": "performance",
+    "name": "Performance",
+    "ability": "charisma",
+    "description": "Entertain through music, dance, acting, storytelling, or other artistic displays."
+  },
+  {
+    "id": "religion",
+    "name": "Religion",
+    "ability": "wisdom",
+    "description": "Recall knowledge about divine traditions, deities, holy symbols, and undead."
+  },
+  {
+    "id": "society",
+    "name": "Society",
+    "ability": "intelligence",
+    "description": "Recall knowledge about history, cultures, governments, and geography."
+  },
+  {
+    "id": "stealth",
+    "name": "Stealth",
+    "ability": "dexterity",
+    "description": "Hide, sneak, and avoid detection."
+  },
+  {
+    "id": "survival",
+    "name": "Survival",
+    "ability": "wisdom",
+    "description": "Track creatures, navigate wilderness, subsist in the wild, and sense weather changes."
+  },
+  {
+    "id": "thievery",
+    "name": "Thievery",
+    "ability": "dexterity",
+    "description": "Palm objects, steal, disable devices, and pick locks."
+  }
+]

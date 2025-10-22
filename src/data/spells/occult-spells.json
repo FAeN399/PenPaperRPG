@@ -1,0 +1,674 @@
+{
+  "spells": [
+    {
+      "id": "daze",
+      "name": "Daze",
+      "level": 0,
+      "tradition": ["arcane", "divine", "occult"],
+      "traits": ["Cantrip", "Mental", "Nonlethal"],
+      "castTime": "2 actions",
+      "range": "60 feet",
+      "targets": "1 creature",
+      "duration": "1 round",
+      "savingThrow": "Will",
+      "description": "You cloud the target's mind with a momentary mental overload, dealing mental damage and potentially stunning them. The target takes 1d6 mental damage with a basic Will save. If the target critically fails, it is also stunned 1.",
+      "heightened": [
+        {
+          "level": "+1",
+          "effect": "The damage increases by 1d6."
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "name": "Message",
+      "level": 0,
+      "tradition": ["arcane", "divine", "occult"],
+      "traits": ["Cantrip", "Auditory", "Linguistic", "Mental"],
+      "castTime": "1 action",
+      "range": "120 feet",
+      "targets": "1 creature",
+      "duration": "See text",
+      "description": "You mouth words quietly, but instead of coming out of your mouth, they're transferred directly to the ears of the target. The target hears the message in their mind, recognizing you as the sender. The spell doesn't have to follow a straight line and can travel around corners and barriers.",
+      "heightened": [
+        {
+          "level": "3rd",
+          "effect": "The spell's range increases to 500 feet."
+        }
+      ]
+    },
+    {
+      "id": "ghost-sound",
+      "name": "Ghost Sound",
+      "level": 0,
+      "tradition": ["arcane", "occult"],
+      "traits": ["Cantrip", "Auditory", "Illusion"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "duration": "Sustained up to 1 minute",
+      "description": "You create an auditory illusion of simple sounds that emanate from a location of your choice. The sounds are no louder than four normal humans could produce. You can produce the sounds of multiple people talking, singing, walking, or almost any other sound a group could make.",
+      "heightened": [
+        {
+          "level": "3rd",
+          "effect": "The range increases to 60 feet."
+        },
+        {
+          "level": "5th",
+          "effect": "The range increases to 120 feet."
+        }
+      ]
+    },
+    {
+      "id": "telekinetic-projectile",
+      "name": "Telekinetic Projectile",
+      "level": 0,
+      "tradition": ["arcane", "occult"],
+      "traits": ["Cantrip", "Attack", "Force"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 creature",
+      "duration": "Instantaneous",
+      "description": "You hurl a loose, unattended object within range at the target using telekinetic power. Make a ranged spell attack roll against the target. If you hit, you deal bludgeoning, piercing, or slashing damage equal to 1d6 plus your spellcasting ability modifier.",
+      "heightened": [
+        {
+          "level": "+1",
+          "effect": "The damage increases by 1d6."
+        }
+      ]
+    },
+    {
+      "id": "shield",
+      "name": "Shield",
+      "level": 0,
+      "tradition": ["arcane", "divine", "occult"],
+      "traits": ["Cantrip", "Force"],
+      "castTime": "1 action",
+      "range": "Self",
+      "duration": "Until the start of your next turn",
+      "description": "You raise a magical shield of force. This counts as using the Raise a Shield action, giving you a +1 circumstance bonus to AC. While the spell is in effect, you can use the Shield Block reaction with your magic shield, which has Hardness 5.",
+      "heightened": [
+        {
+          "level": "3rd",
+          "effect": "The shield has Hardness 10."
+        },
+        {
+          "level": "5th",
+          "effect": "The shield has Hardness 15."
+        },
+        {
+          "level": "7th",
+          "effect": "The shield has Hardness 20."
+        }
+      ]
+    },
+    {
+      "id": "detect-magic",
+      "name": "Detect Magic",
+      "level": 0,
+      "tradition": ["arcane", "divine", "occult", "primal"],
+      "traits": ["Cantrip", "Detection"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "area": "30-foot emanation",
+      "duration": "Sustained",
+      "description": "You send out a pulse that registers the presence of magic within the area. You receive no information beyond the presence or absence of magic. You can choose to ignore magic you're fully aware of, such as the magic items you and your allies are wearing."
+    },
+    {
+      "id": "guidance",
+      "name": "Guidance",
+      "level": 0,
+      "tradition": ["divine", "occult"],
+      "traits": ["Cantrip"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 creature",
+      "duration": "Until the start of your next turn",
+      "description": "You channel psychic energy or divine inspiration to grant the target a flash of insight. Once before the duration ends, the target can roll a d20 and add +1 to the result. The spell then ends. If the spell is used as part of an attack roll and the attack is a critical failure, the attack becomes a normal failure instead."
+    },
+    {
+      "id": "light",
+      "name": "Light",
+      "level": 0,
+      "tradition": ["arcane", "divine", "occult", "primal"],
+      "traits": ["Cantrip", "Light"],
+      "castTime": "2 actions",
+      "range": "Touch",
+      "targets": "1 object of 1 Bulk or less",
+      "duration": "Until your next daily preparations",
+      "description": "The object glows, shedding bright light in a 20-foot radius like a torch. If you cast this spell again on a second object, the light spell on the first object ends.",
+      "heightened": [
+        {
+          "level": "4th",
+          "effect": "The object sheds bright light in a 60-foot radius and dim light for the next 60 feet."
+        }
+      ]
+    },
+    {
+      "id": "mage-hand",
+      "name": "Mage Hand",
+      "level": 0,
+      "tradition": ["arcane", "occult"],
+      "traits": ["Cantrip"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "duration": "Sustained",
+      "description": "You create a floating, spectral hand that can manipulate objects at a distance. The hand can manipulate an object, open an unlocked door or container, stow or retrieve an item from an open container, or pour the contents from a vial. The hand can't use abilities that require a check or attack roll."
+    },
+    {
+      "id": "prestidigitation",
+      "name": "Prestidigitation",
+      "level": 0,
+      "tradition": ["arcane", "occult"],
+      "traits": ["Cantrip"],
+      "castTime": "2 actions",
+      "range": "10 feet",
+      "targets": "1 object",
+      "duration": "Sustained",
+      "description": "You perform a simple magical effect with a single gesture. You can color, clean, or soil items in a 1-foot cube each round. You can chill, warm, or flavor 1 pound of nonliving material. You can create a small, harmless sensory effect. You can lift and move up to 1 Bulk of objects."
+    },
+    {
+      "id": "read-aura",
+      "name": "Read Aura",
+      "level": 0,
+      "tradition": ["arcane", "divine", "occult"],
+      "traits": ["Cantrip", "Detection"],
+      "castTime": "1 minute",
+      "range": "30 feet",
+      "targets": "1 object",
+      "duration": "Instantaneous",
+      "description": "You focus on the target object, opening your mind to perceive magical auras. When the casting is complete, you learn whether that item is magical, and if it is, you learn the school of magic. You don't learn what the magic does, only its type."
+    },
+    {
+      "id": "sigil",
+      "name": "Sigil",
+      "level": 0,
+      "tradition": ["arcane", "occult"],
+      "traits": ["Cantrip"],
+      "castTime": "2 actions",
+      "range": "Touch",
+      "targets": "1 object",
+      "duration": "Unlimited",
+      "description": "You harmlessly place your unique magical sigil on an item. The mark can be visible or invisible, and you can change it from one state to the other with a touch as an Interact action. An invisible mark can be revealed by detect magic."
+    },
+    {
+      "id": "forbidding-ward",
+      "name": "Forbidding Ward",
+      "level": 0,
+      "tradition": ["divine", "occult"],
+      "traits": ["Cantrip", "Abjuration"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 ally",
+      "duration": "1 round",
+      "description": "You create a protective ward that deters enemies from attacking your ally. The target gains a +1 status bonus to AC and saves against creatures that are adjacent to them. This bonus increases to +3 against creatures attempting to attack the target using an unarmed attack."
+    },
+    {
+      "id": "void-warp",
+      "name": "Void Warp",
+      "level": 0,
+      "tradition": ["arcane", "occult"],
+      "traits": ["Cantrip", "Attack", "Void"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 creature",
+      "duration": "Instantaneous",
+      "description": "You puncture the veil to the Void and draw out a weighted sphere of Void energy that you fling at the target. Make a ranged spell attack. On a hit, the target takes bludgeoning damage equal to 1d4 plus your spellcasting ability modifier.",
+      "heightened": [
+        {
+          "level": "+1",
+          "effect": "The damage increases by 1d4."
+        }
+      ]
+    },
+    {
+      "id": "telekinetic-hand",
+      "name": "Telekinetic Hand",
+      "level": 0,
+      "tradition": ["arcane", "occult"],
+      "traits": ["Cantrip"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "duration": "Sustained",
+      "description": "You create an invisible telekinetic hand that can manipulate objects at a distance. The hand can hold up to 1 Bulk worth of objects, and you can use it to manipulate or move items within range. You can Sustain the spell to move the hand up to 20 feet and repeat one of its actions."
+    },
+    {
+      "id": "charm",
+      "name": "Charm",
+      "level": 1,
+      "tradition": ["occult"],
+      "traits": ["Emotion", "Incapacitation", "Mental"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 creature",
+      "duration": "1 hour",
+      "savingThrow": "Will",
+      "description": "To the target, your words are honey and your visage seems bathed in a dreamy haze. It must attempt a Will save, with a +4 circumstance bonus if you or your allies recently threatened or were hostile to it. The creature becomes friendly to you. If it was previously friendly, it becomes helpful. It can't take hostile actions against you.",
+      "heightened": [
+        {
+          "level": "4th",
+          "effect": "The duration lasts until the next time you make your daily preparations."
+        },
+        {
+          "level": "8th",
+          "effect": "The duration is unlimited."
+        }
+      ]
+    },
+    {
+      "id": "fear",
+      "name": "Fear",
+      "level": 1,
+      "tradition": ["arcane", "divine", "occult", "primal"],
+      "traits": ["Emotion", "Fear", "Mental"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 creature",
+      "duration": "Varies",
+      "savingThrow": "Will",
+      "description": "You plant fear in the target's mind. The target becomes frightened based on the result of its Will save. Critical Success: The target is unaffected. Success: The target is frightened 1. Failure: The target is frightened 2. Critical Failure: The target is frightened 3 and fleeing for 1 round.",
+      "heightened": [
+        {
+          "level": "3rd",
+          "effect": "You can target up to five creatures."
+        }
+      ]
+    },
+    {
+      "id": "illusory-disguise",
+      "name": "Illusory Disguise",
+      "level": 1,
+      "tradition": ["arcane", "occult"],
+      "traits": ["Illusion", "Visual"],
+      "castTime": "2 actions",
+      "range": "Self",
+      "duration": "10 minutes",
+      "description": "You create an illusion that causes you to appear as another creature of the same body shape and roughly similar height and weight as yourself. The disguise can make you appear as any creature of your general size and body shape, but the spell doesn't provide the abilities or mannerisms of the chosen form.",
+      "heightened": [
+        {
+          "level": "2nd",
+          "effect": "The duration increases to 1 hour, and you can change the appearance as an action."
+        },
+        {
+          "level": "3rd",
+          "effect": "The duration increases to 24 hours."
+        }
+      ]
+    },
+    {
+      "id": "illusory-object",
+      "name": "Illusory Object",
+      "level": 1,
+      "tradition": ["arcane", "occult"],
+      "traits": ["Illusion", "Visual"],
+      "castTime": "2 actions",
+      "range": "500 feet",
+      "duration": "10 minutes",
+      "description": "You create an illusory visual image of a stationary object. The entire image must fit within the spell's range. The image can't create sound, light, smell, or any other sensory effect. The image looks realistic, but creatures that touch it pass through it.",
+      "heightened": [
+        {
+          "level": "2nd",
+          "effect": "Your image makes appropriate sounds and has a scent and normal temperature. A creature that touches the image or uses the Seek action can attempt to disbelieve your illusion."
+        },
+        {
+          "level": "5th",
+          "effect": "As the 2nd-rank version, but the casting time becomes 1 minute and the spell has a duration of unlimited."
+        }
+      ]
+    },
+    {
+      "id": "soothe",
+      "name": "Soothe",
+      "level": 1,
+      "tradition": ["occult"],
+      "traits": ["Emotion", "Healing", "Mental"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 willing creature",
+      "duration": "1 minute",
+      "description": "You grace the target's mind, soothing away one mental effect. The target regains 1d10+4 Hit Points when you cast the spell and gains a +2 status bonus to saves against mental effects for the duration. You can remove a single effect imposing the frightened condition.",
+      "heightened": [
+        {
+          "level": "+1",
+          "effect": "The amount of healing increases by 1d10+4."
+        }
+      ]
+    },
+    {
+      "id": "sleep",
+      "name": "Sleep",
+      "level": 1,
+      "tradition": ["arcane", "occult"],
+      "traits": ["Incapacitation", "Mental", "Sleep"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "area": "5-foot burst",
+      "duration": "1 minute",
+      "savingThrow": "Will",
+      "description": "Each creature in the area becomes drowsy and might fall asleep. A creature that falls unconscious from this spell awakens if it takes damage or if a creature uses an Interact action to shake it awake. Each creature in the area must attempt a Will save. Critical Success: The creature is unaffected. Success: The creature takes a -1 status penalty to Perception checks for 1 round. Failure: The creature falls unconscious. Critical Failure: The creature falls unconscious and doesn't attempt a flat check to wake up if it takes damage.",
+      "heightened": [
+        {
+          "level": "4th",
+          "effect": "Creatures fall unconscious even on a success (but not a critical success), though they don't get the critical failure effect."
+        }
+      ]
+    },
+    {
+      "id": "command",
+      "name": "Command",
+      "level": 1,
+      "tradition": ["arcane", "divine", "occult"],
+      "traits": ["Auditory", "Linguistic", "Mental"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 creature",
+      "duration": "Until the end of the target's next turn",
+      "savingThrow": "Will",
+      "description": "You shout a command that's hard to ignore. You can command the target to approach you, run away (fleeing from you), release what it's holding, drop prone, or stand in place. The target must attempt a Will save. Success: The target is unaffected. Failure: The target follows your command on its next turn. Critical Failure: The target follows your command and is stunned 1.",
+      "heightened": [
+        {
+          "level": "5th",
+          "effect": "You can target up to 10 creatures."
+        }
+      ]
+    },
+    {
+      "id": "phantom-pain",
+      "name": "Phantom Pain",
+      "level": 1,
+      "tradition": ["occult"],
+      "traits": ["Mental", "Nonlethal"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 creature",
+      "duration": "1 minute",
+      "savingThrow": "Will",
+      "description": "You send a flash of painful mental anguish through the target's mind. The target takes 2d4 persistent mental damage and must attempt a Will save. Critical Success: The target is unaffected. Success: The target takes half the persistent damage. Failure: The target takes the full persistent damage. Critical Failure: The target takes double the persistent damage and is sickened 1.",
+      "heightened": [
+        {
+          "level": "+1",
+          "effect": "The damage increases by 2d4."
+        }
+      ]
+    },
+    {
+      "id": "mindlink",
+      "name": "Mindlink",
+      "level": 1,
+      "tradition": ["occult"],
+      "traits": ["Detection", "Mental"],
+      "castTime": "2 actions",
+      "range": "Touch",
+      "targets": "You and 1 willing creature",
+      "duration": "10 minutes",
+      "description": "You link your mind to the target's mind and can communicate telepathically. You can send and receive messages and images to each other mentally. While the spell is active, you can use a single action with the concentrate trait to share your current vision with your target, allowing them to see through your eyes.",
+      "heightened": [
+        {
+          "level": "3rd",
+          "effect": "The target can be up to 1 mile away and the duration is 8 hours."
+        },
+        {
+          "level": "5th",
+          "effect": "The target can be anywhere on the same planet."
+        }
+      ]
+    },
+    {
+      "id": "bane",
+      "name": "Bane",
+      "level": 1,
+      "tradition": ["divine", "occult"],
+      "traits": ["Mental"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "Up to 5 creatures",
+      "duration": "1 minute",
+      "savingThrow": "Will",
+      "description": "You fill the targets with a curse that saps their courage and coordination. Each target must attempt a Will save. Critical Success: The target is unaffected. Success: The target takes a -1 status penalty to attack rolls for 1 round. Failure: The target takes a -1 status penalty to attack rolls for the duration. Critical Failure: The target takes a -2 status penalty to attack rolls for the duration."
+    },
+    {
+      "id": "bless",
+      "name": "Bless",
+      "level": 1,
+      "tradition": ["divine", "occult"],
+      "traits": ["Mental"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "You and allies in range",
+      "duration": "1 minute",
+      "description": "Blessings from beyond fill your allies with the strength and confidence to fight. You and your allies in the area gain a +1 status bonus to attack rolls while within the area. Casting this spell heightens all of your other ongoing bless spells to the higher level."
+    },
+    {
+      "id": "true-strike",
+      "name": "True Strike",
+      "level": 1,
+      "tradition": ["arcane", "occult"],
+      "traits": ["Fortune"],
+      "castTime": "1 action",
+      "range": "Self",
+      "duration": "Until the end of your turn",
+      "description": "A glimpse into the future ensures your next blow strikes true. The next attack roll you make before the end of your turn gains a +1 status bonus and ignores the target's concealment. If the attack is successful, it deals an additional die of damage."
+    },
+    {
+      "id": "magic-missile",
+      "name": "Magic Missile",
+      "level": 1,
+      "tradition": ["arcane", "occult"],
+      "traits": ["Evocation", "Force"],
+      "castTime": "1 to 3 actions",
+      "range": "120 feet",
+      "targets": "1 or more creatures",
+      "duration": "Instantaneous",
+      "description": "You send a dart of force streaking toward a creature that you can see. It automatically hits and deals 1d4+1 force damage. For each additional action you use when Casting the Spell, increase the number of missiles you shoot by one, to a maximum of three missiles for 3 actions.",
+      "heightened": [
+        {
+          "level": "+2",
+          "effect": "You shoot one additional missile with each action spent."
+        }
+      ]
+    },
+    {
+      "id": "sanctuary",
+      "name": "Sanctuary",
+      "level": 1,
+      "tradition": ["divine", "occult"],
+      "traits": ["Abjuration"],
+      "castTime": "2 actions",
+      "range": "Touch",
+      "targets": "1 creature",
+      "duration": "1 minute",
+      "description": "You ward a creature with protective energy that deters enemy attacks. Creatures attempting to attack the target must attempt a Will save each time. If they fail, they must choose a new target or lose the action. This can't prevent people from using area attacks or otherwise attacking in a way that might harm the target but doesn't specifically target them."
+    },
+    {
+      "id": "ventriloquism",
+      "name": "Ventriloquism",
+      "level": 1,
+      "tradition": ["arcane", "occult"],
+      "traits": ["Auditory", "Illusion"],
+      "castTime": "2 actions",
+      "range": "60 feet",
+      "duration": "10 minutes",
+      "description": "Whenever you speak, you can make your voice appear to originate from any point within range. You can speak normally, whisper, shout, or even perfectly imitate someone else's voice. Anyone who hears the sound can attempt a Perception check against your spell DC to disbelieve the illusion.",
+      "heightened": [
+        {
+          "level": "2nd",
+          "effect": "The duration increases to 1 hour."
+        }
+      ]
+    },
+    {
+      "id": "color-spray",
+      "name": "Color Spray",
+      "level": 1,
+      "tradition": ["arcane", "occult"],
+      "traits": ["Incapacitation", "Illusion", "Visual"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "area": "15-foot cone",
+      "duration": "1 to 3 rounds",
+      "savingThrow": "Will",
+      "description": "You unleash a dazzling spray of sparkling, multicolored light. Each creature in the area must attempt a Will save. Critical Success: The creature is unaffected. Success: The creature is dazzled for 1 round. Failure: The creature is stunned 1, blinded for 1 round, and dazzled for 1 minute. Critical Failure: The creature is stunned for 1 round and blinded for 1 minute."
+    },
+    {
+      "id": "grim-tendrils",
+      "name": "Grim Tendrils",
+      "level": 1,
+      "tradition": ["arcane", "occult"],
+      "traits": ["Void"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "area": "Line",
+      "duration": "Instantaneous",
+      "savingThrow": "Fortitude",
+      "description": "Tendrils of darkness curl out from your fingers and race through the air. You deal 2d4 void damage and 1 persistent bleed damage to living creatures in the line. Each creature in the area must attempt a Fortitude save. Critical Success: The creature is unaffected. Success: The creature takes half damage. Failure: The creature takes full damage. Critical Failure: The creature takes double damage.",
+      "heightened": [
+        {
+          "level": "+1",
+          "effect": "The damage increases by 2d4 and the persistent bleed damage by 1."
+        }
+      ]
+    },
+    {
+      "id": "unseen-servant",
+      "name": "Unseen Servant",
+      "level": 1,
+      "tradition": ["arcane", "occult"],
+      "traits": ["Summoned"],
+      "castTime": "3 actions",
+      "range": "60 feet",
+      "duration": "Sustained",
+      "description": "You summon an invisible, shapeless force that performs simple tasks at your command. It can move up to 15 feet and use 2 Interact actions when you Sustain the Spell. It can't attack, use a skill check, or use any actions with the manipulate trait that require a creature. The servant can hold objects but not wield weapons."
+    },
+    {
+      "id": "noxious-vapors",
+      "name": "Noxious Vapors",
+      "level": 1,
+      "tradition": ["arcane", "occult", "primal"],
+      "traits": ["Poison"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "area": "10-foot burst",
+      "duration": "1 minute",
+      "savingThrow": "Fortitude",
+      "description": "You create a cloud of putrid mist. All creatures in the area when you cast the spell, creatures that enter the area, and creatures that end their turn in the area must attempt a Fortitude save. They take 1d6 poison damage on a failure or no damage on a success. The cloud provides concealment.",
+      "heightened": [
+        {
+          "level": "+1",
+          "effect": "The damage increases by 1d6."
+        }
+      ]
+    },
+    {
+      "id": "floating-disk",
+      "name": "Floating Disk",
+      "level": 1,
+      "tradition": ["arcane", "occult"],
+      "traits": ["Force"],
+      "castTime": "2 actions",
+      "range": "Self",
+      "duration": "8 hours",
+      "description": "You create a disk of magical force that floats just above the ground. The disk is 3 feet in diameter and follows you at a distance of 5 feet, unable to move more than 5 feet away from you. It can hold up to 5 Bulk of items. If you move more than 5 feet from the disk, the spell ends."
+    },
+    {
+      "id": "grease",
+      "name": "Grease",
+      "level": 1,
+      "tradition": ["arcane", "occult"],
+      "traits": [],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "area": "Four contiguous 5-foot squares",
+      "duration": "1 minute",
+      "savingThrow": "Reflex",
+      "description": "You conjure grease in the target area, making it difficult terrain. Creatures entering the area or ending their turn in the area must attempt a Reflex save. On a failure, they fall prone. On a critical failure, they also take 1d6 bludgeoning damage."
+    },
+    {
+      "id": "magic-aura",
+      "name": "Magic Aura",
+      "level": 1,
+      "tradition": ["arcane", "occult"],
+      "traits": ["Illusion"],
+      "castTime": "1 minute",
+      "range": "Touch",
+      "targets": "1 object of 5 Bulk or less",
+      "duration": "Until your next daily preparations",
+      "description": "You alter the appearance of an item's magic aura. You can make a magical item seem nonmagical, make a nonmagical item seem magical, or change the magic school an item's aura belongs to. Any spell that detects magic works against the false aura instead of the true aura.",
+      "heightened": [
+        {
+          "level": "3rd",
+          "effect": "You can target up to 10 objects, and the duration is 24 hours."
+        }
+      ]
+    },
+    {
+      "id": "disguise-magic",
+      "name": "Disguise Magic",
+      "level": 1,
+      "tradition": ["arcane", "occult"],
+      "traits": ["Illusion"],
+      "castTime": "1 minute",
+      "range": "Touch",
+      "targets": "1 creature or object",
+      "duration": "Until your next daily preparations",
+      "description": "You shroud the target in an illusion that makes it appear nonmagical. The spell conceals magical auras from detection, making it hard for others to sense magic on the target. The target must attempt a Will save when someone uses a detection spell against it. On a success, the magic is hidden.",
+      "heightened": [
+        {
+          "level": "2nd",
+          "effect": "The duration increases to 1 hour and you can target up to 10 creatures or objects."
+        }
+      ]
+    },
+    {
+      "id": "magic-weapon",
+      "name": "Magic Weapon",
+      "level": 1,
+      "tradition": ["arcane", "divine", "occult"],
+      "traits": [],
+      "castTime": "2 actions",
+      "range": "Touch",
+      "targets": "1 non-magical weapon",
+      "duration": "1 minute",
+      "description": "You enhance a weapon with magical energy. The weapon becomes a +1 striking weapon, gaining a +1 item bonus to attack rolls and increasing the number of weapon damage dice to two.",
+      "heightened": [
+        {
+          "level": "3rd",
+          "effect": "The weapon becomes a +2 striking weapon."
+        },
+        {
+          "level": "5th",
+          "effect": "The weapon becomes a +3 striking weapon."
+        }
+      ]
+    },
+    {
+      "id": "share-lore",
+      "name": "Share Lore",
+      "level": 1,
+      "tradition": ["occult"],
+      "traits": ["Mental"],
+      "castTime": "1 minute",
+      "range": "Touch",
+      "targets": "1 willing creature",
+      "duration": "10 minutes",
+      "description": "You share your knowledge with the target, imparting information about a particular subject. For the duration, the target can use your proficiency bonus for one Lore skill of your choice instead of their own. This doesn't grant them any special knowledge, only your trained insight."
+    },
+    {
+      "id": "enfeeble",
+      "name": "Enfeeble",
+      "level": 1,
+      "tradition": ["arcane", "occult"],
+      "traits": ["Void"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 creature",
+      "duration": "Varies",
+      "savingThrow": "Fortitude",
+      "description": "You sap the target's strength with void energy. The target becomes enfeebled based on its Fortitude save. Critical Success: The target is unaffected. Success: The target is enfeebled 1 for 1 round. Failure: The target is enfeebled 2 for 1 minute. Critical Failure: The target is enfeebled 3 for 1 minute.",
+      "heightened": [
+        {
+          "level": "6th",
+          "effect": "The enfeebled condition increases by 1 for each degree of success."
+        }
+      ]
+    }
+  ]
+}
