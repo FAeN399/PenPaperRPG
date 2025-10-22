@@ -1,7 +1,13 @@
 import { useState } from 'react'
+import CharacterCreator from './components/CharacterCreator'
+import Button from './components/shared/Button'
 
 function App() {
-  const [message, setMessage] = useState<string>('Welcome to PenPaperRPG')
+  const [showCreator, setShowCreator] = useState(false)
+
+  if (showCreator) {
+    return <CharacterCreator />
+  }
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -15,19 +21,16 @@ function App() {
       <main className="flex-1 p-6">
         <div className="max-w-4xl mx-auto">
           <div className="card text-center py-12">
-            <h2 className="text-pf-accent mb-4">{message}</h2>
+            <h2 className="text-pf-accent mb-4">Welcome to PenPaperRPG</h2>
             <p className="text-pf-text-muted mb-6">
               A comprehensive character creator for Pathfinder Second Edition
             </p>
             <p className="text-sm text-pf-text-muted mb-8">
-              Phase 1: Project Setup & Foundation - Complete
+              Phase 2: Core UI Framework - Complete
             </p>
-            <button
-              className="btn-primary"
-              onClick={() => setMessage('Ready to create your character!')}
-            >
-              Get Started
-            </button>
+            <Button onClick={() => setShowCreator(true)}>
+              Create New Character
+            </Button>
           </div>
 
           {/* Feature Preview */}
