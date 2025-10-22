@@ -1,0 +1,809 @@
+{
+  "spells": [
+    {
+      "id": "produce-flame",
+      "name": "Produce Flame",
+      "level": 0,
+      "tradition": ["primal"],
+      "traits": ["Attack", "Cantrip", "Concentrate", "Fire", "Manipulate"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 creature",
+      "duration": "varies",
+      "description": "A small ball of flame appears in the palm of your hand, and you lash out with it either in melee or at range. Make a spell attack roll against your target's AC. This is normally a ranged attack, but you can also make a melee attack against a creature in your reach. On a success, you deal 1d4 fire damage plus your spellcasting ability modifier. On a critical success, the target takes double damage and 1d4 persistent fire damage.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "The initial damage increases by 1d4, and the persistent damage on a critical hit increases by 1d4"
+        },
+        {
+          "level": 5,
+          "effect": "The initial damage increases by 2d4, and the persistent damage on a critical hit increases by 2d4"
+        },
+        {
+          "level": 7,
+          "effect": "The initial damage increases by 3d4, and the persistent damage on a critical hit increases by 3d4"
+        },
+        {
+          "level": 9,
+          "effect": "The initial damage increases by 4d4, and the persistent damage on a critical hit increases by 4d4"
+        }
+      ]
+    },
+    {
+      "id": "tanglefoot",
+      "name": "Tanglefoot",
+      "level": 0,
+      "tradition": ["primal"],
+      "traits": ["Attack", "Cantrip", "Concentrate", "Manipulate", "Plant"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 creature",
+      "duration": "1 round",
+      "description": "A vine covered in sticky sap appears from thin air, flicking from your hand and lashing itself to the target. Make a spell attack roll against the target's AC. On a success, the target takes a -10-foot status penalty to its Speeds for 1 round. On a critical success, the target is also immobilized for 1 round unless it Escapes.",
+      "heightened": [
+        {
+          "level": 2,
+          "effect": "The effects last for 2 rounds"
+        }
+      ]
+    },
+    {
+      "id": "electric-arc",
+      "name": "Electric Arc",
+      "level": 0,
+      "tradition": ["primal"],
+      "traits": ["Cantrip", "Concentrate", "Electricity", "Manipulate"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 or 2 creatures",
+      "savingThrow": "basic Reflex",
+      "duration": "instantaneous",
+      "description": "An arc of lightning leaps from your hand. It deals 1d4 electricity damage to each target, with a basic Reflex save. On a critical failure, the target also takes 1 persistent electricity damage.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "The damage increases by 1d4"
+        },
+        {
+          "level": 5,
+          "effect": "The damage increases by 2d4"
+        },
+        {
+          "level": 7,
+          "effect": "The damage increases by 3d4"
+        },
+        {
+          "level": 9,
+          "effect": "The damage increases by 4d4"
+        }
+      ]
+    },
+    {
+      "id": "ray-of-frost",
+      "name": "Ray of Frost",
+      "level": 0,
+      "tradition": ["primal"],
+      "traits": ["Attack", "Cantrip", "Cold", "Concentrate", "Manipulate"],
+      "castTime": "2 actions",
+      "range": "120 feet",
+      "targets": "1 creature",
+      "duration": "instantaneous",
+      "description": "You blast an icy ray. Make a spell attack roll. The ray deals cold damage equal to 1d4 plus your spellcasting ability modifier. On a critical success, the target takes double damage and takes a -10-foot status penalty to its Speeds for 1 round.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "The damage increases by 1d4"
+        },
+        {
+          "level": 5,
+          "effect": "The damage increases by 2d4"
+        },
+        {
+          "level": 7,
+          "effect": "The damage increases by 3d4"
+        },
+        {
+          "level": 9,
+          "effect": "The damage increases by 4d4"
+        }
+      ]
+    },
+    {
+      "id": "light",
+      "name": "Light",
+      "level": 0,
+      "tradition": ["primal"],
+      "traits": ["Cantrip", "Concentrate", "Light", "Manipulate"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 object",
+      "duration": "until your next daily preparations",
+      "description": "The object glows, casting bright light in a 20-foot radius (and dim light for the next 20 feet). The effect looks like a regular flame but creates no heat and doesn't consume oxygen. You can Dismiss the spell. If you cast this spell again, any previous castings end.",
+      "heightened": [
+        {
+          "level": 4,
+          "effect": "The radius of bright light increases to 60 feet (and dim light for the next 60 feet)"
+        }
+      ]
+    },
+    {
+      "id": "detect-magic",
+      "name": "Detect Magic",
+      "level": 0,
+      "tradition": ["primal"],
+      "traits": ["Cantrip", "Concentrate", "Detection", "Manipulate"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "area": "30-foot emanation",
+      "duration": "sustained",
+      "description": "You send out a pulse that registers the presence of magic. You receive no information beyond the presence or absence of magic. You can choose to ignore magic you're fully aware of, such as the magic items and ongoing spells of you and your allies. You detect illusion magic only if that magic's effect has a lower rank than the rank of your detect magic spell. However, items that have an illusion aura but aren't deceptive in appearance, like an invisibility potion, typically are detected normally.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "You learn the rank or level of the most powerful magical effect the spell detects"
+        },
+        {
+          "level": 4,
+          "effect": "As 3rd rank, plus you can Dismiss the spell to gain the benefits of a Read Aura spell that is also heightened to 4th rank"
+        }
+      ]
+    },
+    {
+      "id": "know-the-way",
+      "name": "Know the Way",
+      "level": 0,
+      "tradition": ["primal"],
+      "traits": ["Cantrip", "Concentrate", "Detection", "Manipulate"],
+      "castTime": "2 actions",
+      "range": "personal",
+      "duration": "instantaneous",
+      "description": "You gain an intuitive sense of the cardinal directions, as well as which direction you're facing. If you're in an environment that doesn't have traditional cardinal directions, such as a plane with different geography or on a sphere, you instead gain an intuitive sense of the underlying magical directions.",
+      "heightened": []
+    },
+    {
+      "id": "stabilize",
+      "name": "Stabilize",
+      "level": 0,
+      "tradition": ["primal"],
+      "traits": ["Cantrip", "Concentrate", "Healing", "Manipulate", "Vitality"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 dying creature",
+      "duration": "instantaneous",
+      "description": "Vital energy flows into the target creature, stabilizing it. The target loses the dying condition, though it remains unconscious at 0 Hit Points.",
+      "heightened": []
+    },
+    {
+      "id": "acid-splash",
+      "name": "Acid Splash",
+      "level": 0,
+      "tradition": ["primal"],
+      "traits": ["Acid", "Attack", "Cantrip", "Concentrate", "Manipulate"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 creature",
+      "duration": "instantaneous",
+      "description": "You splash a glob of acid that splatters your target and nearby creatures. Make a spell attack roll. On a success, you deal 1d6 acid damage plus your spellcasting ability modifier to the target, and the target takes 1 persistent acid damage. On a critical success, the target takes double initial damage and 2 persistent acid damage, and the splash damage is equal to your spellcasting ability modifier.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "The initial damage increases by 1d6 and the persistent damage increases by 1"
+        },
+        {
+          "level": 5,
+          "effect": "The initial damage increases by 2d6 and the persistent damage increases by 2"
+        },
+        {
+          "level": 7,
+          "effect": "The initial damage increases by 3d6 and the persistent damage increases by 3"
+        },
+        {
+          "level": 9,
+          "effect": "The initial damage increases by 4d6 and the persistent damage increases by 4"
+        }
+      ]
+    },
+    {
+      "id": "gouging-claw",
+      "name": "Gouging Claw",
+      "level": 0,
+      "tradition": ["primal"],
+      "traits": ["Attack", "Cantrip", "Concentrate", "Manipulate", "Morph"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 creature",
+      "duration": "1 minute",
+      "description": "You temporarily morph your limb into a clawed appendage. Make a melee spell attack roll against your target's AC. On a success, you deal 1d6 slashing damage plus your spellcasting ability modifier. On a critical success, you deal double damage plus 1d4 persistent bleed damage. The spell ends after you make the attack or the duration expires, whichever comes first.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "The damage increases by 1d6, and the persistent bleed damage on a critical hit increases by 1d4"
+        },
+        {
+          "level": 5,
+          "effect": "The damage increases by 2d6, and the persistent bleed damage on a critical hit increases by 2d4"
+        },
+        {
+          "level": 7,
+          "effect": "The damage increases by 3d6, and the persistent bleed damage on a critical hit increases by 3d4"
+        },
+        {
+          "level": 9,
+          "effect": "The damage increases by 4d6, and the persistent bleed damage on a critical hit increases by 4d4"
+        }
+      ]
+    },
+    {
+      "id": "sigil",
+      "name": "Sigil",
+      "level": 0,
+      "tradition": ["primal"],
+      "traits": ["Cantrip", "Concentrate", "Manipulate"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 creature or object",
+      "duration": "unlimited",
+      "description": "You harmlessly place your unique magical sigil, which is about 1 square inch in size, on the targeted creature or object. The mark can be visible or invisible, and you can change it from one state to another by using an Interact action to touch the target. The mark can be scrubbed or scraped off with 5 minutes of work. If it's on a creature, it fades naturally over the course of a week.",
+      "heightened": []
+    },
+    {
+      "id": "vitality-lash",
+      "name": "Vitality Lash",
+      "level": 0,
+      "tradition": ["primal"],
+      "traits": ["Attack", "Cantrip", "Concentrate", "Manipulate", "Vitality"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 undead creature",
+      "duration": "instantaneous",
+      "description": "You unleash a lance of vitality that damages undead creatures. Make a spell attack roll against the target's AC. On a success, the target takes 1d4 vitality damage plus your spellcasting ability modifier. On a critical success, the target takes double damage and becomes enfeebled 1 for 1 round.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "The damage increases by 1d4"
+        },
+        {
+          "level": 5,
+          "effect": "The damage increases by 2d4"
+        },
+        {
+          "level": 7,
+          "effect": "The damage increases by 3d4"
+        },
+        {
+          "level": 9,
+          "effect": "The damage increases by 4d4"
+        }
+      ]
+    },
+    {
+      "id": "frostbite",
+      "name": "Frostbite",
+      "level": 0,
+      "tradition": ["primal"],
+      "traits": ["Cantrip", "Cold", "Concentrate", "Manipulate"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 creature",
+      "savingThrow": "Fortitude",
+      "duration": "varies",
+      "description": "You cover the target in icy frost. The target takes 1d4 cold damage and must attempt a Fortitude save. On a critical success, nothing happens. On a success, the target takes half damage. On a failure, the target takes full damage and also takes a -5-foot status penalty to its Speeds for 1 round. On a critical failure, the target takes double damage and takes a -10-foot status penalty to its Speeds for 1 round.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "The damage increases by 1d4"
+        },
+        {
+          "level": 5,
+          "effect": "The damage increases by 2d4"
+        },
+        {
+          "level": 7,
+          "effect": "The damage increases by 3d4"
+        },
+        {
+          "level": 9,
+          "effect": "The damage increases by 4d4"
+        }
+      ]
+    },
+    {
+      "id": "spout",
+      "name": "Spout",
+      "level": 0,
+      "tradition": ["primal"],
+      "traits": ["Attack", "Cantrip", "Concentrate", "Manipulate", "Water"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 creature",
+      "duration": "instantaneous",
+      "description": "Water blasts from your hand in a jet. Make a spell attack roll against the target. On a success, you deal 1d6 bludgeoning damage plus your spellcasting ability modifier, and you can push the target 5 feet away from you. On a critical success, you deal double damage and can push the target 10 feet away from you.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "The damage increases by 1d6"
+        },
+        {
+          "level": 5,
+          "effect": "The damage increases by 2d6"
+        },
+        {
+          "level": 7,
+          "effect": "The damage increases by 3d6"
+        },
+        {
+          "level": 9,
+          "effect": "The damage increases by 4d6"
+        }
+      ]
+    },
+    {
+      "id": "heal",
+      "name": "Heal",
+      "level": 1,
+      "tradition": ["primal"],
+      "traits": ["Concentrate", "Healing", "Manipulate", "Vitality"],
+      "castTime": "1 to 3 actions",
+      "range": "varies",
+      "targets": "1 willing living creature or 1 undead creature",
+      "duration": "instantaneous",
+      "description": "You channel vitality into a living creature to heal its wounds. If the target is a willing living creature, you restore 1d8 Hit Points. If the target is undead, the target takes 1d8 vitality damage and must attempt a basic Fortitude save; if it fails, it also becomes enfeebled 1 for 1 round. The number of actions you spend when Casting this Spell determines its targets, range, area, and other parameters. 1 action: somatic, range touch. 2 actions: somatic and verbal, range 30 feet. 3 actions: somatic, verbal, and material; you disperse vitality in a 30-foot emanation. This heals all living creatures in the area for 1d8 Hit Points and damages all undead creatures in the area, following the same rules as the 1-action version.",
+      "heightened": [
+        {
+          "level": 2,
+          "effect": "The healing (or damage) increases by 1d8, or by 2d8 if you're using the 1-action version to heal the living"
+        }
+      ]
+    },
+    {
+      "id": "shillelagh",
+      "name": "Shillelagh",
+      "level": 1,
+      "tradition": ["primal"],
+      "traits": ["Concentrate", "Manipulate", "Plant"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 non-magical club or staff you hold",
+      "duration": "1 minute",
+      "description": "You bring special favor upon a weapon. The target becomes a +1 striking weapon while the spell lasts, gaining a +1 item bonus to attack rolls and increasing the number of weapon damage dice to two. In addition, the weapon deals force damage instead of its normal damage type.",
+      "heightened": [
+        {
+          "level": 4,
+          "effect": "The item bonus increases to +2, and the weapon becomes a +2 greater striking weapon, increasing the weapon damage dice to three"
+        }
+      ]
+    },
+    {
+      "id": "summon-animal",
+      "name": "Summon Animal",
+      "level": 1,
+      "tradition": ["primal"],
+      "traits": ["Concentrate", "Manipulate", "Summon"],
+      "castTime": "3 actions",
+      "range": "30 feet",
+      "duration": "sustained up to 1 minute",
+      "description": "You conjure a natural animal to fight on your behalf. You summon a common creature that has the animal trait and whose rank is -1 to fight on your behalf. This creature appears in a space within range. When you Cast this Spell, choose eagle, guard dog, or viper. Your choice determines which animal you summon. The creature has 2 actions per turn and acts on your turn. Heightening the spell increases the maximum rank of creature you can summon.",
+      "heightened": [
+        {
+          "level": 2,
+          "effect": "Rank 1"
+        },
+        {
+          "level": 3,
+          "effect": "Rank 2"
+        },
+        {
+          "level": 4,
+          "effect": "Rank 3"
+        },
+        {
+          "level": 5,
+          "effect": "Rank 5"
+        },
+        {
+          "level": 6,
+          "effect": "Rank 7"
+        },
+        {
+          "level": 7,
+          "effect": "Rank 9"
+        },
+        {
+          "level": 8,
+          "effect": "Rank 11"
+        },
+        {
+          "level": 9,
+          "effect": "Rank 13"
+        },
+        {
+          "level": 10,
+          "effect": "Rank 15"
+        }
+      ]
+    },
+    {
+      "id": "gust-of-wind",
+      "name": "Gust of Wind",
+      "level": 1,
+      "tradition": ["primal"],
+      "traits": ["Air", "Concentrate", "Manipulate"],
+      "castTime": "2 actions",
+      "range": "60 feet",
+      "area": "60-foot line",
+      "savingThrow": "Fortitude",
+      "duration": "until the start of your next turn",
+      "description": "A violent wind issues forth from your palm, blowing from the point where you are when you cast the spell to the line's opposite end. The wind extinguishes small non-magical fires, disperses fog and mist, blows objects of light Bulk or less around, and pushes larger objects. Each Medium or smaller creature in the area must attempt a Fortitude save. On a critical success, the creature is unaffected. On a success, the creature is pushed 5 feet away from you. On a failure, the creature is pushed 10 feet away from you. On a critical failure, the creature is pushed 10 feet away from you and knocked prone.",
+      "heightened": []
+    },
+    {
+      "id": "burning-hands",
+      "name": "Burning Hands",
+      "level": 1,
+      "tradition": ["primal"],
+      "traits": ["Concentrate", "Fire", "Manipulate"],
+      "castTime": "2 actions",
+      "range": "15 feet",
+      "area": "15-foot cone",
+      "savingThrow": "basic Reflex",
+      "duration": "instantaneous",
+      "description": "Gouts of flame rush from your hands. You deal 2d6 fire damage to creatures in the area.",
+      "heightened": [
+        {
+          "level": 2,
+          "effect": "The damage increases by 2d6"
+        }
+      ]
+    },
+    {
+      "id": "shocking-grasp",
+      "name": "Shocking Grasp",
+      "level": 1,
+      "tradition": ["primal"],
+      "traits": ["Attack", "Concentrate", "Electricity", "Manipulate"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 creature",
+      "duration": "1 minute",
+      "description": "You shroud your hands in a crackling field of lightning. Make a melee spell attack roll against your target's AC. On a success, you deal 1d12 electricity damage plus your spellcasting ability modifier. On a critical success, the target takes double damage and is stunned 1. The spell ends after you make the attack or the duration expires, whichever comes first.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "The damage increases by 1d12"
+        }
+      ]
+    },
+    {
+      "id": "grease",
+      "name": "Grease",
+      "level": 1,
+      "tradition": ["primal"],
+      "traits": ["Concentrate", "Manipulate"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "area": "4 contiguous 5-foot squares",
+      "savingThrow": "Reflex",
+      "duration": "1 minute",
+      "description": "You conjure grease, making the area difficult terrain. Any creature in the area when you cast the spell or that enters the area must attempt a Reflex save. On a critical success, the creature is unaffected. On a success, the creature is unaffected but treats the area as difficult terrain. On a failure, the creature falls prone. On a critical failure, the creature falls prone and slides 10 feet in a random direction.",
+      "heightened": []
+    },
+    {
+      "id": "magic-fang",
+      "name": "Magic Fang",
+      "level": 1,
+      "tradition": ["primal"],
+      "traits": ["Concentrate", "Manipulate"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 willing creature",
+      "duration": "1 minute",
+      "description": "Choose one of the target's unarmed attacks. You cause that unarmed attack to shine with primal energy. The unarmed attack becomes a +1 striking unarmed attack, gaining a +1 item bonus to attack rolls and increasing the number of damage dice to two.",
+      "heightened": [
+        {
+          "level": 4,
+          "effect": "The item bonus increases to +2, and the unarmed attack becomes a +2 greater striking unarmed attack, increasing the damage dice to three"
+        },
+        {
+          "level": 7,
+          "effect": "The item bonus increases to +3, and the unarmed attack becomes a +3 major striking unarmed attack, increasing the damage dice to four"
+        }
+      ]
+    },
+    {
+      "id": "pest-form",
+      "name": "Pest Form",
+      "level": 1,
+      "tradition": ["primal"],
+      "traits": ["Concentrate", "Manipulate", "Polymorph"],
+      "castTime": "2 actions",
+      "range": "personal",
+      "duration": "10 minutes",
+      "description": "You transform into a Tiny animal that commonly lives in urban areas. Your gear is absorbed into your form; the constant abilities of your gear still function, but you can't activate any item abilities. When you transform, you gain the animal trait and you lose any trait that isn't appropriate for your new form. You can Dismiss the spell. You gain the effects of a 1st-rank pest form with the exceptions that you can choose the specific pest form and the statistics are as follows: AC 15, Speed 10 feet, Attack modifier +5 (bludgeoning, finesse), Damage 1, Hit Points based on your level.",
+      "heightened": [
+        {
+          "level": 4,
+          "effect": "You can turn into a flying pest like a bird or bat. You gain a fly Speed of 20 feet"
+        }
+      ]
+    },
+    {
+      "id": "spider-sting",
+      "name": "Spider Sting",
+      "level": 1,
+      "tradition": ["primal"],
+      "traits": ["Attack", "Concentrate", "Manipulate"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 creature",
+      "savingThrow": "Fortitude",
+      "duration": "varies",
+      "description": "You magically duplicate a spider's venomous sting. Make a melee spell attack roll against the target. On a success, you deal 1d4 piercing damage plus your spellcasting ability modifier, and the target must attempt a Fortitude save against your spell DC. On a critical success, nothing happens. On a success, the target is unaffected. On a failure, the target takes 1d4 poison damage and becomes sickened 1. On a critical failure, the target takes 2d4 poison damage and becomes sickened 2.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "The initial piercing damage increases by 1d4, and the poison damage on a failed save increases by 1d4 (or 2d4 on a critical failure)"
+        }
+      ]
+    },
+    {
+      "id": "air-bubble",
+      "name": "Air Bubble",
+      "level": 1,
+      "tradition": ["primal"],
+      "traits": ["Air", "Concentrate", "Manipulate"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 willing creature",
+      "duration": "1 minute",
+      "description": "A bubble of pure air appears around the target's head, allowing them to breathe normally in any environment. The bubble also grants the target a +1 circumstance bonus to saves against inhaled threats such as inhaled poisons and transmitted diseases.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "The duration increases to 10 minutes"
+        }
+      ]
+    },
+    {
+      "id": "ant-haul",
+      "name": "Ant Haul",
+      "level": 1,
+      "tradition": ["primal"],
+      "traits": ["Concentrate", "Manipulate"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 willing creature",
+      "duration": "1 minute",
+      "description": "You reinforce the target's musculoskeletal system to bear more weight. The target can carry 3 more Bulk than normal before becoming encumbered and up to a maximum of 6 more Bulk.",
+      "heightened": [
+        {
+          "level": 2,
+          "effect": "The duration increases to 10 minutes"
+        },
+        {
+          "level": 4,
+          "effect": "The duration increases to 1 hour"
+        }
+      ]
+    },
+    {
+      "id": "create-water",
+      "name": "Create Water",
+      "level": 1,
+      "tradition": ["primal"],
+      "traits": ["Concentrate", "Manipulate", "Water"],
+      "castTime": "2 actions",
+      "range": "0 feet",
+      "duration": "instantaneous",
+      "description": "As you cup your hands, water begins to flow forth from them. You create 2 gallons of water. You can double the amount of water you create with each additional action you spend Casting the Spell (to a maximum of 8 gallons with 3 actions).",
+      "heightened": [
+        {
+          "level": 2,
+          "effect": "You create 10 gallons of water"
+        }
+      ]
+    },
+    {
+      "id": "fear",
+      "name": "Fear",
+      "level": 1,
+      "tradition": ["primal"],
+      "traits": ["Concentrate", "Emotion", "Fear", "Manipulate", "Mental"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 creature",
+      "savingThrow": "Will",
+      "duration": "varies",
+      "description": "You plant fear in the target's mind. The target must attempt a Will save. On a critical success, nothing happens. On a success, the target is frightened 1. On a failure, the target is frightened 2. On a critical failure, the target is frightened 3 and fleeing for 1 round.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "You can target up to 5 creatures"
+        }
+      ]
+    },
+    {
+      "id": "fleet-step",
+      "name": "Fleet Step",
+      "level": 1,
+      "tradition": ["primal"],
+      "traits": ["Concentrate", "Manipulate"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 willing creature",
+      "duration": "1 minute",
+      "description": "You call upon primal energy to accelerate a creature. The target gains a +30-foot status bonus to all its Speeds for the duration. This bonus increases to +40 feet if the target is wearing light armor or no armor.",
+      "heightened": []
+    },
+    {
+      "id": "jump",
+      "name": "Jump",
+      "level": 1,
+      "tradition": ["primal"],
+      "traits": ["Concentrate", "Manipulate"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 creature",
+      "duration": "1 minute",
+      "description": "The target creature gains a +10-foot status bonus to its jump distance for High Jumps or Long Jumps. This bonus increases to +20 feet for a vertical Leap and a +15-foot status bonus to its jump distance for a Leap horizontal distance.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "The duration increases to 10 minutes"
+        }
+      ]
+    },
+    {
+      "id": "longstrider",
+      "name": "Longstrider",
+      "level": 1,
+      "tradition": ["primal"],
+      "traits": ["Concentrate", "Manipulate"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 willing creature",
+      "duration": "1 hour",
+      "description": "You lengthen your stride and quicken your pace. The target gains a +10-foot status bonus to its Speeds.",
+      "heightened": [
+        {
+          "level": 2,
+          "effect": "The duration increases to 8 hours"
+        }
+      ]
+    },
+    {
+      "id": "negate-aroma",
+      "name": "Negate Aroma",
+      "level": 1,
+      "tradition": ["primal"],
+      "traits": ["Concentrate", "Manipulate"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 creature",
+      "duration": "1 hour",
+      "description": "You erode the olfactory divulgence of a creature, preventing it from being tracked by scent. The target creature doesn't produce an odor that can be tracked by scent, though creatures can still smell the target if they're adjacent to it. You also make the target harder to track, imposing a -4 circumstance penalty to Survival checks to Track the target.",
+      "heightened": []
+    },
+    {
+      "id": "pass-without-trace",
+      "name": "Pass Without Trace",
+      "level": 1,
+      "tradition": ["primal"],
+      "traits": ["Concentrate", "Manipulate"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "up to 5 creatures",
+      "duration": "1 hour",
+      "description": "You obscure the tracks and other physical evidence of the targets' passage, making it harder for others to track them. The targets' tracks and traces of their passage are hidden, and they gain a +4 circumstance bonus to Stealth checks to Hide and Sneak and to Survival checks to Cover Tracks. This spell doesn't prevent witnesses from noticing the targets.",
+      "heightened": [
+        {
+          "level": 2,
+          "effect": "The duration increases to 8 hours"
+        }
+      ]
+    },
+    {
+      "id": "protector-tree",
+      "name": "Protector Tree",
+      "level": 1,
+      "tradition": ["primal"],
+      "traits": ["Concentrate", "Manipulate", "Plant"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 Large tree",
+      "duration": "5 minutes",
+      "description": "You animate a Large tree to fight on your behalf. The tree has the statistics of a wooden guardian. It has 2 actions per turn, which it uses when you Sustain the spell. The tree protects creatures you designate within its reach.",
+      "heightened": []
+    },
+    {
+      "id": "purify-food-and-drink",
+      "name": "Purify Food and Drink",
+      "level": 1,
+      "tradition": ["primal"],
+      "traits": ["Concentrate", "Manipulate"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 cubic foot of contaminated food or water",
+      "duration": "instantaneous",
+      "description": "You remove toxins and contamination from food and drink, making them safe to consume. This spell doesn't prevent future contamination, and it can counteract only toxins, diseases, and other contaminants, not inherently inedible or poisonous plants or creatures.",
+      "heightened": []
+    },
+    {
+      "id": "snowball",
+      "name": "Snowball",
+      "level": 1,
+      "tradition": ["primal"],
+      "traits": ["Attack", "Cold", "Concentrate", "Manipulate", "Water"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 creature",
+      "duration": "instantaneous",
+      "description": "You throw a magically propelled and chilled ball of dense snow. Make a spell attack roll against the target. On a success, you deal 2d4 cold damage plus your spellcasting ability modifier. On a critical success, the target takes double damage and a -10-foot status penalty to its Speeds for 1 round.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "The damage increases by 2d4"
+        }
+      ]
+    },
+    {
+      "id": "tailwind",
+      "name": "Tailwind",
+      "level": 1,
+      "tradition": ["primal"],
+      "traits": ["Air", "Concentrate", "Manipulate"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "up to 5 willing creatures",
+      "duration": "8 hours",
+      "description": "A warm breeze follows at the target's back. The targets gain a +10-foot status bonus to their land Speed. When any of the targets flies using their own fly Speed (but not via flying items or spells), they gain a +20-foot status bonus to their fly Speed.",
+      "heightened": []
+    },
+    {
+      "id": "goblin-pox",
+      "name": "Goblin Pox",
+      "level": 1,
+      "tradition": ["primal"],
+      "traits": ["Concentrate", "Disease", "Manipulate"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 creature",
+      "savingThrow": "Fortitude",
+      "duration": "varies",
+      "description": "You afflict the target with a disease that quickly causes them to break out in uncomfortable hives. The target must attempt a Fortitude save. On a critical success, the target is unaffected. On a success, the target is sickened 1. On a failure, the target is afflicted with goblin pox at stage 1. On a critical failure, the target is afflicted with goblin pox at stage 2.",
+      "heightened": []
+    },
+    {
+      "id": "mud-pit",
+      "name": "Mud Pit",
+      "level": 1,
+      "tradition": ["primal"],
+      "traits": ["Concentrate", "Earth", "Manipulate"],
+      "castTime": "3 actions",
+      "range": "120 feet",
+      "area": "20-foot burst",
+      "savingThrow": "Reflex",
+      "duration": "1 minute",
+      "description": "You cause the ground to become sodden and muddy, making it difficult terrain. Each creature in the area when you cast the spell or that enters the area must attempt a Reflex save. On a critical success, the creature is unaffected. On a success, the creature treats the area as difficult terrain. On a failure, the creature sinks into the mud and is immobilized until it Escapes. On a critical failure, the creature is also prone.",
+      "heightened": []
+    },
+    {
+      "id": "pummeling-rubble",
+      "name": "Pummeling Rubble",
+      "level": 1,
+      "tradition": ["primal"],
+      "traits": ["Attack", "Concentrate", "Earth", "Manipulate"],
+      "castTime": "2 actions",
+      "range": "60 feet",
+      "targets": "1 creature",
+      "duration": "instantaneous",
+      "description": "A spray of heavy rocks flies through the air in front of you. Make a spell attack roll against the target. On a success, you deal 2d6 bludgeoning damage plus your spellcasting ability modifier. On a critical success, the target takes double damage and is pushed 10 feet away from you.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "The damage increases by 2d6"
+        }
+      ]
+    }
+  ]
+}

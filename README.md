@@ -2,11 +2,11 @@
 
 A comprehensive desktop character creator for Pathfinder 2nd Edition (Remastered), built with Electron, React, and TypeScript.
 
-![Phase 7: Skills & Feats - Complete](https://img.shields.io/badge/Phase%207-Complete-brightgreen)
+![Phase 8: Spells System - Complete](https://img.shields.io/badge/Phase%208-Complete-brightgreen)
 
 ## Features
 
-### ✨ Current Features (Phase 7 Complete)
+### ✨ Current Features (Phase 8 Complete)
 
 - **Complete Character Creation Workflow**
   - 10-step wizard with progress tracking
@@ -33,6 +33,15 @@ A comprehensive desktop character creator for Pathfinder 2nd Edition (Remastered
     - Search functionality
     - Prerequisite checking
     - Detailed feat descriptions with benefits, traits, frequency
+  - Step 8: Spell selection (for spellcasting classes)
+    - 155 spells across all 4 magical traditions
+    - Arcane (37), Divine (37), Occult (41), Primal (40)
+    - Cantrips and level 1 spells
+    - Automatic tradition detection based on class
+    - Prepared vs spontaneous casting support
+    - Spell DC and attack bonus calculations
+    - Filter by spell level, search by name/description/traits
+    - Visual spell cards with full details (range, duration, saving throw, etc.)
 
 - **Live Character Stats**
   - Real-time calculation of all derived stats
@@ -96,7 +105,10 @@ PenPaperRPG/
 │   │   │   ├── StepAncestry.tsx
 │   │   │   ├── StepBackground.tsx
 │   │   │   ├── StepClass.tsx
-│   │   │   └── StepAbilities.tsx
+│   │   │   ├── StepAbilities.tsx
+│   │   │   ├── StepSkills.tsx
+│   │   │   ├── StepFeats.tsx
+│   │   │   └── StepSpells.tsx
 │   │   ├── layout/            # Layout components
 │   │   │   ├── Header.tsx
 │   │   │   ├── Sidebar.tsx
@@ -114,7 +126,10 @@ PenPaperRPG/
 │   ├── data/                   # PF2e game content
 │   │   ├── ancestries/
 │   │   ├── backgrounds/
-│   │   └── classes/
+│   │   ├── classes/
+│   │   ├── skills/
+│   │   ├── feats/
+│   │   └── spells/
 │   ├── hooks/
 │   │   ├── useCharacter.ts    # Character state hook
 │   │   └── useGameData.ts     # Game data hook
@@ -221,12 +236,29 @@ npm run build:linux  # Linux
   - skills.json, ancestry-feats.json, class-feats.json, general-feats.json, skill-feats.json
 - **Created using 4 parallel subagents** for feat data generation
 
-### 🚧 Future Phases (Planned)
+### ✅ Phase 8: Spells System
+- **Complete Spell Database**
+  - **155 spells total across 4 magical traditions:**
+    - 37 Arcane spells (14 cantrips, 23 level 1)
+    - 37 Divine spells (13 cantrips, 24 level 1)
+    - 41 Occult spells (15 cantrips, 26 level 1)
+    - 40 Primal spells (14 cantrips, 26 level 1)
+  - Full spell details: range, duration, targets, saving throws, traits
+  - Heightened spell information for scaling
+- **StepSpells Component**
+  - Automatic spellcasting detection (skips non-casters)
+  - Spell DC and attack bonus calculations
+  - Filter by spell level (cantrips/level 1)
+  - Search by name, description, or traits
+  - Visual spell cards with complete details
+  - Cantrip selection (5 cantrips)
+  - Level 1 spell selection (2 for prepared, 4 for spontaneous)
+  - Support for both prepared and spontaneous casters
+- **New Data Files:**
+  - arcane-spells.json, divine-spells.json, occult-spells.json, primal-spells.json
+- **Created using 4 parallel subagents** for spell data generation
 
-- **Phase 8:** Spells (for casters)
-  - Spell selection interface
-  - Prepared vs spontaneous casters
-  - Spell DC and attack calculations
+### 🚧 Future Phases (Planned)
 
 - **Phase 9:** Equipment
   - Weapon and armor selection
@@ -263,9 +295,9 @@ Descriptions are original content to avoid copyright issues.
 
 ## Stats
 
-- **65 modules** bundled
-- **247.35KB** JavaScript bundle (+108 feats data!)
-- **16.87KB** CSS bundle
+- **70 modules** bundled
+- **339.29KB** JavaScript bundle (+155 spells data!)
+- **16.93KB** CSS bundle
 - **Zero** TypeScript errors
 - **100%** type-safe code
 
@@ -276,4 +308,4 @@ Pathfinder and associated marks are trademarks of Paizo Inc.
 
 ---
 
-**Status:** Phase 7 Complete - Skills & Feats fully implemented! Character creation now includes full skill training system (16 skills) and comprehensive feat selection (108 level 1 feats across all types). All core mechanics for level 1 character creation are functional!
+**Status:** Phase 8 Complete - Spells System fully implemented! Character creation now includes complete spell selection for all spellcasting classes with 155 spells across 4 magical traditions (Arcane, Divine, Occult, Primal). Both prepared and spontaneous casters are supported with automatic spell DC/attack calculations. All core mechanics for level 1 character creation are complete!

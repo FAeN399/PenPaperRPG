@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Ancestry, Heritage, Background, Class, Skill, Feat } from '@/types/gameData'
+import { Ancestry, Heritage, Background, Class, Skill, Feat, Spell } from '@/types/gameData'
 import { GameDataService } from '@/services/gameData'
 
 export function useGameData() {
@@ -8,6 +8,7 @@ export function useGameData() {
   const [classes, setClasses] = useState<Class[]>([])
   const [skills, setSkills] = useState<Skill[]>([])
   const [feats, setFeats] = useState<Feat[]>([])
+  const [spells, setSpells] = useState<Spell[]>([])
 
   useEffect(() => {
     // Load all game data
@@ -16,6 +17,7 @@ export function useGameData() {
     setClasses(GameDataService.getAllClasses())
     setSkills(GameDataService.getAllSkills())
     setFeats(GameDataService.getAllFeats())
+    setSpells(GameDataService.getAllSpells())
   }, [])
 
   const getHeritagesForAncestry = (ancestryId: string): Heritage[] => {
@@ -54,12 +56,36 @@ export function useGameData() {
     return GameDataService.searchFeats(query)
   }
 
+  const getSpellById = (id: string): Spell | undefined => {
+    return GameDataService.getSpellById(id)
+  }
+
+  const getSpellsByTradition = (tradition: 'arcane' | 'divine' | 'occult' | 'primal'): Spell[] => {
+    return GameDataService.getSpellsByTradition(tradition)
+  }
+
+  const getSpellsByLevel = (level: number): Spell[] => {
+    return GameDataService.getSpellsByLevel(level)
+  }
+
+  const getSpellsByTraditionAndLevel = (
+    tradition: 'arcane' | 'divine' | 'occult' | 'primal',
+    level: number
+  ): Spell[] => {
+    return GameDataService.getSpellsByTraditionAndLevel(tradition, level)
+  }
+
+  const searchSpells = (query: string): Spell[] => {
+    return GameDataService.searchSpells(query)
+  }
+
   return {
     ancestries,
     backgrounds,
     classes,
     skills,
     feats,
+    spells,
     getHeritagesForAncestry,
     getAncestryById,
     getBackgroundById,
@@ -69,5 +95,10 @@ export function useGameData() {
     getFeatById,
     getFeatsByType,
     searchFeats,
+    getSpellById,
+    getSpellsByTradition,
+    getSpellsByLevel,
+    getSpellsByTraditionAndLevel,
+    searchSpells,
   }
 }

@@ -11,6 +11,7 @@ import StepClass from './character-creation/StepClass'
 import StepAbilities from './character-creation/StepAbilities'
 import StepSkills from './character-creation/StepSkills'
 import StepFeats from './character-creation/StepFeats'
+import StepSpells from './character-creation/StepSpells'
 import { useCharacter } from '@/hooks/useCharacter'
 import { CharacterCreationStep, CREATION_STEPS } from '@/types/steps'
 
@@ -109,18 +110,19 @@ export default function CharacterCreator() {
 
             {currentStep === CharacterCreationStep.Feats && <StepFeats />}
 
+            {currentStep === CharacterCreationStep.Spells && <StepSpells />}
+
             {currentStep !== CharacterCreationStep.Basics &&
               currentStep !== CharacterCreationStep.Abilities &&
               currentStep !== CharacterCreationStep.Ancestry &&
               currentStep !== CharacterCreationStep.Background &&
               currentStep !== CharacterCreationStep.Class &&
               currentStep !== CharacterCreationStep.Skills &&
-              currentStep !== CharacterCreationStep.Feats && (
+              currentStep !== CharacterCreationStep.Feats &&
+              currentStep !== CharacterCreationStep.Spells && (
                 <Card className="p-8">
                   <div className="text-center">
                     <p className="text-lg text-pf-text mb-4">
-                      {currentStep === CharacterCreationStep.Spells &&
-                        'Select spells (if applicable)'}
                       {currentStep === CharacterCreationStep.Equipment &&
                         'Choose starting equipment'}
                       {currentStep === CharacterCreationStep.Review &&

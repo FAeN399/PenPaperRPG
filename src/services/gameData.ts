@@ -1,4 +1,4 @@
-import { Ancestry, Heritage, Background, Class, Skill, Feat } from '@/types/gameData'
+import { Ancestry, Heritage, Background, Class, Skill, Feat, Spell } from '@/types/gameData'
 
 // Import JSON data
 import ancestriesData from '@/data/ancestries/ancestries.json'
@@ -10,6 +10,10 @@ import ancestryFeatsData from '@/data/feats/ancestry-feats.json'
 import classFeatsData from '@/data/feats/class-feats.json'
 import generalFeatsData from '@/data/feats/general-feats.json'
 import skillFeatsData from '@/data/feats/skill-feats.json'
+import arcaneSpellsData from '@/data/spells/arcane-spells.json'
+import divineSpellsData from '@/data/spells/divine-spells.json'
+import occultSpellsData from '@/data/spells/occult-spells.json'
+import primalSpellsData from '@/data/spells/primal-spells.json'
 
 // Game Data Service
 export class GameDataService {
@@ -23,6 +27,12 @@ export class GameDataService {
     ...((classFeatsData as any).feats as Feat[]),
     ...((generalFeatsData as any).feats as Feat[]),
     ...((skillFeatsData as any).feats as Feat[]),
+  ]
+  private static spells: Spell[] = [
+    ...((arcaneSpellsData as any).spells as Spell[]),
+    ...((divineSpellsData as any).spells as Spell[]),
+    ...((occultSpellsData as any).spells as Spell[]),
+    ...((primalSpellsData as any).spells as Spell[]),
   ]
 
   // Ancestry Methods
@@ -93,6 +103,40 @@ export class GameDataService {
         f.name.toLowerCase().includes(lowerQuery) ||
         f.description.toLowerCase().includes(lowerQuery) ||
         f.benefit.toLowerCase().includes(lowerQuery)
+    )
+  }
+
+  // Spell Methods
+  static getAllSpells(): Spell[] {
+    return this.spells
+  }
+
+  static getSpellById(id: string): Spell | undefined {
+    return this.spells.find((s) => s.id === id)
+  }
+
+  static getSpellsByTradition(tradition: 'arcane' | 'divine' | 'occult' | 'primal'): Spell[] {
+    return this.spells.filter((s) => s.tradition.includes(tradition))
+  }
+
+  static getSpellsByLevel(level: number): Spell[] {
+    return this.spells.filter((s) => s.level === level)
+  }
+
+  static getSpellsByTraditionAndLevel(
+    tradition: 'arcane' | 'divine' | 'occult' | 'primal',
+    level: number
+  ): Spell[] {
+    return this.spells.filter((s) => s.tradition.includes(tradition) && s.level === level)
+  }
+
+  static searchSpells(query: string): Spell[] {
+    const lowerQuery = query.toLowerCase()
+    return this.spells.filter(
+      (s) =>
+        s.name.toLowerCase().includes(lowerQuery) ||
+        s.description.toLowerCase().includes(lowerQuery) ||
+        s.traits.some((t) => t.toLowerCase().includes(lowerQuery))
     )
   }
 
