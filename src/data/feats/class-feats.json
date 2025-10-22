@@ -1,0 +1,538 @@
+[
+  {
+    "id": "acute-vision",
+    "name": "Acute Vision",
+    "type": "class",
+    "level": 1,
+    "description": "Your rage sharpens your senses, granting you the ability to see in darkness.",
+    "prerequisites": ["Barbarian"],
+    "traits": ["Barbarian"],
+    "benefit": "You gain darkvision, allowing you to see in darkness and dim light as well as you see in bright light. If you already have darkvision, you gain scent as an imprecise sense with a range of 30 feet."
+  },
+  {
+    "id": "raging-athlete",
+    "name": "Raging Athlete",
+    "type": "class",
+    "level": 1,
+    "description": "Your fury fuels incredible physical prowess in athletic endeavors.",
+    "prerequisites": ["Barbarian"],
+    "traits": ["Barbarian"],
+    "benefit": "While raging, you gain a +10-foot status bonus to your Speed, and you can use Athletics for High Jump and Long Jump as if you had a running start."
+  },
+  {
+    "id": "sudden-charge-barbarian",
+    "name": "Sudden Charge",
+    "type": "class",
+    "level": 1,
+    "description": "Rush forward with devastating momentum to close distance and strike.",
+    "prerequisites": ["Barbarian"],
+    "traits": ["Barbarian", "Flourish", "Open"],
+    "benefit": "Stride twice. If you end your movement within melee reach of at least one enemy, you can make a melee Strike against that enemy."
+  },
+  {
+    "id": "raging-thrower",
+    "name": "Raging Thrower",
+    "type": "class",
+    "level": 1,
+    "description": "Your rage empowers thrown weapons with brutal force.",
+    "prerequisites": ["Barbarian"],
+    "traits": ["Barbarian"],
+    "benefit": "You can throw weapons while raging and add your rage damage to thrown weapon attacks. Additionally, you don't take the normal circumstance penalty for making ranged attacks within melee reach."
+  },
+  {
+    "id": "champion-deity-domain",
+    "name": "Deity's Domain",
+    "type": "class",
+    "level": 1,
+    "description": "Your deity grants you access to a special domain of divine power.",
+    "prerequisites": ["Champion"],
+    "traits": ["Champion"],
+    "benefit": "Choose one domain associated with your deity. You gain the domain's initial domain spell as a devotion spell and can cast it using your Champion focus points."
+  },
+  {
+    "id": "unimpeded-step",
+    "name": "Unimpeded Step",
+    "type": "class",
+    "level": 1,
+    "description": "Your righteous purpose allows you to advance even through obstructed terrain.",
+    "prerequisites": ["Champion"],
+    "traits": ["Champion"],
+    "benefit": "When you Step, you can Step into difficult terrain. You can't Step into greater difficult terrain or hazardous terrain this way."
+  },
+  {
+    "id": "everstand-stance",
+    "name": "Everstand Stance",
+    "type": "class",
+    "level": 1,
+    "description": "You adopt a defensive posture that makes you incredibly resilient.",
+    "prerequisites": ["Champion"],
+    "traits": ["Champion", "Stance"],
+    "benefit": "You take a defensive stance. While in this stance, you gain a +1 circumstance bonus to AC, but your Speeds are reduced by 5 feet."
+  },
+  {
+    "id": "weight-of-guilt",
+    "name": "Weight of Guilt",
+    "type": "class",
+    "level": 1,
+    "description": "You invoke divine judgment to shake your foe's confidence.",
+    "prerequisites": ["Champion"],
+    "traits": ["Champion", "Mental"],
+    "benefit": "You can use Religion instead of Intimidation to Demoralize foes. When you successfully Demoralize a creature using Religion, it becomes frightened 1 (or frightened 2 on a critical success)."
+  },
+  {
+    "id": "sudden-charge-fighter",
+    "name": "Sudden Charge",
+    "type": "class",
+    "level": 1,
+    "description": "Rush forward and strike in one fluid motion.",
+    "prerequisites": ["Fighter"],
+    "traits": ["Fighter", "Flourish", "Open"],
+    "benefit": "Stride twice. If you end your movement within melee reach of at least one enemy, you can make a melee Strike against that enemy."
+  },
+  {
+    "id": "point-blank-shot",
+    "name": "Point-Blank Shot",
+    "type": "class",
+    "level": 1,
+    "description": "You've trained to fire ranged weapons effectively even when enemies press close.",
+    "prerequisites": ["Fighter"],
+    "traits": ["Fighter", "Open", "Stance"],
+    "benefit": "You enter a combat stance. While in this stance, you don't take the penalty for making ranged attacks within your enemy's melee reach. You leave this stance if you make a melee attack."
+  },
+  {
+    "id": "double-slice",
+    "name": "Double Slice",
+    "type": "class",
+    "level": 1,
+    "description": "Strike with both weapons simultaneously in a devastating combination.",
+    "prerequisites": ["Fighter"],
+    "traits": ["Fighter", "Press"],
+    "benefit": "Make two Strikes, one with each of your two melee weapons. Both attacks count toward your multiple attack penalty, but don't apply the penalty until after both attacks."
+  },
+  {
+    "id": "power-attack",
+    "name": "Power Attack",
+    "type": "class",
+    "level": 1,
+    "description": "Sacrifice accuracy for a devastating blow.",
+    "prerequisites": ["Fighter"],
+    "traits": ["Fighter", "Flourish"],
+    "benefit": "Make a melee Strike. If you hit, you deal an extra die of weapon damage. If you're at least 10th level, increase this to two extra dice, and if you're at least 18th level, increase it to three extra dice."
+  },
+  {
+    "id": "snagging-strike",
+    "name": "Snagging Strike",
+    "type": "class",
+    "level": 1,
+    "description": "Your attack throws your opponent off-balance.",
+    "prerequisites": ["Fighter"],
+    "traits": ["Fighter", "Press"],
+    "benefit": "Make a Strike. If it hits and deals damage, the target is flat-footed until the start of your next turn."
+  },
+  {
+    "id": "ki-strike",
+    "name": "Ki Strike",
+    "type": "class",
+    "level": 1,
+    "description": "Channel your inner energy to enhance your unarmed attacks with mystical force.",
+    "prerequisites": ["Monk"],
+    "traits": ["Monk"],
+    "benefit": "You gain the ki strike ki spell and a focus pool of 1 Focus Point. Your ki strike makes your unarmed attacks magical."
+  },
+  {
+    "id": "monastic-weaponry",
+    "name": "Monastic Weaponry",
+    "type": "class",
+    "level": 1,
+    "description": "You've trained with weapons alongside your unarmed techniques.",
+    "prerequisites": ["Monk"],
+    "traits": ["Monk"],
+    "benefit": "You gain access to uncommon monk weapons and can use your monk abilities with melee weapons with the monk trait."
+  },
+  {
+    "id": "mountain-stance",
+    "name": "Mountain Stance",
+    "type": "class",
+    "level": 1,
+    "description": "Root yourself like an immovable mountain, trading mobility for defensive power.",
+    "prerequisites": ["Monk"],
+    "traits": ["Monk", "Stance"],
+    "benefit": "You enter Mountain Stance. While in this stance, you gain a +4 item bonus to AC and a +2 circumstance bonus to Fortitude saves, but your Speed is reduced to 20 feet (or your current Speed, whichever is slower)."
+  },
+  {
+    "id": "crane-stance",
+    "name": "Crane Stance",
+    "type": "class",
+    "level": 1,
+    "description": "Adopt the graceful movements of a crane, gaining defensive mobility.",
+    "prerequisites": ["Monk"],
+    "traits": ["Monk", "Stance"],
+    "benefit": "You enter Crane Stance. While in this stance, you gain a +1 circumstance bonus to AC but can only make crane wing attacks (unarmed attacks that deal 1d6 bludgeoning damage)."
+  },
+  {
+    "id": "tiger-stance",
+    "name": "Tiger Stance",
+    "type": "class",
+    "level": 1,
+    "description": "Channel the ferocity of a tiger into your combat style.",
+    "prerequisites": ["Monk"],
+    "traits": ["Monk", "Stance"],
+    "benefit": "You enter Tiger Stance. While in this stance, you can make tiger claw attacks (unarmed attacks that deal 1d8 slashing damage) and can Step 10 feet instead of 5 feet."
+  },
+  {
+    "id": "crossbow-ace",
+    "name": "Crossbow Ace",
+    "type": "class",
+    "level": 1,
+    "description": "Your crossbow expertise allows you to deliver devastating precision shots.",
+    "prerequisites": ["Ranger"],
+    "traits": ["Ranger"],
+    "benefit": "When you're wielding a crossbow and you Hit a creature with a ranged Strike that has the volley trait, you deal an extra 2 precision damage. If the crossbow is a simple crossbow, increase this to 4 precision damage."
+  },
+  {
+    "id": "hunted-shot",
+    "name": "Hunted Shot",
+    "type": "class",
+    "level": 1,
+    "description": "Loose two arrows at your prey in rapid succession.",
+    "prerequisites": ["Ranger"],
+    "traits": ["Ranger", "Flourish"],
+    "benefit": "Make two Strikes against your hunted prey with the required weapon. If both hit the same creature, combine their damage for the purpose of resistances and weaknesses. Apply your multiple attack penalty normally."
+  },
+  {
+    "id": "monster-hunter",
+    "name": "Monster Hunter",
+    "type": "class",
+    "level": 1,
+    "description": "Your experience hunting creatures gives you insight into their weaknesses.",
+    "prerequisites": ["Ranger"],
+    "traits": ["Ranger"],
+    "benefit": "When you succeed at identifying a creature using Recall Knowledge, you learn one of its weaknesses in addition to the information you normally learn. On a critical success, you learn all of its weaknesses."
+  },
+  {
+    "id": "twin-takedown",
+    "name": "Twin Takedown",
+    "type": "class",
+    "level": 1,
+    "description": "Strike with both weapons in a coordinated assault.",
+    "prerequisites": ["Ranger"],
+    "traits": ["Ranger", "Flourish"],
+    "benefit": "Make two Strikes against your hunted prey, one with each of the two required weapons. If both Strikes hit, combine their damage for the purpose of your prey's resistances and weaknesses. Apply your multiple attack penalty normally."
+  },
+  {
+    "id": "nimble-dodge",
+    "name": "Nimble Dodge",
+    "type": "class",
+    "level": 1,
+    "description": "Your quick reflexes allow you to twist away from danger at the last moment.",
+    "prerequisites": ["Rogue"],
+    "traits": ["Rogue"],
+    "trigger": "An attacker hits you with a melee attack",
+    "benefit": "You gain a +2 circumstance bonus to AC against the triggering attack, which might cause the attack to miss."
+  },
+  {
+    "id": "trap-finder",
+    "name": "Trap Finder",
+    "type": "class",
+    "level": 1,
+    "description": "Your experience with traps gives you an edge in detecting and disarming them.",
+    "prerequisites": ["Rogue"],
+    "traits": ["Rogue"],
+    "benefit": "You gain a +1 circumstance bonus to Perception checks to find traps and to Thievery checks to disable them. You can disable traps that require a proficiency rank of master in Thievery. If you have master proficiency in Thievery, you can disable traps that require legendary proficiency."
+  },
+  {
+    "id": "twin-feint",
+    "name": "Twin Feint",
+    "type": "class",
+    "level": 1,
+    "description": "Use your off-hand weapon to create an opening for your main attack.",
+    "prerequisites": ["Rogue"],
+    "traits": ["Rogue"],
+    "benefit": "Make a feint against a target, then immediately Strike that target with a melee weapon. If your Strike hits, the target is flat-footed against your attacks until the end of your turn."
+  },
+  {
+    "id": "you-are-next",
+    "name": "You're Next",
+    "type": "class",
+    "level": 1,
+    "description": "After downing a foe, you intimidate another with a menacing threat.",
+    "prerequisites": ["Rogue"],
+    "traits": ["Rogue", "Emotion", "Fear", "Mental"],
+    "trigger": "You reduce a creature to 0 Hit Points",
+    "benefit": "Choose a creature within 30 feet that can see you. That creature becomes frightened 1. If your attack was a critical hit, the creature instead becomes frightened 2."
+  },
+  {
+    "id": "alchemical-familiar",
+    "name": "Alchemical Familiar",
+    "type": "class",
+    "level": 1,
+    "description": "You gain a familiar that assists in your alchemical work.",
+    "prerequisites": ["Alchemist"],
+    "traits": ["Alchemist"],
+    "benefit": "You gain a familiar. The familiar can assist you with alchemical crafting and has the valet and lab assistant abilities."
+  },
+  {
+    "id": "far-lobber",
+    "name": "Far Lobber",
+    "type": "class",
+    "level": 1,
+    "description": "You've mastered the technique of throwing alchemical items great distances.",
+    "prerequisites": ["Alchemist"],
+    "traits": ["Alchemist"],
+    "benefit": "When you throw an alchemical bomb, it has a range increment of 30 feet instead of 20 feet."
+  },
+  {
+    "id": "quick-bomber",
+    "name": "Quick Bomber",
+    "type": "class",
+    "level": 1,
+    "description": "You can draw and throw alchemical bombs with incredible speed.",
+    "prerequisites": ["Alchemist"],
+    "traits": ["Alchemist"],
+    "benefit": "You can Interact to draw an alchemical bomb and then Strike with it as part of the same action."
+  },
+  {
+    "id": "smoke-bomb",
+    "name": "Smoke Bomb",
+    "type": "class",
+    "level": 1,
+    "description": "You create a special bomb that produces obscuring smoke.",
+    "prerequisites": ["Alchemist"],
+    "traits": ["Alchemist", "Additive"],
+    "frequency": "once per round",
+    "benefit": "When you throw an alchemical bomb with the splash trait, you can also create a cloud of smoke in a 10-foot radius around the target. Creatures in the cloud are concealed."
+  },
+  {
+    "id": "bardic-lore",
+    "name": "Bardic Lore",
+    "type": "class",
+    "level": 1,
+    "description": "Your studies have given you esoteric knowledge on countless topics.",
+    "prerequisites": ["Bard"],
+    "traits": ["Bard"],
+    "benefit": "You gain the Bardic Lore skill feat. When you use it to Recall Knowledge, you can attempt checks on any topic using Bardic Lore, and you're trained in this lore skill."
+  },
+  {
+    "id": "lingering-composition",
+    "name": "Lingering Composition",
+    "type": "class",
+    "level": 1,
+    "description": "Your compositions continue to resonate after you stop performing.",
+    "prerequisites": ["Bard"],
+    "traits": ["Bard"],
+    "benefit": "By spending 1 additional action when you cast a composition cantrip, you increase its duration by 1 round."
+  },
+  {
+    "id": "reach-spell-bard",
+    "name": "Reach Spell",
+    "type": "class",
+    "level": 1,
+    "description": "You can extend the range of your spells beyond their normal limits.",
+    "prerequisites": ["Bard"],
+    "traits": ["Bard", "Concentrate", "Metamagic"],
+    "benefit": "If the next action you use is to Cast a Spell that has a range, increase that spell's range by 30 feet."
+  },
+  {
+    "id": "versatile-performance",
+    "name": "Versatile Performance",
+    "type": "class",
+    "level": 1,
+    "description": "Your performance skills are so refined they can substitute for other abilities.",
+    "prerequisites": ["Bard"],
+    "traits": ["Bard"],
+    "benefit": "Choose one of the following skills: Deception, Diplomacy, or Intimidation. You can use Performance instead of that skill when making checks with it."
+  },
+  {
+    "id": "deadly-simplicity",
+    "name": "Deadly Simplicity",
+    "type": "class",
+    "level": 1,
+    "description": "Your deity's favored weapon becomes more deadly in your hands.",
+    "prerequisites": ["Cleric"],
+    "traits": ["Cleric"],
+    "benefit": "When you use your deity's favored weapon, you increase the weapon damage die by one size. If the weapon is a simple weapon, you also gain the critical specialization effect for that weapon."
+  },
+  {
+    "id": "domain-initiate",
+    "name": "Domain Initiate",
+    "type": "class",
+    "level": 1,
+    "description": "Your devotion grants you access to a divine domain.",
+    "prerequisites": ["Cleric"],
+    "traits": ["Cleric"],
+    "benefit": "Choose one domain associated with your deity. You gain the domain's initial domain spell as a devotion spell and can cast it using your cleric focus points."
+  },
+  {
+    "id": "harming-hands",
+    "name": "Harming Hands",
+    "type": "class",
+    "level": 1,
+    "description": "Your harm spells carry extra destructive power.",
+    "prerequisites": ["Cleric"],
+    "traits": ["Cleric"],
+    "benefit": "When you cast a harm spell and damage at least one living creature, you deal an extra 1 damage per spell rank to one of the damaged creatures of your choice."
+  },
+  {
+    "id": "healing-hands",
+    "name": "Healing Hands",
+    "type": "class",
+    "level": 1,
+    "description": "Your healing magic is particularly potent and restorative.",
+    "prerequisites": ["Cleric"],
+    "traits": ["Cleric"],
+    "benefit": "When you cast a heal spell and restore Hit Points to a living creature, you restore an extra 1 Hit Point per spell rank to one target of your choice."
+  },
+  {
+    "id": "holy-castigation",
+    "name": "Holy Castigation",
+    "type": "class",
+    "level": 1,
+    "description": "You channel divine wrath to punish the unholy.",
+    "prerequisites": ["Cleric"],
+    "traits": ["Cleric"],
+    "benefit": "When you damage a fiend or undead with a spell, you deal an extra 1 good damage. This increases to 2 at 9th level, and 3 at 17th level."
+  },
+  {
+    "id": "animal-companion",
+    "name": "Animal Companion",
+    "type": "class",
+    "level": 1,
+    "description": "A loyal animal becomes your steadfast companion in your druidic endeavors.",
+    "prerequisites": ["Druid"],
+    "traits": ["Druid"],
+    "benefit": "You gain a young animal companion that accompanies you on your adventures and follows your commands."
+  },
+  {
+    "id": "leshy-familiar",
+    "name": "Leshy Familiar",
+    "type": "class",
+    "level": 1,
+    "description": "A small plant creature becomes your loyal companion.",
+    "prerequisites": ["Druid"],
+    "traits": ["Druid"],
+    "benefit": "You gain a leshy familiar, a Small plant creature that serves as your familiar and can speak to you."
+  },
+  {
+    "id": "reach-spell-druid",
+    "name": "Reach Spell",
+    "type": "class",
+    "level": 1,
+    "description": "You can extend the range of your spells beyond their normal limits.",
+    "prerequisites": ["Druid"],
+    "traits": ["Druid", "Concentrate", "Metamagic"],
+    "benefit": "If the next action you use is to Cast a Spell that has a range, increase that spell's range by 30 feet."
+  },
+  {
+    "id": "storm-retribution",
+    "name": "Storm Retribution",
+    "type": "class",
+    "level": 1,
+    "description": "Call down lightning to punish those who dare harm you.",
+    "prerequisites": ["Druid"],
+    "traits": ["Druid", "Electricity", "Evocation", "Primal"],
+    "trigger": "You are hit by a melee attack",
+    "benefit": "You can call down a bolt of lightning to strike your attacker, dealing 1d12 electricity damage. The attacker must attempt a basic Reflex save against your spell DC."
+  },
+  {
+    "id": "widen-spell-druid",
+    "name": "Widen Spell",
+    "type": "class",
+    "level": 1,
+    "description": "You can expand the area of your spells to affect a larger zone.",
+    "prerequisites": ["Druid"],
+    "traits": ["Druid", "Manipulate", "Metamagic"],
+    "benefit": "If the next action you use is to Cast a Spell with an area of a burst, cone, or line, increase the area of that spell by 5 feet."
+  },
+  {
+    "id": "counterspell-sorcerer",
+    "name": "Counterspell",
+    "type": "class",
+    "level": 1,
+    "description": "Use your magical knowledge to disrupt enemy spells.",
+    "prerequisites": ["Sorcerer"],
+    "traits": ["Sorcerer", "Abjuration"],
+    "trigger": "A creature within 60 feet Casts a Spell that you have in your repertoire",
+    "benefit": "Expend a spell slot of the same level or higher to counteract the triggering spell. Attempt a counteract check."
+  },
+  {
+    "id": "dangerous-sorcery",
+    "name": "Dangerous Sorcery",
+    "type": "class",
+    "level": 1,
+    "description": "Your bloodline makes your damaging spells more potent.",
+    "prerequisites": ["Sorcerer"],
+    "traits": ["Sorcerer"],
+    "benefit": "When you Cast a Spell from your spell slots and the spell deals damage, you deal an extra 1 damage per spell rank to one target. This increases to 2 at 9th level."
+  },
+  {
+    "id": "familiar-sorcerer",
+    "name": "Familiar",
+    "type": "class",
+    "level": 1,
+    "description": "You gain a magical familiar tied to your bloodline.",
+    "prerequisites": ["Sorcerer"],
+    "traits": ["Sorcerer"],
+    "benefit": "You gain a familiar, a magical creature that serves you. The appearance of your familiar is tied to your bloodline."
+  },
+  {
+    "id": "reach-spell-sorcerer",
+    "name": "Reach Spell",
+    "type": "class",
+    "level": 1,
+    "description": "You can extend the range of your spells beyond their normal limits.",
+    "prerequisites": ["Sorcerer"],
+    "traits": ["Sorcerer", "Concentrate", "Metamagic"],
+    "benefit": "If the next action you use is to Cast a Spell that has a range, increase that spell's range by 30 feet."
+  },
+  {
+    "id": "counterspell-wizard",
+    "name": "Counterspell",
+    "type": "class",
+    "level": 1,
+    "description": "Use your arcane knowledge to disrupt enemy spells.",
+    "prerequisites": ["Wizard"],
+    "traits": ["Wizard", "Abjuration", "Arcane"],
+    "trigger": "A creature within 60 feet Casts a Spell that you have prepared",
+    "benefit": "Expend a spell slot of the same level or higher to counteract the triggering spell. Attempt a counteract check."
+  },
+  {
+    "id": "familiar-wizard",
+    "name": "Familiar",
+    "type": "class",
+    "level": 1,
+    "description": "You gain a magical familiar to aid in your studies.",
+    "prerequisites": ["Wizard"],
+    "traits": ["Wizard"],
+    "benefit": "You gain a familiar, a small magical creature that can assist you in various tasks and help with your arcane research."
+  },
+  {
+    "id": "hand-of-the-apprentice",
+    "name": "Hand of the Apprentice",
+    "type": "class",
+    "level": 1,
+    "description": "Use your magical knowledge to hurl weapons with telekinetic force.",
+    "prerequisites": ["Wizard"],
+    "traits": ["Wizard", "Attack", "Evocation"],
+    "benefit": "You gain the hand of the apprentice school spell. You can make ranged spell attacks with melee weapons using your Intelligence modifier."
+  },
+  {
+    "id": "reach-spell-wizard",
+    "name": "Reach Spell",
+    "type": "class",
+    "level": 1,
+    "description": "You can extend the range of your spells beyond their normal limits.",
+    "prerequisites": ["Wizard"],
+    "traits": ["Wizard", "Concentrate", "Metamagic"],
+    "benefit": "If the next action you use is to Cast a Spell that has a range, increase that spell's range by 30 feet."
+  },
+  {
+    "id": "widen-spell-wizard",
+    "name": "Widen Spell",
+    "type": "class",
+    "level": 1,
+    "description": "You can expand the area of your spells to affect a larger zone.",
+    "prerequisites": ["Wizard"],
+    "traits": ["Wizard", "Manipulate", "Metamagic"],
+    "benefit": "If the next action you use is to Cast a Spell with an area of a burst, cone, or line, increase the area of that spell by 5 feet."
+  }
+]

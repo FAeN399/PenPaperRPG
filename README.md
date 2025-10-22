@@ -2,11 +2,11 @@
 
 A comprehensive desktop character creator for Pathfinder 2nd Edition (Remastered), built with Electron, React, and TypeScript.
 
-![Phase 6: Ability Score Builder - Complete](https://img.shields.io/badge/Phase%206-Complete-brightgreen)
+![Phase 7: Skills & Feats - Complete](https://img.shields.io/badge/Phase%207-Complete-brightgreen)
 
 ## Features
 
-### ✨ Current Features (Phase 6 Complete)
+### ✨ Current Features (Phase 7 Complete)
 
 - **Complete Character Creation Workflow**
   - 10-step wizard with progress tracking
@@ -21,6 +21,18 @@ A comprehensive desktop character creator for Pathfinder 2nd Edition (Remastered
     - Proper PF2e rules: Boosts add +2 (or +1 if ability is 18+)
     - Validation: Can't use 2 free boosts on same ability at level 1
     - Live calculation showing boost breakdown by source
+  - Step 6: Skill training selection
+    - 16 core PF2e skills with proper ability scores
+    - Automatic background skill application
+    - Class skills + Intelligence bonus
+    - Interactive card-based selection
+    - Live skill modifier calculations
+  - Step 7: Feat selection
+    - 108 level 1 feats (18 ancestry, 53 class, 15 general, 22 skill)
+    - Filter by type (ancestry/class/skill/general)
+    - Search functionality
+    - Prerequisite checking
+    - Detailed feat descriptions with benefits, traits, frequency
 
 - **Live Character Stats**
   - Real-time calculation of all derived stats
@@ -186,12 +198,30 @@ npm run build:linux  # Linux
   - addAbilityBoost/removeAbilityBoost methods
   - Automatic score calculation from boost array
 
-### 🚧 Future Phases (Planned)
+### ✅ Phase 7: Skills & Feats
+- **Complete Skills System**
+  - 16 core PF2e skills (Acrobatics, Arcana, Athletics, etc.)
+  - Automatic background skill training
+  - Class skill selection (3-8 skills depending on class)
+  - Intelligence bonus skills (minimum 1)
+  - Live skill modifier calculations
+  - StepSkills component with card interface
+- **Comprehensive Feat System**
+  - **108 level 1 feats total:**
+    - 18 ancestry feats (3 per ancestry)
+    - 53 class feats (4-5 per class)
+    - 15 general feats (Toughness, Fleet, Shield Block, etc.)
+    - 22 skill feats (Assurance, Cat Fall, Battle Medicine, etc.)
+  - StepFeats browser component
+  - Filter by type (ancestry/class/skill/general)
+  - Search functionality
+  - Prerequisite display and checking
+  - Detailed feat cards with benefits, traits, frequency
+- **New Data Files:**
+  - skills.json, ancestry-feats.json, class-feats.json, general-feats.json, skill-feats.json
+- **Created using 4 parallel subagents** for feat data generation
 
-- **Phase 7:** Skills & Feats
-  - Skill proficiency selection
-  - Feat browser with prerequisites
-  - Ancestry, class, skill, and general feats
+### 🚧 Future Phases (Planned)
 
 - **Phase 8:** Spells (for casters)
   - Spell selection interface
@@ -233,9 +263,9 @@ Descriptions are original content to avoid copyright issues.
 
 ## Stats
 
-- **58 modules** bundled
-- **190.57KB** JavaScript bundle
-- **15.59KB** CSS bundle
+- **65 modules** bundled
+- **247.35KB** JavaScript bundle (+108 feats data!)
+- **16.87KB** CSS bundle
 - **Zero** TypeScript errors
 - **100%** type-safe code
 
@@ -246,4 +276,4 @@ Pathfinder and associated marks are trademarks of Paizo Inc.
 
 ---
 
-**Status:** Phase 6 Complete - Proper PF2e ability boost system implemented! Character creation now includes accurate ancestry/background/class boost application with interactive free boost selection.
+**Status:** Phase 7 Complete - Skills & Feats fully implemented! Character creation now includes full skill training system (16 skills) and comprehensive feat selection (108 level 1 feats across all types). All core mechanics for level 1 character creation are functional!

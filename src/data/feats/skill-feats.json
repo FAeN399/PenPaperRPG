@@ -1,0 +1,223 @@
+[
+  {
+    "id": "assurance-acrobatics",
+    "name": "Assurance (Acrobatics)",
+    "type": "skill",
+    "level": 1,
+    "description": "You can perform a skill check with reliable consistency, even under pressure.",
+    "prerequisites": ["Trained in Acrobatics"],
+    "traits": ["Fortune", "General", "Skill"],
+    "benefit": "When you use Acrobatics, you can choose to forgo rolling and instead use a result of 10 + your proficiency bonus (not including any other bonuses, penalties, or modifiers). This allows you to succeed at tasks with consistent reliability, though you cannot achieve critical successes using this ability."
+  },
+  {
+    "id": "cat-fall",
+    "name": "Cat Fall",
+    "type": "skill",
+    "level": 1,
+    "description": "Your quick reflexes allow you to land gracefully when falling, reducing the impact of a tumble.",
+    "prerequisites": ["Trained in Acrobatics"],
+    "traits": ["General", "Skill"],
+    "benefit": "Treat falls as 10 feet shorter when determining falling damage. If you're an expert in Acrobatics, treat falls as 25 feet shorter. If you're a master, treat them as 50 feet shorter. If you're legendary, you always land on your feet and take no damage, regardless of the distance fallen."
+  },
+  {
+    "id": "quick-squeeze",
+    "name": "Quick Squeeze",
+    "type": "skill",
+    "level": 1,
+    "description": "You can slip through tight spaces with surprising speed.",
+    "prerequisites": ["Trained in Acrobatics"],
+    "traits": ["General", "Skill"],
+    "benefit": "You Squeeze at full Speed instead of the usual 5 feet per round. You can use this ability even when someone is observing you, though observers can still tell you're Squeezing."
+  },
+  {
+    "id": "arcane-sense",
+    "name": "Arcane Sense",
+    "type": "skill",
+    "level": 1,
+    "description": "Your magical intuition allows you to sense the presence of arcane power nearby.",
+    "prerequisites": ["Trained in Arcana"],
+    "traits": ["Detection", "General", "Skill"],
+    "benefit": "You can cast detect magic as an arcane innate cantrip at will. A cantrip is heightened to a spell rank equal to half your level rounded up. This allows you to sense magical auras within 30 feet and learn their schools of magic."
+  },
+  {
+    "id": "combat-climber",
+    "name": "Combat Climber",
+    "type": "skill",
+    "level": 1,
+    "description": "You maintain your guard even while scaling walls or clinging to surfaces.",
+    "prerequisites": ["Trained in Athletics"],
+    "traits": ["General", "Skill"],
+    "benefit": "You're not off-guard while Climbing. If you have a climb Speed, you gain a +2 circumstance bonus to your Fortitude or Reflex DC against attempts to Shove or Trip you while you're climbing."
+  },
+  {
+    "id": "hefty-hauler",
+    "name": "Hefty Hauler",
+    "type": "skill",
+    "level": 1,
+    "description": "Your powerful physique allows you to carry more weight than others of your size.",
+    "prerequisites": ["Trained in Athletics"],
+    "traits": ["General", "Skill"],
+    "benefit": "Increase your maximum and encumbered Bulk limits by 2. This doesn't affect the Bulk you can carry while meeting the Bulk requirements for armor."
+  },
+  {
+    "id": "specialty-crafting",
+    "name": "Specialty Crafting",
+    "type": "skill",
+    "level": 1,
+    "description": "You've developed expertise in crafting a particular type of item.",
+    "prerequisites": ["Trained in Crafting"],
+    "traits": ["General", "Skill"],
+    "special": "You can take this feat multiple times, choosing a different specialty each time.",
+    "benefit": "Choose one specialty from the following list: alchemy, artistry, blacksmithing, bookmaking, glassmaking, leatherworking, pottery, shipbuilding, stonemasonry, tailoring, or woodworking. When Crafting items of your chosen specialty, your proficiency rank for the Craft check is one higher (from trained to expert, for example)."
+  },
+  {
+    "id": "impeccable-crafting",
+    "name": "Impeccable Crafting",
+    "type": "skill",
+    "level": 1,
+    "description": "Your meticulous craftsmanship produces items of exceptional quality.",
+    "prerequisites": ["Trained in Crafting", "Expert in Crafting"],
+    "traits": ["General", "Skill"],
+    "benefit": "Whenever you roll a success on a Crafting check to Craft an item of your level or lower, you get a critical success instead. This means you can craft the item in half the time it would normally take, or you can increase the item's quality."
+  },
+  {
+    "id": "charming-liar",
+    "name": "Charming Liar",
+    "type": "skill",
+    "level": 1,
+    "description": "Your lies are so charming that people want to believe you.",
+    "prerequisites": ["Trained in Deception"],
+    "traits": ["General", "Skill"],
+    "benefit": "When you critically succeed at Lying to someone, if that creature would have an attitude towards you of indifferent or better, it improves by one step (for example, indifferent to friendly). This doesn't affect creatures with a worse starting attitude."
+  },
+  {
+    "id": "lengthy-diversion",
+    "name": "Lengthy Diversion",
+    "type": "skill",
+    "level": 1,
+    "description": "Your diversions keep targets distracted for longer than usual.",
+    "prerequisites": ["Trained in Deception"],
+    "traits": ["General", "Skill"],
+    "benefit": "When you succeed at using Deception to Create a Diversion, you continue to remain hidden for 1 additional round after the diversion ends. This gives you more time to move or take actions while remaining unnoticed."
+  },
+  {
+    "id": "bargain-hunter",
+    "name": "Bargain Hunter",
+    "type": "skill",
+    "level": 1,
+    "description": "You have a keen eye for finding good deals and negotiating favorable prices.",
+    "prerequisites": ["Trained in Diplomacy"],
+    "traits": ["General", "Skill"],
+    "benefit": "When you Purchase goods, you can attempt a Diplomacy check to find a bargain. If you succeed, you find the item at a discount, paying 90% of the normal price. If you critically succeed, you pay only 80% of the normal price. This doesn't apply to magical items or items with a minimum purchase price."
+  },
+  {
+    "id": "group-impression",
+    "name": "Group Impression",
+    "type": "skill",
+    "level": 1,
+    "description": "You can make a strong first impression on multiple people simultaneously.",
+    "prerequisites": ["Trained in Diplomacy"],
+    "traits": ["General", "Skill"],
+    "benefit": "When you Make an Impression, you can target up to two creatures at once, instead of just one. If you're an expert in Diplomacy, you can target four creatures; if you're a master, you can target ten creatures; and if you're legendary, you can target twenty-five creatures."
+  },
+  {
+    "id": "intimidating-glare",
+    "name": "Intimidating Glare",
+    "type": "skill",
+    "level": 1,
+    "description": "Your menacing stare can unsettle foes without a word being spoken.",
+    "prerequisites": ["Trained in Intimidation"],
+    "traits": ["General", "Skill"],
+    "benefit": "You can Demoralize a target using only visual cues rather than language. This uses the same rules as the Demoralize action, but you don't need to share a language with the target, and the target doesn't need to be able to hear you. They must be able to see you, though."
+  },
+  {
+    "id": "battle-medicine",
+    "name": "Battle Medicine",
+    "type": "skill",
+    "level": 1,
+    "description": "You can quickly administer first aid to wounded allies even in the heat of combat.",
+    "prerequisites": ["Trained in Medicine"],
+    "traits": ["General", "Healing", "Manipulate", "Skill"],
+    "benefit": "You can use the Treat Wounds action in combat as a 1-action activity. When you do, you can only restore Hit Points equal to the target's Constitution modifier (minimum 1). You can't use Battle Medicine on the same target again until they rest for 10 minutes or receive magical healing. This doesn't prevent you from using Treat Wounds during exploration mode."
+  },
+  {
+    "id": "train-animal",
+    "name": "Train Animal",
+    "type": "skill",
+    "level": 1,
+    "description": "You can teach animals to follow your commands and perform specific tasks.",
+    "prerequisites": ["Trained in Nature"],
+    "traits": ["Downtime", "General", "Manipulate", "Skill"],
+    "benefit": "You can train animals to obey your commands. Using downtime, you can attempt a Nature check to teach an animal a trick. The DC depends on the complexity of the trick and the animal's intelligence. Successfully trained animals will perform the trick when commanded."
+  },
+  {
+    "id": "oddity-identification",
+    "name": "Oddity Identification",
+    "type": "skill",
+    "level": 1,
+    "description": "Your knowledge of the occult helps you identify strange and unusual magical items.",
+    "prerequisites": ["Trained in Occultism"],
+    "traits": ["General", "Skill"],
+    "benefit": "You can use Occultism to Identify Magic when examining occult items and effects. You gain a +2 circumstance bonus to Occultism checks to identify items with the cursed, emotion, or mental trait."
+  },
+  {
+    "id": "fascinating-performance",
+    "name": "Fascinating Performance",
+    "type": "skill",
+    "level": 1,
+    "description": "Your performances can captivate and entrance your audience.",
+    "prerequisites": ["Trained in Performance"],
+    "traits": ["General", "Skill"],
+    "benefit": "When you critically succeed at a Performance check to Perform, you can attempt to fascinate one target within 30 feet who watched or heard your performance. The target must attempt a Will save against your Performance DC. On a failure, they become fascinated by you for 1 round."
+  },
+  {
+    "id": "student-of-the-canon",
+    "name": "Student of the Canon",
+    "type": "skill",
+    "level": 1,
+    "description": "Your deep study of religious texts gives you extensive knowledge of the divine.",
+    "prerequisites": ["Trained in Religion"],
+    "traits": ["General", "Skill"],
+    "benefit": "You gain a +1 circumstance bonus to Religion checks to Recall Knowledge about deities, religious traditions, holy texts, and religious ceremonies. If you have the Assurance feat for Religion, you can use it even when recalling knowledge about obscure religious topics."
+  },
+  {
+    "id": "streetwise",
+    "name": "Streetwise",
+    "type": "skill",
+    "level": 1,
+    "description": "You know how to navigate urban environments and gather information from the locals.",
+    "prerequisites": ["Trained in Society"],
+    "traits": ["General", "Skill"],
+    "benefit": "You can use Society to Gather Information even if you don't have access to a library or other research materials, as long as you're in a settlement. When using Society to Gather Information in a settlement, if you critically fail, you still get a false lead instead of no information at all."
+  },
+  {
+    "id": "experienced-smuggler",
+    "name": "Experienced Smuggler",
+    "type": "skill",
+    "level": 1,
+    "description": "You're skilled at concealing small items on your person to avoid detection.",
+    "prerequisites": ["Trained in Stealth"],
+    "traits": ["General", "Skill"],
+    "benefit": "You gain a +2 circumstance bonus to Stealth checks to Conceal an Object that is light Bulk or less. You can also draw a light Bulk concealed item as easily as you would draw a weapon, using the Interact action."
+  },
+  {
+    "id": "survey-wildlife",
+    "name": "Survey Wildlife",
+    "type": "skill",
+    "level": 1,
+    "description": "Your knowledge of animal behavior helps you track creatures through the wilderness.",
+    "prerequisites": ["Trained in Survival"],
+    "traits": ["General", "Skill"],
+    "benefit": "You can spend 10 minutes surveying an area to learn about local wildlife. Attempt a Survival check against a DC determined by the GM. On a success, you learn what types of creatures inhabit the area and their general threat level. This gives you useful information for planning your journey."
+  },
+  {
+    "id": "pickpocket",
+    "name": "Pickpocket",
+    "type": "skill",
+    "level": 1,
+    "description": "Your nimble fingers allow you to steal items from unsuspecting marks.",
+    "prerequisites": ["Trained in Thievery"],
+    "traits": ["General", "Skill"],
+    "benefit": "You can use Thievery to Steal or Palm an Object from another creature's person. This requires you to be within reach of the target. The target can attempt a Perception check against your Thievery DC to notice your attempt, even if they don't succeed at catching you."
+  }
+]

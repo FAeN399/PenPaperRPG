@@ -1,4 +1,4 @@
-import { Ancestry, Heritage, Background, Class, Skill } from '@/types/gameData'
+import { Ancestry, Heritage, Background, Class, Skill, Feat } from '@/types/gameData'
 
 // Import JSON data
 import ancestriesData from '@/data/ancestries/ancestries.json'
@@ -6,6 +6,10 @@ import heritagesData from '@/data/ancestries/heritages.json'
 import backgroundsData from '@/data/backgrounds/backgrounds.json'
 import classesData from '@/data/classes/classes.json'
 import skillsData from '@/data/skills/skills.json'
+import ancestryFeatsData from '@/data/feats/ancestry-feats.json'
+import classFeatsData from '@/data/feats/class-feats.json'
+import generalFeatsData from '@/data/feats/general-feats.json'
+import skillFeatsData from '@/data/feats/skill-feats.json'
 
 // Game Data Service
 export class GameDataService {
@@ -14,6 +18,12 @@ export class GameDataService {
   private static backgrounds: Background[] = backgroundsData as Background[]
   private static classes: Class[] = classesData as Class[]
   private static skills: Skill[] = skillsData as Skill[]
+  private static feats: Feat[] = [
+    ...((ancestryFeatsData as any).feats as Feat[]),
+    ...((classFeatsData as any).feats as Feat[]),
+    ...((generalFeatsData as any).feats as Feat[]),
+    ...((skillFeatsData as any).feats as Feat[]),
+  ]
 
   // Ancestry Methods
   static getAllAncestries(): Ancestry[] {
@@ -61,6 +71,29 @@ export class GameDataService {
 
   static getSkillByName(name: string): Skill | undefined {
     return this.skills.find((s) => s.name.toLowerCase() === name.toLowerCase())
+  }
+
+  // Feat Methods
+  static getAllFeats(): Feat[] {
+    return this.feats
+  }
+
+  static getFeatById(id: string): Feat | undefined {
+    return this.feats.find((f) => f.id === id)
+  }
+
+  static getFeatsByType(type: 'ancestry' | 'class' | 'skill' | 'general'): Feat[] {
+    return this.feats.filter((f) => f.type === type)
+  }
+
+  static searchFeats(query: string): Feat[] {
+    const lowerQuery = query.toLowerCase()
+    return this.feats.filter(
+      (f) =>
+        f.name.toLowerCase().includes(lowerQuery) ||
+        f.description.toLowerCase().includes(lowerQuery) ||
+        f.benefit.toLowerCase().includes(lowerQuery)
+    )
   }
 
   // Utility Methods

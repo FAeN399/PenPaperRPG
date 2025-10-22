@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Ancestry, Heritage, Background, Class, Skill } from '@/types/gameData'
+import { Ancestry, Heritage, Background, Class, Skill, Feat } from '@/types/gameData'
 import { GameDataService } from '@/services/gameData'
 
 export function useGameData() {
@@ -7,6 +7,7 @@ export function useGameData() {
   const [backgrounds, setBackgrounds] = useState<Background[]>([])
   const [classes, setClasses] = useState<Class[]>([])
   const [skills, setSkills] = useState<Skill[]>([])
+  const [feats, setFeats] = useState<Feat[]>([])
 
   useEffect(() => {
     // Load all game data
@@ -14,6 +15,7 @@ export function useGameData() {
     setBackgrounds(GameDataService.getAllBackgrounds())
     setClasses(GameDataService.getAllClasses())
     setSkills(GameDataService.getAllSkills())
+    setFeats(GameDataService.getAllFeats())
   }, [])
 
   const getHeritagesForAncestry = (ancestryId: string): Heritage[] => {
@@ -40,16 +42,32 @@ export function useGameData() {
     return GameDataService.getSkillByName(name)
   }
 
+  const getFeatById = (id: string): Feat | undefined => {
+    return GameDataService.getFeatById(id)
+  }
+
+  const getFeatsByType = (type: 'ancestry' | 'class' | 'skill' | 'general'): Feat[] => {
+    return GameDataService.getFeatsByType(type)
+  }
+
+  const searchFeats = (query: string): Feat[] => {
+    return GameDataService.searchFeats(query)
+  }
+
   return {
     ancestries,
     backgrounds,
     classes,
     skills,
+    feats,
     getHeritagesForAncestry,
     getAncestryById,
     getBackgroundById,
     getClassById,
     getSkillById,
     getSkillByName,
+    getFeatById,
+    getFeatsByType,
+    searchFeats,
   }
 }
