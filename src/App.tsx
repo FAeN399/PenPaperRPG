@@ -21,7 +21,7 @@ function App() {
     return (
       <CharacterProvider>
         <div className="min-h-screen flex flex-col bg-pf-bg">
-          <header className="bg-pf-bg-card border-b border-gray-700 px-6 py-4 flex justify-between items-center">
+          <header className="bg-pf-bg-card border-b border-pf-border px-6 py-4 flex justify-between items-center">
             <div>
               <h1 className="text-pf-accent">PenPaperRPG</h1>
               <p className="text-sm text-pf-text-muted">Character Sheet</p>
@@ -39,7 +39,7 @@ function App() {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Header */}
-      <header className="bg-pf-bg-card border-b border-gray-700 px-6 py-4">
+      <header className="bg-pf-bg-card border-b border-pf-border px-6 py-4">
         <h1 className="text-pf-accent">PenPaperRPG</h1>
         <p className="text-sm text-pf-text-muted">Pathfinder 2e Character Creator</p>
       </header>
@@ -85,7 +85,7 @@ function App() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-pf-bg-card border-t border-gray-700 px-6 py-4 text-center text-sm text-pf-text-muted">
+      <footer className="bg-pf-bg-card border-t border-pf-border px-6 py-4 text-center text-sm text-pf-text-muted">
         <p>
           This application uses the Pathfinder Second Edition system under the ORC License
         </p>

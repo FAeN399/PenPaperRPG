@@ -26,7 +26,7 @@ export default function Footer({
   isLastStep = false,
 }: FooterProps) {
   return (
-    <footer className="bg-pf-bg-card border-t border-gray-700 px-6 py-4">
+    <footer className="bg-pf-bg-card border-t border-pf-border px-6 py-4">
       <div className="flex items-center justify-between">
         {/* Left: Back button */}
         <div>

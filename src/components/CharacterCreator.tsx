@@ -15,13 +15,18 @@ import StepSpells from './character-creation/StepSpells'
 import StepEquipment from './character-creation/StepEquipment'
 import { useCharacter } from '@/hooks/useCharacter'
 import { CharacterCreationStep, CREATION_STEPS } from '@/types/steps'
+import {
+  saveCharacterToFile,
+  loadCharacterFromFile,
+  downloadTextExport,
+} from '@/utils/fileOperations'
 
 interface CharacterCreatorProps {
   onViewSheet?: () => void
 }
 
 export default function CharacterCreator({ onViewSheet }: CharacterCreatorProps) {
-  const { character, updateBasics } = useCharacter()
+  const { character, updateBasics, loadCharacter, resetCharacter } = useCharacter()
   const [currentStep, setCurrentStep] = useState<CharacterCreationStep>(
     CharacterCreationStep.Basics
   )
@@ -45,9 +50,52 @@ export default function CharacterCreator({ onViewSheet }: CharacterCreatorProps)
     setCurrentStep(step)
   }
 
-  const handleSave = () => {
-    console.log('Saving character...', character)
-    // TODO: Implement save functionality
+  const handleNewCharacter = () => {
+    if (
+      confirm(
+        'Are you sure you want to create a new character? All unsaved progress will be lost.'
+      )
+    ) {
+      resetCharacter()
+      setCurrentStep(CharacterCreationStep.Basics)
+    }
+  }
+
+  const handleSave = async () => {
+    try {
+      await saveCharacterToFile(character)
+    } catch (error) {
+      console.error('Error saving character:', error)
+      alert('Failed to save character. Please try again.')
+    }
+  }
+
+  const handleLoad = async () => {
+    if (
+      confirm(
+        'Loading a character will replace your current character. Continue?'
+      )
+    ) {
+      try {
+        const loadedCharacter = await loadCharacterFromFile()
+        if (loadedCharacter) {
+          loadCharacter(loadedCharacter)
+          setCurrentStep(CharacterCreationStep.Basics)
+        }
+      } catch (error) {
+        console.error('Error loading character:', error)
+        alert('Failed to load character. Please check the file format.')
+      }
+    }
+  }
+
+  const handleExportText = () => {
+    try {
+      downloadTextExport(character)
+    } catch (error) {
+      console.error('Error exporting character:', error)
+      alert('Failed to export character. Please try again.')
+    }
   }
 
   return (
@@ -56,6 +104,10 @@ export default function CharacterCreator({ onViewSheet }: CharacterCreatorProps)
         characterName={character.basics.name}
         currentStep={currentStepInfo?.order.toString()}
         totalSteps={CREATION_STEPS.length}
+        onNewCharacter={handleNewCharacter}
+        onSaveCharacter={handleSave}
+        onLoadCharacter={handleLoad}
+        onExportText={handleExportText}
       />
 
       <StepIndicator
@@ -91,7 +143,7 @@ export default function CharacterCreator({ onViewSheet }: CharacterCreatorProps)
                     onChange={(value) => updateBasics({ playerName: value })}
                     placeholder="Enter player name"
                   />
-                  <div className="pt-4 border-t border-gray-700">
+                  <div className="pt-4 border-t border-pf-border">
                     <p className="text-sm text-pf-text-muted mb-2">
                       Level: {character.basics.level}
                     </p>

@@ -19,6 +19,7 @@ interface CharacterContextType {
   removeFeat: (type: keyof Character['feats'], feat: string) => void
   updateSpells: (spells: Character['spells']) => void
   updateEquipment: (equipment: Partial<Character['equipment']>) => void
+  loadCharacter: (character: Character) => void
   resetCharacter: () => void
 }
 
@@ -148,6 +149,10 @@ export function CharacterProvider({ children }: CharacterProviderProps) {
     }))
   }
 
+  const loadCharacter = (loadedCharacter: Character) => {
+    setCharacter(loadedCharacter)
+  }
+
   const resetCharacter = () => {
     setCharacter(createEmptyCharacter())
   }
@@ -200,6 +205,7 @@ export function CharacterProvider({ children }: CharacterProviderProps) {
     removeFeat,
     updateSpells,
     updateEquipment,
+    loadCharacter,
     resetCharacter,
   }
 

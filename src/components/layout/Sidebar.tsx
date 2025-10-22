@@ -11,7 +11,7 @@ export default function Sidebar({ character }: SidebarProps) {
   }
 
   return (
-    <aside className="w-80 bg-pf-bg-card border-r border-gray-700 p-4 overflow-y-auto">
+    <aside className="w-80 bg-pf-bg-card border-r border-pf-border p-4 overflow-y-auto">
       <h3 className="text-lg font-semibold text-pf-accent mb-4">Character Stats</h3>
 
       {/* Basic Info */}
