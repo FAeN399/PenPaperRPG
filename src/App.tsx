@@ -1,0 +1,70 @@
+import { useState } from 'react'
+
+function App() {
+  const [message, setMessage] = useState<string>('Welcome to PenPaperRPG')
+
+  return (
+    <div className="min-h-screen flex flex-col">
+      {/* Header */}
+      <header className="bg-pf-bg-card border-b border-gray-700 px-6 py-4">
+        <h1 className="text-pf-accent">PenPaperRPG</h1>
+        <p className="text-sm text-pf-text-muted">Pathfinder 2e Character Creator</p>
+      </header>
+
+      {/* Main Content */}
+      <main className="flex-1 p-6">
+        <div className="max-w-4xl mx-auto">
+          <div className="card text-center py-12">
+            <h2 className="text-pf-accent mb-4">{message}</h2>
+            <p className="text-pf-text-muted mb-6">
+              A comprehensive character creator for Pathfinder Second Edition
+            </p>
+            <p className="text-sm text-pf-text-muted mb-8">
+              Phase 1: Project Setup & Foundation - Complete
+            </p>
+            <button
+              className="btn-primary"
+              onClick={() => setMessage('Ready to create your character!')}
+            >
+              Get Started
+            </button>
+          </div>
+
+          {/* Feature Preview */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+            <div className="card">
+              <h3 className="text-pf-accent mb-2">Deep Character Creation</h3>
+              <p className="text-sm text-pf-text-muted">
+                Full support for ancestries, backgrounds, classes, and feats
+              </p>
+            </div>
+            <div className="card">
+              <h3 className="text-pf-accent mb-2">Modern Interface</h3>
+              <p className="text-sm text-pf-text-muted">
+                Clean, intuitive UI with progressive disclosure
+              </p>
+            </div>
+            <div className="card">
+              <h3 className="text-pf-accent mb-2">Local Storage</h3>
+              <p className="text-sm text-pf-text-muted">
+                Save and manage characters on your computer
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      {/* Footer */}
+      <footer className="bg-pf-bg-card border-t border-gray-700 px-6 py-4 text-center text-sm text-pf-text-muted">
+        <p>
+          This application uses the Pathfinder Second Edition system under the ORC License
+        </p>
+        <p className="mt-1">
+          Pathfinder and associated marks are trademarks of Paizo Inc.
+        </p>
+      </footer>
+    </div>
+  )
+}
+
+export default App
