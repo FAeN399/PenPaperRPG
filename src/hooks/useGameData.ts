@@ -24,6 +24,10 @@ export function useGameData() {
     return GameDataService.getHeritagesForAncestry(ancestryId)
   }
 
+  const getHeritageById = (id: string): Heritage | undefined => {
+    return GameDataService.getHeritageById(id)
+  }
+
   const getAncestryById = (id: string): Ancestry | undefined => {
     return GameDataService.getAncestryById(id)
   }
@@ -87,6 +91,7 @@ export function useGameData() {
     feats,
     spells,
     getHeritagesForAncestry,
+    getHeritageById,
     getAncestryById,
     getBackgroundById,
     getClassById,

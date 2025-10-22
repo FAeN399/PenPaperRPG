@@ -15,7 +15,11 @@ import StepSpells from './character-creation/StepSpells'
 import { useCharacter } from '@/hooks/useCharacter'
 import { CharacterCreationStep, CREATION_STEPS } from '@/types/steps'
 
-export default function CharacterCreator() {
+interface CharacterCreatorProps {
+  onViewSheet?: () => void
+}
+
+export default function CharacterCreator({ onViewSheet }: CharacterCreatorProps) {
   const { character, updateBasics } = useCharacter()
   const [currentStep, setCurrentStep] = useState<CharacterCreationStep>(
     CharacterCreationStep.Basics
@@ -142,6 +146,7 @@ export default function CharacterCreator() {
         onBack={handleBack}
         onNext={handleNext}
         onSave={handleSave}
+        onViewSheet={onViewSheet}
         canGoBack={currentStepIndex > 0}
         canGoNext={currentStepIndex < CREATION_STEPS.length - 1}
         isFirstStep={currentStepIndex === 0}

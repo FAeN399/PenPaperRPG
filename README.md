@@ -68,6 +68,14 @@ A comprehensive desktop character creator for Pathfinder 2nd Edition (Remastered
   - Step indicator with progress visualization
   - Keyboard navigation support
 
+- **Character Sheet View**
+  - Comprehensive character sheet displaying all character information
+  - Professional PF2e-style layout
+  - Sections: Ability Scores, Combat Stats, Saving Throws, Skills, Feats, Spells
+  - Real-time stat calculations
+  - View anytime during character creation
+  - Printable-ready format (future enhancement)
+
 ### 🎯 Accurate PF2e Mechanics
 
 All calculations follow official Pathfinder 2e rules:
@@ -290,14 +298,15 @@ Descriptions are original content to avoid copyright issues.
 ## Demo Files
 
 - **DEMO.html** - Standalone HTML demo (no server required)
+- **CHARACTER_SHEET_DEMO.html** - Visual character sheet demonstration
 - **UI_VISUAL_MOCKUP.md** - Visual design documentation
 - **PROJECT_PROMPT.md** - Complete development specification
 
 ## Stats
 
-- **70 modules** bundled
-- **339.29KB** JavaScript bundle (+155 spells data!)
-- **16.93KB** CSS bundle
+- **71 modules** bundled
+- **352.51KB** JavaScript bundle (character sheet +13KB!)
+- **17.07KB** CSS bundle
 - **Zero** TypeScript errors
 - **100%** type-safe code
 

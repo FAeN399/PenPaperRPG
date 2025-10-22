@@ -4,6 +4,7 @@ interface FooterProps {
   onBack?: () => void
   onNext?: () => void
   onSave?: () => void
+  onViewSheet?: () => void
   backLabel?: string
   nextLabel?: string
   canGoBack?: boolean
@@ -16,6 +17,7 @@ export default function Footer({
   onBack,
   onNext,
   onSave,
+  onViewSheet,
   backLabel = 'Back',
   nextLabel = 'Next',
   canGoBack = true,
@@ -39,11 +41,16 @@ export default function Footer({
           )}
         </div>
 
-        {/* Center: Save draft */}
-        <div>
+        {/* Center: Save draft & View Sheet */}
+        <div className="flex gap-3">
           {onSave && (
             <Button onClick={onSave} variant="ghost" size="sm">
               💾 Save Draft
+            </Button>
+          )}
+          {onViewSheet && (
+            <Button onClick={onViewSheet} variant="secondary" size="sm">
+              📄 View Character Sheet
             </Button>
           )}
         </div>
