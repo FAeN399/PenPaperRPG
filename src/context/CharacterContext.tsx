@@ -1,7 +1,10 @@
-import { createContext, ReactNode, useState, useEffect } from 'react'
+import { createContext, ReactNode, useState, useEffect, useCallback, useRef } from 'react'
 import { Character, createEmptyCharacter, AbilityBoost } from '@/types/character'
 import { calculateDerivedStats } from '@/services/calculations'
 import { calculateAllAbilityScores } from '@/utils/abilityBoosts'
+
+const AUTO_SAVE_KEY = 'penpaperrpg-character-autosave'
+const AUTO_SAVE_DELAY = 1000 // Save 1 second after last change
 
 interface CharacterContextType {
   character: Character
@@ -32,45 +35,81 @@ interface CharacterProviderProps {
 }
 
 export function CharacterProvider({ children }: CharacterProviderProps) {
-  const [character, setCharacter] = useState<Character>(createEmptyCharacter())
+  // Load character from localStorage on mount
+  const [character, setCharacter] = useState<Character>(() => {
+    try {
+      const saved = localStorage.getItem(AUTO_SAVE_KEY)
+      if (saved) {
+        const loaded = JSON.parse(saved) as Character
+        // Recalculate derived stats in case formulas changed
+        return {
+          ...loaded,
+          derivedStats: calculateDerivedStats(loaded),
+        }
+      }
+    } catch (error) {
+      console.error('Failed to load autosaved character:', error)
+    }
+    return createEmptyCharacter()
+  })
 
-  // Recalculate derived stats whenever character changes
+  const saveTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+
+  // Auto-save to localStorage with debounce
   useEffect(() => {
-    setCharacter((prev) => ({
-      ...prev,
-      derivedStats: calculateDerivedStats(prev),
-    }))
-  }, [
-    character.abilityScores,
-    character.ancestry,
-    character.class,
-    character.equipment,
-    character.skills,
-  ])
+    if (saveTimeoutRef.current) {
+      clearTimeout(saveTimeoutRef.current)
+    }
+
+    saveTimeoutRef.current = setTimeout(() => {
+      try {
+        localStorage.setItem(AUTO_SAVE_KEY, JSON.stringify(character))
+      } catch (error) {
+        console.error('Failed to autosave character:', error)
+      }
+    }, AUTO_SAVE_DELAY)
+
+    return () => {
+      if (saveTimeoutRef.current) {
+        clearTimeout(saveTimeoutRef.current)
+      }
+    }
+  }, [character])
+
+  // Helper to update character and recalculate derived stats
+  const updateCharacter = useCallback((updater: (prev: Character) => Character) => {
+    setCharacter((prev) => {
+      const updated = updater(prev)
+      return {
+        ...updated,
+        derivedStats: calculateDerivedStats(updated),
+      }
+    })
+  }, [])
 
   const updateBasics = (basics: Partial<Character['basics']>) => {
-    setCharacter((prev) => ({
+    updateCharacter((prev) => ({
       ...prev,
       basics: { ...prev.basics, ...basics },
     }))
   }
 
   const updateAncestry = (ancestry: Character['ancestry']) => {
-    setCharacter((prev) => ({
+    updateCharacter((prev) => ({
       ...prev,
       ancestry,
     }))
   }
 
   const updateBackground = (background: string) => {
-    setCharacter((prev) => ({
+    updateCharacter((prev) => ({
       ...prev,
       background,
     }))
   }
 
   const updateClass = (classData: Character['class']) => {
-    setCharacter((prev) => ({
+    updateCharacter((prev) => ({
       ...prev,
       class: classData,
     }))
@@ -80,7 +119,7 @@ export function CharacterProvider({ children }: CharacterProviderProps) {
     ability: keyof Character['abilityScores'],
     value: number
   ) => {
-    setCharacter((prev) => ({
+    updateCharacter((prev) => ({
       ...prev,
       abilityScores: {
         ...prev.abilityScores,
@@ -90,7 +129,7 @@ export function CharacterProvider({ children }: CharacterProviderProps) {
   }
 
   const updateAbilityScores = (scores: Partial<Character['abilityScores']>) => {
-    setCharacter((prev) => ({
+    updateCharacter((prev) => ({
       ...prev,
       abilityScores: {
         ...prev.abilityScores,
@@ -103,7 +142,7 @@ export function CharacterProvider({ children }: CharacterProviderProps) {
     skill: string,
     proficiency: Character['skills'][string]
   ) => {
-    setCharacter((prev) => ({
+    updateCharacter((prev) => ({
       ...prev,
       skills: {
         ...prev.skills,
@@ -113,7 +152,7 @@ export function CharacterProvider({ children }: CharacterProviderProps) {
   }
 
   const addFeat = (type: keyof Character['feats'], feat: string) => {
-    setCharacter((prev) => ({
+    updateCharacter((prev) => ({
       ...prev,
       feats: {
         ...prev.feats,
@@ -123,7 +162,7 @@ export function CharacterProvider({ children }: CharacterProviderProps) {
   }
 
   const removeFeat = (type: keyof Character['feats'], feat: string) => {
-    setCharacter((prev) => ({
+    updateCharacter((prev) => ({
       ...prev,
       feats: {
         ...prev.feats,
@@ -133,14 +172,14 @@ export function CharacterProvider({ children }: CharacterProviderProps) {
   }
 
   const updateSpells = (spells: Character['spells']) => {
-    setCharacter((prev) => ({
+    updateCharacter((prev) => ({
       ...prev,
       spells,
     }))
   }
 
   const updateEquipment = (equipment: Partial<Character['equipment']>) => {
-    setCharacter((prev) => ({
+    updateCharacter((prev) => ({
       ...prev,
       equipment: {
         ...prev.equipment,
@@ -150,15 +189,22 @@ export function CharacterProvider({ children }: CharacterProviderProps) {
   }
 
   const loadCharacter = (loadedCharacter: Character) => {
-    setCharacter(loadedCharacter)
+    updateCharacter(() => loadedCharacter)
   }
 
   const resetCharacter = () => {
-    setCharacter(createEmptyCharacter())
+    const empty = createEmptyCharacter()
+    setCharacter(empty)
+    // Clear autosave
+    try {
+      localStorage.removeItem(AUTO_SAVE_KEY)
+    } catch (error) {
+      console.error('Failed to clear autosave:', error)
+    }
   }
 
   const addAbilityBoost = (boost: AbilityBoost) => {
-    setCharacter((prev) => {
+    updateCharacter((prev) => {
       const newBoosts = [...prev.abilityScores.boosts, boost]
       const newScores = calculateAllAbilityScores(newBoosts)
       return {
@@ -169,7 +215,7 @@ export function CharacterProvider({ children }: CharacterProviderProps) {
   }
 
   const removeAbilityBoost = (boost: AbilityBoost) => {
-    setCharacter((prev) => {
+    updateCharacter((prev) => {
       const newBoosts = prev.abilityScores.boosts.filter(
         (b) => !(b.ability === boost.ability && b.source === boost.source)
       )
@@ -183,7 +229,7 @@ export function CharacterProvider({ children }: CharacterProviderProps) {
 
   const applyAbilityBoosts = (boosts: AbilityBoost[]) => {
     const newScores = calculateAllAbilityScores(boosts)
-    setCharacter((prev) => ({
+    updateCharacter((prev) => ({
       ...prev,
       abilityScores: newScores,
     }))

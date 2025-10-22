@@ -1,10 +1,12 @@
 import { useState } from 'react'
+import toast from 'react-hot-toast'
 import Header from './layout/Header'
 import Sidebar from './layout/Sidebar'
 import Footer from './layout/Footer'
 import StepIndicator from './layout/StepIndicator'
 import Card from './shared/Card'
 import Input from './shared/Input'
+import ConfirmDialog from './shared/ConfirmDialog'
 import StepAncestry from './character-creation/StepAncestry'
 import StepBackground from './character-creation/StepBackground'
 import StepClass from './character-creation/StepClass'
@@ -30,6 +32,8 @@ export default function CharacterCreator({ onViewSheet }: CharacterCreatorProps)
   const [currentStep, setCurrentStep] = useState<CharacterCreationStep>(
     CharacterCreationStep.Basics
   )
+  const [showNewCharacterDialog, setShowNewCharacterDialog] = useState(false)
+  const [showLoadDialog, setShowLoadDialog] = useState(false)
 
   const currentStepInfo = CREATION_STEPS.find((s) => s.id === currentStep)
   const currentStepIndex = CREATION_STEPS.findIndex((s) => s.id === currentStep)
@@ -51,50 +55,63 @@ export default function CharacterCreator({ onViewSheet }: CharacterCreatorProps)
   }
 
   const handleNewCharacter = () => {
-    if (
-      confirm(
-        'Are you sure you want to create a new character? All unsaved progress will be lost.'
-      )
-    ) {
-      resetCharacter()
-      setCurrentStep(CharacterCreationStep.Basics)
-    }
+    setShowNewCharacterDialog(true)
+  }
+
+  const confirmNewCharacter = () => {
+    resetCharacter()
+    setCurrentStep(CharacterCreationStep.Basics)
+    setShowNewCharacterDialog(false)
+    toast.success('New character created')
   }
 
   const handleSave = async () => {
+    const loadingToast = toast.loading('Saving character...')
     try {
       await saveCharacterToFile(character)
+      toast.success('Character saved successfully!', { id: loadingToast })
     } catch (error) {
       console.error('Error saving character:', error)
-      alert('Failed to save character. Please try again.')
+      toast.error('Failed to save character. Please try again.', {
+        id: loadingToast,
+      })
     }
   }
 
-  const handleLoad = async () => {
-    if (
-      confirm(
-        'Loading a character will replace your current character. Continue?'
-      )
-    ) {
-      try {
-        const loadedCharacter = await loadCharacterFromFile()
-        if (loadedCharacter) {
-          loadCharacter(loadedCharacter)
-          setCurrentStep(CharacterCreationStep.Basics)
-        }
-      } catch (error) {
-        console.error('Error loading character:', error)
-        alert('Failed to load character. Please check the file format.')
+  const handleLoad = () => {
+    setShowLoadDialog(true)
+  }
+
+  const confirmLoad = async () => {
+    setShowLoadDialog(false)
+    const loadingToast = toast.loading('Loading character...')
+    try {
+      const loadedCharacter = await loadCharacterFromFile()
+      if (loadedCharacter) {
+        loadCharacter(loadedCharacter)
+        setCurrentStep(CharacterCreationStep.Basics)
+        toast.success('Character loaded successfully!', { id: loadingToast })
+      } else {
+        toast.dismiss(loadingToast)
       }
+    } catch (error) {
+      console.error('Error loading character:', error)
+      toast.error('Failed to load character. Please check the file format.', {
+        id: loadingToast,
+      })
     }
   }
 
   const handleExportText = () => {
+    const loadingToast = toast.loading('Exporting character...')
     try {
       downloadTextExport(character)
+      toast.success('Character exported successfully!', { id: loadingToast })
     } catch (error) {
       console.error('Error exporting character:', error)
-      alert('Failed to export character. Please try again.')
+      toast.error('Failed to export character. Please try again.', {
+        id: loadingToast,
+      })
     }
   }
 
@@ -205,6 +222,28 @@ export default function CharacterCreator({ onViewSheet }: CharacterCreatorProps)
         canGoNext={currentStepIndex < CREATION_STEPS.length - 1}
         isFirstStep={currentStepIndex === 0}
         isLastStep={currentStepIndex === CREATION_STEPS.length - 1}
+      />
+
+      {/* Confirmation Dialogs */}
+      <ConfirmDialog
+        isOpen={showNewCharacterDialog}
+        title="Create New Character?"
+        message="Are you sure you want to create a new character? Your current progress is auto-saved, but creating a new character will replace it."
+        confirmLabel="Create New"
+        cancelLabel="Cancel"
+        onConfirm={confirmNewCharacter}
+        onCancel={() => setShowNewCharacterDialog(false)}
+        variant="danger"
+      />
+
+      <ConfirmDialog
+        isOpen={showLoadDialog}
+        title="Load Character?"
+        message="Loading a character will replace your current character. Make sure you've saved your current progress if needed."
+        confirmLabel="Load"
+        cancelLabel="Cancel"
+        onConfirm={confirmLoad}
+        onCancel={() => setShowLoadDialog(false)}
       />
     </div>
   )
