@@ -7,6 +7,8 @@ import Card from './shared/Card'
 import Button from './shared/Button'
 import Input from './shared/Input'
 import StepAncestry from './character-creation/StepAncestry'
+import StepBackground from './character-creation/StepBackground'
+import StepClass from './character-creation/StepClass'
 import { useCharacter } from '@/hooks/useCharacter'
 import { CharacterCreationStep, CREATION_STEPS } from '@/types/steps'
 
@@ -122,24 +124,23 @@ export default function CharacterCreator() {
               </Card>
             )}
 
-            {currentStep === CharacterCreationStep.Ancestry && (
-              <StepAncestry />
-            )}
+            {currentStep === CharacterCreationStep.Ancestry && <StepAncestry />}
+
+            {currentStep === CharacterCreationStep.Background && <StepBackground />}
+
+            {currentStep === CharacterCreationStep.Class && <StepClass />}
 
             {currentStep !== CharacterCreationStep.Basics &&
               currentStep !== CharacterCreationStep.Abilities &&
-              currentStep !== CharacterCreationStep.Ancestry && (
+              currentStep !== CharacterCreationStep.Ancestry &&
+              currentStep !== CharacterCreationStep.Background &&
+              currentStep !== CharacterCreationStep.Class && (
                 <Card className="p-8">
                   <div className="text-center">
                     <p className="text-lg text-pf-text mb-4">
-                      {currentStep === CharacterCreationStep.Background &&
-                        'Select a background for your character'}
-                      {currentStep === CharacterCreationStep.Class &&
-                        'Choose your character\'s class'}
                       {currentStep === CharacterCreationStep.Skills &&
                         'Select skill proficiencies'}
-                      {currentStep === CharacterCreationStep.Feats &&
-                        'Choose your feats'}
+                      {currentStep === CharacterCreationStep.Feats && 'Choose your feats'}
                       {currentStep === CharacterCreationStep.Spells &&
                         'Select spells (if applicable)'}
                       {currentStep === CharacterCreationStep.Equipment &&
@@ -148,7 +149,7 @@ export default function CharacterCreator() {
                         'Review your character'}
                     </p>
                     <p className="text-sm text-pf-text-muted">
-                      Step content will be implemented in Phase 5
+                      Coming in future phases
                     </p>
                   </div>
                 </Card>

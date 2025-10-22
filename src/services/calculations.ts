@@ -1,6 +1,7 @@
 import { Character, DerivedStats, ProficiencyLevel } from '@/types/character'
 import { getAbilityModifier } from '@/utils/modifiers'
 import { getProficiencyBonus } from '@/utils/proficiency'
+import { GameDataService } from './gameData'
 
 /**
  * Calculate all derived stats for a character
@@ -43,9 +44,25 @@ function calculateHP(character: Character): number {
   const level = character.basics.level
   const conMod = getAbilityModifier(character.abilityScores.constitution)
 
-  // Default values (will be replaced when we have actual data)
-  const ancestryHP = 8 // Default, varies by ancestry
-  const classHP = 10 // Default, varies by class
+  // Get actual ancestry HP
+  let ancestryHP = 8 // Default
+  if (character.ancestry?.ancestry) {
+    const ancestries = GameDataService.getAllAncestries()
+    const ancestry = ancestries.find((a) => a.name === character.ancestry?.ancestry)
+    if (ancestry) {
+      ancestryHP = ancestry.hitPoints
+    }
+  }
+
+  // Get actual class HP
+  let classHP = 10 // Default
+  if (character.class?.class) {
+    const classes = GameDataService.getAllClasses()
+    const classData = classes.find((c) => c.name === character.class?.class)
+    if (classData) {
+      classHP = classData.hitPoints
+    }
+  }
 
   // Level 1: Ancestry HP + Class HP + Con modifier
   // Each additional level: Class HP + Con modifier
@@ -136,13 +153,18 @@ function calculateSaves(character: Character): {
  * Calculate Speed
  * Default 25 feet, modified by ancestry
  */
-function calculateSpeed(_character: Character): number {
+function calculateSpeed(character: Character): number {
   // Default speed
   let speed = 25
 
-  // Ancestry modifiers will be applied here when implemented
-  // For example: Elves have 30, Dwarves have 20
-  // Will use _character.ancestry when implemented
+  // Get actual ancestry speed
+  if (character.ancestry?.ancestry) {
+    const ancestries = GameDataService.getAllAncestries()
+    const ancestry = ancestries.find((a) => a.name === character.ancestry?.ancestry)
+    if (ancestry) {
+      speed = ancestry.speed
+    }
+  }
 
   return speed
 }
