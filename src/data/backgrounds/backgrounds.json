@@ -1,0 +1,218 @@
+[
+  {
+    "id": "acolyte",
+    "name": "Acolyte",
+    "description": "You spent your early days in service to a temple, learning religious texts and helping with sacred rituals.",
+    "abilityBoosts": [
+      {
+        "type": "choice",
+        "abilities": ["intelligence", "wisdom"]
+      },
+      {
+        "type": "free",
+        "count": 1
+      }
+    ],
+    "skillTraining": "Religion",
+    "featGranted": "Student of the Canon",
+    "traits": []
+  },
+  {
+    "id": "criminal",
+    "name": "Criminal",
+    "description": "You've made your way in the world through theft, smuggling, or other illicit activities.",
+    "abilityBoosts": [
+      {
+        "type": "choice",
+        "abilities": ["dexterity", "intelligence"]
+      },
+      {
+        "type": "free",
+        "count": 1
+      }
+    ],
+    "skillTraining": "Stealth",
+    "featGranted": "Experienced Smuggler",
+    "traits": []
+  },
+  {
+    "id": "merchant",
+    "name": "Merchant",
+    "description": "You've spent your life buying and selling goods, learning the art of the deal.",
+    "abilityBoosts": [
+      {
+        "type": "choice",
+        "abilities": ["intelligence", "charisma"]
+      },
+      {
+        "type": "free",
+        "count": 1
+      }
+    ],
+    "skillTraining": "Diplomacy",
+    "featGranted": "Bargain Hunter",
+    "traits": []
+  },
+  {
+    "id": "guard",
+    "name": "Guard",
+    "description": "You served as a city watch member or similar protector, keeping the peace and fighting crime.",
+    "abilityBoosts": [
+      {
+        "type": "choice",
+        "abilities": ["strength", "charisma"]
+      },
+      {
+        "type": "free",
+        "count": 1
+      }
+    ],
+    "skillTraining": "Intimidation",
+    "featGranted": "Quick Coercion",
+    "traits": []
+  },
+  {
+    "id": "noble",
+    "name": "Noble",
+    "description": "You were born into privilege and trained in courtly graces and political maneuvering.",
+    "abilityBoosts": [
+      {
+        "type": "choice",
+        "abilities": ["intelligence", "charisma"]
+      },
+      {
+        "type": "free",
+        "count": 1
+      }
+    ],
+    "skillTraining": "Society",
+    "featGranted": "Courtly Graces",
+    "traits": []
+  },
+  {
+    "id": "scholar",
+    "name": "Scholar",
+    "description": "You devoted yourself to learning, studying ancient texts and expanding your knowledge.",
+    "abilityBoosts": [
+      {
+        "type": "choice",
+        "abilities": ["intelligence", "wisdom"]
+      },
+      {
+        "type": "free",
+        "count": 1
+      }
+    ],
+    "skillTraining": "Arcana",
+    "featGranted": "Assurance (Arcana)",
+    "traits": []
+  },
+  {
+    "id": "warrior",
+    "name": "Warrior",
+    "description": "You grew up fighting, whether as a soldier, gladiator, or simply someone who survived through combat.",
+    "abilityBoosts": [
+      {
+        "type": "choice",
+        "abilities": ["strength", "constitution"]
+      },
+      {
+        "type": "free",
+        "count": 1
+      }
+    ],
+    "skillTraining": "Intimidation",
+    "featGranted": "Intimidating Glare",
+    "traits": []
+  },
+  {
+    "id": "herbalist",
+    "name": "Herbalist",
+    "description": "You know the healing properties of plants and create remedies from natural ingredients.",
+    "abilityBoosts": [
+      {
+        "type": "choice",
+        "abilities": ["constitution", "wisdom"]
+      },
+      {
+        "type": "free",
+        "count": 1
+      }
+    ],
+    "skillTraining": "Nature",
+    "featGranted": "Natural Medicine",
+    "traits": []
+  },
+  {
+    "id": "entertainer",
+    "name": "Entertainer",
+    "description": "You've lived your life performing for crowds, whether as a musician, actor, or acrobat.",
+    "abilityBoosts": [
+      {
+        "type": "choice",
+        "abilities": ["dexterity", "charisma"]
+      },
+      {
+        "type": "free",
+        "count": 1
+      }
+    ],
+    "skillTraining": "Performance",
+    "featGranted": "Fascinating Performance",
+    "traits": []
+  },
+  {
+    "id": "artisan",
+    "name": "Artisan",
+    "description": "You're a skilled craftsperson, trained in creating quality goods with your hands.",
+    "abilityBoosts": [
+      {
+        "type": "choice",
+        "abilities": ["strength", "intelligence"]
+      },
+      {
+        "type": "free",
+        "count": 1
+      }
+    ],
+    "skillTraining": "Crafting",
+    "featGranted": "Specialty Crafting",
+    "traits": []
+  },
+  {
+    "id": "farmhand",
+    "name": "Farmhand",
+    "description": "You grew up working the land, developing strength and resilience through hard agricultural labor.",
+    "abilityBoosts": [
+      {
+        "type": "choice",
+        "abilities": ["constitution", "wisdom"]
+      },
+      {
+        "type": "free",
+        "count": 1
+      }
+    ],
+    "skillTraining": "Athletics",
+    "featGranted": "Assurance (Athletics)",
+    "traits": []
+  },
+  {
+    "id": "scout",
+    "name": "Scout",
+    "description": "You explored the wilderness, learning to track, survive, and navigate dangerous terrain.",
+    "abilityBoosts": [
+      {
+        "type": "choice",
+        "abilities": ["dexterity", "wisdom"]
+      },
+      {
+        "type": "free",
+        "count": 1
+      }
+    ],
+    "skillTraining": "Survival",
+    "featGranted": "Forager",
+    "traits": []
+  }
+]

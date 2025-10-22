@@ -1,0 +1,162 @@
+[
+  {
+    "id": "human",
+    "name": "Human",
+    "description": "Adaptable and ambitious, humans have spread across the world. Known for their versatility and determination.",
+    "hitPoints": 8,
+    "size": "Medium",
+    "speed": 25,
+    "abilityBoosts": [
+      {
+        "type": "free",
+        "count": 2
+      }
+    ],
+    "abilityFlaws": [],
+    "languages": ["Common"],
+    "additionalLanguages": 1,
+    "traits": ["Human", "Humanoid"],
+    "specialAbilities": ["Bonus General Feat at 1st level"],
+    "heritages": ["versatile-human", "skilled-human"]
+  },
+  {
+    "id": "elf",
+    "name": "Elf",
+    "description": "Long-lived and magical, elves are graceful beings attuned to nature and magic. They possess keen senses and a deep connection to beauty.",
+    "hitPoints": 6,
+    "size": "Medium",
+    "speed": 30,
+    "abilityBoosts": [
+      {
+        "type": "specific",
+        "abilities": ["dexterity", "intelligence"]
+      },
+      {
+        "type": "free",
+        "count": 1
+      }
+    ],
+    "abilityFlaws": [
+      {
+        "ability": "constitution"
+      }
+    ],
+    "languages": ["Common", "Elven"],
+    "additionalLanguages": 1,
+    "traits": ["Elf", "Humanoid"],
+    "specialAbilities": ["Low-Light Vision"],
+    "heritages": ["woodland-elf", "ancient-elf"]
+  },
+  {
+    "id": "dwarf",
+    "name": "Dwarf",
+    "description": "Hardy and stalwart, dwarves are master craftspeople who live in mountains and underground. They value tradition, honor, and hard work.",
+    "hitPoints": 10,
+    "size": "Medium",
+    "speed": 20,
+    "abilityBoosts": [
+      {
+        "type": "specific",
+        "abilities": ["constitution", "wisdom"]
+      },
+      {
+        "type": "free",
+        "count": 1
+      }
+    ],
+    "abilityFlaws": [
+      {
+        "ability": "charisma"
+      }
+    ],
+    "languages": ["Common", "Dwarven"],
+    "additionalLanguages": 1,
+    "traits": ["Dwarf", "Humanoid"],
+    "specialAbilities": ["Darkvision"],
+    "heritages": ["mountain-dwarf", "forge-dwarf"]
+  },
+  {
+    "id": "gnome",
+    "name": "Gnome",
+    "description": "Small and curious, gnomes are inventive tinkerers with a love for magic and exploration. They resist magic naturally and embrace wonder.",
+    "hitPoints": 8,
+    "size": "Small",
+    "speed": 25,
+    "abilityBoosts": [
+      {
+        "type": "specific",
+        "abilities": ["constitution", "charisma"]
+      },
+      {
+        "type": "free",
+        "count": 1
+      }
+    ],
+    "abilityFlaws": [
+      {
+        "ability": "strength"
+      }
+    ],
+    "languages": ["Common", "Gnomish"],
+    "additionalLanguages": 1,
+    "traits": ["Gnome", "Humanoid"],
+    "specialAbilities": ["Low-Light Vision"],
+    "heritages": ["sensate-gnome", "umbral-gnome"]
+  },
+  {
+    "id": "halfling",
+    "name": "Halfling",
+    "description": "Cheerful and lucky, halflings are small folk known for their bravery despite their size. They value home, community, and good food.",
+    "hitPoints": 6,
+    "size": "Small",
+    "speed": 25,
+    "abilityBoosts": [
+      {
+        "type": "specific",
+        "abilities": ["dexterity", "wisdom"]
+      },
+      {
+        "type": "free",
+        "count": 1
+      }
+    ],
+    "abilityFlaws": [
+      {
+        "ability": "strength"
+      }
+    ],
+    "languages": ["Common", "Halfling"],
+    "additionalLanguages": 1,
+    "traits": ["Halfling", "Humanoid"],
+    "specialAbilities": ["Keen Eyes"],
+    "heritages": ["gutsy-halfling", "twilight-halfling"]
+  },
+  {
+    "id": "goblin",
+    "name": "Goblin",
+    "description": "Scrappy and energetic, goblins are small but fierce. They love fire, songs, and causing chaos, but make loyal and brave companions.",
+    "hitPoints": 6,
+    "size": "Small",
+    "speed": 25,
+    "abilityBoosts": [
+      {
+        "type": "specific",
+        "abilities": ["dexterity", "charisma"]
+      },
+      {
+        "type": "free",
+        "count": 1
+      }
+    ],
+    "abilityFlaws": [
+      {
+        "ability": "wisdom"
+      }
+    ],
+    "languages": ["Common", "Goblin"],
+    "additionalLanguages": 1,
+    "traits": ["Goblin", "Humanoid"],
+    "specialAbilities": ["Darkvision"],
+    "heritages": ["charhide-goblin", "unbreakable-goblin"]
+  }
+]
