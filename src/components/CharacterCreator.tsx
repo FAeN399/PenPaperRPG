@@ -12,6 +12,7 @@ import StepAbilities from './character-creation/StepAbilities'
 import StepSkills from './character-creation/StepSkills'
 import StepFeats from './character-creation/StepFeats'
 import StepSpells from './character-creation/StepSpells'
+import StepEquipment from './character-creation/StepEquipment'
 import { useCharacter } from '@/hooks/useCharacter'
 import { CharacterCreationStep, CREATION_STEPS } from '@/types/steps'
 
@@ -116,6 +117,8 @@ export default function CharacterCreator({ onViewSheet }: CharacterCreatorProps)
 
             {currentStep === CharacterCreationStep.Spells && <StepSpells />}
 
+            {currentStep === CharacterCreationStep.Equipment && <StepEquipment />}
+
             {currentStep !== CharacterCreationStep.Basics &&
               currentStep !== CharacterCreationStep.Abilities &&
               currentStep !== CharacterCreationStep.Ancestry &&
@@ -123,12 +126,11 @@ export default function CharacterCreator({ onViewSheet }: CharacterCreatorProps)
               currentStep !== CharacterCreationStep.Class &&
               currentStep !== CharacterCreationStep.Skills &&
               currentStep !== CharacterCreationStep.Feats &&
-              currentStep !== CharacterCreationStep.Spells && (
+              currentStep !== CharacterCreationStep.Spells &&
+              currentStep !== CharacterCreationStep.Equipment && (
                 <Card className="p-8">
                   <div className="text-center">
                     <p className="text-lg text-pf-text mb-4">
-                      {currentStep === CharacterCreationStep.Equipment &&
-                        'Choose starting equipment'}
                       {currentStep === CharacterCreationStep.Review &&
                         'Review your character'}
                     </p>

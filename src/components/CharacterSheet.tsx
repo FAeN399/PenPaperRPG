@@ -3,7 +3,7 @@ import { useGameData } from '@/hooks/useGameData'
 import { getAbilityModifier, formatModifier } from '@/utils/modifiers'
 import { getProficiencyBonus } from '@/utils/proficiency'
 import { ProficiencyLevel, AbilityType } from '@/types/character'
-import { Feat, Spell } from '@/types/gameData'
+import { Feat, Spell, Weapon, Item } from '@/types/gameData'
 import { useMemo } from 'react'
 
 export default function CharacterSheet() {
@@ -15,6 +15,9 @@ export default function CharacterSheet() {
     getClassById,
     getFeatById,
     getSpellById,
+    getWeaponById,
+    getArmorById,
+    getItemById,
   } = useGameData()
 
   // Get full game data objects
@@ -50,6 +53,17 @@ export default function CharacterSheet() {
   const spellsPrepared = character.spells?.spellsPrepared
     .map((id) => getSpellById(id))
     .filter((spell): spell is Spell => spell !== undefined)
+
+  // Get equipment with full details
+  const equippedWeapons = character.equipment.weapons
+    .map((id) => getWeaponById(id))
+    .filter((weapon): weapon is Weapon => weapon !== undefined)
+  const equippedArmor = character.equipment.armor
+    ? getArmorById(character.equipment.armor)
+    : null
+  const equippedItems = character.equipment.items
+    .map((id) => getItemById(id))
+    .filter((item): item is Item => item !== undefined)
 
   // Calculate skill modifiers
   const skillModifiers = useMemo(() => {
@@ -381,6 +395,113 @@ export default function CharacterSheet() {
             )}
           </div>
         </div>
+
+        {/* Equipment */}
+        {(equippedWeapons.length > 0 || equippedArmor || equippedItems.length > 0) && (
+          <div className="bg-pf-bg-card rounded-lg border border-gray-700 p-6 mb-6">
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-xl font-bold text-pf-accent">Equipment</h2>
+              <div className="text-sm text-pf-text-muted">
+                Gold: {character.equipment.gold.toFixed(2)} gp
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Weapons */}
+              {equippedWeapons.length > 0 && (
+                <div>
+                  <h3 className="text-lg font-semibold text-pf-accent-light mb-3">
+                    Weapons
+                  </h3>
+                  {equippedWeapons.map((weapon) => (
+                    <div
+                      key={weapon.id}
+                      className="bg-pf-bg-dark rounded-lg p-4 border border-gray-700 mb-3"
+                    >
+                      <div className="font-semibold text-pf-text mb-1">
+                        {weapon.name}
+                      </div>
+                      <div className="text-xs text-pf-accent-light mb-2">
+                        {weapon.category} • {weapon.group}
+                      </div>
+                      <div className="text-sm text-pf-text-muted mb-2">
+                        Damage: {weapon.damage} {weapon.damageType}
+                      </div>
+                      <div className="text-xs text-pf-text-muted">
+                        Hands: {weapon.hands} • Bulk: {weapon.bulk}
+                        {weapon.range && ` • Range: ${weapon.range} ft`}
+                      </div>
+                      {weapon.traits.length > 0 && (
+                        <div className="text-xs text-pf-accent-light mt-2">
+                          {weapon.traits.join(', ')}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {/* Armor */}
+              {equippedArmor && (
+                <div>
+                  <h3 className="text-lg font-semibold text-pf-accent-light mb-3">
+                    Armor
+                  </h3>
+                  <div className="bg-pf-bg-dark rounded-lg p-4 border border-gray-700 mb-3">
+                    <div className="font-semibold text-pf-text mb-1">
+                      {equippedArmor.name}
+                    </div>
+                    <div className="text-xs text-pf-accent-light mb-2">
+                      {equippedArmor.category}
+                    </div>
+                    <div className="text-sm text-pf-text-muted mb-2">
+                      AC Bonus: +{equippedArmor.acBonus}
+                      {equippedArmor.dexCap !== null &&
+                        ` • Dex Cap: +${equippedArmor.dexCap}`}
+                    </div>
+                    <div className="text-xs text-pf-text-muted">
+                      Bulk: {equippedArmor.bulk}
+                      {equippedArmor.checkPenalty !== 0 &&
+                        ` • Check Penalty: ${equippedArmor.checkPenalty}`}
+                    </div>
+                    {equippedArmor.traits.length > 0 && (
+                      <div className="text-xs text-pf-accent-light mt-2">
+                        {equippedArmor.traits.join(', ')}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
+
+              {/* Items */}
+              {equippedItems.length > 0 && (
+                <div className="md:col-span-2">
+                  <h3 className="text-lg font-semibold text-pf-accent-light mb-3">
+                    Items
+                  </h3>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                    {equippedItems.map((item) => (
+                      <div
+                        key={item.id}
+                        className="bg-pf-bg-dark rounded-lg p-3 border border-gray-700"
+                      >
+                        <div className="font-semibold text-pf-text text-sm mb-1">
+                          {item.name}
+                        </div>
+                        <div className="text-xs text-pf-text-muted mb-1">
+                          {item.description}
+                        </div>
+                        <div className="text-xs text-pf-text-muted">
+                          Bulk: {item.bulk}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
 
         {/* Spells (if spellcaster) */}
         {character.spells && (spellsKnown || spellsPrepared) && (

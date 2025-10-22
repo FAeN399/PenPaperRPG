@@ -1,0 +1,338 @@
+{
+  "items": [
+    {
+      "id": "backpack",
+      "name": "Backpack",
+      "description": "A sturdy leather pack that can hold up to 4 Bulk of items. Items in a backpack are protected from damage.",
+      "bulk": "L",
+      "price": "1 sp",
+      "traits": [],
+      "usage": "worn on back"
+    },
+    {
+      "id": "bandolier",
+      "name": "Bandolier",
+      "description": "A bandolier holds up to eight items of light Bulk within easy reach and is usually used for alchemical items or ammunition.",
+      "bulk": "L",
+      "price": "1 sp",
+      "traits": [],
+      "usage": "worn"
+    },
+    {
+      "id": "bedroll",
+      "name": "Bedroll",
+      "description": "A rolled-up blanket with a tied leather cord that provides basic comfort and warmth for sleeping outdoors.",
+      "bulk": "L",
+      "price": "1 cp",
+      "traits": []
+    },
+    {
+      "id": "belt-pouch",
+      "name": "Belt Pouch",
+      "description": "A simple leather pouch that attaches to a belt and can hold up to 4 items of light Bulk.",
+      "bulk": "L",
+      "price": "4 cp",
+      "traits": [],
+      "usage": "worn on belt"
+    },
+    {
+      "id": "candle",
+      "name": "Candle",
+      "description": "A simple wax candle that burns for 8 hours, shedding bright light in a 5-foot radius and dim light to 10 feet.",
+      "bulk": "—",
+      "price": "1 cp",
+      "traits": [],
+      "usage": "held in 1 hand"
+    },
+    {
+      "id": "chalk",
+      "name": "Chalk",
+      "description": "A stick of chalk useful for marking surfaces, drawing diagrams, or leaving messages.",
+      "bulk": "—",
+      "price": "1 cp",
+      "traits": []
+    },
+    {
+      "id": "compass",
+      "name": "Compass",
+      "description": "A magnetic compass that helps determine cardinal directions, granting a +1 item bonus to Survival checks to avoid becoming lost.",
+      "bulk": "—",
+      "price": "1 gp",
+      "traits": [],
+      "usage": "held in 1 hand"
+    },
+    {
+      "id": "crowbar",
+      "name": "Crowbar",
+      "description": "A heavy iron bar used for prying things open, granting a +1 item bonus to Athletics checks to Force Open.",
+      "bulk": "L",
+      "price": "5 sp",
+      "traits": [],
+      "usage": "held in 2 hands"
+    },
+    {
+      "id": "flint-and-steel",
+      "name": "Flint and Steel",
+      "description": "Striking the flint and steel together creates sparks used to start fires, requiring 1 minute to light a torch or similar object.",
+      "bulk": "—",
+      "price": "5 cp",
+      "traits": []
+    },
+    {
+      "id": "grappling-hook",
+      "name": "Grappling Hook",
+      "description": "A four-pronged metal hook attached to a rope, allowing you to anchor the rope to battlements, window ledges, or other edges.",
+      "bulk": "L",
+      "price": "1 sp",
+      "traits": []
+    },
+    {
+      "id": "hammer",
+      "name": "Hammer",
+      "description": "A simple one-handed hammer used for driving stakes, nails, and spikes.",
+      "bulk": "L",
+      "price": "1 sp",
+      "traits": [],
+      "usage": "held in 1 hand"
+    },
+    {
+      "id": "healers-tools",
+      "name": "Healer's Tools",
+      "description": "A set of bandages, herbs, and surgical tools that grants a +1 item bonus to Medicine checks and is required to Treat Wounds.",
+      "bulk": "1",
+      "price": "5 gp",
+      "traits": [],
+      "usage": "held in 2 hands"
+    },
+    {
+      "id": "holly-and-mistletoe",
+      "name": "Holly and Mistletoe",
+      "description": "Sacred plants used as a primal spellcasting focus by druids and other primal spellcasters.",
+      "bulk": "—",
+      "price": "5 cp",
+      "traits": []
+    },
+    {
+      "id": "hooded-lantern",
+      "name": "Hooded Lantern",
+      "description": "A lantern that burns oil for 6 hours, shedding bright light in a 30-foot radius and dim light to 60 feet. The hood allows you to direct the light or close it completely.",
+      "bulk": "L",
+      "price": "7 sp",
+      "traits": [],
+      "usage": "held in 1 hand"
+    },
+    {
+      "id": "ink",
+      "name": "Ink",
+      "description": "A small vial of black ink suitable for writing with a quill or pen, containing enough ink for about 100 pages.",
+      "bulk": "—",
+      "price": "1 sp",
+      "traits": []
+    },
+    {
+      "id": "inkpen",
+      "name": "Inkpen",
+      "description": "A quill or metal pen used for writing with ink on parchment or paper.",
+      "bulk": "—",
+      "price": "1 cp",
+      "traits": []
+    },
+    {
+      "id": "journal",
+      "name": "Journal",
+      "description": "A blank book of bound parchment or paper, suitable for recording notes, sketches, or observations.",
+      "bulk": "L",
+      "price": "1 gp",
+      "traits": []
+    },
+    {
+      "id": "ladder-10-foot",
+      "name": "Ladder (10-foot)",
+      "description": "A wooden ladder that can be positioned to climb up or down a 10-foot height.",
+      "bulk": "3",
+      "price": "3 cp",
+      "traits": []
+    },
+    {
+      "id": "lantern-oil",
+      "name": "Lantern Oil",
+      "description": "A pint of oil that fuels a lantern for 6 hours or can be used as a thrown weapon to spread fire.",
+      "bulk": "L",
+      "price": "1 cp",
+      "traits": ["consumable"]
+    },
+    {
+      "id": "lock-simple",
+      "name": "Lock (Simple)",
+      "description": "A basic mechanical lock that can be opened with a key or picked with thieves' tools (DC 15).",
+      "bulk": "—",
+      "price": "2 gp",
+      "traits": []
+    },
+    {
+      "id": "magnifying-glass",
+      "name": "Magnifying Glass",
+      "description": "A handheld lens that grants a +1 item bonus to Perception checks to notice fine details of documents, fabric, and the like.",
+      "bulk": "—",
+      "price": "4 gp",
+      "traits": []
+    },
+    {
+      "id": "manacles",
+      "name": "Manacles",
+      "description": "Heavy metal restraints that bind a creature's wrists or ankles, requiring a successful DC 17 Athletics check to break or DC 17 Thievery check to pick.",
+      "bulk": "—",
+      "price": "3 gp",
+      "traits": []
+    },
+    {
+      "id": "mirror",
+      "name": "Mirror",
+      "description": "A small hand mirror useful for looking around corners or examining your appearance.",
+      "bulk": "—",
+      "price": "1 gp",
+      "traits": []
+    },
+    {
+      "id": "piton",
+      "name": "Piton",
+      "description": "A metal spike that can be driven into a surface to provide an anchor point for ropes.",
+      "bulk": "—",
+      "price": "1 cp",
+      "traits": []
+    },
+    {
+      "id": "potion-minor-healing",
+      "name": "Potion of Minor Healing",
+      "description": "A magical elixir that restores 1d8 Hit Points when consumed with an Interact action.",
+      "bulk": "L",
+      "price": "4 gp",
+      "traits": ["consumable", "healing", "magical", "potion"],
+      "usage": "held in 1 hand"
+    },
+    {
+      "id": "rations",
+      "name": "Rations",
+      "description": "Preserved food suitable for long journeys, providing enough sustenance for one Medium creature for 1 day.",
+      "bulk": "L",
+      "price": "4 cp",
+      "traits": ["consumable"]
+    },
+    {
+      "id": "religious-symbol-wooden",
+      "name": "Religious Symbol (Wooden)",
+      "description": "A wooden symbol of your deity or philosophy, used as a divine spellcasting focus.",
+      "bulk": "L",
+      "price": "1 sp",
+      "traits": [],
+      "usage": "held in 1 hand"
+    },
+    {
+      "id": "repair-kit",
+      "name": "Repair Kit",
+      "description": "A portable kit containing tools and materials for fixing damaged equipment, granting a +1 item bonus to Crafting checks to Repair.",
+      "bulk": "1",
+      "price": "2 gp",
+      "traits": []
+    },
+    {
+      "id": "rope-50-feet",
+      "name": "Rope (50 feet)",
+      "description": "A hempen rope 50 feet long that can hold up to 3,000 pounds and requires a DC 17 Athletics check to Climb.",
+      "bulk": "L",
+      "price": "5 sp",
+      "traits": []
+    },
+    {
+      "id": "sack",
+      "name": "Sack",
+      "description": "A large cloth bag that can hold up to 8 Bulk worth of items.",
+      "bulk": "L",
+      "price": "1 cp",
+      "traits": []
+    },
+    {
+      "id": "sewing-needle",
+      "name": "Sewing Needle",
+      "description": "A simple needle and thread used for mending clothes and fabric.",
+      "bulk": "—",
+      "price": "5 cp",
+      "traits": []
+    },
+    {
+      "id": "signal-whistle",
+      "name": "Signal Whistle",
+      "description": "A small metal whistle that produces a loud, piercing sound audible up to 500 feet away.",
+      "bulk": "—",
+      "price": "8 cp",
+      "traits": []
+    },
+    {
+      "id": "soap",
+      "name": "Soap",
+      "description": "A bar of soap useful for bathing and washing clothes.",
+      "bulk": "—",
+      "price": "2 cp",
+      "traits": []
+    },
+    {
+      "id": "spellbook-blank",
+      "name": "Spellbook (Blank)",
+      "description": "A blank book with 100 pages for recording arcane spells, required by wizards and magi to prepare spells.",
+      "bulk": "L",
+      "price": "1 gp",
+      "traits": []
+    },
+    {
+      "id": "tent-pup",
+      "name": "Tent (Pup Tent)",
+      "description": "A small tent that shelters two Medium creatures from the elements.",
+      "bulk": "L",
+      "price": "8 sp",
+      "traits": []
+    },
+    {
+      "id": "thieves-tools",
+      "name": "Thieves' Tools",
+      "description": "A set of lockpicks and other tools required to Pick Locks or Disable Devices using Thievery.",
+      "bulk": "L",
+      "price": "3 gp",
+      "traits": [],
+      "usage": "held in 2 hands"
+    },
+    {
+      "id": "torch",
+      "name": "Torch",
+      "description": "A wooden rod capped with twisted flax soaked in tallow that burns for 1 hour, shedding bright light in a 20-foot radius and dim light to 40 feet.",
+      "bulk": "L",
+      "price": "1 cp",
+      "traits": [],
+      "usage": "held in 1 hand"
+    },
+    {
+      "id": "waterskin",
+      "name": "Waterskin",
+      "description": "A leather container that holds enough drinking water to sustain one Medium creature for 1 day.",
+      "bulk": "L",
+      "price": "5 cp",
+      "traits": []
+    },
+    {
+      "id": "writing-set",
+      "name": "Writing Set",
+      "description": "A portable set containing ink, inkpen, parchment, and a small knife for trimming quills and scraping away mistakes.",
+      "bulk": "L",
+      "price": "1 gp",
+      "traits": []
+    },
+    {
+      "id": "sheath",
+      "name": "Sheath",
+      "description": "A leather or wooden case for storing a weapon, keeping it protected and easily accessible.",
+      "bulk": "—",
+      "price": "1 sp",
+      "traits": [],
+      "usage": "worn"
+    }
+  ]
+}

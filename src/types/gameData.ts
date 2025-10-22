@@ -152,9 +152,9 @@ export interface Weapon {
 export interface Armor {
   id: string
   name: string
-  category: 'unarmored' | 'light' | 'medium' | 'heavy'
+  category: 'unarmored' | 'light' | 'medium' | 'heavy' | 'shield'
   acBonus: number
-  dexCap: number
+  dexCap: number | null
   checkPenalty: number
   speedPenalty: number
   strength: number

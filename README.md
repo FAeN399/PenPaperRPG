@@ -2,11 +2,11 @@
 
 A comprehensive desktop character creator for Pathfinder 2nd Edition (Remastered), built with Electron, React, and TypeScript.
 
-![Phase 8: Spells System - Complete](https://img.shields.io/badge/Phase%208-Complete-brightgreen)
+![Phase 9: Equipment System - Complete](https://img.shields.io/badge/Phase%209-Complete-brightgreen)
 
 ## Features
 
-### ✨ Current Features (Phase 8 Complete)
+### ✨ Current Features (Phase 9 Complete)
 
 - **Complete Character Creation Workflow**
   - 10-step wizard with progress tracking
@@ -42,6 +42,15 @@ A comprehensive desktop character creator for Pathfinder 2nd Edition (Remastered
     - Spell DC and attack bonus calculations
     - Filter by spell level, search by name/description/traits
     - Visual spell cards with full details (range, duration, saving throw, etc.)
+  - Step 9: Equipment selection
+    - 49 weapons (16 simple, 33 martial)
+    - 20+ armor types (unarmored, light, medium, heavy, shields)
+    - 40+ adventuring items (tools, gear, consumables)
+    - Starting gold management (15 gp for level 1)
+    - Automatic filtering by class proficiencies
+    - Real-time gold and bulk tracking
+    - Search and filter by category (weapons/armor/items)
+    - Visual equipment cards with stats and properties
 
 - **Live Character Stats**
   - Real-time calculation of all derived stats
@@ -71,8 +80,9 @@ A comprehensive desktop character creator for Pathfinder 2nd Edition (Remastered
 - **Character Sheet View**
   - Comprehensive character sheet displaying all character information
   - Professional PF2e-style layout
-  - Sections: Ability Scores, Combat Stats, Saving Throws, Skills, Feats, Spells
+  - Sections: Ability Scores, Combat Stats, Saving Throws, Skills, Feats, Equipment, Spells
   - Real-time stat calculations
+  - Equipment display with weapon/armor/item details
   - View anytime during character creation
   - Printable-ready format (future enhancement)
 
@@ -266,12 +276,37 @@ npm run build:linux  # Linux
   - arcane-spells.json, divine-spells.json, occult-spells.json, primal-spells.json
 - **Created using 4 parallel subagents** for spell data generation
 
-### 🚧 Future Phases (Planned)
+### ✅ Phase 9: Equipment System
+- **Complete Equipment Database**
+  - **49 weapons total:**
+    - 16 Simple weapons (club, dagger, staff, crossbow, etc.)
+    - 33 Martial weapons (longsword, greatsword, battle axe, longbow, etc.)
+  - **20+ armor types:**
+    - All categories: unarmored, light, medium, heavy, shields
+    - Full AC, Dex cap, bulk, and penalty details
+  - **40+ adventuring items:**
+    - Tools, gear, consumables, containers, light sources
+- **StepEquipment Component**
+  - Starting gold management (15 gp for level 1)
+  - Automatic proficiency filtering for weapons and armor
+  - Real-time gold spent and remaining tracking
+  - Real-time bulk calculation
+  - Category tabs (weapons, armor, items)
+  - Search functionality
+  - Visual equipment cards with complete stats
+  - Multiple weapon selection support
+  - Single armor/shield selection
+  - Multiple item selection
+- **CharacterSheet Equipment Display**
+  - Weapons section with damage, hands, bulk, traits
+  - Armor section with AC bonus, Dex cap, penalties
+  - Items section with descriptions and bulk
+  - Gold remaining display
+- **New Data Files:**
+  - weapons.json, armor.json, items.json
+- **Created using 3 parallel subagents** for equipment data generation
 
-- **Phase 9:** Equipment
-  - Weapon and armor selection
-  - Starting gold packages
-  - Bulk tracking
+### 🚧 Future Phases (Planned)
 
 - **Phase 10:** Polish & Distribution
   - Character save/load
@@ -304,9 +339,9 @@ Descriptions are original content to avoid copyright issues.
 
 ## Stats
 
-- **71 modules** bundled
-- **352.51KB** JavaScript bundle (character sheet +13KB!)
-- **17.07KB** CSS bundle
+- **75 modules** bundled
+- **381.70KB** JavaScript bundle (equipment system +29KB!)
+- **17.21KB** CSS bundle
 - **Zero** TypeScript errors
 - **100%** type-safe code
 
@@ -317,4 +352,4 @@ Pathfinder and associated marks are trademarks of Paizo Inc.
 
 ---
 
-**Status:** Phase 8 Complete - Spells System fully implemented! Character creation now includes complete spell selection for all spellcasting classes with 155 spells across 4 magical traditions (Arcane, Divine, Occult, Primal). Both prepared and spontaneous casters are supported with automatic spell DC/attack calculations. All core mechanics for level 1 character creation are complete!
+**Status:** Phase 9 Complete - Equipment System fully implemented! Character creation now includes comprehensive equipment selection with 49 weapons, 20+ armor types, and 40+ adventuring items. Automatic proficiency filtering, starting gold management (15 gp), and real-time bulk tracking are all functional. The complete character creation workflow from basics through equipment is now fully operational! 🎉

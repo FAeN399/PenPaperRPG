@@ -1,4 +1,4 @@
-import { Ancestry, Heritage, Background, Class, Skill, Feat, Spell } from '@/types/gameData'
+import { Ancestry, Heritage, Background, Class, Skill, Feat, Spell, Weapon, Armor, Item } from '@/types/gameData'
 
 // Import JSON data
 import ancestriesData from '@/data/ancestries/ancestries.json'
@@ -14,6 +14,9 @@ import arcaneSpellsData from '@/data/spells/arcane-spells.json'
 import divineSpellsData from '@/data/spells/divine-spells.json'
 import occultSpellsData from '@/data/spells/occult-spells.json'
 import primalSpellsData from '@/data/spells/primal-spells.json'
+import weaponsData from '@/data/equipment/weapons.json'
+import armorData from '@/data/equipment/armor.json'
+import itemsData from '@/data/equipment/items.json'
 
 // Game Data Service
 export class GameDataService {
@@ -34,6 +37,9 @@ export class GameDataService {
     ...((occultSpellsData as any).spells as Spell[]),
     ...((primalSpellsData as any).spells as Spell[]),
   ]
+  private static weapons: Weapon[] = ((weaponsData as any).weapons as Weapon[])
+  private static armor: Armor[] = ((armorData as any).armor as Armor[])
+  private static items: Item[] = ((itemsData as any).items as Item[])
 
   // Ancestry Methods
   static getAllAncestries(): Ancestry[] {
@@ -166,5 +172,49 @@ export class GameDataService {
         c.name.toLowerCase().includes(lowerQuery) ||
         c.description.toLowerCase().includes(lowerQuery)
     )
+  }
+
+  // Equipment Methods
+  static getAllWeapons(): Weapon[] {
+    return this.weapons
+  }
+
+  static getWeaponById(id: string): Weapon | undefined {
+    return this.weapons.find((w) => w.id === id)
+  }
+
+  static getWeaponsByCategory(category: 'simple' | 'martial'): Weapon[] {
+    return this.weapons.filter((w) => w.category === category)
+  }
+
+  static getAllArmor(): Armor[] {
+    return this.armor
+  }
+
+  static getArmorById(id: string): Armor | undefined {
+    return this.armor.find((a) => a.id === id)
+  }
+
+  static getArmorByCategory(category: 'unarmored' | 'light' | 'medium' | 'heavy' | 'shield'): Armor[] {
+    return this.armor.filter((a) => a.category === category)
+  }
+
+  static getAllItems(): Item[] {
+    return this.items
+  }
+
+  static getItemById(id: string): Item | undefined {
+    return this.items.find((i) => i.id === id)
+  }
+
+  static searchEquipment(query: string): (Weapon | Armor | Item)[] {
+    const lowerQuery = query.toLowerCase()
+    const matchingWeapons = this.weapons.filter((w) => w.name.toLowerCase().includes(lowerQuery))
+    const matchingArmor = this.armor.filter((a) => a.name.toLowerCase().includes(lowerQuery))
+    const matchingItems = this.items.filter((i) =>
+      i.name.toLowerCase().includes(lowerQuery) ||
+      i.description.toLowerCase().includes(lowerQuery)
+    )
+    return [...matchingWeapons, ...matchingArmor, ...matchingItems]
   }
 }

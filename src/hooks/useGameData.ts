@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Ancestry, Heritage, Background, Class, Skill, Feat, Spell } from '@/types/gameData'
+import { Ancestry, Heritage, Background, Class, Skill, Feat, Spell, Weapon, Armor, Item } from '@/types/gameData'
 import { GameDataService } from '@/services/gameData'
 
 export function useGameData() {
@@ -9,6 +9,9 @@ export function useGameData() {
   const [skills, setSkills] = useState<Skill[]>([])
   const [feats, setFeats] = useState<Feat[]>([])
   const [spells, setSpells] = useState<Spell[]>([])
+  const [weapons, setWeapons] = useState<Weapon[]>([])
+  const [armor, setArmor] = useState<Armor[]>([])
+  const [items, setItems] = useState<Item[]>([])
 
   useEffect(() => {
     // Load all game data
@@ -18,6 +21,9 @@ export function useGameData() {
     setSkills(GameDataService.getAllSkills())
     setFeats(GameDataService.getAllFeats())
     setSpells(GameDataService.getAllSpells())
+    setWeapons(GameDataService.getAllWeapons())
+    setArmor(GameDataService.getAllArmor())
+    setItems(GameDataService.getAllItems())
   }, [])
 
   const getHeritagesForAncestry = (ancestryId: string): Heritage[] => {
@@ -83,6 +89,30 @@ export function useGameData() {
     return GameDataService.searchSpells(query)
   }
 
+  const getWeaponById = (id: string): Weapon | undefined => {
+    return GameDataService.getWeaponById(id)
+  }
+
+  const getWeaponsByCategory = (category: 'simple' | 'martial'): Weapon[] => {
+    return GameDataService.getWeaponsByCategory(category)
+  }
+
+  const getArmorById = (id: string): Armor | undefined => {
+    return GameDataService.getArmorById(id)
+  }
+
+  const getArmorByCategory = (category: 'unarmored' | 'light' | 'medium' | 'heavy' | 'shield'): Armor[] => {
+    return GameDataService.getArmorByCategory(category)
+  }
+
+  const getItemById = (id: string): Item | undefined => {
+    return GameDataService.getItemById(id)
+  }
+
+  const searchEquipment = (query: string): (Weapon | Armor | Item)[] => {
+    return GameDataService.searchEquipment(query)
+  }
+
   return {
     ancestries,
     backgrounds,
@@ -90,6 +120,9 @@ export function useGameData() {
     skills,
     feats,
     spells,
+    weapons,
+    armor,
+    items,
     getHeritagesForAncestry,
     getHeritageById,
     getAncestryById,
@@ -105,5 +138,11 @@ export function useGameData() {
     getSpellsByLevel,
     getSpellsByTraditionAndLevel,
     searchSpells,
+    getWeaponById,
+    getWeaponsByCategory,
+    getArmorById,
+    getArmorByCategory,
+    getItemById,
+    searchEquipment,
   }
 }
