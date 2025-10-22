@@ -671,6 +671,373 @@
           "effect": "Range increases to 120 feet"
         }
       ]
+    },
+    {
+      "id": "blur",
+      "name": "Blur",
+      "level": 2,
+      "tradition": ["arcane"],
+      "traits": ["Illusion", "Visual"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 creature",
+      "duration": "1 minute",
+      "description": "The target's form appears blurred and indistinct. Attacks against the target have a 20% miss chance, and the target has concealment against all attacks. This doesn't stack with other sources of concealment.",
+      "heightened": [
+        {
+          "level": 4,
+          "effect": "Duration increases to 10 minutes"
+        }
+      ]
+    },
+    {
+      "id": "invisibility",
+      "name": "Invisibility",
+      "level": 2,
+      "tradition": ["arcane"],
+      "traits": ["Illusion"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 creature",
+      "duration": "10 minutes",
+      "description": "The target becomes invisible. This makes it undetected to all creatures, though it can still be heard and felt. The spell ends if the target uses a hostile action.",
+      "heightened": [
+        {
+          "level": 4,
+          "effect": "The spell lasts 1 minute and doesn't end if the target uses a hostile action"
+        }
+      ]
+    },
+    {
+      "id": "mirror-image",
+      "name": "Mirror Image",
+      "level": 2,
+      "tradition": ["arcane"],
+      "traits": ["Illusion", "Visual"],
+      "castTime": "2 actions",
+      "range": "self",
+      "duration": "1 minute",
+      "description": "Three illusory duplicates of you appear in your space. When a creature targets you with an attack, randomly determine whether it attacks you or one of your images. If it attacks an image, the image is destroyed. The spell ends when all images are destroyed.",
+      "heightened": [
+        {
+          "level": 5,
+          "effect": "The number of images increases to 5"
+        }
+      ]
+    },
+    {
+      "id": "dispel-magic",
+      "name": "Dispel Magic",
+      "level": 2,
+      "tradition": ["arcane"],
+      "traits": ["Abjuration"],
+      "castTime": "2 actions",
+      "range": "120 feet",
+      "targets": "1 spell effect or unattended magic item",
+      "duration": "instant",
+      "description": "You unravel the magic of a spell or item. Attempt a counteract check against the target. If you succeed, the spell effect ends or the item becomes non-magical for 10 minutes.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "Your counteract rank increases by 1"
+        }
+      ]
+    },
+    {
+      "id": "enlarge",
+      "name": "Enlarge",
+      "level": 2,
+      "tradition": ["arcane"],
+      "traits": ["Polymorph", "Transmutation"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 willing creature",
+      "duration": "5 minutes",
+      "description": "The target grows to Large size. It gains a +2 status bonus to melee damage, a +10-foot status bonus to Speed, and is clumsy 1. The creature takes a -2 status penalty to AC and Reflex saves.",
+      "heightened": [
+        {
+          "level": 4,
+          "effect": "The target can grow to Huge size instead"
+        }
+      ]
+    },
+    {
+      "id": "flaming-sphere",
+      "name": "Flaming Sphere",
+      "level": 2,
+      "tradition": ["arcane"],
+      "traits": ["Evocation", "Fire"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "duration": "sustained up to 1 minute",
+      "savingThrow": "Reflex",
+      "description": "You create a 5-foot-diameter sphere of fire that rolls where you direct it. Each creature in the sphere's space takes 3d6 fire damage with a basic Reflex save. You can Sustain the spell to move the sphere up to 30 feet.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "Damage increases by 1d6"
+        }
+      ]
+    },
+    {
+      "id": "glitterdust",
+      "name": "Glitterdust",
+      "level": 2,
+      "tradition": ["arcane"],
+      "traits": ["Evocation"],
+      "castTime": "2 actions",
+      "range": "120 feet",
+      "area": "10-foot burst",
+      "duration": "1 minute",
+      "savingThrow": "Reflex",
+      "description": "Glittering golden particles cover creatures and objects in the area, making them visible even if invisible. Creatures in the area must attempt a Reflex save. On a failure, they are blinded for 1 round and outlined by glitter for the duration.",
+      "heightened": [
+        {
+          "level": 4,
+          "effect": "Area increases to 20-foot burst"
+        }
+      ]
+    },
+    {
+      "id": "knock",
+      "name": "Knock",
+      "level": 2,
+      "tradition": ["arcane"],
+      "traits": ["Transmutation"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 door, lock, or container",
+      "duration": "instant",
+      "description": "You make a loud knocking sound and attempt to open a locked door, container, or lock. The spell opens doors, containers, and locks even if they are magically sealed, unless they are protected by a higher-level spell.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "Can open locks sealed by spells of up to 3rd level"
+        }
+      ]
+    },
+    {
+      "id": "resist-energy",
+      "name": "Resist Energy",
+      "level": 2,
+      "tradition": ["arcane"],
+      "traits": ["Abjuration"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 creature",
+      "duration": "10 minutes",
+      "description": "Choose acid, cold, electricity, fire, or sonic when you cast this spell. The target gains resistance 5 against damage of the chosen type.",
+      "heightened": [
+        {
+          "level": 4,
+          "effect": "Resistance increases to 10"
+        },
+        {
+          "level": 7,
+          "effect": "Resistance increases to 15"
+        }
+      ]
+    },
+    {
+      "id": "web",
+      "name": "Web",
+      "level": 2,
+      "tradition": ["arcane"],
+      "traits": ["Conjuration"],
+      "castTime": "3 actions",
+      "range": "30 feet",
+      "area": "10-foot burst",
+      "duration": "1 minute",
+      "savingThrow": "Reflex",
+      "description": "You create a sticky mass of webbing that fills the area. Creatures in the area when you cast the spell or that enter the area must attempt a Reflex save. On a failure, they're immobilized until they Escape. The webs are difficult terrain.",
+      "heightened": [
+        {
+          "level": 4,
+          "effect": "Area increases to 20-foot burst"
+        }
+      ]
+    },
+    {
+      "id": "fireball",
+      "name": "Fireball",
+      "level": 3,
+      "tradition": ["arcane"],
+      "traits": ["Evocation", "Fire"],
+      "castTime": "2 actions",
+      "range": "500 feet",
+      "area": "20-foot burst",
+      "duration": "instant",
+      "savingThrow": "basic Reflex",
+      "description": "A roaring blast of fire appears at a spot you designate, dealing 6d6 fire damage. Creatures in the area must attempt a basic Reflex save.",
+      "heightened": [
+        {
+          "level": 4,
+          "effect": "Damage increases by 2d6"
+        }
+      ]
+    },
+    {
+      "id": "haste",
+      "name": "Haste",
+      "level": 3,
+      "tradition": ["arcane"],
+      "traits": ["Transmutation"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 creature",
+      "duration": "1 minute",
+      "description": "Magic empowers the target to act faster. The target is quickened and can use the extra action to Stride or Strike.",
+      "heightened": [
+        {
+          "level": 6,
+          "effect": "You can target up to 5 creatures"
+        }
+      ]
+    },
+    {
+      "id": "lightning-bolt",
+      "name": "Lightning Bolt",
+      "level": 3,
+      "tradition": ["arcane"],
+      "traits": ["Electricity", "Evocation"],
+      "castTime": "2 actions",
+      "range": "120 feet",
+      "area": "120-foot line",
+      "duration": "instant",
+      "savingThrow": "basic Reflex",
+      "description": "A bolt of lightning strikes outward from your hand, dealing 4d12 electricity damage. Creatures in the area must attempt a basic Reflex save.",
+      "heightened": [
+        {
+          "level": 4,
+          "effect": "Damage increases by 1d12"
+        }
+      ]
+    },
+    {
+      "id": "slow",
+      "name": "Slow",
+      "level": 3,
+      "tradition": ["arcane"],
+      "traits": ["Transmutation"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "up to 5 creatures",
+      "duration": "1 minute",
+      "savingThrow": "Fortitude",
+      "description": "You cause time to flow more slowly for your enemies. Targets must attempt a Fortitude save. On a failure, the target is slowed 1 for the duration. On a critical failure, the target is slowed 2 for the duration.",
+      "heightened": [
+        {
+          "level": 6,
+          "effect": "You can target up to 10 creatures"
+        }
+      ]
+    },
+    {
+      "id": "stinking-cloud",
+      "name": "Stinking Cloud",
+      "level": 3,
+      "tradition": ["arcane"],
+      "traits": ["Conjuration", "Poison"],
+      "castTime": "2 actions",
+      "range": "120 feet",
+      "area": "20-foot burst",
+      "duration": "1 minute",
+      "savingThrow": "Fortitude",
+      "description": "You create a cloud of putrid vapors. Each creature in the area when you cast the spell, or that enters the area, must attempt a Fortitude save. On a failure, the creature is sickened 1. On a critical failure, the creature is sickened 2.",
+      "heightened": [
+        {
+          "level": 5,
+          "effect": "Creatures that fail are sickened 2, or sickened 3 on a critical failure"
+        }
+      ]
+    },
+    {
+      "id": "vampiric-touch",
+      "name": "Vampiric Touch",
+      "level": 3,
+      "tradition": ["arcane"],
+      "traits": ["Death", "Necromancy", "Negative"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 living creature",
+      "duration": "instant",
+      "description": "Your touch leeches the lifeblood out of a target. Make a melee spell attack roll. On a success, the target takes 6d6 negative damage and you gain temporary Hit Points equal to half the damage dealt. On a critical success, the target takes double damage and you gain temporary HP equal to the damage dealt.",
+      "heightened": [
+        {
+          "level": 4,
+          "effect": "Damage increases by 2d6"
+        }
+      ]
+    },
+    {
+      "id": "fly",
+      "name": "Fly",
+      "level": 3,
+      "tradition": ["arcane"],
+      "traits": ["Transmutation"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 creature",
+      "duration": "5 minutes",
+      "description": "The target can fly through the air, gaining a fly Speed equal to its land Speed or 20 feet, whichever is greater.",
+      "heightened": [
+        {
+          "level": 7,
+          "effect": "Duration increases to 1 hour"
+        }
+      ]
+    },
+    {
+      "id": "blink",
+      "name": "Blink",
+      "level": 3,
+      "tradition": ["arcane"],
+      "traits": ["Conjuration", "Teleportation"],
+      "castTime": "2 actions",
+      "range": "self",
+      "duration": "1 minute",
+      "description": "You blink quickly between the Material Plane and the Ethereal Plane. You gain resistance 5 to all damage. Attacks against you have a 50% miss chance. When you move, you can pass through creatures and objects, taking 1d6 force damage if you end your turn inside an object.",
+      "heightened": [
+        {
+          "level": 5,
+          "effect": "Resistance increases to 10"
+        }
+      ]
+    },
+    {
+      "id": "clairaudience",
+      "name": "Clairaudience",
+      "level": 3,
+      "tradition": ["arcane"],
+      "traits": ["Divination", "Scrying"],
+      "castTime": "2 actions",
+      "range": "500 feet",
+      "duration": "10 minutes",
+      "description": "You create an invisible floating ear at a location within range. You can hear through this ear as if you were there. You can use an action to move the ear up to 20 feet.",
+      "heightened": [
+        {
+          "level": 5,
+          "effect": "Duration increases to 1 hour"
+        }
+      ]
+    },
+    {
+      "id": "heroism-3",
+      "name": "Heroism",
+      "level": 3,
+      "tradition": ["arcane"],
+      "traits": ["Enchantment", "Mental"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 creature",
+      "duration": "10 minutes",
+      "description": "You inspire the target with heroic confidence. The target gains a +2 status bonus to attack rolls, Perception checks, saving throws, and skill checks. The target also gains 10 temporary Hit Points.",
+      "heightened": [
+        {
+          "level": 5,
+          "effect": "Bonus increases to +3 and temporary HP increases to 15"
+        }
+      ]
     }
   ]
 }

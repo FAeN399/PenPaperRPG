@@ -333,6 +333,156 @@
       "price": "1 sp",
       "traits": [],
       "usage": "worn"
+    },
+    {
+      "id": "alchemists-fire-lesser",
+      "name": "Alchemist's Fire (Lesser)",
+      "bulk": "L",
+      "price": "3 gp",
+      "level": 1,
+      "category": "Alchemical",
+      "traits": ["Alchemical", "Bomb", "Consumable", "Fire", "Splash"],
+      "description": "A flask of volatile alchemical reagents that explodes into flame on impact. When thrown as a Strike (with a range increment of 20 feet), it deals 1d8 fire damage plus 1 fire splash damage. On a hit, the target takes 1 persistent fire damage. Dealing even 1 point of splash damage to a creature breaks the flask on them, applying 1 persistent fire damage."
+    },
+    {
+      "id": "acid-flask-lesser",
+      "name": "Acid Flask (Lesser)",
+      "bulk": "L",
+      "price": "3 gp",
+      "level": 1,
+      "category": "Alchemical",
+      "traits": ["Alchemical", "Bomb", "Consumable", "Acid", "Splash"],
+      "description": "A flask of concentrated acid that sears through flesh and corrodes metal. When thrown as a Strike (with a range increment of 20 feet), it deals 1d6 acid damage plus 1 acid splash damage. On a hit, the target takes 1 persistent acid damage, and can attempt a DC 15 Fortitude save to reduce the persistent damage by half."
+    },
+    {
+      "id": "bottled-lightning-lesser",
+      "name": "Bottled Lightning (Lesser)",
+      "bulk": "L",
+      "price": "3 gp",
+      "level": 1,
+      "category": "Alchemical",
+      "traits": ["Alchemical", "Bomb", "Consumable", "Electricity", "Splash"],
+      "description": "A carefully sealed vial of crackling electricity. When thrown as a Strike (with a range increment of 20 feet), it deals 1d6 electricity damage plus 1 electricity splash damage. On a hit, the target becomes flat-footed until the start of your next turn."
+    },
+    {
+      "id": "thunderstone-lesser",
+      "name": "Thunderstone (Lesser)",
+      "bulk": "L",
+      "price": "3 gp",
+      "level": 1,
+      "category": "Alchemical",
+      "traits": ["Alchemical", "Bomb", "Consumable", "Sonic"],
+      "description": "A small stone that releases a thunderous boom upon striking a hard surface. When thrown as a Strike (with a range increment of 20 feet), it deals 1d4 sonic damage. On a hit, the target must succeed at a DC 17 Fortitude save or become deafened for 1 minute (or 1 hour on a critical failure)."
+    },
+    {
+      "id": "elixir-of-life-minor",
+      "name": "Elixir of Life (Minor)",
+      "bulk": "L",
+      "price": "3 gp",
+      "level": 1,
+      "category": "Alchemical",
+      "traits": ["Alchemical", "Elixir", "Consumable", "Healing"],
+      "description": "A potent healing elixir created through alchemical processes. Drinking this elixir takes an Interact action and restores 1d6+1 Hit Points. The elixir has a slightly bitter taste but works quickly to mend wounds and restore vitality."
+    },
+    {
+      "id": "antidote-lesser",
+      "name": "Antidote (Lesser)",
+      "bulk": "L",
+      "price": "3 gp",
+      "level": 1,
+      "category": "Alchemical",
+      "traits": ["Alchemical", "Elixir", "Consumable"],
+      "description": "An elixir that bolsters the body's defenses against toxins. Drinking this elixir takes an Interact action and grants a +2 item bonus to Fortitude saves against poisons for 6 hours. If you are afflicted with a poison, you can also immediately attempt a saving throw against it at the normal DC (not a flat check)."
+    },
+    {
+      "id": "antiplague-lesser",
+      "name": "Antiplague (Lesser)",
+      "bulk": "L",
+      "price": "3 gp",
+      "level": 1,
+      "category": "Alchemical",
+      "traits": ["Alchemical", "Elixir", "Consumable"],
+      "description": "An elixir that fortifies the body against disease. Drinking this elixir takes an Interact action and grants a +2 item bonus to Fortitude saves against diseases for 24 hours. If you are afflicted with a disease, you can also immediately attempt a saving throw against it at the normal DC (not a flat check)."
+    },
+    {
+      "id": "darkvision-elixir-lesser",
+      "name": "Darkvision Elixir (Lesser)",
+      "bulk": "L",
+      "price": "5 gp",
+      "level": 2,
+      "category": "Alchemical",
+      "traits": ["Alchemical", "Elixir", "Consumable"],
+      "description": "An elixir that temporarily grants the ability to see in darkness. Drinking this elixir takes an Interact action and grants you darkvision for 10 minutes, allowing you to see in darkness and dim light just as well as in bright light. If you already have darkvision, the elixir has no effect."
+    },
+    {
+      "id": "smokestick-lesser",
+      "name": "Smokestick (Lesser)",
+      "bulk": "L",
+      "price": "3 gp",
+      "level": 1,
+      "category": "Alchemical",
+      "traits": ["Alchemical", "Tool", "Consumable"],
+      "description": "A small tube that releases thick smoke when activated. You can Activate the smokestick using an Interact action to create a cloud of smoke in a 10-foot burst centered on one corner of your space. All creatures within the smoke become concealed, and all creatures outside the smoke become concealed to creatures within it. The smoke lasts for 1 minute or until dispersed by strong wind."
+    },
+    {
+      "id": "sunrod",
+      "name": "Sunrod",
+      "bulk": "L",
+      "price": "3 cp",
+      "level": 1,
+      "category": "Alchemical",
+      "traits": ["Alchemical", "Tool", "Consumable", "Light"],
+      "description": "An alchemical rod that glows brightly when activated. You can Activate the sunrod using an Interact action, causing it to glow with bright light in a 20-foot radius (and dim light to the next 20 feet) for 6 hours. The light is warm and steady, making it ideal for extended exploration. Unlike torches, sunrods don't produce heat or flame."
+    },
+    {
+      "id": "tanglefoot-bag-lesser",
+      "name": "Tanglefoot Bag (Lesser)",
+      "bulk": "L",
+      "price": "3 gp",
+      "level": 1,
+      "category": "Alchemical",
+      "traits": ["Alchemical", "Tool", "Consumable"],
+      "description": "A sack filled with sticky adhesive compounds. When thrown as a Strike (with a range increment of 20 feet), it bursts on impact, covering the target in sticky goo. The target takes a -10-foot status penalty to its Speeds for 1 minute. The target can remove the goo by Escaping (DC 17) or spending 3 Interact actions to carefully remove it."
+    },
+    {
+      "id": "tindertwig",
+      "name": "Tindertwig",
+      "bulk": "—",
+      "price": "1 cp",
+      "level": 0,
+      "category": "Alchemical",
+      "traits": ["Alchemical", "Tool", "Consumable"],
+      "description": "An alchemically treated stick that ignites into flame with a simple strike against a rough surface. Using a tindertwig to light a torch (or anything else with tinder and fuel) takes an Interact action. Unlike flint and steel, which takes 1 minute, a tindertwig allows you to light something as part of a single action. Tindertwigs are waterproofed and will even ignite when wet."
+    },
+    {
+      "id": "giant-centipede-venom",
+      "name": "Giant Centipede Venom",
+      "bulk": "L",
+      "price": "4 gp",
+      "level": 1,
+      "category": "Alchemical",
+      "traits": ["Alchemical", "Poison", "Consumable", "Injury"],
+      "description": "The extracted venom of a giant centipede, processed for alchemical use. This poison must be applied to a weapon and delivered via a Strike that deals piercing or slashing damage. The target must succeed at a DC 17 Fortitude save or take 1d6 poison damage immediately and 1d6 poison damage again after 1 round. On a critical failure, the target also becomes sickened 1."
+    },
+    {
+      "id": "lethargy-poison-lesser",
+      "name": "Lethargy Poison (Lesser)",
+      "bulk": "L",
+      "price": "7 gp",
+      "level": 2,
+      "category": "Alchemical",
+      "traits": ["Alchemical", "Poison", "Consumable", "Injury"],
+      "description": "An insidious poison that saps the target's speed and reflexes. This poison must be applied to a weapon and delivered via a Strike that deals piercing or slashing damage. The target must succeed at a DC 18 Fortitude save or become slowed 1 for 1 minute. On a critical failure, the target is slowed 2 instead. The target can attempt a new save at the end of each of its turns to reduce the slowed condition by 1."
+    },
+    {
+      "id": "black-adder-venom",
+      "name": "Black Adder Venom",
+      "bulk": "L",
+      "price": "6 gp",
+      "level": 2,
+      "category": "Alchemical",
+      "traits": ["Alchemical", "Poison", "Consumable", "Injury"],
+      "description": "A deadly toxin harvested from black adders that weakens the body. This poison must be applied to a weapon and delivered via a Strike that deals piercing or slashing damage. The target must succeed at a DC 18 Fortitude save or take 1d4 poison damage and become enfeebled 1 for 1 minute. On a critical failure, the target takes double damage and is enfeebled 2 instead."
     }
   ]
 }

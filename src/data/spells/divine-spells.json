@@ -585,6 +585,373 @@
           "effect": "Summon a level 2 animal"
         }
       ]
+    },
+    {
+      "id": "aid",
+      "name": "Aid",
+      "level": 2,
+      "tradition": ["divine"],
+      "traits": ["Necromancy"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 willing creature",
+      "duration": "10 minutes",
+      "description": "You bolster your ally's defenses. The target gains 10 temporary Hit Points and gains a +1 status bonus to attack rolls and saves against fear effects for the duration.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "Temporary HP increases to 15"
+        },
+        {
+          "level": 5,
+          "effect": "Temporary HP increases to 20"
+        }
+      ]
+    },
+    {
+      "id": "calm-emotions",
+      "name": "Calm Emotions",
+      "level": 2,
+      "tradition": ["divine"],
+      "traits": ["Enchantment", "Incapacitation", "Mental"],
+      "castTime": "2 actions",
+      "range": "120 feet",
+      "area": "10-foot burst",
+      "duration": "sustained up to 1 minute",
+      "savingThrow": "Will",
+      "description": "You calm the emotions of creatures in the area, suppressing strong emotional effects. Creatures in the area must attempt a Will save. On a failure, emotion effects are suppressed, including fear and rage. Hostile actions end the spell for that creature.",
+      "heightened": [
+        {
+          "level": 4,
+          "effect": "Area increases to 20-foot burst"
+        }
+      ]
+    },
+    {
+      "id": "restoration-lesser",
+      "name": "Restoration (Lesser)",
+      "level": 2,
+      "tradition": ["divine"],
+      "traits": ["Healing", "Necromancy"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 creature",
+      "duration": "instant",
+      "description": "You remove one of the following conditions affecting the target: dazzled, deafened, enfeebled 1, or sickened 1. You can instead reduce the target's clumsy, enfeebled, or stupefied condition by 1.",
+      "heightened": [
+        {
+          "level": 4,
+          "effect": "You can remove or reduce two conditions instead of one"
+        }
+      ]
+    },
+    {
+      "id": "silence",
+      "name": "Silence",
+      "level": 2,
+      "tradition": ["divine"],
+      "traits": ["Illusion"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 willing creature",
+      "duration": "1 minute",
+      "description": "The target radiates an aura of silence in a 10-foot emanation. All sound is suppressed within the area. Creatures can't use sonic attacks, speak, or cast spells with verbal components while in the area.",
+      "heightened": [
+        {
+          "level": 4,
+          "effect": "Duration increases to 10 minutes"
+        }
+      ]
+    },
+    {
+      "id": "sound-burst",
+      "name": "Sound Burst",
+      "level": 2,
+      "tradition": ["divine"],
+      "traits": ["Evocation", "Sonic"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "area": "10-foot burst",
+      "duration": "instant",
+      "savingThrow": "Fortitude",
+      "description": "A cacophonous blast of sound assaults creatures in the area. Creatures in the area take 2d10 sonic damage with a basic Fortitude save. On a critical failure, a creature is also stunned 1.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "Damage increases by 1d10"
+        }
+      ]
+    },
+    {
+      "id": "spiritual-weapon",
+      "name": "Spiritual Weapon",
+      "level": 2,
+      "tradition": ["divine"],
+      "traits": ["Evocation", "Force"],
+      "castTime": "2 actions",
+      "range": "120 feet",
+      "duration": "sustained up to 1 minute",
+      "description": "A weapon made of pure force appears and attacks foes at your command. When you cast the spell and each time you Sustain it, you can make a melee spell attack against a creature within 120 feet, dealing 1d8 + your spellcasting ability modifier force damage on a hit.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "Damage increases by 1d8"
+        }
+      ]
+    },
+    {
+      "id": "status",
+      "name": "Status",
+      "level": 2,
+      "tradition": ["divine"],
+      "traits": ["Detection", "Divination"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 willing creature",
+      "duration": "1 day",
+      "description": "You create a magical link with the target. As long as you're on the same plane, you know the target's direction from you, its distance, and its current HP. You also sense when the target takes damage and when it dies.",
+      "heightened": [
+        {
+          "level": 4,
+          "effect": "You can target up to 4 creatures"
+        }
+      ]
+    },
+    {
+      "id": "shield-other",
+      "name": "Shield Other",
+      "level": 2,
+      "tradition": ["divine"],
+      "traits": ["Necromancy"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 willing creature",
+      "duration": "10 minutes",
+      "description": "You forge a magical link between yourself and the target. Whenever the target takes damage, you take half of that damage and the target takes the other half. This lasts until the spell ends or you're unconscious.",
+      "heightened": [
+        {
+          "level": 5,
+          "effect": "Duration increases to 1 hour"
+        }
+      ]
+    },
+    {
+      "id": "augury",
+      "name": "Augury",
+      "level": 2,
+      "tradition": ["divine"],
+      "traits": ["Divination", "Prediction"],
+      "castTime": "10 minutes",
+      "range": "self",
+      "duration": "instant",
+      "description": "You gain insight into the likely outcome of a course of action you plan to take within the next 30 minutes. The GM chooses from the following: weal (good results), woe (bad results), weal and woe (both), or nothing (no particularly good or bad results).",
+      "heightened": [
+        {
+          "level": 4,
+          "effect": "You can see up to 1 hour into the future"
+        }
+      ]
+    },
+    {
+      "id": "remove-paralysis",
+      "name": "Remove Paralysis",
+      "level": 2,
+      "tradition": ["divine"],
+      "traits": ["Healing", "Necromancy"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 creature",
+      "duration": "instant",
+      "description": "You remove the paralyzed condition from the target. You can also attempt to counteract effects that restrict the target's movement, such as being grabbed or restrained.",
+      "heightened": [
+        {
+          "level": 3,
+          "effect": "You can target up to 4 creatures"
+        }
+      ]
+    },
+    {
+      "id": "blindness",
+      "name": "Blindness",
+      "level": 3,
+      "tradition": ["divine"],
+      "traits": ["Incapacitation", "Necromancy"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 creature",
+      "duration": "varies",
+      "savingThrow": "Fortitude",
+      "description": "You curse the target with blindness. The target must attempt a Fortitude save. On a failure, the target is blinded for 1 minute. On a critical failure, the target is permanently blinded.",
+      "heightened": [
+        {
+          "level": 7,
+          "effect": "You can target up to 10 creatures"
+        }
+      ]
+    },
+    {
+      "id": "circle-of-protection",
+      "name": "Circle of Protection",
+      "level": 3,
+      "tradition": ["divine"],
+      "traits": ["Abjuration"],
+      "castTime": "3 actions",
+      "range": "touch",
+      "area": "10-foot emanation",
+      "duration": "1 minute",
+      "description": "You create a magical circle that wards against a chosen alignment. Choose good, evil, lawful, or chaotic when you cast. Creatures of the chosen alignment can't willingly enter the area. Attacks from such creatures against targets in the area take a -1 status penalty. Targets in the area gain a +1 status bonus to AC and saves against creatures of the chosen alignment.",
+      "heightened": [
+        {
+          "level": 4,
+          "effect": "Duration increases to 10 minutes"
+        }
+      ]
+    },
+    {
+      "id": "crisis-of-faith",
+      "name": "Crisis of Faith",
+      "level": 3,
+      "tradition": ["divine"],
+      "traits": ["Enchantment", "Mental"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 creature",
+      "duration": "varies",
+      "savingThrow": "Will",
+      "description": "You assault the target's faith, causing them to doubt their beliefs. The target must attempt a Will save. On a failure, the target is stupefied 1 for 1 minute and can't Cast Spells. On a critical failure, the target is stupefied 2 for 1 minute and can't Cast Spells.",
+      "heightened": [
+        {
+          "level": 5,
+          "effect": "Duration increases to 10 minutes"
+        }
+      ]
+    },
+    {
+      "id": "heroism-divine-3",
+      "name": "Heroism",
+      "level": 3,
+      "tradition": ["divine"],
+      "traits": ["Enchantment", "Mental"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 creature",
+      "duration": "10 minutes",
+      "description": "You inspire the target with heroic confidence. The target gains a +2 status bonus to attack rolls, Perception checks, saving throws, and skill checks. The target also gains 10 temporary Hit Points.",
+      "heightened": [
+        {
+          "level": 5,
+          "effect": "Bonus increases to +3 and temporary HP increases to 15"
+        }
+      ]
+    },
+    {
+      "id": "searing-light",
+      "name": "Searing Light",
+      "level": 3,
+      "tradition": ["divine"],
+      "traits": ["Attack", "Evocation", "Fire", "Light"],
+      "castTime": "2 actions",
+      "range": "120 feet",
+      "targets": "1 creature",
+      "duration": "instant",
+      "description": "A ray of burning light streaks toward your target. Make a ranged spell attack roll. On a success, you deal 5d6 fire damage. If the target is undead, you deal 5d8 fire damage instead. On a critical success, the target takes double damage.",
+      "heightened": [
+        {
+          "level": 4,
+          "effect": "Damage increases by 2d6 (or 2d8 against undead)"
+        }
+      ]
+    },
+    {
+      "id": "sanctified-ground",
+      "name": "Sanctified Ground",
+      "level": 3,
+      "tradition": ["divine"],
+      "traits": ["Abjuration"],
+      "castTime": "3 actions",
+      "range": "120 feet",
+      "area": "20-foot burst",
+      "duration": "1 minute",
+      "description": "You sanctify the area with divine power. Allies in the area gain a +1 status bonus to AC, saves, attack rolls, and damage rolls. Creatures opposed to your faith take a -1 status penalty to these rolls.",
+      "heightened": [
+        {
+          "level": 5,
+          "effect": "Duration increases to 10 minutes"
+        }
+      ]
+    },
+    {
+      "id": "warding-sign",
+      "name": "Warding Sign",
+      "level": 3,
+      "tradition": ["divine"],
+      "traits": ["Abjuration"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 creature",
+      "duration": "1 minute",
+      "description": "You inscribe a protective sign upon the target. The target gains a +2 status bonus to AC and saves. When a creature damages the target with an attack, the attacker takes 2d6 spirit damage.",
+      "heightened": [
+        {
+          "level": 5,
+          "effect": "Bonus increases to +3 and damage to 3d6"
+        }
+      ]
+    },
+    {
+      "id": "animate-dead",
+      "name": "Animate Dead",
+      "level": 3,
+      "tradition": ["divine"],
+      "traits": ["Necromancy"],
+      "castTime": "3 actions",
+      "range": "30 feet",
+      "targets": "1 dead creature",
+      "duration": "sustained up to 1 minute",
+      "description": "You animate a skeleton or zombie from a dead creature. The undead has the statistics appropriate to its type and is under your control. The creature acts on your turn and follows your mental commands.",
+      "heightened": [
+        {
+          "level": 4,
+          "effect": "You can animate 2 dead creatures"
+        }
+      ]
+    },
+    {
+      "id": "remove-disease",
+      "name": "Remove Disease",
+      "level": 3,
+      "tradition": ["divine"],
+      "traits": ["Healing", "Necromancy"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 creature",
+      "duration": "instant",
+      "description": "You remove a disease affecting the target. Attempt a counteract check against the disease. On a success, you reduce the disease's stage by 1. On a critical success, you reduce the disease's stage by 2 or cure it if it's at stage 1.",
+      "heightened": [
+        {
+          "level": 5,
+          "effect": "Your counteract rank increases by 1"
+        }
+      ]
+    },
+    {
+      "id": "zone-of-truth",
+      "name": "Zone of Truth",
+      "level": 3,
+      "tradition": ["divine"],
+      "traits": ["Enchantment", "Mental"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "area": "20-foot burst",
+      "duration": "10 minutes",
+      "savingThrow": "Will",
+      "description": "You create a zone where creatures can't deliberately lie. Creatures in the area when you cast the spell and those who enter must attempt a Will save. On a failure, a creature can't speak deliberate lies and may choose to not speak rather than tell the truth.",
+      "heightened": [
+        {
+          "level": 5,
+          "effect": "Duration increases to 1 hour"
+        }
+      ]
     }
   ]
 }

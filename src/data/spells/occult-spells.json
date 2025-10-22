@@ -669,6 +669,367 @@
           "effect": "The enfeebled condition increases by 1 for each degree of success."
         }
       ]
+    },
+    {
+      "id": "hideous-laughter",
+      "name": "Hideous Laughter",
+      "level": 2,
+      "tradition": ["occult"],
+      "traits": ["Enchantment", "Emotion", "Mental"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 creature",
+      "duration": "sustained up to 1 minute",
+      "savingThrow": "Will",
+      "description": "The target is overwhelmed with uncontrollable laughter. On a failed Will save, the target is slowed 1 and can't use reactions. On a critical failure, the target also falls prone and can't stand up while the spell lasts.",
+      "heightened": [
+        {
+          "level": "4th",
+          "effect": "You can target up to 3 creatures"
+        }
+      ]
+    },
+    {
+      "id": "illusory-creature",
+      "name": "Illusory Creature",
+      "level": 2,
+      "tradition": ["occult"],
+      "traits": ["Illusion", "Visual"],
+      "castTime": "2 actions",
+      "range": "500 feet",
+      "duration": "sustained up to 1 minute",
+      "description": "You create an illusory image of a Large or smaller creature. The creature acts on your turn and can move up to its Speed. It can make gestures and sounds appropriate to its form, but it can't attack. Physical interaction reveals it as an illusion.",
+      "heightened": [
+        {
+          "level": "3rd",
+          "effect": "The creature can be Huge or smaller"
+        }
+      ]
+    },
+    {
+      "id": "invisibility-occult",
+      "name": "Invisibility",
+      "level": 2,
+      "tradition": ["occult"],
+      "traits": ["Illusion"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 creature",
+      "duration": "10 minutes",
+      "description": "The target becomes invisible. This makes it undetected to all creatures, though it can still be heard and felt. The spell ends if the target uses a hostile action.",
+      "heightened": [
+        {
+          "level": "4th",
+          "effect": "The spell lasts 1 minute and doesn't end if the target uses a hostile action"
+        }
+      ]
+    },
+    {
+      "id": "mirror-image-occult",
+      "name": "Mirror Image",
+      "level": 2,
+      "tradition": ["occult"],
+      "traits": ["Illusion", "Visual"],
+      "castTime": "2 actions",
+      "range": "self",
+      "duration": "1 minute",
+      "description": "Three illusory duplicates of you appear in your space. When a creature targets you with an attack, randomly determine whether it attacks you or one of your images. If it attacks an image, the image is destroyed. The spell ends when all images are destroyed.",
+      "heightened": [
+        {
+          "level": "5th",
+          "effect": "The number of images increases to 5"
+        }
+      ]
+    },
+    {
+      "id": "paranoia",
+      "name": "Paranoia",
+      "level": 2,
+      "tradition": ["occult"],
+      "traits": ["Illusion", "Mental"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 creature",
+      "duration": "1 minute",
+      "savingThrow": "Will",
+      "description": "You make the target believe everyone is out to get them. On a failed save, the target becomes suspicious of all other creatures and treats them as unfriendly. The target takes a -2 status penalty to Perception checks and can't use Aid actions.",
+      "heightened": [
+        {
+          "level": "4th",
+          "effect": "Duration increases to 10 minutes"
+        }
+      ]
+    },
+    {
+      "id": "phantom-steed",
+      "name": "Phantom Steed",
+      "level": 2,
+      "tradition": ["occult"],
+      "traits": ["Conjuration"],
+      "castTime": "10 minutes",
+      "range": "30 feet",
+      "duration": "8 hours",
+      "description": "You conjure a Large, magical horse that serves as a mount. The steed has a Speed of 40 feet, AC 18, and 10 Hit Points. It can't attack but can serve as a reliable mount and carry up to 2 Bulk of cargo.",
+      "heightened": [
+        {
+          "level": "4th",
+          "effect": "The steed's Speed increases to 60 feet and it gains a +2 bonus to all defenses"
+        }
+      ]
+    },
+    {
+      "id": "see-invisibility",
+      "name": "See Invisibility",
+      "level": 2,
+      "tradition": ["occult"],
+      "traits": ["Divination"],
+      "castTime": "2 actions",
+      "range": "self",
+      "duration": "10 minutes",
+      "description": "You can see invisible creatures and objects. They appear to you as translucent shapes, and you can target them normally. This doesn't let you see through solid objects or reveal illusions.",
+      "heightened": [
+        {
+          "level": "5th",
+          "effect": "Duration increases to 8 hours"
+        }
+      ]
+    },
+    {
+      "id": "touch-of-idiocy",
+      "name": "Touch of Idiocy",
+      "level": 2,
+      "tradition": ["occult"],
+      "traits": ["Enchantment", "Mental"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 creature",
+      "duration": "1 minute",
+      "savingThrow": "Will",
+      "description": "You cloud the target's mind. On a failed Will save, the target becomes stupefied 2. On a critical failure, the target is stupefied 3 and also slowed 1 for the duration.",
+      "heightened": [
+        {
+          "level": "4th",
+          "effect": "Duration increases to 10 minutes"
+        }
+      ]
+    },
+    {
+      "id": "blur-occult",
+      "name": "Blur",
+      "level": 2,
+      "tradition": ["occult"],
+      "traits": ["Illusion", "Visual"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 creature",
+      "duration": "1 minute",
+      "description": "The target's form appears blurred and indistinct. Attacks against the target have a 20% miss chance, and the target has concealment against all attacks. This doesn't stack with other sources of concealment.",
+      "heightened": [
+        {
+          "level": "4th",
+          "effect": "Duration increases to 10 minutes"
+        }
+      ]
+    },
+    {
+      "id": "comprehend-language",
+      "name": "Comprehend Language",
+      "level": 2,
+      "tradition": ["occult"],
+      "traits": ["Divination"],
+      "castTime": "2 actions",
+      "range": "self",
+      "duration": "1 hour",
+      "description": "You gain the ability to understand any spoken or written language. This doesn't let you speak the language, only comprehend it. You can read magical writing with a successful Perception check against the spell's DC.",
+      "heightened": [
+        {
+          "level": "4th",
+          "effect": "Duration increases to 8 hours and you can also speak all languages you comprehend"
+        }
+      ]
+    },
+    {
+      "id": "dream-message",
+      "name": "Dream Message",
+      "level": 3,
+      "tradition": ["occult"],
+      "traits": ["Illusion", "Mental"],
+      "castTime": "10 minutes",
+      "range": "planetary",
+      "targets": "1 sleeping creature",
+      "duration": "instant",
+      "description": "You send a message to a sleeping creature through their dreams. The message can be up to 1 minute long. The target remembers the dream upon waking. If the target isn't asleep when you cast this, the spell has no effect.",
+      "heightened": [
+        {
+          "level": 5,
+          "effect": "The message can be up to 10 minutes long"
+        }
+      ]
+    },
+    {
+      "id": "hypnotic-pattern",
+      "name": "Hypnotic Pattern",
+      "level": 3,
+      "tradition": ["occult"],
+      "traits": ["Illusion", "Visual"],
+      "castTime": "2 actions",
+      "range": "120 feet",
+      "area": "10-foot burst",
+      "duration": "sustained up to 1 minute",
+      "savingThrow": "Will",
+      "description": "You create a swirling pattern of colors in the air. Creatures in the area must attempt a Will save. On a failure, they're fascinated for the duration and can't use hostile actions. On a critical failure, they're also stunned 1.",
+      "heightened": [
+        {
+          "level": 5,
+          "effect": "Area increases to 20-foot burst"
+        }
+      ]
+    },
+    {
+      "id": "levitate",
+      "name": "Levitate",
+      "level": 3,
+      "tradition": ["occult"],
+      "traits": ["Evocation"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 creature",
+      "duration": "5 minutes",
+      "description": "The target can float up and down at will, gaining a fly Speed of 20 feet. The target can only move up or down, not horizontally, unless it pushes off a surface.",
+      "heightened": [
+        {
+          "level": 5,
+          "effect": "Duration increases to 10 minutes"
+        }
+      ]
+    },
+    {
+      "id": "mind-reading",
+      "name": "Mind Reading",
+      "level": 3,
+      "tradition": ["occult"],
+      "traits": ["Detection", "Divination", "Mental"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 creature",
+      "duration": "1 round or sustained up to 1 minute",
+      "savingThrow": "Will",
+      "description": "You read the target's surface thoughts. On a failed Will save, you can read the target's current thoughts. Each time you Sustain the spell, you can choose to probe deeper, learning about the target's memories and deeper thoughts. The target becomes aware of the intrusion if you probe deeper.",
+      "heightened": [
+        {
+          "level": 5,
+          "effect": "Range increases to 60 feet"
+        }
+      ]
+    },
+    {
+      "id": "paralyze",
+      "name": "Paralyze",
+      "level": 3,
+      "tradition": ["occult"],
+      "traits": ["Enchantment", "Incapacitation", "Mental"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 creature",
+      "duration": "varies",
+      "savingThrow": "Will",
+      "description": "You paralyze the target with mental power. The target must attempt a Will save. On a failure, the target is paralyzed for 1 round. On a critical failure, the target is paralyzed for 4 rounds.",
+      "heightened": [
+        {
+          "level": 7,
+          "effect": "You can target up to 10 creatures"
+        }
+      ]
+    },
+    {
+      "id": "vampiric-touch-occult",
+      "name": "Vampiric Touch",
+      "level": 3,
+      "tradition": ["occult"],
+      "traits": ["Death", "Necromancy", "Negative"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 living creature",
+      "duration": "instant",
+      "description": "Your touch leeches the lifeblood out of a target. Make a melee spell attack roll. On a success, the target takes 6d6 negative damage and you gain temporary Hit Points equal to half the damage dealt. On a critical success, the target takes double damage and you gain temporary HP equal to the damage dealt.",
+      "heightened": [
+        {
+          "level": 4,
+          "effect": "Damage increases by 2d6"
+        }
+      ]
+    },
+    {
+      "id": "slow-occult",
+      "name": "Slow",
+      "level": 3,
+      "tradition": ["occult"],
+      "traits": ["Transmutation"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "up to 5 creatures",
+      "duration": "1 minute",
+      "savingThrow": "Fortitude",
+      "description": "You cause time to flow more slowly for your enemies. Targets must attempt a Fortitude save. On a failure, the target is slowed 1 for the duration. On a critical failure, the target is slowed 2 for the duration.",
+      "heightened": [
+        {
+          "level": 6,
+          "effect": "You can target up to 10 creatures"
+        }
+      ]
+    },
+    {
+      "id": "haste-occult",
+      "name": "Haste",
+      "level": 3,
+      "tradition": ["occult"],
+      "traits": ["Transmutation"],
+      "castTime": "2 actions",
+      "range": "30 feet",
+      "targets": "1 creature",
+      "duration": "1 minute",
+      "description": "Magic empowers the target to act faster. The target is quickened and can use the extra action to Stride or Strike.",
+      "heightened": [
+        {
+          "level": 6,
+          "effect": "You can target up to 5 creatures"
+        }
+      ]
+    },
+    {
+      "id": "clairaudience-occult",
+      "name": "Clairaudience",
+      "level": 3,
+      "tradition": ["occult"],
+      "traits": ["Divination", "Scrying"],
+      "castTime": "2 actions",
+      "range": "500 feet",
+      "duration": "10 minutes",
+      "description": "You create an invisible floating ear at a location within range. You can hear through this ear as if you were there. You can use an action to move the ear up to 20 feet.",
+      "heightened": [
+        {
+          "level": 5,
+          "effect": "Duration increases to 1 hour"
+        }
+      ]
+    },
+    {
+      "id": "heroism-occult-3",
+      "name": "Heroism",
+      "level": 3,
+      "tradition": ["occult"],
+      "traits": ["Enchantment", "Mental"],
+      "castTime": "2 actions",
+      "range": "touch",
+      "targets": "1 creature",
+      "duration": "10 minutes",
+      "description": "You inspire the target with heroic confidence. The target gains a +2 status bonus to attack rolls, Perception checks, saving throws, and skill checks. The target also gains 10 temporary Hit Points.",
+      "heightened": [
+        {
+          "level": 5,
+          "effect": "Bonus increases to +3 and temporary HP increases to 15"
+        }
+      ]
     }
   ]
 }

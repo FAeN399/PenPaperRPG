@@ -1,0 +1,1 @@
+"use strict";const r=require("electron");r.contextBridge.exposeInMainWorld("electronAPI",{saveCharacter:e=>r.ipcRenderer.invoke("save-character",e),loadCharacter:()=>r.ipcRenderer.invoke("load-character"),exportCharacter:(e,a)=>r.ipcRenderer.invoke("export-character",e,a),onMessage:e=>{r.ipcRenderer.on("main-process-message",(a,c)=>e(c))}});
