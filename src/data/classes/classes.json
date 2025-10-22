@@ -1,0 +1,380 @@
+[
+  {
+    "id": "barbarian",
+    "name": "Barbarian",
+    "description": "A fierce warrior who can enter a battle rage, gaining incredible strength and resilience.",
+    "keyAbility": ["strength"],
+    "hitPoints": 12,
+    "initialProficiencies": {
+      "perception": 4,
+      "fortitude": 4,
+      "reflex": 2,
+      "will": 2,
+      "skills": {
+        "trained": 3
+      },
+      "attacks": {
+        "simple": 2,
+        "martial": 2,
+        "unarmed": 2
+      },
+      "defenses": {
+        "unarmored": 2,
+        "light": 2,
+        "medium": 2,
+        "heavy": 0
+      }
+    },
+    "traits": [],
+    "classDC": 2
+  },
+  {
+    "id": "bard",
+    "name": "Bard",
+    "description": "A charismatic performer who uses music and magic to inspire allies and confound foes.",
+    "keyAbility": ["charisma"],
+    "hitPoints": 8,
+    "initialProficiencies": {
+      "perception": 4,
+      "fortitude": 2,
+      "reflex": 4,
+      "will": 4,
+      "skills": {
+        "trained": 4
+      },
+      "attacks": {
+        "simple": 2,
+        "martial": 0,
+        "unarmed": 2
+      },
+      "defenses": {
+        "unarmored": 2,
+        "light": 2,
+        "medium": 0,
+        "heavy": 0
+      }
+    },
+    "traits": [],
+    "classDC": 2,
+    "spellcasting": {
+      "tradition": "occult",
+      "type": "spontaneous",
+      "spellsPerDay": [5, 3, 2],
+      "keyAbility": "charisma"
+    }
+  },
+  {
+    "id": "champion",
+    "name": "Champion",
+    "description": "A divine warrior who protects allies and upholds their code with holy power.",
+    "keyAbility": ["strength", "dexterity"],
+    "hitPoints": 10,
+    "initialProficiencies": {
+      "perception": 2,
+      "fortitude": 4,
+      "reflex": 2,
+      "will": 4,
+      "skills": {
+        "trained": 2
+      },
+      "attacks": {
+        "simple": 2,
+        "martial": 2,
+        "unarmed": 2
+      },
+      "defenses": {
+        "unarmored": 2,
+        "light": 2,
+        "medium": 2,
+        "heavy": 2
+      }
+    },
+    "traits": [],
+    "classDC": 2
+  },
+  {
+    "id": "cleric",
+    "name": "Cleric",
+    "description": "A divine spellcaster who channels the power of their deity to heal allies and smite foes.",
+    "keyAbility": ["wisdom"],
+    "hitPoints": 8,
+    "initialProficiencies": {
+      "perception": 2,
+      "fortitude": 2,
+      "reflex": 2,
+      "will": 4,
+      "skills": {
+        "trained": 2
+      },
+      "attacks": {
+        "simple": 2,
+        "martial": 0,
+        "unarmed": 2
+      },
+      "defenses": {
+        "unarmored": 2,
+        "light": 0,
+        "medium": 0,
+        "heavy": 0
+      }
+    },
+    "traits": [],
+    "classDC": 2,
+    "spellcasting": {
+      "tradition": "divine",
+      "type": "prepared",
+      "spellsPerDay": [3, 2, 1],
+      "keyAbility": "wisdom"
+    }
+  },
+  {
+    "id": "druid",
+    "name": "Druid",
+    "description": "A primal spellcaster connected to nature, able to take animal forms and command the elements.",
+    "keyAbility": ["wisdom"],
+    "hitPoints": 8,
+    "initialProficiencies": {
+      "perception": 2,
+      "fortitude": 2,
+      "reflex": 2,
+      "will": 4,
+      "skills": {
+        "trained": 2
+      },
+      "attacks": {
+        "simple": 2,
+        "martial": 0,
+        "unarmed": 2
+      },
+      "defenses": {
+        "unarmored": 2,
+        "light": 2,
+        "medium": 2,
+        "heavy": 0
+      }
+    },
+    "traits": [],
+    "classDC": 2,
+    "spellcasting": {
+      "tradition": "primal",
+      "type": "prepared",
+      "spellsPerDay": [3, 2, 1],
+      "keyAbility": "wisdom"
+    }
+  },
+  {
+    "id": "fighter",
+    "name": "Fighter",
+    "description": "A master of weapons and combat techniques, the most versatile martial warrior.",
+    "keyAbility": ["strength", "dexterity"],
+    "hitPoints": 10,
+    "initialProficiencies": {
+      "perception": 4,
+      "fortitude": 4,
+      "reflex": 4,
+      "will": 2,
+      "skills": {
+        "trained": 3
+      },
+      "attacks": {
+        "simple": 4,
+        "martial": 4,
+        "unarmed": 4
+      },
+      "defenses": {
+        "unarmored": 2,
+        "light": 2,
+        "medium": 2,
+        "heavy": 2
+      }
+    },
+    "traits": [],
+    "classDC": 2
+  },
+  {
+    "id": "monk",
+    "name": "Monk",
+    "description": "A martial artist who uses ki and flurries of strikes to overwhelm enemies.",
+    "keyAbility": ["strength", "dexterity"],
+    "hitPoints": 10,
+    "initialProficiencies": {
+      "perception": 2,
+      "fortitude": 4,
+      "reflex": 4,
+      "will": 4,
+      "skills": {
+        "trained": 4
+      },
+      "attacks": {
+        "simple": 2,
+        "martial": 0,
+        "unarmed": 4
+      },
+      "defenses": {
+        "unarmored": 4,
+        "light": 0,
+        "medium": 0,
+        "heavy": 0
+      }
+    },
+    "traits": [],
+    "classDC": 2
+  },
+  {
+    "id": "ranger",
+    "name": "Ranger",
+    "description": "A skilled tracker and hunter who excels at taking down specific prey.",
+    "keyAbility": ["strength", "dexterity"],
+    "hitPoints": 10,
+    "initialProficiencies": {
+      "perception": 4,
+      "fortitude": 4,
+      "reflex": 4,
+      "will": 2,
+      "skills": {
+        "trained": 4
+      },
+      "attacks": {
+        "simple": 2,
+        "martial": 2,
+        "unarmed": 2
+      },
+      "defenses": {
+        "unarmored": 2,
+        "light": 2,
+        "medium": 2,
+        "heavy": 0
+      }
+    },
+    "traits": [],
+    "classDC": 2
+  },
+  {
+    "id": "rogue",
+    "name": "Rogue",
+    "description": "A cunning expert who uses stealth and precision to exploit enemy weaknesses.",
+    "keyAbility": ["dexterity", "charisma", "intelligence", "strength"],
+    "hitPoints": 8,
+    "initialProficiencies": {
+      "perception": 4,
+      "fortitude": 2,
+      "reflex": 4,
+      "will": 4,
+      "skills": {
+        "trained": 7
+      },
+      "attacks": {
+        "simple": 2,
+        "martial": 0,
+        "unarmed": 2
+      },
+      "defenses": {
+        "unarmored": 2,
+        "light": 2,
+        "medium": 0,
+        "heavy": 0
+      }
+    },
+    "traits": [],
+    "classDC": 2
+  },
+  {
+    "id": "sorcerer",
+    "name": "Sorcerer",
+    "description": "An innate spellcaster whose magic comes from a powerful bloodline.",
+    "keyAbility": ["charisma"],
+    "hitPoints": 6,
+    "initialProficiencies": {
+      "perception": 2,
+      "fortitude": 2,
+      "reflex": 2,
+      "will": 4,
+      "skills": {
+        "trained": 2
+      },
+      "attacks": {
+        "simple": 2,
+        "martial": 0,
+        "unarmed": 2
+      },
+      "defenses": {
+        "unarmored": 2,
+        "light": 0,
+        "medium": 0,
+        "heavy": 0
+      }
+    },
+    "traits": [],
+    "classDC": 2,
+    "spellcasting": {
+      "tradition": "arcane",
+      "type": "spontaneous",
+      "spellsPerDay": [5, 3, 2],
+      "keyAbility": "charisma"
+    }
+  },
+  {
+    "id": "wizard",
+    "name": "Wizard",
+    "description": "A scholarly spellcaster who learns magic through study and preparation.",
+    "keyAbility": ["intelligence"],
+    "hitPoints": 6,
+    "initialProficiencies": {
+      "perception": 2,
+      "fortitude": 2,
+      "reflex": 2,
+      "will": 4,
+      "skills": {
+        "trained": 2
+      },
+      "attacks": {
+        "simple": 2,
+        "martial": 0,
+        "unarmed": 2
+      },
+      "defenses": {
+        "unarmored": 2,
+        "light": 0,
+        "medium": 0,
+        "heavy": 0
+      }
+    },
+    "traits": [],
+    "classDC": 2,
+    "spellcasting": {
+      "tradition": "arcane",
+      "type": "prepared",
+      "spellsPerDay": [3, 2, 1],
+      "keyAbility": "intelligence"
+    }
+  },
+  {
+    "id": "alchemist",
+    "name": "Alchemist",
+    "description": "A master of alchemy who crafts powerful elixirs, bombs, and mutagens.",
+    "keyAbility": ["intelligence"],
+    "hitPoints": 8,
+    "initialProficiencies": {
+      "perception": 2,
+      "fortitude": 4,
+      "reflex": 4,
+      "will": 2,
+      "skills": {
+        "trained": 3
+      },
+      "attacks": {
+        "simple": 2,
+        "martial": 0,
+        "unarmed": 2
+      },
+      "defenses": {
+        "unarmored": 2,
+        "light": 2,
+        "medium": 2,
+        "heavy": 0
+      }
+    },
+    "traits": [],
+    "classDC": 2
+  }
+]

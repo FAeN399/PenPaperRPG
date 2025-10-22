@@ -31,7 +31,7 @@ function App() {
               A comprehensive character creator for Pathfinder Second Edition
             </p>
             <p className="text-sm text-pf-text-muted mb-8">
-              Phase 3: Character State Management - Complete
+              Phase 4: Game Data Loading - Complete
             </p>
             <Button onClick={() => setShowCreator(true)}>
               Create New Character

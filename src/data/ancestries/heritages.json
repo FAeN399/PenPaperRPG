@@ -1,0 +1,86 @@
+[
+  {
+    "id": "versatile-human",
+    "ancestryId": "human",
+    "name": "Versatile Heritage",
+    "description": "You gain adaptability through varied experiences.",
+    "benefits": ["Gain a 1st-level general feat"]
+  },
+  {
+    "id": "skilled-human",
+    "ancestryId": "human",
+    "name": "Skilled Heritage",
+    "description": "Your training has made you exceptionally capable.",
+    "benefits": ["Trained in one skill of your choice"]
+  },
+  {
+    "id": "woodland-elf",
+    "ancestryId": "elf",
+    "name": "Woodland Elf",
+    "description": "You're adapted to life in the forest.",
+    "benefits": ["Ignore difficult terrain from trees and undergrowth"]
+  },
+  {
+    "id": "ancient-elf",
+    "ancestryId": "elf",
+    "name": "Ancient Elf",
+    "description": "Your long life has given you experience in many fields.",
+    "benefits": ["Gain a 1st-level multiclass dedication feat"]
+  },
+  {
+    "id": "mountain-dwarf",
+    "ancestryId": "dwarf",
+    "name": "Mountain Dwarf",
+    "description": "You're well suited to climbing and high altitudes.",
+    "benefits": ["Trained in Athletics", "Ignore altitude penalties"]
+  },
+  {
+    "id": "forge-dwarf",
+    "ancestryId": "dwarf",
+    "name": "Forge Dwarf",
+    "description": "You have a deep connection to fire and metalwork.",
+    "benefits": ["Resistance 1 to fire damage"]
+  },
+  {
+    "id": "sensate-gnome",
+    "ancestryId": "gnome",
+    "name": "Sensate Gnome",
+    "description": "Your senses are highly acute.",
+    "benefits": ["Gain a +2 bonus to Perception for initiative"]
+  },
+  {
+    "id": "umbral-gnome",
+    "ancestryId": "gnome",
+    "name": "Umbral Gnome",
+    "description": "You have darkvision from dwelling in darkness.",
+    "benefits": ["Gain Darkvision"]
+  },
+  {
+    "id": "gutsy-halfling",
+    "ancestryId": "halfling",
+    "name": "Gutsy Halfling",
+    "description": "Your courage is unshakeable.",
+    "benefits": ["+2 circumstance bonus to saves against emotion effects"]
+  },
+  {
+    "id": "twilight-halfling",
+    "ancestryId": "halfling",
+    "name": "Twilight Halfling",
+    "description": "Your eyes are adapted to low light.",
+    "benefits": ["Gain Low-Light Vision"]
+  },
+  {
+    "id": "charhide-goblin",
+    "ancestryId": "goblin",
+    "name": "Charhide Goblin",
+    "description": "Your skin has been hardened by fire.",
+    "benefits": ["Resistance 1 to fire damage"]
+  },
+  {
+    "id": "unbreakable-goblin",
+    "ancestryId": "goblin",
+    "name": "Unbreakable Goblin",
+    "description": "You bounce back from injuries quickly.",
+    "benefits": ["Reduce dying value from falls by 1"]
+  }
+]

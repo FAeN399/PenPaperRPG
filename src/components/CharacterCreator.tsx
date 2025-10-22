@@ -6,6 +6,7 @@ import StepIndicator from './layout/StepIndicator'
 import Card from './shared/Card'
 import Button from './shared/Button'
 import Input from './shared/Input'
+import StepAncestry from './character-creation/StepAncestry'
 import { useCharacter } from '@/hooks/useCharacter'
 import { CharacterCreationStep, CREATION_STEPS } from '@/types/steps'
 
@@ -121,13 +122,16 @@ export default function CharacterCreator() {
               </Card>
             )}
 
+            {currentStep === CharacterCreationStep.Ancestry && (
+              <StepAncestry />
+            )}
+
             {currentStep !== CharacterCreationStep.Basics &&
-              currentStep !== CharacterCreationStep.Abilities && (
+              currentStep !== CharacterCreationStep.Abilities &&
+              currentStep !== CharacterCreationStep.Ancestry && (
                 <Card className="p-8">
                   <div className="text-center">
                     <p className="text-lg text-pf-text mb-4">
-                      {currentStep === CharacterCreationStep.Ancestry &&
-                        'Choose your character\'s ancestry and heritage'}
                       {currentStep === CharacterCreationStep.Background &&
                         'Select a background for your character'}
                       {currentStep === CharacterCreationStep.Class &&
