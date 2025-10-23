@@ -1,6 +1,7 @@
 "use client";
 
 import type {
+  AbilityId,
   AbilityBoostMode,
   CatalogIndexEntry,
   ContentEntity,
@@ -8,6 +9,7 @@ import type {
 import { useMemo } from "react";
 
 import type { CreationStep } from "./CreationWizard";
+import { AbilityBoostSelector } from "./AbilityBoostSelector";
 
 import type { CharacterBuilderState } from "@/hooks/useCharacterBuilder";
 
@@ -19,6 +21,7 @@ interface WizardViewportProps {
   onSelectAncestry: (id: string) => void;
   onSelectBackground: (id: string) => void;
   onSelectClass: (id: string) => void;
+  onResolveAbilityBoost: (choiceId: string, selectedAbilities: AbilityId[]) => void;
 }
 
 const STEP_PLACEHOLDER: Record<string, string> = {
@@ -40,6 +43,7 @@ export function WizardViewport({
   onSelectAncestry,
   onSelectBackground,
   onSelectClass,
+  onResolveAbilityBoost,
 }: WizardViewportProps): JSX.Element {
   const selectableStepId = isSelectableStep(step.id) ? step.id : null;
 
@@ -84,7 +88,12 @@ export function WizardViewport({
         <p style={{ margin: 0, color: "#4b5563", lineHeight: 1.5 }}>{step.description}</p>
       </header>
 
-      {selectableStepId ? (
+      {step.id === "abilities" ? (
+        <AbilityBoostSection
+          builderState={builderState}
+          onResolveAbilityBoost={onResolveAbilityBoost}
+        />
+      ) : selectableStepId ? (
         entries.length > 0 ? (
           <EntitySelectionList
             entries={entries}
@@ -401,6 +410,100 @@ function PlaceholderMessage({ stepId }: { stepId: string }): JSX.Element {
       }}
     >
       {message}
+    </div>
+  );
+}
+
+interface AbilityBoostSectionProps {
+  builderState: CharacterBuilderState;
+  onResolveAbilityBoost: (choiceId: string, selectedAbilities: AbilityId[]) => void;
+}
+
+function AbilityBoostSection({ builderState, onResolveAbilityBoost }: AbilityBoostSectionProps): JSX.Element {
+  const { pendingChoices, character } = builderState;
+
+  // Filter for ability boost choices only
+  const abilityBoostChoices = pendingChoices.filter(choice => choice.scope === "abilityBoost");
+
+  if (abilityBoostChoices.length === 0) {
+    return (
+      <div
+        style={{
+          border: "1px solid #10b981",
+          borderRadius: 8,
+          padding: "1.25rem",
+          background: "#ecfdf5",
+          color: "#047857",
+          lineHeight: 1.5,
+        }}
+      >
+        <p style={{ margin: 0, fontWeight: "600" }}>All ability boosts have been assigned!</p>
+        <p style={{ margin: "0.5rem 0 0 0", fontSize: "0.875rem" }}>
+          Your final ability scores:
+        </p>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(100px, 1fr))",
+            gap: "0.75rem",
+            marginTop: "0.75rem",
+          }}
+        >
+          {(["STR", "DEX", "CON", "INT", "WIS", "CHA"] as AbilityId[]).map((abilityId) => {
+            const score = character.abilityScores.final[abilityId];
+            const modifier = Math.floor((score - 10) / 2);
+            const modifierText = modifier >= 0 ? `+${modifier}` : `${modifier}`;
+
+            return (
+              <div
+                key={abilityId}
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  padding: "0.5rem",
+                  background: "#ffffff",
+                  borderRadius: "0.375rem",
+                  border: "1px solid #d1fae5",
+                }}
+              >
+                <div style={{ fontSize: "0.875rem", fontWeight: "600", color: "#047857" }}>
+                  {abilityId}
+                </div>
+                <div style={{ fontSize: "1.5rem", fontWeight: "700", color: "#111827" }}>
+                  {score}
+                </div>
+                <div style={{ fontSize: "0.875rem", color: "#6b7280" }}>
+                  ({modifierText})
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+      {abilityBoostChoices.map((choice, index) => (
+        <div key={choice.id}>
+          {index > 0 && (
+            <div
+              style={{
+                height: "1px",
+                background: "#e5e7eb",
+                margin: "0.5rem 0",
+              }}
+            />
+          )}
+          <AbilityBoostSelector
+            choice={choice}
+            currentAbilities={character.abilityScores.final}
+            onResolve={onResolveAbilityBoost}
+          />
+        </div>
+      ))}
     </div>
   );
 }

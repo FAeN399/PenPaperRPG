@@ -1,0 +1,226 @@
+{
+  "packs": {
+    "core": {
+      "id": "core",
+      "name": "Core Sample Pack",
+      "license": "ORC",
+      "includes": [
+        "ancestries",
+        "backgrounds",
+        "classes",
+        "feats"
+      ]
+    }
+  },
+  "entities": [
+    {
+      "entity": {
+        "id": "pf2e.ancestry.human",
+        "type": "ancestry",
+        "name": "Human",
+        "summary": "Versatile folk that excel through determination.",
+        "source": {
+          "id": "orc-remaster",
+          "page": 26
+        },
+        "rarity": "common",
+        "traits": [],
+        "tags": [],
+        "effects": [],
+        "hitPoints": 8,
+        "size": "medium",
+        "speed": 25,
+        "boosts": [
+          {
+            "type": "choice",
+            "count": 2,
+            "options": [
+              "STR",
+              "DEX",
+              "CON",
+              "INT",
+              "WIS",
+              "CHA"
+            ],
+            "value": 2
+          },
+          {
+            "type": "any",
+            "count": 1,
+            "value": 2
+          }
+        ],
+        "flaws": [],
+        "languages": {
+          "granted": [
+            "Common"
+          ],
+          "choices": {
+            "count": 1,
+            "options": [
+              "Any"
+            ]
+          }
+        },
+        "features": [
+          "ancestryfeat:1"
+        ]
+      },
+      "packId": "core",
+      "hash": "3e6bfde0c814a630358d5750ffb16559536e4ae74413f4d53d98e74114db254e"
+    },
+    {
+      "entity": {
+        "id": "pf2e.background.blacksmith",
+        "type": "background",
+        "name": "Blacksmith",
+        "summary": "You apprenticed at the forge and learned the value of hard work.",
+        "source": {
+          "id": "orc-remaster",
+          "page": 52
+        },
+        "rarity": "common",
+        "traits": [],
+        "tags": [],
+        "effects": [],
+        "boosts": [
+          {
+            "type": "choice",
+            "count": 1,
+            "options": [
+              "STR",
+              "INT"
+            ],
+            "value": 2
+          },
+          {
+            "type": "any",
+            "count": 1,
+            "value": 2
+          }
+        ],
+        "skillTraining": [
+          "Crafting",
+          "Athletics"
+        ],
+        "feat": "pf2e.feat.specialty-crafting"
+      },
+      "packId": "core",
+      "hash": "c7b68781e3bff0dc50649f142816a57f733f5980ecb0476239ea4dd71cdfcbfd"
+    },
+    {
+      "entity": {
+        "id": "pf2e.feat.power-attack",
+        "type": "feat",
+        "name": "Power Attack",
+        "summary": "Make a forceful strike that deals extra damage.",
+        "source": {
+          "id": "orc-remaster",
+          "page": 147
+        },
+        "rarity": "common",
+        "traits": [
+          "Fighter",
+          "Press"
+        ],
+        "tags": [],
+        "prerequisites": {
+          "type": "all",
+          "predicates": [
+            {
+              "type": "hasClass",
+              "classId": "pf2e.class.fighter"
+            }
+          ]
+        },
+        "effects": [],
+        "level": 1,
+        "category": "class",
+        "actionCost": {
+          "type": "two"
+        }
+      },
+      "packId": "core",
+      "hash": "ac6d6d670c38b908c633dab8ac17261e26385de172f047dd041af444bf573f8a"
+    },
+    {
+      "entity": {
+        "id": "pf2e.class.fighter",
+        "type": "class",
+        "name": "Fighter",
+        "source": {
+          "id": "orc-remaster",
+          "page": 72
+        },
+        "rarity": "common",
+        "traits": [],
+        "tags": [],
+        "effects": [],
+        "keyAbility": [
+          "STR",
+          "DEX"
+        ],
+        "hitPointsPerLevel": 10,
+        "proficiencies": {
+          "perception": "expert",
+          "savingThrows": {
+            "fortitude": "expert",
+            "reflex": "expert",
+            "will": "trained"
+          },
+          "skills": {
+            "trained": 3,
+            "additionalChoices": []
+          },
+          "attacks": {
+            "simple": "expert",
+            "martial": "expert",
+            "advanced": "trained",
+            "unarmed": "expert"
+          },
+          "defense": {
+            "unarmored": "trained",
+            "light": "trained",
+            "medium": "trained",
+            "heavy": "trained",
+            "shields": "trained"
+          },
+          "classDC": "trained"
+        },
+        "progression": {
+          "1": {
+            "grants": [],
+            "choices": [],
+            "proficiencyBumps": [
+              {
+                "target": "weapons:martial",
+                "rank": "trained"
+              },
+              {
+                "target": "armor:medium",
+                "rank": "trained"
+              }
+            ],
+            "featureRefs": [
+              "classfeat:1",
+              "fighterfeatures:attack-of-opportunity"
+            ]
+          },
+          "2": {
+            "grants": [],
+            "choices": [],
+            "proficiencyBumps": [],
+            "featureRefs": [
+              "classfeat:1",
+              "skillfeat:1",
+              "fighterfeatures:bravery"
+            ]
+          }
+        }
+      },
+      "packId": "core",
+      "hash": "eea32dd9502bd731711ad94ef85b05af2c351b5495c583dc42f9445f53a09fbe"
+    }
+  ],
+  "createdAt": "2025-10-23T04:41:07.925Z"
+}

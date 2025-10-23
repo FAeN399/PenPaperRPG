@@ -69,6 +69,7 @@ export function CreationWizard(): JSX.Element {
     selectAncestry,
     selectBackground,
     selectClass,
+    resolveAbilityBoost,
   } = useCharacterBuilder();
   const desktopBridge = getDesktopBridge();
   const isDesktop = Boolean(desktopBridge);
@@ -157,6 +158,7 @@ export function CreationWizard(): JSX.Element {
             onSelectAncestry={selectAncestry}
             onSelectBackground={selectBackground}
             onSelectClass={selectClass}
+            onResolveAbilityBoost={resolveAbilityBoost}
           />
         ) : null}
       </main>

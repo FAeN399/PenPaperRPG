@@ -419,7 +419,7 @@ export {
   selectClass,
   createEffectApplicationResult,
   type EffectApplicationResult,
-} from "./effects.js";
+} from "./effects";
 
 
 

@@ -6,10 +6,13 @@ import {
   selectAncestry as engineSelectAncestry,
   selectBackground as engineSelectBackground,
   selectClass as engineSelectClass,
+  applyEntityEffects,
   type CatalogLookup,
   type DerivedContext,
+  type ChoiceResolution,
 } from "@pen-paper-rpg/engine";
 import type {
+  AbilityId,
   AbilityScoreBlock,
   CatalogIndex,
   Character,
@@ -51,6 +54,7 @@ interface BuilderHookResult {
   selectAncestry: (id: string) => void;
   selectBackground: (id: string) => void;
   selectClass: (id: string) => void;
+  resolveAbilityBoost: (choiceId: string, selectedAbilities: AbilityId[]) => void;
 }
 
 function getDesktopBridge(): DesktopBridge | undefined {
@@ -118,7 +122,7 @@ export function useCharacterBuilder(): BuilderHookResult {
       pendingChoices = [];
       derivedContext = cloneDerivedContext();
     } else {
-      const initial = createInitialCharacter(catalog);
+      const initial = createInitialCharacter(catalog, catalogLookup);
       character = initial.character;
       pendingChoices = initial.pendingChoices;
       derivedContext = initial.derivedContext;
@@ -194,6 +198,17 @@ export function useCharacterBuilder(): BuilderHookResult {
         }
 
         const { character, catalogLookup, derivedContext } = current;
+
+        // Get the entity to check for pending choices
+        const entityEntry = catalogLookup.byId.get(entityId);
+        if (!entityEntry) {
+          return current;
+        }
+
+        // Apply entity effects to get pending choices
+        const effectResult = applyEntityEffects(entityEntry.entity, character, catalogLookup);
+
+        // Apply the selection (without resolving choices yet)
         let updatedCharacter: Character = character;
 
         if (entityType === "ancestry") {
@@ -209,10 +224,89 @@ export function useCharacterBuilder(): BuilderHookResult {
         return {
           ...current,
           character: updatedCharacter,
+          pendingChoices: effectResult.choices.filter((choice) => choice.scope === "abilityBoost"),
           derivedContext: {
             ...current.derivedContext,
             speeds: { ...updatedCharacter.derived.speeds },
           },
+        };
+      });
+
+      if (nextCharacter) {
+        persistCharacterState(nextCharacter);
+      }
+    },
+    [],
+  );
+
+  const resolveAbilityBoost = useCallback(
+    (choiceId: string, selectedAbilities: AbilityId[]) => {
+      let nextCharacter: Character | null = null;
+
+      setState((current) => {
+        if (!current) {
+          return current;
+        }
+
+        // Find the choice being resolved
+        const choice = current.pendingChoices.find((c) => c.id === choiceId);
+        if (!choice) {
+          console.warn(`Choice ${choiceId} not found in pending choices`);
+          return current;
+        }
+
+        // Validate selection count
+        if (selectedAbilities.length !== choice.count) {
+          console.error(`Invalid selection: expected ${choice.count}, got ${selectedAbilities.length}`);
+          return current;
+        }
+
+        const { character, catalogLookup, derivedContext } = current;
+        const { identity } = character;
+
+        // Determine which entity this choice came from
+        let updatedCharacter: Character = character;
+        const resolution: ChoiceResolution = {
+          choiceId,
+          selectedIds: selectedAbilities,
+        };
+
+        // Re-apply the entity selection with the choice resolution
+        if (choice.id.includes("ancestry:") && identity.ancestryId) {
+          updatedCharacter = engineSelectAncestry(
+            character,
+            identity.ancestryId,
+            catalogLookup,
+            derivedContext,
+            [resolution],
+          );
+        } else if (choice.id.includes("background:") && identity.backgroundId) {
+          updatedCharacter = engineSelectBackground(
+            character,
+            identity.backgroundId,
+            catalogLookup,
+            derivedContext,
+            [resolution],
+          );
+        } else if (choice.id.includes("class:") && identity.classId) {
+          updatedCharacter = engineSelectClass(
+            character,
+            identity.classId,
+            catalogLookup,
+            derivedContext,
+            [resolution],
+          );
+        }
+
+        nextCharacter = updatedCharacter;
+
+        // Remove the resolved choice from pending
+        const remainingChoices = current.pendingChoices.filter((c) => c.id !== choiceId);
+
+        return {
+          ...current,
+          character: updatedCharacter,
+          pendingChoices: remainingChoices,
         };
       });
 
@@ -249,11 +343,13 @@ export function useCharacterBuilder(): BuilderHookResult {
     selectAncestry,
     selectBackground,
     selectClass,
+    resolveAbilityBoost,
   };
 }
 
 function createInitialCharacter(
   catalog: CatalogIndex,
+  catalogLookup: CatalogLookup,
 ): {
   character: Character;
   pendingChoices: ChoiceDefinition[];
@@ -312,11 +408,30 @@ function createInitialCharacter(
     derivedContext,
   });
 
+  // Collect pending choices from initial selections
+  const ancestryChoices = ancestryId ? extractChoicesFromEntity(ancestryId, catalogLookup) : [];
+  const backgroundChoices = backgroundId ? extractChoicesFromEntity(backgroundId, catalogLookup) : [];
+  const classChoices = classId ? extractChoicesFromEntity(classId, catalogLookup) : [];
+
+  const allChoices = [...ancestryChoices, ...backgroundChoices, ...classChoices].filter(
+    (choice) => choice.scope === "abilityBoost",
+  );
+
   return {
     character,
-    pendingChoices: [],
+    pendingChoices: allChoices,
     derivedContext,
   };
+}
+
+function extractChoicesFromEntity(entityId: string, catalogLookup: CatalogLookup): ChoiceDefinition[] {
+  const entry = catalogLookup.byId.get(entityId);
+  if (!entry) {
+    return [];
+  }
+
+  const effectResult = applyEntityEffects(entry.entity);
+  return effectResult.choices;
 }
 
 function findFirstEntityId(catalog: CatalogIndex, type: string): string | undefined {
