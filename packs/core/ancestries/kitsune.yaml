@@ -1,0 +1,28 @@
+id: pf2e.ancestry.kitsune
+type: ancestry
+name: Kitsune
+summary: Shapeshifting fox-like humanoids who walk between worlds with grace and cunning.
+source:
+  id: advanced-players-guide
+  page: 13
+hitPoints: 8
+size: medium
+speed: 25
+boosts:
+  - type: fixed
+    abilities: [CHA]
+    value: 2
+  - type: any
+    count: 1
+    value: 2
+flaws: []
+languages:
+  granted: [Common, Kitsune]
+  choices:
+    count: 1
+    options: [Any]
+features:
+  - ancestryfeat:1
+traits:
+  - kitsune
+  - humanoid

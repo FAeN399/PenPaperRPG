@@ -1,0 +1,22 @@
+id: pf2e.feat.battle-cry
+type: feat
+name: Battle Cry
+summary: You let out a mighty shout to demoralize your foes.
+source:
+  id: core-remaster
+  page: 258
+level: 1
+category: skill
+traits: [General, Skill, Auditory, Emotion, Mental]
+actionCost:
+  type: one
+prerequisites:
+  type: all
+  predicates:
+  - type: hasSkillRank
+    skillId: intimidation
+    rank: trained
+description: |
+  Trigger: You roll initiative.
+
+  You cry out in defiance, throwing yourself into the fray. Attempt to Demoralize a foe within 60 feet that can hear you. If you critically succeed, for 1 minute, any of your allies that can hear you gain a +1 circumstance bonus to attack and damage rolls when attacking that foe.

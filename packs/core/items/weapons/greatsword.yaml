@@ -1,0 +1,19 @@
+id: pf2e.item.greatsword
+type: item
+source:
+  id: core-remaster
+name: Greatsword
+level: 0
+price: 2 gp
+bulk: "2"
+traits: [versatile-P]
+summary: A massive two-handed blade dealing 1d12 slashing damage with impressive reach.
+description: |
+  An enormous sword with a blade up to 6 feet long, requiring both hands to wield effectively. The greatsword is favored by warriors who want maximum damage.
+
+  - Damage: 1d12 slashing
+  - Hands: 2
+  - Group: Sword
+  - Weapon Traits: versatile P
+
+  The greatsword deals the highest base damage of any martial sword and its versatile P trait provides tactical flexibility. However, wielding it requires both hands, preventing you from using a shield.

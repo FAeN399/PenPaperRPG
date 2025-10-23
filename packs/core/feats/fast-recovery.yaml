@@ -1,0 +1,18 @@
+id: pf2e.feat.fast-recovery
+type: feat
+name: Fast Recovery
+summary: Your body quickly bounces back from afflictions.
+source:
+  id: core-remaster
+  page: 264
+level: 1
+category: general
+traits: [General]
+prerequisites:
+  type: all
+  predicates:
+    - type: abilityAtLeast
+      ability: CON
+      score: 14
+description: |
+  Your body quickly bounces back from afflictions. You regain twice as many Hit Points from resting. Each time you succeed at a Fortitude save against an ongoing disease or poison, you reduce its stage by 2, or by 1 against a virulent disease or poison. Each critical success you achieve against an ongoing disease or poison reduces its stage by 3, or by 2 against a virulent disease or poison. In addition, you reduce the severity of the doomed condition by 2 when you rest for a night instead of by 1.

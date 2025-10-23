@@ -1,0 +1,12 @@
+id: pf2e.feat.expeditious-search
+type: feat
+name: Expeditious Search
+summary: You search areas more quickly than normal.
+source:
+  id: core-remaster
+  page: 263
+level: 1
+category: general
+traits: [General]
+description: |
+  You are a thorough searcher, even when in a rush. You can Search areas twice as quickly as normal, reducing the time it takes to Search a 10-foot-by-10-foot area to 15 seconds (or 1.5 seconds if you're legendary in Perception).

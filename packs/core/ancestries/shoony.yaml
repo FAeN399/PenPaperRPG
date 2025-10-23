@@ -1,0 +1,29 @@
+id: pf2e.ancestry.shoony
+type: ancestry
+name: Shoony
+summary: Kindhearted dog-like humanoids who value community and loyalty above all.
+source:
+  id: advanced-players-guide
+  page: 17
+hitPoints: 6
+size: small
+speed: 25
+boosts:
+  - type: fixed
+    abilities: [DEX, CHA]
+    value: 2
+  - type: any
+    count: 1
+    value: 2
+flaws:
+  - CON
+languages:
+  granted: [Common, Shoony]
+  choices:
+    count: 1
+    options: [Any]
+features:
+  - ancestryfeat:1
+traits:
+  - shoony
+  - humanoid

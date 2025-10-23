@@ -1,0 +1,15 @@
+id: pf2e.spell.burning-hands
+type: spell
+name: Burning Hands
+rank: 1
+traditions: [arcane, primal]
+source:
+  id: core-remaster
+traits: [concentrate, fire, manipulate]
+duration: instantaneous
+range: 15-foot cone
+targets: all creatures in area
+savingThrow: basic Reflex
+summary: A gout of flame deals fire damage in a cone.
+description: |
+  Gouts of flame rush from your hands. You deal 2d6 fire damage to creatures in the area.

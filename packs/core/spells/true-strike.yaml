@@ -1,0 +1,14 @@
+id: pf2e.spell.true-strike
+type: spell
+name: True Strike
+rank: 1
+traditions: [arcane, occult]
+source:
+  id: core-remaster
+traits: [concentrate, fortune, manipulate]
+duration: until the end of your turn
+range: self
+targets: you
+summary: Gain a +2 circumstance bonus to your next attack roll.
+description: |
+  A flash of insight into the future ensures your next strike finds its target. The next time you make an attack roll before the end of your turn, roll the attack twice and use the better result. The attack ignores circumstance penalties to the attack roll and any flat check required due to the target being concealed or hidden.

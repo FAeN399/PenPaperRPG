@@ -1,0 +1,12 @@
+id: pf2e.item.flint-and-steel
+type: item
+source:
+  id: core-remaster
+name: Flint and Steel
+level: 0
+price: 5 cp
+bulk: "-"
+traits: []
+summary: Tools for striking sparks to start fires.
+description: |
+  Striking the flint and steel together creates sparks. You can use these sparks to create a fire if you have some tinder or another suitable flammable material handy. It usually takes about 1 minute to light a flame with flint and steel.

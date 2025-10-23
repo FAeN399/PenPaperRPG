@@ -1,0 +1,51 @@
+id: pf2e.class.sorcerer
+type: class
+name: Sorcerer
+source:
+  id: orc-remaster
+  page: 76
+keyAbility: [CHA]
+hitPointsPerLevel: 6
+proficiencies:
+  perception: trained
+  savingThrows:
+    fortitude: trained
+    reflex: trained
+    will: expert
+  skills:
+    trained: 2
+    additionalChoices: []
+  attacks:
+    simple: trained
+    martial: untrained
+    advanced: untrained
+    unarmed: trained
+  defense:
+    unarmored: trained
+    light: untrained
+    medium: untrained
+    heavy: untrained
+    shields: untrained
+  classDC: trained
+  spellcasting:
+    varies: trained
+progression:
+  "1":
+    featureRefs:
+      - classfeat:1
+      - sorcererfeatures:bloodline
+      - sorcererfeatures:sorcerer-spellcasting
+      - sorcererfeatures:spell-repertoire
+    proficiencyBumps:
+      - target: weapons:simple
+        rank: trained
+      - target: spells:bloodline
+        rank: trained
+  "2":
+    featureRefs:
+      - classfeat:1
+      - skillfeat:1
+      - sorcererfeatures:bloodline-skill
+    proficiencyBumps: []
+summary: >
+  You didn't choose to become a spellcaster—you were born one. There's magic in your blood, whether a divinity touched one of your ancestors, a forebear communed with a primal creature, or a powerful occult ritual influenced your line. Self-reflection and study allow you to refine your inherent magical skills and unlock new, more powerful abilities. The power in your blood carries a risk, however, and you constantly balance yourself between potency and the danger of losing control of your power.

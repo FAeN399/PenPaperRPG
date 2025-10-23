@@ -1,0 +1,19 @@
+id: pf2e.feat.raging-intimidation
+type: feat
+name: Raging Intimidation
+summary: Intimidate foes while raging.
+source:
+  id: core-remaster
+  page: 83
+level: 1
+category: class
+traits: [Barbarian]
+prerequisites:
+  type: all
+  predicates:
+    - type: hasClass
+      classId: pf2e.class.barbarian
+description: >
+  Your fury fills your foes with fear. While you are raging, your Demoralize and Scare to Death actions
+  gain the rage trait, allowing you to use them while raging. As soon as you meet the prerequisites for
+  the skill feats Intimidating Glare and Scare to Death, you gain these feats.

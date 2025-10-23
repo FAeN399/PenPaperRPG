@@ -1,0 +1,12 @@
+id: pf2e.spell.vampiric-touch
+type: spell
+name: Vampiric Touch
+rank: 3
+traditions: [arcane, divine, occult]
+source:
+  id: core-remaster
+traits: [death, void]
+targets: 1 living creature
+summary: Your touch deals void damage and heals you.
+description: |
+  Your touch leeches the lifeblood out of a target to empower yourself. Make a melee spell attack against the target. On a success, you deal 6d6 void damage and the target becomes drained 1. On a critical success, the target becomes drained 2 instead. You gain temporary Hit Points equal to half the void damage the target takes (after applying resistances and the like). You lose any remaining temporary Hit Points after 1 minute.

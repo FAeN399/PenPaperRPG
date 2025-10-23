@@ -1,0 +1,12 @@
+id: pf2e.spell.mirror-image
+type: spell
+name: Mirror Image
+rank: 2
+traditions: [arcane, occult]
+source:
+  id: core-remaster
+traits: [illusion, visual]
+duration: 1 minute
+summary: Three illusory duplicates protect you from attacks.
+description: |
+  Three illusory images of you swirl about your space, moving with you and mimicking your actions. Each time you're hit by a Strike, roll 1d4. On a 1, the attack hits you. On a 2, 3, or 4, you're unaffected, and one of your images is destroyed. Once all images are gone, the spell ends.

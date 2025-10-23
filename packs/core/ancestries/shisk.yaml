@@ -1,0 +1,29 @@
+id: pf2e.ancestry.shisk
+type: ancestry
+name: Shisk
+summary: Lizard-like humanoids covered in retractable quills, known for their defensive capabilities.
+rarity: uncommon
+source:
+  id: mwangi-expanse
+  page: 112
+hitPoints: 8
+size: medium
+speed: 30
+boosts:
+  - type: fixed
+    abilities: [INT]
+    value: 2
+  - type: any
+    count: 1
+    value: 2
+flaws: []
+languages:
+  granted: [Common, Mwangi]
+  choices:
+    count: 1
+    options: [Any]
+features:
+  - ancestryfeat:1
+traits:
+  - shisk
+  - humanoid

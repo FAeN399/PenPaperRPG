@@ -1,0 +1,20 @@
+id: pf2e.feat.nimble-dodge
+type: feat
+name: Nimble Dodge
+summary: Gain a bonus to AC against a single attack.
+source:
+  id: core-remaster
+  page: 184
+level: 1
+category: class
+traits: [Rogue]
+actionCost:
+  type: reaction
+trigger: A creature targets you with an attack and you can see the attacker.
+prerequisites:
+  type: all
+  predicates:
+    - type: hasClass
+      classId: pf2e.class.rogue
+description: >
+  You deftly dodge out of the way, gaining a +2 circumstance bonus to AC against the triggering attack.

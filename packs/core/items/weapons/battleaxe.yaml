@@ -1,0 +1,19 @@
+id: pf2e.item.battleaxe
+type: item
+source:
+  id: core-remaster
+name: Battleaxe
+level: 0
+price: 1 gp
+bulk: "1"
+traits: [ sweep ]
+summary: A single-bladed axe dealing 1d8 slashing damage with the sweep trait.
+description: |
+  A sturdy axe with a single blade mounted on a wooden haft. The battleaxe is a reliable martial weapon favored by warriors.
+
+  - Damage: 1d8 slashing
+  - Hands: 1
+  - Group: Axe
+  - Weapon Traits: sweep
+
+  The sweep trait grants you a +1 circumstance bonus to attack rolls against a target if you've already attacked a different target that turn with this weapon, making it excellent for fighting multiple opponents.

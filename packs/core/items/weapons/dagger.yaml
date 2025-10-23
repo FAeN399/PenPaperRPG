@@ -1,0 +1,20 @@
+id: pf2e.item.dagger
+type: item
+source:
+  id: core-remaster
+name: Dagger
+level: 0
+price: 2 sp
+bulk: L
+traits: [ agile, finesse, thrown-10, versatile-S ]
+summary: A small, versatile blade dealing 1d4 piercing damage, agile and
+  finesse, throwable up to 10 feet.
+description: |
+  A lightweight stabbing weapon with a short blade, the dagger is a versatile tool used by rogues, spellcasters, and anyone needing a concealable weapon.
+
+  - Damage: 1d4 piercing
+  - Hands: 1
+  - Group: Knife
+  - Weapon Traits: agile, finesse, thrown 10 ft., versatile S
+
+  The dagger's agile and finesse traits make it ideal for quick, precise strikes, while its thrown trait allows it to be used at range. The versatile S trait lets you deal slashing damage instead of piercing when advantageous.

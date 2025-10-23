@@ -1,0 +1,19 @@
+id: pf2e.feat.orc-sight
+type: feat
+name: Orc Sight
+level: 1
+category: ancestry
+source:
+  id: core-remaster
+  page: 52
+traits:
+- orc
+prerequisites:
+  type: all
+  predicates:
+  - type: hasAncestry
+    ancestryId: pf2e.ancestry.orc
+summary: Your eyes are keen in darkness, granting you darkvision.
+description: Your acute senses allow you to see in the dark. You gain darkvision,
+  allowing you to see in darkness and dim light just as well as you can in bright
+  light. However, in darkness, you see in black and white only.

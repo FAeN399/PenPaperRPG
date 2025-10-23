@@ -1,0 +1,21 @@
+id: pf2e.feat.burrow-elocutionist
+type: feat
+name: Burrow Elocutionist
+level: 1
+category: ancestry
+source:
+  id: core-remaster
+  page: 44
+traits:
+- gnome
+prerequisites:
+  type: all
+  predicates:
+  - type: hasAncestry
+    ancestryId: pf2e.ancestry.gnome
+summary: You can speak with burrowing animals like moles and badgers.
+description: You recognize the chittering of ground creatures as its own peculiar
+  language. You can ask questions of, receive answers from, and use the Diplomacy
+  skill with animals that have a burrow Speed, such as badgers, ground squirrels,
+  moles, and prairie dogs. The GM determines which animals have a burrow Speed and
+  can respond to you.

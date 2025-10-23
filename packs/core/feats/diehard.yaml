@@ -1,0 +1,12 @@
+id: pf2e.feat.diehard
+type: feat
+name: Diehard
+summary: It takes more to kill you than most.
+source:
+  id: core-remaster
+  page: 263
+level: 1
+category: general
+traits: [General]
+description: |
+  It takes more to kill you than most. You die from the dying condition at dying 5, rather than dying 4.

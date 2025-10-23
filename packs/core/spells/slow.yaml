@@ -1,0 +1,23 @@
+id: pf2e.spell.slow
+type: spell
+name: Slow
+rank: 3
+traditions: [arcane, occult, primal]
+source:
+  id: core-remaster
+traits: []
+range: 30 feet
+targets: up to 6 creatures
+duration: 1 minute
+savingThrow: Fortitude
+summary: You slow the targets' flow of time.
+description: |
+  You slow the targets' flow of time. Each target must attempt a Fortitude save.
+
+  Critical Success: The target is unaffected.
+
+  Success: The target is slowed 1 for 1 round.
+
+  Failure: The target is slowed 1 for 1 minute.
+
+  Critical Failure: The target is slowed 2 for 1 minute.

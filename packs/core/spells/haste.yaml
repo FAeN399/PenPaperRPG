@@ -1,0 +1,13 @@
+id: pf2e.spell.haste
+type: spell
+name: Haste
+rank: 3
+traditions: [arcane, occult, primal]
+source:
+  id: core-remaster
+traits: []
+duration: 1 minute
+targets: 1 creature
+summary: Magic empowers the target to act faster.
+description: |
+  Magic empowers the target to act faster. It gains the quickened condition and can use the extra action each round only for Strike and Stride actions.

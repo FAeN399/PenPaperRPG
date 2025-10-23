@@ -1,0 +1,18 @@
+id: pf2e.background.guard
+type: background
+name: Guard
+source:
+  id: core-remaster
+boosts:
+  - type: choice
+    count: 1
+    options: [STR, CHA]
+    value: 2
+  - type: any
+    count: 1
+    value: 2
+skillTraining:
+  - Intimidation
+  - Legal Lore
+feat: pf2e.feat.quick-coercion
+summary: You served as a guard, protecting people or property and maintaining order.

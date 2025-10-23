@@ -1,0 +1,16 @@
+id: pf2e.spell.needle-darts
+type: spell
+name: Needle Darts
+rank: 0
+traditions: [arcane, primal]
+source:
+  id: core-remaster
+traits: [cantrip, concentrate]
+range: 60 feet
+targets: 1 creature
+savingThrow: basic Reflex
+summary: Dozens of needle-sharp shards of glass or crystal fly toward your enemy.
+description: |
+  You fling a large number of tiny darts made of ice or glass. The target takes 3d4 piercing damage and must attempt a basic Reflex save.
+
+  **Heightened (+1)** The damage increases by 1d4.

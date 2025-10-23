@@ -1,0 +1,12 @@
+id: pf2e.item.grappling-hook
+type: item
+source:
+  id: core-remaster
+name: Grappling Hook
+level: 0
+price: 1 sp
+bulk: L
+traits: []
+summary: A multi-pronged hook for climbing.
+description: |
+  You can throw a grappling hook with a rope tied to it to make a climb easier. To anchor a grappling hook, make an attack roll with the secret trait against a DC depending on the target, typically DC 20 for a battleground object and DC 25 for a ledge or structure. On a success, your hook has a firm hold, but on a critical failure, the hook seems like it will hold but actually falls when you're partway up.

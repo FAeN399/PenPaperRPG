@@ -1,0 +1,21 @@
+id: pf2e.feat.goblin-scuttle
+type: feat
+name: Goblin Scuttle
+level: 1
+category: ancestry
+source:
+  id: core-remaster
+  page: 46
+traits:
+- goblin
+actionCost:
+  type: reaction
+prerequisites:
+  type: all
+  predicates:
+  - type: hasAncestry
+    ancestryId: pf2e.ancestry.goblin
+summary: You instinctively scurry away when an ally attacks a foe near you.
+description: You instinctively scurry away when an ally attacks a foe near you. You
+  take a Step when an ally hits and damages a foe that is within your melee reach.
+  This Step doesn't trigger reactions that are normally triggered by movement.

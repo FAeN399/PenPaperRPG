@@ -1,0 +1,20 @@
+id: pf2e.feat.goblin-song
+type: feat
+name: Goblin Song
+level: 1
+category: ancestry
+source:
+  id: core-remaster
+  page: 46
+traits:
+  - goblin
+actionCost:
+  type: one
+prerequisites:
+  type: all
+  predicates:
+    - type: hasAncestry
+      ancestryId: pf2e.ancestry.goblin
+summary: You sing annoying songs to distract your enemies.
+description: |
+  You sing annoying goblin songs, distracting your foes with silly and repetitive lyrics. Attempt a Performance check against the Will DC of a single enemy within 30 feet. This has the usual traits and restrictions of a Performance check. Critical Success: The target takes a -1 status penalty to Perception checks and Will saves for 1 minute. Success: The target takes a -1 status penalty to Perception checks and Will saves for 1 round. Critical Failure: The target is temporarily immune to attempts to use Goblin Song for 1 hour.

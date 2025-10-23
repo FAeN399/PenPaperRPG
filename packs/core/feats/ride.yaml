@@ -1,0 +1,12 @@
+id: pf2e.feat.ride
+type: feat
+name: Ride
+summary: You are skilled at riding mounts.
+source:
+  id: core-remaster
+  page: 266
+level: 1
+category: general
+traits: [General]
+description: |
+  You are skilled at riding mounts. You become trained in Nature and you gain the Mounted Combat skill feat. If you are already trained in Nature, you instead become trained in a skill of your choice. If you have the Cavalier or similar dedication that makes you trained or better in Nature, you skip gaining the trained proficiency and still gain the Mounted Combat skill feat.

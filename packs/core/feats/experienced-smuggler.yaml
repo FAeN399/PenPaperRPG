@@ -1,0 +1,27 @@
+id: pf2e.feat.experienced-smuggler
+type: feat
+name: Experienced Smuggler
+summary: Use Stealth to hide and conceal small objects on your person.
+source:
+  id: core-remaster
+level: 1
+category: skill
+traits:
+- skill
+- general
+prerequisites:
+  type: all
+  predicates:
+  - type: hasSkillRank
+    skillId: stealth
+    rank: trained
+description: 'You often smuggle things past the authorities. When the GM rolls your
+  Stealth check to see if a passive observer notices a small item you have concealed,
+  the GM uses the number rolled or 10 + your Stealth modifier, whichever is higher,
+  as the result of your die roll, adding it to your Stealth modifier to determine
+  your Stealth check result. If you''re a master in Stealth, the GM uses the number
+  rolled or 15 + your Stealth modifier, whichever is higher. If you''re legendary
+  in Stealth, you automatically succeed at hiding a small concealed item from passive
+  observers.
+
+  '

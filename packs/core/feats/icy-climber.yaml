@@ -1,0 +1,18 @@
+id: pf2e.feat.icy-climber
+type: feat
+name: Icy Climber
+summary: You climb icy surfaces with ease.
+source:
+  id: core-remaster
+  page: 265
+level: 1
+category: skill
+traits: [General, Skill]
+prerequisites:
+  type: all
+  predicates:
+  - type: hasSkillRank
+    skillId: athletics
+    rank: trained
+description: |
+  Your technique lets you climb icy surfaces. You aren't off-guard when Climbing on ice, and you aren't affected by difficult terrain when Climbing on ice.

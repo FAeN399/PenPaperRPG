@@ -1,0 +1,18 @@
+id: pf2e.item.climbing-bolt
+type: item
+source:
+  id: core-remaster
+name: Climbing Bolt
+level: 3
+price: 10 gp
+bulk: L
+traits: [magical, consumable, transmutation]
+summary: A bolt that affixes itself to a surface and creates a rope.
+description: |
+  This steel bolt is etched with transmutation runes and has a thick eyelet at its base.
+
+  Usage: held in 1 hand
+  Bulk: L
+  Activate: Interact
+
+  You toss the bolt at a surface within 60 feet. It flies directly to the target location and affixes itself with a loud click. It can support up to 4,000 pounds of weight. Once the bolt is affixed, a 60-foot-long rope appears, hanging from the bolt's eyelet. The rope is the same strength and has the same statistics as a typical adventuring rope. Both the bolt and rope last for 8 hours, after which they disappear.

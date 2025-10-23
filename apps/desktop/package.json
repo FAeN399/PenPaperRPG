@@ -5,7 +5,7 @@
   "type": "module",
   "main": "dist/main.js",
   "scripts": {
-    "dev": "tsx watch src/main.ts",
+    "dev": "concurrently -k -n tsc,electron -c yellow,magenta \"tsc -p tsconfig.json --watch\" \"wait-on tcp:3000 && nodemon -q -w dist -e js --exec electron .\"",
     "build": "tsc -p tsconfig.json",
     "lint": "eslint src --ext .ts",
     "typecheck": "tsc --noEmit"
@@ -15,6 +15,9 @@
     "electron-store": "^11.0.0"
   },
   "devDependencies": {
-    "electron-builder": "^24.13.3"
+    "electron-builder": "^24.13.3",
+    "concurrently": "^9.1.0",
+    "wait-on": "^8.0.2",
+    "nodemon": "^3.1.7"
   }
 }

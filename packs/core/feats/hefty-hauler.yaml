@@ -1,0 +1,12 @@
+id: pf2e.feat.hefty-hauler
+type: feat
+name: Hefty Hauler
+summary: You can carry more weight than others.
+source:
+  id: core-remaster
+  page: 264
+level: 1
+category: general
+traits: [General]
+description: |
+  You can carry more than your frame implies. Increase your maximum and encumbered Bulk limits by 2.

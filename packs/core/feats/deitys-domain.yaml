@@ -1,0 +1,20 @@
+id: pf2e.feat.deitys-domain
+type: feat
+name: Deity's Domain
+summary: Gain a domain spell from your deity.
+source:
+  id: core-remaster
+  page: 106
+level: 1
+category: class
+traits: [Champion]
+prerequisites:
+  type: all
+  predicates:
+    - type: hasClass
+      classId: pf2e.class.champion
+description: >
+  You embody an aspect of your deity. Choose one of your deity's domains. You gain the domain's initial domain
+  spell as a devotion spell. If you don't already have one, you gain a focus pool of 1 Focus Point, which you
+  can Refocus by praying to your deity or performing service toward their causes. You are trained in the skill
+  associated with that domain.

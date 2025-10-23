@@ -409,6 +409,18 @@ export function buildCatalogLookup(entries: CatalogIndexEntry[]): CatalogLookup 
   return { byId };
 }
 
+// Re-export effect system from effects module
+export {
+  applyEffect,
+  applyEntityEffects,
+  resolveChoice,
+  selectAncestry,
+  selectBackground,
+  selectClass,
+  createEffectApplicationResult,
+  type EffectApplicationResult,
+} from "./effects";
+
 
 
 

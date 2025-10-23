@@ -1,0 +1,12 @@
+id: pf2e.feat.student-of-the-canon
+type: feat
+name: Student of the Canon
+summary: You've researched many topics and can remember helpful information.
+source:
+  id: core-remaster
+  page: 267
+level: 1
+category: general
+traits: [General]
+description: |
+  You've spent considerable time studying a specific religious or philosophical text and can invoke its teachings in everyday life. Choose a text. You gain a +1 circumstance bonus to Diplomacy, Lore, and Society checks to interact with people who also study the same text. If you critically fail a check to Recall Knowledge about the subject matter of your chosen text, you get a failure instead. Finally, you can attempt to Recall Knowledge about that text using Society or your Lore skill for the text's origin.

@@ -1,0 +1,46 @@
+id: pf2e.class.ranger
+type: class
+name: Ranger
+source:
+  id: orc-remaster
+  page: 90
+keyAbility: [STR, DEX]
+hitPointsPerLevel: 10
+proficiencies:
+  perception: expert
+  savingThrows:
+    fortitude: expert
+    reflex: expert
+    will: trained
+  skills:
+    trained: 4
+    additionalChoices: []
+  attacks:
+    simple: trained
+    martial: trained
+    advanced: untrained
+    unarmed: trained
+  defense:
+    unarmored: trained
+    light: trained
+    medium: trained
+    heavy: untrained
+    shields: trained
+  classDC: trained
+progression:
+  "1":
+    featureRefs:
+      - classfeat:1
+      - rangerfeatures:hunt-prey
+      - rangerfeatures:hunter-edge
+    proficiencyBumps:
+      - target: skills:survival
+        rank: expert
+      - target: skills:nature
+        rank: trained
+  "2":
+    featureRefs:
+      - classfeat:1
+      - skillfeat:1
+    proficiencyBumps: []
+summary: Master tracker and survivalist who excels at hunting down prey.

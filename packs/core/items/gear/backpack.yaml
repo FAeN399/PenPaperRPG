@@ -1,0 +1,12 @@
+id: pf2e.item.backpack
+type: item
+source:
+  id: core-remaster
+name: Backpack
+level: 0
+price: 1 sp
+bulk: L
+traits: []
+summary: A sturdy leather pack for carrying equipment.
+description: |
+  A backpack holds up to 4 Bulk of items. The first 2 Bulk of these items don't count against your Bulk limits.

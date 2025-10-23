@@ -1,0 +1,16 @@
+id: pf2e.item.ring-of-sustenance
+type: item
+source:
+  id: core-remaster
+name: Ring of Sustenance
+level: 3
+price: 50 gp
+bulk: "-"
+traits: [magical, conjuration, invested]
+summary: A ring that reduces your need for food and sleep.
+description: |
+  This polished wooden ring constantly refreshes your body and mind. You don't need to eat or drink while wearing this ring.
+
+  Usage: worn ring
+
+  You don't need to eat or drink while wearing this ring. You only need to rest for 2 hours per day to gain the benefits of 8 hours of rest. This doesn't allow you to prepare more than once per day or regain your resources more quickly. You still need to spend 10 minutes winding down before sleeping, and if you rest any longer than 2 hours, you gain the normal benefits of resting for that longer period.

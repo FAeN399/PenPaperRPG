@@ -1,0 +1,57 @@
+id: pf2e.class.druid
+type: class
+name: Druid
+source:
+  id: orc-remaster
+  page: 74
+keyAbility: [WIS]
+hitPointsPerLevel: 8
+proficiencies:
+  perception: trained
+  savingThrows:
+    fortitude: trained
+    reflex: trained
+    will: expert
+  skills:
+    trained: 2
+    additionalChoices: []
+  attacks:
+    simple: trained
+    martial: untrained
+    advanced: untrained
+    unarmed: trained
+  defense:
+    unarmored: trained
+    light: trained
+    medium: trained
+    heavy: untrained
+    shields: untrained
+  classDC: trained
+  spellcasting:
+    primal: trained
+progression:
+  "1":
+    featureRefs:
+      - classfeat:1
+      - druidfeatures:primal-spellcasting
+      - druidfeatures:druidic-language
+      - druidfeatures:druidic-order
+      - druidfeatures:shield-block
+      - druidfeatures:wild-empathy
+    proficiencyBumps:
+      - target: weapons:simple
+        rank: trained
+      - target: armor:light
+        rank: trained
+      - target: armor:medium
+        rank: trained
+      - target: spells:primal
+        rank: trained
+  "2":
+    featureRefs:
+      - classfeat:1
+      - skillfeat:1
+      - druidfeatures:order-ability
+    proficiencyBumps: []
+summary: >
+  The power of nature is impossible to resist. It can bring ruin to the stoutest fortress in minutes, reducing even the mightiest works to rubble, burning them to ash, burying them beneath an avalanche of snow, or drowning them beneath the waves. It can provide endless bounty and breathtaking splendor to those who respect it—and an agonizing death to those who take it too lightly. You are one of those who hear nature's call. You stand in awe of the majesty of its power and give yourself over to its service.

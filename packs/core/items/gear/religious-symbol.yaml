@@ -1,0 +1,12 @@
+id: pf2e.item.religious-symbol
+type: item
+source:
+  id: core-remaster
+name: Religious Symbol (Wooden)
+level: 0
+price: 1 sp
+bulk: L
+traits: []
+summary: A holy symbol representing a deity or faith.
+description: |
+  A religious symbol is a wooden carving or simple pendant representing a deity or religious philosophy. Many divine spellcasters wear their religious symbol visibly to show their devotion. A religious symbol is required as a focus for some divine spells.

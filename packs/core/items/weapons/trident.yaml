@@ -1,0 +1,19 @@
+id: pf2e.item.trident
+type: item
+source:
+  id: core-remaster
+name: Trident
+level: 0
+price: 1 gp
+bulk: "1"
+traits: [thrown-20]
+summary: A three-pronged spear dealing 1d8 piercing damage, throwable up to 20 feet.
+description: |
+  A long weapon with three prongs at the tip, traditionally associated with fishing and sea deities. The trident is similar to a spear but deadlier.
+
+  - Damage: 1d8 piercing
+  - Hands: 1
+  - Group: Spear
+  - Weapon Traits: thrown 20 ft.
+
+  The trident deals more damage than a simple spear and maintains the same throwing range, making it a superior choice for those proficient in martial weapons. It's particularly favored by aquatic fighters.

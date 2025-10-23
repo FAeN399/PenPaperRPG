@@ -1,0 +1,12 @@
+id: pf2e.item.rations
+type: item
+source:
+  id: core-remaster
+name: Rations (1 week)
+level: 0
+price: 4 sp
+bulk: L
+traits: []
+summary: A week's worth of dried and preserved food.
+description: |
+  Rations consist of dried foods that can survive long periods of time without spoiling. This purchase includes enough food for one person for 1 week.

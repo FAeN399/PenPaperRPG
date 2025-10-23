@@ -1,0 +1,16 @@
+id: pf2e.item.potency-rune-weapon
+type: item
+source:
+  id: core-remaster
+name: Potency Rune (+1 Weapon)
+level: 2
+price: 35 gp
+bulk: "-"
+traits: [magical, evocation]
+summary: A fundamental rune that grants a +1 item bonus to attack rolls.
+description: |
+  Magical enhancements make this weapon strike true. A potency rune is what makes a weapon a magic weapon or armor magic armor.
+
+  Usage: etched onto a weapon
+
+  An item can have only one fundamental rune of each type, though it can have any number of property runes. A +1 weapon potency rune gives you a +1 item bonus to attack rolls with the weapon and increases the weapon's number of damage dice by one for all your Strikes with that weapon.

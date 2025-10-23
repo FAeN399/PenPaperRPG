@@ -1,0 +1,12 @@
+id: pf2e.spell.locate
+type: spell
+name: Locate
+rank: 3
+traditions: [arcane, divine, occult]
+source:
+  id: core-remaster
+traits: [detection]
+duration: sustained
+summary: You learn the direction to a specific object or creature.
+description: |
+  You learn the direction to a specific object or creature you name or otherwise describe. You must have observed your target with your own senses or with magic, and you must specify the target in the same detail that you know it. The spell points in the direction of the target's location, though it provides no information about how far away the target is. Locate can find a target only within 500 feet of you. If the target moves, the effect updates as normal. If the target is beyond 500 feet or in a location not on the same plane, the spell fails.

@@ -1,0 +1,20 @@
+id: pf2e.spell.fear
+type: spell
+name: Fear
+rank: 1
+traditions: [arcane, divine, occult, primal]
+source:
+  id: core-remaster
+traits: [concentrate, emotion, fear, manipulate, mental]
+duration: varies
+range: 30 feet
+targets: 1 creature
+savingThrow: Will
+summary: Frighten a single creature.
+description: |
+  You plant fear in the target; it must attempt a Will save.
+
+  Critical Success: The target is unaffected.
+  Success: The target is frightened 1.
+  Failure: The target is frightened 2.
+  Critical Failure: The target is frightened 3 and fleeing for 1 round.

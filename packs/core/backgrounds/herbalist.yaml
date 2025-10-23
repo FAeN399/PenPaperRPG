@@ -1,0 +1,18 @@
+id: pf2e.background.herbalist
+type: background
+name: Herbalist
+source:
+  id: core-remaster
+boosts:
+  - type: choice
+    count: 1
+    options: [CON, WIS]
+    value: 2
+  - type: any
+    count: 1
+    value: 2
+skillTraining:
+  - Nature
+  - Herbalism Lore
+feat: pf2e.feat.natural-medicine
+summary: You studied plants and their properties, learning to craft remedies from natural ingredients.

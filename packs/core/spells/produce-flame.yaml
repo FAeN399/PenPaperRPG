@@ -1,0 +1,15 @@
+id: pf2e.spell.produce-flame
+type: spell
+name: Produce Flame
+rank: 0
+traditions: [arcane, primal]
+source:
+  id: core-remaster
+traits: [attack, cantrip, concentrate, fire]
+range: 30 feet
+targets: 1 creature
+summary: A flickering flame in your hand that can be hurled as a ranged attack.
+description: |
+  A small ball of flame appears in the palm of your hand, and you lash out with it. Make a ranged spell attack roll against your target's AC. This is normally a ranged attack, but you can also make a melee attack if a creature is within your reach. On a success, you deal 1d4 fire damage plus your spellcasting ability modifier. On a critical success, the target takes double damage plus 1d4 persistent fire damage.
+
+  **Heightened (+1)** The initial damage increases by 1d4, and the persistent fire damage on a critical success increases by 1d4.

@@ -1,0 +1,22 @@
+id: pf2e.item.padded-armor
+type: item
+source:
+  id: core-remaster
+name: Padded Armor
+level: 0
+price: 2 sp
+bulk: L
+traits: [comfort]
+summary: Quilted layers of cloth provide basic protection while remaining light and comfortable.
+description: |
+  This suit of armor consists of heavy, quilted layers of cloth with some light padding. It provides modest protection while remaining relatively lightweight and comfortable to wear.
+
+  - AC Bonus: +1
+  - Dex Cap: +3
+  - Check Penalty: 0
+  - Speed Penalty: 0 ft
+  - Strength: 10
+  - Group: Cloth
+  - Armor Traits: comfort
+
+  Padded armor is made of quilted layers of cloth and batting. The comfort trait means this armor is so comfortable you can rest normally while wearing it.

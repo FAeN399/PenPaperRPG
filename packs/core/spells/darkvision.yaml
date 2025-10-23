@@ -1,0 +1,13 @@
+id: pf2e.spell.darkvision
+type: spell
+name: Darkvision
+rank: 2
+traditions: [arcane, divine, occult, primal]
+source:
+  id: core-remaster
+traits: []
+duration: 1 hour
+targets: 1 creature
+summary: You grant a creature darkvision.
+description: |
+  You grant the target the ability to see in darkness. It gains darkvision, which allows it to see in dim light as if it were bright light and in darkness as if it were dim light.

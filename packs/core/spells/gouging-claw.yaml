@@ -1,0 +1,19 @@
+id: pf2e.spell.gouging-claw
+type: spell
+name: Gouging Claw
+rank: 0
+traditions: [arcane, primal]
+source:
+  id: core-remaster
+traits: [attack, cantrip, concentrate, morph]
+duration: 1 minute
+summary: Transform your hand into a deadly claw and attack with it.
+description: |
+  You temporarily morph your limb into a clawed appendage. Make a melee spell attack roll against your target's AC. Your claw is in the brawling weapon group and has the agile and finesse traits.
+
+  **Critical Success** The target takes 2d6 slashing damage and takes a –5-foot status penalty to its Speed for 1 round.
+  **Success** The target takes 1d6 slashing damage.
+
+  The spell ends when you use an action that doesn't have the attack trait. If you Cast this Spell again, any previous casting automatically ends.
+
+  **Heightened (+1)** The damage increases by 1d6 on a success (or 2d6 on a critical success).

@@ -1,0 +1,12 @@
+id: pf2e.feat.incredible-initiative
+type: feat
+name: Incredible Initiative
+summary: You react more quickly than others can.
+source:
+  id: core-remaster
+  page: 264
+level: 1
+category: general
+traits: [General]
+description: |
+  You react more quickly than others can. You gain a +2 circumstance bonus to initiative rolls.

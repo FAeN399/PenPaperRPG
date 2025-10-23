@@ -1,0 +1,12 @@
+id: pf2e.item.lantern
+type: item
+source:
+  id: core-remaster
+name: Lantern (Hooded)
+level: 0
+price: 7 sp
+bulk: L
+traits: []
+summary: A metal lantern with shutters to control light.
+description: |
+  A lantern sheds bright light in a 30-foot radius (and dim light to the next 60 feet). It can be shuttered to emit only dim light in a 10-foot radius. A lantern burns for 6 hours on a pint (1/2 liter) of oil.

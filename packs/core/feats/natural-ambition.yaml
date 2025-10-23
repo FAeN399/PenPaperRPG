@@ -1,0 +1,21 @@
+id: pf2e.feat.natural-ambition
+type: feat
+name: Natural Ambition
+level: 1
+category: ancestry
+source:
+  id: core-remaster
+  page: 56
+traits:
+- human
+prerequisites:
+  type: all
+  predicates:
+  - type: hasAncestry
+    ancestryId: pf2e.ancestry.human
+summary: You were raised to strive for greatness, allowing you to gain a 1st-level
+  class feat.
+description: You were raised to be ambitious and always reach for the stars, leading
+  you to progress quickly in your chosen field. You gain a 1st-level class feat for
+  your class. You must meet the prerequisites, but you can select the feat later in
+  the character creation process to determine which prerequisites you meet.

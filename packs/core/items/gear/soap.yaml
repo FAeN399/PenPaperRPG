@@ -1,0 +1,12 @@
+id: pf2e.item.soap
+type: item
+source:
+  id: core-remaster
+name: Soap
+level: 0
+price: 2 cp
+bulk: "-"
+traits: []
+summary: A bar of cleaning soap.
+description: |
+  A bar of soap can be used for personal hygiene and cleaning. It's particularly useful for removing grime, blood, and other substances that might make you more noticeable or uncomfortable.

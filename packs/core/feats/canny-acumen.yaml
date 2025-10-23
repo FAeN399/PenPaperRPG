@@ -1,0 +1,14 @@
+id: pf2e.feat.canny-acumen
+type: feat
+name: Canny Acumen
+summary: Your avoidance or observation is beyond the ken of most in your profession.
+source:
+  id: core-remaster
+  page: 262
+level: 1
+category: general
+traits: [General]
+description: |
+  Your avoidance or observation is beyond the ken of most in your profession. Choose Fortitude saves, Reflex saves, Will saves, or Perception. You become trained in your choice. If you are already trained in your choice, you instead become expert. At 17th level, if you selected Perception or if you are already an expert in the chosen save, you instead become a master in your choice.
+
+  **Special** You can select this feat up to four times, choosing a different option each time.

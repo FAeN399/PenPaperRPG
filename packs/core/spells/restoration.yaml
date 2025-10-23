@@ -1,0 +1,16 @@
+id: pf2e.spell.restoration
+type: spell
+name: Restoration
+rank: 2
+traditions: [divine, occult, primal]
+source:
+  id: core-remaster
+traits: [healing]
+targets: 1 creature
+summary: Restorative magic counters the effects of toxins or conditions.
+description: |
+  Restorative magic counters the effects of toxins or conditions that prevent a creature from functioning at its best. When you cast restoration, choose to either reduce a condition or lessen the effect of a toxin. A creature can benefit from only one restoration spell each day, and it can't benefit from restoration more than once to reduce the stage of the same exposure to a given toxin.
+
+  Reduce a Condition: Reduce the value of the target's clumsy, enfeebled, or stupefied condition by 2. You can instead reduce two of the listed conditions by 1 each.
+
+  Lessen a Toxin: Reduce the stage of one toxin the target suffers from by one stage. This can't reduce the stage below stage 1 or cure the affliction.

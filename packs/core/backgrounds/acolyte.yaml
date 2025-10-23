@@ -1,0 +1,19 @@
+id: pf2e.background.acolyte
+type: background
+name: Acolyte
+source:
+  id: orc-remaster
+  page: 50
+boosts:
+  - type: choice
+    count: 1
+    options: [INT, WIS]
+    value: 2
+  - type: any
+    count: 1
+    value: 2
+skillTraining:
+  - Religion
+  - Scribing Lore
+feat: pf2e.feat.student-of-the-canon
+summary: You served at a temple, learning the traditions and secrets of your faith.

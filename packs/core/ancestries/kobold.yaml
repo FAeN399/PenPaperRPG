@@ -1,0 +1,45 @@
+id: pf2e.ancestry.kobold
+type: ancestry
+name: Kobold
+summary: Small draconic humanoids who compensate for their physical fragility with cunning traps and fierce loyalty.
+description: |
+  Kobolds are small, reptilian humanoids who claim a strong connection to dragons. They work well together, dedicating themselves to their tribes and often serving powerful creatures they revere as worthy leaders. Despite their small stature and fragile bodies, kobolds are incredibly resourceful and dangerous when coordinating their efforts.
+
+  **Physical Description**: Kobolds are small reptilian humanoids with scaled skin that ranges from rust-red to deep cobalt blue. They have pointed ears, draconic snouts, and thin tails. Most stand between 3 and 4 feet tall, with lean, wiry builds.
+
+  **Society**: Kobold society is highly communal and hierarchical. They organize themselves into tribes that often serve dragons or other powerful creatures. Kobolds excel at trap-making, ambush tactics, and working together to overcome challenges that would defeat them individually.
+
+  **Alignment and Religion**: Kobolds tend toward lawful alignments due to their structured societies. Many worship dragons or dragon gods, particularly Apsu and Dahak, depending on their tribe's philosophy.
+
+  **Adventurers**: Kobold adventurers often leave their tribes to prove themselves worthy, seek knowledge to benefit their clan, or flee persecution. They make excellent rogues, alchemists, and sorcerers, using their cunning to overcome their physical limitations.
+
+  **Names**: Kobold names are sharp and often include hard consonants. Examples include Draakku, Irnk, Korka, Maksa, Tinzo, Ukaza, Yassa, and Zekka.
+source:
+  id: orc-remaster
+  page: 42
+rarity: uncommon
+hitPoints: 6
+size: small
+speed: 25
+boosts:
+  - type: fixed
+    abilities: [DEX, CHA]
+    value: 2
+  - type: any
+    count: 1
+    value: 2
+flaws:
+  - CON
+languages:
+  granted: [Common, Draconic]
+  choices:
+    count: 0
+    options: []
+features:
+  - ancestryfeat:1
+traits:
+  - kobold
+  - humanoid
+effects:
+  - kind: grantSense
+    senseId: darkvision

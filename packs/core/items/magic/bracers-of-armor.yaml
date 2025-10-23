@@ -1,0 +1,17 @@
+id: pf2e.item.bracers-of-armor
+type: item
+source:
+  id: core-remaster
+name: Bracers of Armor
+level: 5
+price: 140 gp
+bulk: L
+traits: [magical, abjuration, invested]
+summary: Bracers that grant a +1 item bonus to AC when unarmored.
+description: |
+  These stiff leather bracers are embossed with mystical symbols and grant you power to deflect blows.
+
+  Usage: worn bracers
+  Bulk: L
+
+  These bracers grant you a +1 item bonus to AC if you're not wearing armor. This bonus increases by 1 for every 5 levels (to a maximum of +3 at 15th level). If you're wearing armor, you gain no benefit from the bracers, but you can still etch fundamental and property runes onto them as normal for bracers.

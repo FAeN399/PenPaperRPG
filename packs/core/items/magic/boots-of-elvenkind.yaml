@@ -1,0 +1,17 @@
+id: pf2e.item.boots-of-elvenkind
+type: item
+source:
+  id: core-remaster
+name: Boots of Elvenkind
+level: 5
+price: 145 gp
+bulk: L
+traits: [magical, transmutation, invested]
+summary: Soft boots that muffle your footsteps.
+description: |
+  These soft boots are made of supple leather and appear to have been crafted by elven artisans. They conform perfectly to your feet and muffle your footsteps.
+
+  Usage: worn shoes
+  Bulk: L
+
+  These boots give you a +1 item bonus to Stealth checks and you can move at full Speed while using the Avoid Notice exploration activity.

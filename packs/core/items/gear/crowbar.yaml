@@ -1,0 +1,12 @@
+id: pf2e.item.crowbar
+type: item
+source:
+  id: core-remaster
+name: Crowbar
+level: 0
+price: 5 sp
+bulk: L
+traits: []
+summary: A metal bar for prying and forcing open doors and containers.
+description: |
+  When Forcing Open an object that doesn't have an easy grip, a crowbar makes it easier to gain the necessary leverage. Without a crowbar, prying something open takes a –2 item penalty to the Athletics check to Force Open (unless a GM allows you to use a similar tool).

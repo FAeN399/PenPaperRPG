@@ -1,0 +1,13 @@
+id: pf2e.spell.heroism
+type: spell
+name: Heroism
+rank: 3
+traditions: [divine, occult]
+source:
+  id: core-remaster
+traits: [mental]
+duration: 10 minutes
+targets: 1 creature
+summary: You inspire the target with heroic confidence.
+description: |
+  You tap into the target's inner heroism, granting it a +1 status bonus to attack rolls, Perception checks, saving throws, and skill checks.

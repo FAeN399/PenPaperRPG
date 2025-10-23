@@ -1,0 +1,18 @@
+id: pf2e.spell.ray-of-frost
+type: spell
+name: Ray of Frost
+rank: 0
+traditions: [arcane, primal]
+source:
+  id: core-remaster
+traits: [attack, cantrip, cold, concentrate]
+range: 120 feet
+targets: 1 creature
+summary: Blast a creature with cold, dealing damage and slowing it down.
+description: |
+  You blast an icy ray. Make a ranged spell attack roll.
+
+  **Critical Success** The target takes 2d4 cold damage and takes a –10-foot status penalty to its Speeds for 1 round.
+  **Success** The target takes 1d4 cold damage and takes a –5-foot status penalty to its Speeds for 1 round.
+
+  **Heightened (+1)** The damage on a success increases by 1d4, and the damage on a critical success increases by 2d4.

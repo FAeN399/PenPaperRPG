@@ -1,0 +1,22 @@
+id: pf2e.item.breastplate
+type: item
+source:
+  id: core-remaster
+name: Breastplate
+level: 0
+price: 8 gp
+bulk: "2"
+traits: []
+summary: Metal chest plate providing heavy armor protection for vital areas.
+description: |
+  This heavy metal chest piece is worn with leather straps and padding underneath. Though it protects only the torso, it provides substantial protection to vital areas while allowing good arm mobility.
+
+  - AC Bonus: +4
+  - Dex Cap: +1
+  - Check Penalty: -2
+  - Speed Penalty: -5 ft
+  - Strength: 16
+  - Group: Plate
+  - Armor Traits: —
+
+  A breastplate is a single piece of sculpted metal that covers the torso. It can be worn with other armor pieces like greaves and vambraces to provide additional protection.

@@ -1,0 +1,14 @@
+id: pf2e.spell.longstrider
+type: spell
+name: Longstrider
+rank: 1
+traditions: [arcane, primal]
+source:
+  id: core-remaster
+traits: [concentrate, manipulate]
+duration: 1 hour
+range: touch
+targets: 1 creature
+summary: Increase a creature's Speed by 10 feet.
+description: |
+  You lengthen your stride beyond what should be possible. The target's Speed increases by 10 feet.

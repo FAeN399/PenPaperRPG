@@ -1,0 +1,44 @@
+id: pf2e.ancestry.tengu
+type: ancestry
+name: Tengu
+summary: Crow-like avian humanoids known for their curiosity, swordplay, and adaptability to any situation.
+description: |
+  Tengu are a gregarious and resourceful people with avian features who originated from a mysterious distant land. They are known for their natural curiosity, collecting habits, and surprising adaptability. Tengu have integrated themselves into many societies across the world while maintaining their unique cultural identity.
+
+  **Physical Description**: Tengu are medium-sized humanoids with distinctly corvid features, including beaks, talons for hands and feet, and feathers covering their bodies. Their plumage ranges from glossy black to browns, grays, and even occasional bright colors. They stand between 5 and 6 feet tall with slight but athletic builds.
+
+  **Society**: Tengu society values individuality, curiosity, and the sharing of stories and knowledge. They are natural wanderers and collectors, often accumulating odd trinkets and bits of lore. Traditional tengu communities encourage their members to travel widely and return with tales of their adventures.
+
+  **Alignment and Religion**: Tengu lean toward chaotic alignments, valuing freedom and adaptability. They worship a variety of deities but show particular reverence to Hei Feng, a god of the sea, storms, and wanderers, as well as gods of travel, knowledge, and freedom.
+
+  **Adventurers**: Tengu take to adventuring naturally, driven by curiosity and wanderlust. They make excellent rogues, fighters, and bards, often excelling at swordplay and storytelling. Their adaptability allows them to fit into most adventuring roles.
+
+  **Names**: Tengu names often have a sharp, clicking quality reflecting their beaked speech. Examples include Arhan, Chuko, Gragchu, Kachka, Kunkoro, Maksuko, Nakai, Rei, Shipori, Tak, and Zanko.
+source:
+  id: advanced-players-guide
+  page: 26
+rarity: uncommon
+hitPoints: 6
+size: medium
+speed: 30
+boosts:
+  - type: fixed
+    abilities: [DEX]
+    value: 2
+  - type: any
+    count: 2
+    value: 2
+flaws: []
+languages:
+  granted: [Common, Tengu]
+  choices:
+    count: 1
+    options: [Any]
+features:
+  - ancestryfeat:1
+traits:
+  - tengu
+  - humanoid
+effects:
+  - kind: grantSense
+    senseId: low-light-vision

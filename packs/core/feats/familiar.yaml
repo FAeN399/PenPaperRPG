@@ -1,0 +1,19 @@
+id: pf2e.feat.familiar
+type: feat
+name: Familiar
+summary: Gain a familiar to assist you with magic.
+source:
+  id: core-remaster
+  page: 192
+level: 1
+category: class
+traits: [Sorcerer]
+prerequisites:
+  type: all
+  predicates:
+    - type: hasClass
+      classId: pf2e.class.sorcerer
+description: >
+  You make a pact with a creature that serves you and assists your spellcasting. You gain a familiar, an animal
+  that aids you in your magical studies. The type of animal is up to you, but most sorcerers choose one that
+  matches their bloodline. Your familiar acts on your turn and can use 2 actions during your turn.

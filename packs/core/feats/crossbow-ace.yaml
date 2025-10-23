@@ -1,0 +1,22 @@
+id: pf2e.feat.crossbow-ace
+type: feat
+name: Crossbow Ace
+summary: You reload crossbows with remarkable speed.
+source:
+  id: core-remaster
+  page: 168
+level: 1
+category: class
+traits: [Ranger]
+prerequisites:
+  type: all
+  predicates:
+    - type: hasClass
+      classId: pf2e.class.ranger
+description: >
+  You are a skilled crossbow user, able to load and fire with incredible speed. You can use a hand crossbow
+  or light crossbow with one hand, even if it doesn't have the free-hand trait. When you're wielding a
+  crossbow and use Hunt Prey or use Interact to reload your crossbow, you gain a +2 circumstance bonus to
+  the damage roll on your next Strike with that crossbow. If the crossbow you're wielding has the backstabber
+  trait and you have the precision ranger edge, this also applies to your additional precision damage from
+  your edge.

@@ -1,0 +1,17 @@
+id: pf2e.spell.ray-of-enfeeblement
+type: spell
+name: Ray of Enfeeblement
+rank: 1
+traditions: [arcane, divine, occult]
+source:
+  id: core-remaster
+traits: [attack, concentrate, manipulate]
+duration: 1 minute
+range: 30 feet
+targets: 1 creature
+summary: Enfeeble a creature to reduce its physical power.
+description: |
+  A ray of sickly energy weakens the target. Make a ranged spell attack against the target. On a hit, the target becomes enfeebled 2.
+
+  Critical Success: The target is enfeebled 3.
+  Success: The target is enfeebled 2.

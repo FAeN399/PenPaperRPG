@@ -1,0 +1,18 @@
+id: pf2e.item.potion-of-healing-lesser
+type: item
+source:
+  id: core-remaster
+name: Potion of Healing (Lesser)
+level: 3
+price: 12 gp
+bulk: L
+traits: [magical, consumable, potion, healing]
+summary: A lesser healing potion that restores 2d8+5 Hit Points.
+description: |
+  This ruby-red potion restores vitality to those who drink it.
+
+  Usage: held in 1 hand
+  Bulk: L
+  Activate: Interact
+
+  Drinking a potion of healing restores 2d8+5 Hit Points. You gain the maximum benefit from this potion when you drink the entire potion at once.

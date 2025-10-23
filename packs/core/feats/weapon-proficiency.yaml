@@ -1,0 +1,14 @@
+id: pf2e.feat.weapon-proficiency
+type: feat
+name: Weapon Proficiency
+summary: You become trained in simple and martial weapons.
+source:
+  id: core-remaster
+  page: 268
+level: 1
+category: general
+traits: [General]
+description: |
+  You become trained in all simple weapons. If you were already trained in all simple weapons, you become trained in all martial weapons. If you were already trained in all martial weapons, you become trained in one advanced weapon of your choice.
+
+  **Special** You can select this feat more than once. Each time you do, you either become trained in all simple weapons (if you weren't already), become trained in all martial weapons (if you weren't already), or become trained in one advanced weapon of your choice.

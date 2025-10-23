@@ -1,0 +1,22 @@
+id: pf2e.item.explorers-clothing
+type: item
+source:
+  id: core-remaster
+name: Explorer's Clothing
+level: 0
+price: 1 sp
+bulk: L
+traits: [comfort]
+summary: Durable clothing favored by adventurers, providing minimal protection but maximum mobility.
+description: |
+  This comfortable set of durable clothing is favored by adventurers who want to look professional without sacrificing mobility. Explorer's clothing provides a small amount of protection while allowing you to move freely.
+
+  - AC Bonus: +0
+  - Dex Cap: +5
+  - Check Penalty: 0
+  - Speed Penalty: 0 ft
+  - Strength: —
+  - Group: Cloth
+  - Armor Traits: comfort
+
+  Explorer's clothing includes shirts, pants, gloves, and a jacket or cloak that provides a small amount of protection. The comfort trait means this armor is so comfortable you can rest normally while wearing it.

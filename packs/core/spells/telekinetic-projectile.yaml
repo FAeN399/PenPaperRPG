@@ -1,0 +1,18 @@
+id: pf2e.spell.telekinetic-projectile
+type: spell
+name: Telekinetic Projectile
+rank: 0
+traditions: [arcane, occult]
+source:
+  id: core-remaster
+traits: [attack, cantrip, concentrate]
+range: 30 feet
+targets: 1 creature
+summary: Fling an object at a creature.
+description: |
+  You hurl a loose, unattended object that is within range and that has 1 Bulk or less at the target. Make a ranged spell attack roll against the target. If you hit, the object deals 1d6 bludgeoning damage, plus your spellcasting ability modifier. If the object is a weapon, you deal the weapon's damage instead.
+
+  **Critical Success** You deal double damage, plus an additional 1d6 bludgeoning damage.
+  **Success** You deal full damage.
+
+  **Heightened (+1)** The damage from the object increases by 1d6.

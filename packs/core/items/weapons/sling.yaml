@@ -1,0 +1,19 @@
+id: pf2e.item.sling
+type: item
+source:
+  id: core-remaster
+name: Sling
+level: 0
+price: 0 cp
+bulk: L
+traits: [propulsive, range-50, reload-1]
+summary: A simple ranged weapon dealing 1d6 bludgeoning damage with 50 foot range, requires reload.
+description: |
+  A leather strap used to hurl stones or bullets at enemies. The sling is a simple but effective ranged weapon.
+
+  - Damage: 1d6 bludgeoning
+  - Hands: 1+
+  - Group: Sling
+  - Weapon Traits: propulsive, range 50 ft., reload 1
+
+  The sling costs nothing and uses easily found ammunition. The propulsive trait adds half your Strength modifier to damage (minimum 0). Reload 1 means you must use an Interact action to reload after each shot.

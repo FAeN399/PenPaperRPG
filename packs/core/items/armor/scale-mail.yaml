@@ -1,0 +1,22 @@
+id: pf2e.item.scale-mail
+type: item
+source:
+  id: core-remaster
+name: Scale Mail
+level: 0
+price: 4 gp
+bulk: "2"
+traits: []
+summary: Overlapping metal scales provide solid medium armor protection.
+description: |
+  Scale mail consists of many metal scales sewn onto a backing of leather or sturdy cloth. The overlapping scales provide excellent protection while allowing reasonable movement.
+
+  - AC Bonus: +3
+  - Dex Cap: +2
+  - Check Penalty: -2
+  - Speed Penalty: -5 ft
+  - Strength: 14
+  - Group: Composite
+  - Armor Traits: —
+
+  Scale mail is made of dozens of small overlapping metal plates. Each suit is a unique design, with different patterns of overlapping metal.

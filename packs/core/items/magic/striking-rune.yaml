@@ -1,0 +1,18 @@
+id: pf2e.item.striking-rune
+type: item
+source:
+  id: core-remaster
+name: Striking Rune
+level: 4
+price: 65 gp
+bulk: "-"
+traits: [magical, evocation]
+summary: A fundamental rune that increases weapon damage dice.
+description: |
+  A striking rune stores extra magical power in your weapon, increasing the weapon damage dice it deals to two instead of one.
+
+  Usage: etched onto a weapon
+
+  A striking rune etched onto a weapon increases the number of weapon damage dice it deals to two. For instance, a +1 striking dagger would deal 2d4 damage instead of 1d4 damage.
+
+  This benefit doesn't apply to other dice a weapon adds, such as precision damage, versatile damage, or a fatal die increase. A weapon can have only one striking rune at a time.

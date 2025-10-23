@@ -1,0 +1,29 @@
+id: pf2e.ancestry.elf
+type: ancestry
+name: Elf
+summary: Graceful and long-lived people with keen senses and natural magic.
+source:
+  id: orc-remaster
+  page: 28
+hitPoints: 6
+size: medium
+speed: 30
+boosts:
+  - type: fixed
+    abilities: [DEX, INT]
+    value: 2
+  - type: any
+    count: 1
+    value: 2
+flaws:
+  - CON
+languages:
+  granted: [Common, Elven]
+  choices:
+    count: 1
+    options: [Any]
+features:
+  - ancestryfeat:1
+traits:
+  - elf
+  - humanoid

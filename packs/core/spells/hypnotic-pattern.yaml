@@ -1,0 +1,22 @@
+id: pf2e.spell.hypnotic-pattern
+type: spell
+name: Hypnotic Pattern
+rank: 3
+traditions: [arcane, occult]
+source:
+  id: core-remaster
+traits: [illusion, visual]
+range: 120 feet
+duration: sustained up to 1 minute
+savingThrow: Will
+summary: Shifting colors dazzle creatures and fascinate them.
+description: |
+  You create a pattern of shifting colors in a 10-foot burst. Creatures in the area that can see the pattern must attempt a Will save. While fascinated by the pattern, a creature is flat-footed and takes a -2 status penalty to Perception checks and saves.
+
+  Critical Success: The creature is unaffected.
+
+  Success: The creature is dazzled for 1 round.
+
+  Failure: The creature is fascinated by the pattern for the spell's duration.
+
+  Critical Failure: The creature is fascinated by the pattern for the spell's duration. If it's attacked or otherwise subjected to a hostile act by you or one of your allies, it's no longer fascinated at the end of that turn.

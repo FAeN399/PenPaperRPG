@@ -1,0 +1,16 @@
+id: pf2e.item.potency-rune-armor
+type: item
+source:
+  id: core-remaster
+name: Potency Rune (+1 Armor)
+level: 5
+price: 160 gp
+bulk: "-"
+traits: [magical, abjuration]
+summary: A fundamental rune that grants a +1 item bonus to AC.
+description: |
+  Magical enhancements make this armor more effective. A potency rune is what makes armor magic armor.
+
+  Usage: etched onto armor
+
+  An item can have only one fundamental rune of each type, though it can have any number of property runes. A +1 armor potency rune grants a +1 item bonus to AC. If you're wearing armor without a potency rune, you can upgrade it by etching a potency rune on it with the Craft activity.

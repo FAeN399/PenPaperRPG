@@ -1,0 +1,20 @@
+id: pf2e.item.bag-of-holding-type-i
+type: item
+source:
+  id: core-remaster
+name: Bag of Holding (Type I)
+level: 4
+price: 75 gp
+bulk: "1"
+traits: [magical, conjuration, extradimensional]
+summary: A bag that holds far more than its size suggests.
+description: |
+  Though it appears to be a cloth sack decorated with panels of richly colored silk or stylish embroidery, a bag of holding opens into an extradimensional space larger than its outside dimensions.
+
+  Usage: held in 2 hands
+  Bulk: 1
+
+  The Bulk held inside the bag doesn't change the Bulk of the bag of holding itself. The space inside the bag can hold up to 25 Bulk of items. This bag has an extradimensional space that holds up to 4 cubic feet. If the bag is overloaded, or if a sharp object pierces it or tears it, the bag ruptures and is ruined, and all the contents spill out into the Astral Plane. If anyone places a bag of holding inside an extradimensional space, both the bag and the space are destroyed, and everything inside is lost forever.
+
+  Activate: Interact
+  Effect: You draw an item from the bag or place an item inside. Searching the bag for a specific item requires an Interact action per item already in the bag.

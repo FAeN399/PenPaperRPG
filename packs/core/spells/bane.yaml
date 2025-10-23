@@ -1,0 +1,20 @@
+id: pf2e.spell.bane
+type: spell
+name: Bane
+rank: 1
+traditions: [divine, occult]
+source:
+  id: core-remaster
+traits: [concentrate, manipulate, mental]
+duration: 1 minute
+range: 30-foot emanation
+targets: enemies in range
+savingThrow: Will
+summary: Enemies take a -1 status penalty to attack rolls.
+description: |
+  You fill the minds of your enemies with doubt. Enemies in the area must attempt a Will save. They are then temporarily immune for 1 minute.
+
+  Critical Success: The target is unaffected.
+  Success: The target takes a -1 status penalty to attack rolls for 1 round.
+  Failure: The target takes a -1 status penalty to attack rolls for 1 minute.
+  Critical Failure: The target takes a -2 status penalty to attack rolls for 1 minute.

@@ -1,0 +1,12 @@
+id: pf2e.item.material-component-pouch
+type: item
+source:
+  id: core-remaster
+name: Material Component Pouch
+level: 0
+price: 5 sp
+bulk: L
+traits: []
+summary: A pouch containing common spell components.
+description: |
+  A material component pouch contains common spell components that don't have a specific cost. Having one allows you to use the Material Casting action for spells with material components. This pouch is specially organized for quick access during spellcasting.

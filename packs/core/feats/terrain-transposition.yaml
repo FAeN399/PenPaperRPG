@@ -1,0 +1,22 @@
+id: pf2e.feat.terrain-transposition
+type: feat
+name: Terrain Transposition
+summary: You swap positions with an ally in difficult terrain.
+source:
+  id: core-remaster
+  page: 267
+level: 4
+category: skill
+traits: [General, Skill]
+actionCost:
+  type: two
+prerequisites:
+  type: all
+  predicates:
+  - type: hasSkillRank
+    skillId: acrobatics
+    rank: expert
+description: |
+  Requirements: You are in difficult terrain.
+
+  You leap up and over an adjacent willing ally, swapping positions with that ally. You must end this movement in a space that is adjacent to the position you started in. Both you and your ally must occupy spaces of the same size. This movement doesn't trigger reactions.

@@ -1,0 +1,19 @@
+id: pf2e.item.crossbow
+type: item
+source:
+  id: core-remaster
+name: Crossbow
+level: 0
+price: 3 gp
+bulk: "1"
+traits: [ range-120, reload-1 ]
+summary: A mechanical ranged weapon dealing 1d8 piercing damage with 120 foot range.
+description: |
+  A mechanical weapon that fires bolts using a trigger mechanism. The crossbow is more powerful and accurate than a bow but takes longer to reload.
+
+  - Damage: 1d8 piercing
+  - Hands: 2
+  - Group: Bow
+  - Weapon Traits: range 120 ft., reload 1
+
+  The crossbow's excellent range and damage make it a popular choice for guards and hunters. Reload 1 means you must use an Interact action to reload after each shot, limiting your rate of fire.

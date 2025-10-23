@@ -1,0 +1,16 @@
+id: pf2e.spell.light
+type: spell
+name: Light
+rank: 0
+traditions: [arcane, divine, occult, primal]
+source:
+  id: core-remaster
+traits: [cantrip, concentrate, light]
+duration: until your next daily preparations
+range: touch
+targets: 1 object of 1 Bulk or less, either unattended or possessed by you or a willing ally
+summary: Make an object glow like a torch.
+description: |
+  The object glows, casting bright light in a 20-foot radius (and dim light for the next 20 feet) like a torch. If you cast this spell again, or if you use the Dismiss action, any previous light you cast with this spell is dismissed.
+
+  **Heightened (4th)** The object sheds bright light in a 60-foot radius (and dim light for the next 60 feet).

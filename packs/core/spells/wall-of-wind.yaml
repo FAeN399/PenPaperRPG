@@ -1,0 +1,13 @@
+id: pf2e.spell.wall-of-wind
+type: spell
+name: Wall of Wind
+rank: 3
+traditions: [arcane, primal]
+source:
+  id: core-remaster
+traits: [air]
+range: 120 feet
+duration: 1 minute
+summary: You create a barrier of gusting winds.
+description: |
+  You create a barrier of gusting winds that hinders anything trying to pass through. The wall of wind is 5 feet thick, up to 50 feet long, and up to 20 feet high. The wall stands vertically, but you can shape its path. Ranged attacks passing through the wall have a DC 5 flat check to determine whether they're deflected back at the attacker. The wind disperses gas and mist, and it makes fires larger on the side the wind is blowing toward. Tiny or smaller creatures that attempt to pass through the wall must succeed at a Fortitude save or be pushed 10 feet away from the wall (20 feet on a critical failure).

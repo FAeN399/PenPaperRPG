@@ -1,0 +1,12 @@
+id: pf2e.item.tent
+type: item
+source:
+  id: core-remaster
+name: Tent
+level: 0
+price: 8 sp
+bulk: "1"
+traits: []
+summary: A portable shelter for outdoor camping.
+description: |
+  A tent provides cover and concealment from creatures outside the tent. Setting up or taking down a tent requires 10 minutes and 2 hands. Most tents accommodate up to four creatures.

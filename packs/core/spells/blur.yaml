@@ -1,0 +1,12 @@
+id: pf2e.spell.blur
+type: spell
+name: Blur
+rank: 2
+traditions: [arcane, occult]
+source:
+  id: core-remaster
+traits: [illusion, visual]
+duration: 1 minute
+summary: The target's form appears blurred and indistinct.
+description: |
+  The target's form appears blurred and indistinct. Creatures targeting the target must attempt a DC 5 flat check. On a failure, the attack misses, is ineffective, or hits an image instead of the target (as appropriate). This applies to both Strikes and spell attacks that target the blurred creature. Area effects aren't subject to this flat check.

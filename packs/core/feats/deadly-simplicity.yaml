@@ -1,0 +1,19 @@
+id: pf2e.feat.deadly-simplicity
+type: feat
+name: Deadly Simplicity
+summary: Your deity's weapon becomes more deadly in your hands.
+source:
+  id: core-remaster
+  page: 119
+level: 1
+category: class
+traits: [Cleric]
+prerequisites:
+  type: all
+  predicates:
+    - type: hasClass
+      classId: pf2e.class.cleric
+description: >
+  Your deity's favored weapon is simple for you to use. When you are wielding your deity's favored weapon,
+  increase the damage die size by one step. If your deity's favored weapon is uncommon, you also gain access
+  to that weapon.

@@ -1,0 +1,13 @@
+id: pf2e.spell.resist-energy
+type: spell
+name: Resist Energy
+rank: 2
+traditions: [arcane, divine, occult, primal]
+source:
+  id: core-remaster
+traits: [abjuration]
+duration: 10 minutes
+targets: 1 creature
+summary: A shield of elemental energy protects a creature.
+description: |
+  A shield of elemental energy protects a creature against one type of energy damage. Choose acid, cold, electricity, fire, or sonic. The target gains resistance 5 against the chosen energy type. The resistance increases to 10 at 7th rank and to 15 at 9th rank.

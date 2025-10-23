@@ -1,0 +1,19 @@
+id: pf2e.item.javelin
+type: item
+source:
+  id: core-remaster
+name: Javelin
+level: 0
+price: 1 sp
+bulk: L
+traits: [thrown-30]
+summary: A light throwing spear dealing 1d6 piercing damage with 30 foot throwing range.
+description: |
+  A light spear designed specifically for throwing. Javelins are carried in bundles and hurled at enemies.
+
+  - Damage: 1d6 piercing
+  - Hands: 1
+  - Group: Dart
+  - Weapon Traits: thrown 30 ft.
+
+  The javelin is lighter than a spear (Light bulk vs 1 bulk) and has a better throwing range (30 feet vs 20 feet), making it superior as a thrown weapon. Many warriors carry several javelins to use before closing to melee.

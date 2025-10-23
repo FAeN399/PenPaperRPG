@@ -1,0 +1,21 @@
+id: pf2e.feat.lingering-composition
+type: feat
+name: Lingering Composition
+summary: Extend the duration of your composition spells.
+source:
+  id: core-remaster
+  page: 98
+level: 1
+category: class
+traits: [Bard, Concentrate, Manipulate, Metamagic]
+actionCost:
+  type: free
+prerequisites:
+  type: all
+  predicates:
+    - type: hasClass
+      classId: pf2e.class.bard
+description: >
+  You add a flourish to your composition to extend its benefits. If your next action is to cast a composition
+  spell, the spell's duration is increased by 1 round. This doesn't apply to composition spells that have a
+  duration of 1 or more rounds, rather than a specific number of rounds.

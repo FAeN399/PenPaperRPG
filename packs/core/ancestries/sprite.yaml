@@ -1,0 +1,36 @@
+id: pf2e.ancestry.sprite
+type: ancestry
+name: Sprite
+summary: Diminutive fey creatures filled with primal magic and mischief.
+source:
+  id: ancestry-guide
+  page: 126
+hitPoints: 6
+size: tiny
+speed: 20
+rarity: rare
+boosts:
+  - type: fixed
+    abilities: [DEX, INT]
+    value: 2
+  - type: any
+    count: 1
+    value: 2
+flaws:
+  - STR
+languages:
+  granted: [Common, Fey]
+  choices:
+    count: 1
+    options: [Any]
+features:
+  - ancestryfeat:1
+traits:
+  - sprite
+  - fey
+effects:
+  - kind: grantSense
+    senseId: low-light-vision
+  - kind: addSpeed
+    speedType: fly
+    value: 30

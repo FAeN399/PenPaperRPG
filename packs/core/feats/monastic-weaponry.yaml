@@ -1,0 +1,20 @@
+id: pf2e.feat.monastic-weaponry
+type: feat
+name: Monastic Weaponry
+summary: You have trained with monk weapons.
+source:
+  id: core-remaster
+  page: 157
+level: 1
+category: class
+traits: [Monk]
+prerequisites:
+  type: all
+  predicates:
+    - type: hasClass
+      classId: pf2e.class.monk
+description: >
+  You have trained with weapons as an extension of your body. You become trained in simple weapons and martial
+  weapons with the monk trait. When your proficiency rank for unarmed attacks increases to expert or master,
+  your proficiency rank for these weapons increases to expert or master as well. You can use melee monk weapons
+  with any of your monk feats or monk abilities that normally require unarmed attacks.

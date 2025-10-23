@@ -1,0 +1,20 @@
+id: pf2e.spell.command
+type: spell
+name: Command
+rank: 1
+traditions: [arcane, divine, occult]
+source:
+  id: core-remaster
+traits: [auditory, concentrate, linguistic, manipulate, mental]
+duration: varies
+range: 30 feet
+targets: 1 creature
+savingThrow: Will
+summary: Issue a simple command to a creature.
+description: |
+  You shout a command that's hard to ignore. You can command the target to approach you, run away (fleeing from you), release what it's holding, drop prone, or stand still. The target must attempt a Will save.
+
+  Critical Success: The target is unaffected.
+  Success: The target is stunned 1 as it fights off your command.
+  Failure: On its next turn, the target must use its actions to obey your command.
+  Critical Failure: The target follows your command for 1 round, then is stunned 1.

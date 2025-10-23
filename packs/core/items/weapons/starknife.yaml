@@ -1,0 +1,19 @@
+id: pf2e.item.starknife
+type: item
+source:
+  id: core-remaster
+name: Starknife
+level: 0
+price: 2 gp
+bulk: L
+traits: [agile, deadly-d6, finesse, thrown-20, versatile-S]
+summary: A star-shaped blade dealing 1d4 piercing damage with agile, deadly d6, finesse, and thrown.
+description: |
+  A multi-pointed blade shaped like a star that can be wielded in melee or thrown. The starknife is favored by followers of Desna.
+
+  - Damage: 1d4 piercing
+  - Hands: 1
+  - Group: Knife
+  - Weapon Traits: agile, deadly d6, finesse, thrown 20 ft., versatile S
+
+  The starknife combines excellent traits: agile and finesse for accuracy, deadly d6 for critical hits, thrown for range, and versatile S for flexibility. Despite its low base damage, these traits make it surprisingly effective.

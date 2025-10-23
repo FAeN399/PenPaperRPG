@@ -1,0 +1,21 @@
+id: pf2e.item.cloak-of-elvenkind
+type: item
+source:
+  id: core-remaster
+name: Cloak of Elvenkind
+level: 5
+price: 150 gp
+bulk: L
+traits: [magical, illusion, invested]
+summary: A cloak that grants a bonus to Stealth checks.
+description: |
+  This cloak is made of finely woven green cloth and appears to have leaves and vines woven into it. When worn, it shifts its colors and patterns to blend with the surrounding environment.
+
+  Usage: worn cloak
+  Bulk: L
+
+  When you wear this cloak, you gain a +1 item bonus to Stealth checks. You can also activate the cloak for a greater effect.
+
+  Activate: Interact
+  Frequency: once per day
+  Effect: You pull the cloak's hood up and gain the effects of an invisibility spell for 1 minute or until you use a hostile action, whichever comes first. The cloak doesn't grant a bonus to Stealth during this time, as the spell's invisibility is sufficient.

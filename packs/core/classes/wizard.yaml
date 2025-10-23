@@ -1,0 +1,43 @@
+id: pf2e.class.wizard
+type: class
+name: Wizard
+source:
+  id: orc-remaster
+  page: 120
+keyAbility: [INT]
+hitPointsPerLevel: 6
+proficiencies:
+  perception: trained
+  savingThrows:
+    fortitude: trained
+    reflex: trained
+    will: expert
+  skills:
+    trained: 2
+    additionalChoices: []
+  attacks:
+    simple: trained
+    martial: untrained
+    advanced: untrained
+    unarmed: trained
+  defense:
+    unarmored: trained
+    light: untrained
+    medium: untrained
+    heavy: untrained
+    shields: untrained
+  classDC: trained
+progression:
+  "1":
+    featureRefs:
+      - classfeat:1
+      - wizardfeatures:arcane-spellcasting
+      - wizardfeatures:arcane-school
+      - wizardfeatures:arcane-thesis
+    proficiencyBumps: []
+  "2":
+    featureRefs:
+      - classfeat:1
+      - skillfeat:1
+    proficiencyBumps: []
+summary: Master of arcane magic, wielding powerful spells through study and intellect.

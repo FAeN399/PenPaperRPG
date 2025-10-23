@@ -1,0 +1,13 @@
+id: pf2e.spell.water-breathing
+type: spell
+name: Water Breathing
+rank: 2
+traditions: [arcane, divine, primal]
+source:
+  id: core-remaster
+traits: []
+duration: 1 hour
+targets: up to 5 creatures
+summary: The targets can breathe underwater.
+description: |
+  The targets can breathe underwater and can't drown. This doesn't give them the ability to swim, nor does it grant any protection against water pressure or other environmental hazards of being underwater. If you cast this spell on a creature that can't breathe air, it gains the ability to breathe air instead of water.

@@ -1,0 +1,29 @@
+id: pf2e.ancestry.leshy
+type: ancestry
+name: Leshy
+summary: Plant people infused with primal essence and natural wisdom.
+source:
+  id: orc-remaster
+  page: 36
+hitPoints: 8
+size: small
+speed: 25
+boosts:
+  - type: fixed
+    abilities: [CON, WIS]
+    value: 2
+  - type: any
+    count: 1
+    value: 2
+flaws:
+  - INT
+languages:
+  granted: [Common, Sylvan]
+  choices:
+    count: 0
+    options: []
+features:
+  - ancestryfeat:1
+traits:
+  - leshy
+  - plant

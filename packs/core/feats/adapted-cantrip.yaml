@@ -1,0 +1,24 @@
+id: pf2e.feat.adapted-cantrip
+type: feat
+name: Adapted Cantrip
+level: 1
+category: ancestry
+source:
+  id: core-remaster
+  page: 56
+traits:
+- human
+prerequisites:
+  type: all
+  predicates:
+  - type: hasAncestry
+    ancestryId: pf2e.ancestry.human
+summary: Through study or exposure to different magical traditions, you've learned
+  a cantrip from a different tradition.
+description: Through study of multiple magical traditions, or via exposure to different
+  traditions through your culture, you've learned a cantrip from a tradition other
+  than your own. Choose a cantrip from the spell list of a magical tradition other
+  than your own. If you have a spell repertoire or a spellbook, replace one of the
+  cantrips you know or have in your spellbook with the chosen spell. If you prepare
+  spells without a spellbook, replace one of your prepared cantrips with the chosen
+  cantrip.

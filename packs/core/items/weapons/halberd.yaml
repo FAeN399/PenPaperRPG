@@ -1,0 +1,19 @@
+id: pf2e.item.halberd
+type: item
+source:
+  id: core-remaster
+name: Halberd
+level: 0
+price: 2 gp
+bulk: "2"
+traits: [reach, versatile-S]
+summary: A versatile polearm dealing 1d10 piercing damage with reach and versatile slashing.
+description: |
+  A long pole with an axe blade mounted on top and a spike on the end. The halberd is a versatile weapon that combines multiple weapon types.
+
+  - Damage: 1d10 piercing
+  - Hands: 2
+  - Group: Polearm
+  - Weapon Traits: reach, versatile S
+
+  The halberd's reach lets you attack from 10 feet away, while its versatile S trait allows you to deal slashing damage when advantageous. Its higher base damage compared to other reach weapons makes it a popular choice for guards and soldiers.

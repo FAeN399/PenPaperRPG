@@ -1,0 +1,19 @@
+id: pf2e.item.fist
+type: item
+source:
+  id: core-remaster
+name: Fist
+level: 0
+price: 0 cp
+bulk: "-"
+traits: [agile, finesse, nonlethal, unarmed]
+summary: Your basic unarmed strike dealing 1d4 bludgeoning damage, agile, finesse, and nonlethal.
+description: |
+  Everyone has a fist attack that represents punching, kicking, headbutting, or similar unarmed attacks.
+
+  - Damage: 1d4 bludgeoning
+  - Hands: 1
+  - Group: Brawling
+  - Weapon Traits: agile, finesse, nonlethal, unarmed
+
+  Fists are always available and can't be disarmed. The nonlethal trait means attacks with this weapon deal nonlethal damage by default, allowing you to subdue foes without killing them. The agile and finesse traits make unarmed strikes effective for quick combatants.

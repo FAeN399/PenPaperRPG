@@ -1,0 +1,13 @@
+id: pf2e.spell.faerie-fire
+type: spell
+name: Faerie Fire
+rank: 2
+traditions: [divine, occult, primal]
+source:
+  id: core-remaster
+traits: [light]
+range: 120 feet
+duration: 5 minutes
+summary: All creatures in the area shed light and can't be concealed.
+description: |
+  All creatures in a 10-foot burst are outlined in colorful light. Visible creatures can't be concealed while affected by faerie fire. If the creatures are invisible, they are concealed while affected by faerie fire, rather than being undetected.

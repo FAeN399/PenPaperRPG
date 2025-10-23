@@ -1,0 +1,14 @@
+id: pf2e.spell.feather-fall
+type: spell
+name: Feather Fall
+rank: 1
+traditions: [arcane, primal]
+source:
+  id: core-remaster
+traits: [concentrate, manipulate]
+duration: 1 minute
+range: 60 feet
+targets: 1 falling creature
+summary: Slow a creature's fall.
+description: |
+  You cause the air itself to arrest a fall. The target's fall slows to 60 feet per round, and the portion of the fall during the spell's duration doesn't count when calculating falling damage. If the target reaches the ground while the spell is in effect, it takes no damage from the fall. The spell ends as soon as the target lands.

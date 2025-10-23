@@ -1,0 +1,30 @@
+id: pf2e.ancestry.anadi
+type: ancestry
+name: Anadi
+summary: Spider-shapeshifters from the Mwangi Expanse who can assume humanoid or spider forms.
+rarity: uncommon
+source:
+  id: mwangi-expanse
+  page: 104
+hitPoints: 8
+size: medium
+speed: 25
+boosts:
+  - type: fixed
+    abilities: [DEX, WIS]
+    value: 2
+  - type: any
+    count: 1
+    value: 2
+flaws:
+  - CON
+languages:
+  granted: [Common, Anadi]
+  choices:
+    count: 1
+    options: [Any]
+features:
+  - ancestryfeat:1
+traits:
+  - anadi
+  - humanoid

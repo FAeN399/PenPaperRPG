@@ -1,0 +1,18 @@
+id: pf2e.background.entertainer
+type: background
+name: Entertainer
+source:
+  id: core-remaster
+boosts:
+  - type: choice
+    count: 1
+    options: [DEX, CHA]
+    value: 2
+  - type: any
+    count: 1
+    value: 2
+skillTraining:
+  - Performance
+  - Theater Lore
+feat: pf2e.feat.fascinating-performance
+summary: You've spent years performing for crowds, learning to captivate and entertain.

@@ -1,0 +1,31 @@
+id: pf2e.ancestry.conrasu
+type: ancestry
+name: Conrasu
+summary: Plant-like beings housing aeon souls within wooden exoskeletons, embodying cosmic balance.
+rarity: uncommon
+source:
+  id: mwangi-expanse
+  page: 106
+hitPoints: 10
+size: medium
+speed: 25
+boosts:
+  - type: fixed
+    abilities: [CON, WIS]
+    value: 2
+  - type: any
+    count: 1
+    value: 2
+flaws:
+  - CHA
+languages:
+  granted: [Common, Mwangi, Rasu]
+  choices:
+    count: 1
+    options: [Any]
+features:
+  - ancestryfeat:1
+traits:
+  - conrasu
+  - aeon
+  - plant
