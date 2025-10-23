@@ -1,0 +1,19 @@
+id: pf2e.item.longsword
+type: item
+source:
+  id: core-remaster
+name: Longsword
+level: 0
+price: 1 gp
+bulk: "1"
+traits: [versatile-P]
+summary: A versatile martial blade dealing 1d8 slashing damage, or piercing with versatile.
+description: |
+  A classic knightly weapon with a straight, double-edged blade about 3 feet long. The longsword is the quintessential martial weapon.
+
+  - Damage: 1d8 slashing
+  - Hands: 1
+  - Group: Sword
+  - Weapon Traits: versatile P
+
+  The longsword's versatile P trait allows you to deal piercing damage instead of slashing when it would be more effective, such as against armored opponents or creatures with resistance to slashing damage.

@@ -1,0 +1,19 @@
+id: pf2e.item.light-hammer
+type: item
+source:
+  id: core-remaster
+name: Light Hammer
+level: 0
+price: 3 sp
+bulk: L
+traits: [agile, thrown-20]
+summary: A small hammer dealing 1d6 bludgeoning damage, agile and throwable up to 20 feet.
+description: |
+  A small hammer that can be wielded with one hand or thrown. The light hammer is popular among crafters who need a versatile tool and weapon.
+
+  - Damage: 1d6 bludgeoning
+  - Hands: 1
+  - Group: Hammer
+  - Weapon Traits: agile, thrown 20 ft.
+
+  The agile trait reduces multiple attack penalties, and the thrown trait gives it ranged versatility. Its light bulk makes it easy to carry multiple light hammers.

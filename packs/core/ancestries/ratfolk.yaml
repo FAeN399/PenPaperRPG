@@ -1,0 +1,45 @@
+id: pf2e.ancestry.ratfolk
+type: ancestry
+name: Ratfolk
+summary: Clever and adaptable rodent-like humanoids who thrive through trade, ingenuity, and tight-knit communities.
+description: |
+  Ratfolk, or ysoki as they call themselves, are small, rodent-like humanoids known for their mechanical aptitude, love of trade, and fierce loyalty to their families and communities. They possess an uncanny knack for tinkering and can squeeze through spaces that would stymie larger folk.
+
+  **Physical Description**: Ysoki stand about 4 feet tall with lean, wiry frames. They have pointed snouts, round ears, and hairless tails that can be as long as their bodies. Their fur varies widely in color, from white to brown to black, often with mottled patterns.
+
+  **Society**: Ratfolk society centers around large family groups and trading networks that span continents. They excel as merchants, tinkers, and inventors, and their warrens are marvels of efficient engineering with tunnels connecting every important location.
+
+  **Alignment and Religion**: Most ratfolk are neutral, concerned primarily with the prosperity of their families and communities. They commonly worship Lao Geung, a ratfolk deity of prosperity and community, though many also follow other gods of trade and crafting.
+
+  **Adventurers**: Ysoki take to adventuring naturally, seeing it as an opportunity to expand their trading networks, gather rare materials, or help their communities. They make excellent inventors, rogues, and alchemists, using their natural dexterity and intellect.
+
+  **Names**: Ysoki names often have a squeaky or chittering quality. Examples include Barnan, Chikis, Chonan, Drannic, Jinkis, Korvi, Malara, Nikit, Queck, Tikkit, and Witani.
+source:
+  id: advanced-players-guide
+  page: 20
+rarity: uncommon
+hitPoints: 6
+size: small
+speed: 25
+boosts:
+  - type: fixed
+    abilities: [DEX, INT]
+    value: 2
+  - type: any
+    count: 1
+    value: 2
+flaws:
+  - STR
+languages:
+  granted: [Common, Ysoki]
+  choices:
+    count: 1
+    options: [Any]
+features:
+  - ancestryfeat:1
+traits:
+  - ratfolk
+  - humanoid
+effects:
+  - kind: grantSense
+    senseId: low-light-vision

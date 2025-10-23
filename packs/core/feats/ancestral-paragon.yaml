@@ -1,0 +1,12 @@
+id: pf2e.feat.ancestral-paragon
+type: feat
+name: Ancestral Paragon
+summary: You exemplify your ancestry's strengths.
+source:
+  id: core-remaster
+  page: 258
+level: 1
+category: general
+traits: [General]
+description: |
+  Whether through instinct, study, or magic, you feel a deeper connection to your ancestry. You gain a 1st-level ancestry feat.

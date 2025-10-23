@@ -1,0 +1,18 @@
+id: pf2e.feat.feather-step
+type: feat
+name: Feather Step
+summary: You step carefully and quickly.
+source:
+  id: core-remaster
+  page: 264
+level: 1
+category: general
+traits: [General]
+prerequisites:
+  type: all
+  predicates:
+    - type: hasSkillRank
+      skillId: Acrobatics
+      rank: trained
+description: |
+  You step carefully and quickly. You can Step into difficult terrain.

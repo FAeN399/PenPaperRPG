@@ -1,0 +1,12 @@
+id: pf2e.item.bedroll
+type: item
+source:
+  id: core-remaster
+name: Bedroll
+level: 0
+price: 2 cp
+bulk: L
+traits: []
+summary: A sleeping bag with a blanket and cushion.
+description: |
+  A bedroll consists of bedding and a blanket thin enough to be rolled up and tied. It's suited only for people up to 8 feet tall.

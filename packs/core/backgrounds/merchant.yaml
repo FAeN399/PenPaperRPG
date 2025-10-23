@@ -1,0 +1,19 @@
+id: pf2e.background.merchant
+type: background
+name: Merchant
+source:
+  id: orc-remaster
+  page: 52
+boosts:
+  - type: choice
+    count: 1
+    options: [INT, CHA]
+    value: 2
+  - type: any
+    count: 1
+    value: 2
+skillTraining:
+  - Diplomacy
+  - Mercantile Lore
+feat: pf2e.feat.bargain-hunter
+summary: You buy and sell goods for profit, traveling roads and haggling deals.

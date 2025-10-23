@@ -1,0 +1,13 @@
+id: pf2e.spell.dispel-magic
+type: spell
+name: Dispel Magic
+rank: 2
+traditions: [arcane, divine, occult, primal]
+source:
+  id: core-remaster
+traits: []
+range: 120 feet
+targets: 1 spell effect or unattended magic item
+summary: You unravel the magic of a spell or item.
+description: |
+  You unravel the magic of a spell or magic item, potentially causing it to end or be suppressed. Choose a spell effect or magic item within range and attempt a counteract check against it. If you succeed, the spell ends (if it's 2nd rank or lower) or is suppressed for 1 round (if it's higher than 2nd rank). If you target a magic item, it's suppressed for 1 round on a success, and you can't target the same item again for 10 minutes.

@@ -1,0 +1,14 @@
+id: pf2e.spell.ant-haul
+type: spell
+name: Ant Haul
+rank: 1
+traditions: [arcane, primal]
+source:
+  id: core-remaster
+traits: [concentrate, manipulate]
+duration: 8 hours
+range: touch
+targets: 1 creature
+summary: Grant a creature the strength of an ant.
+description: |
+  You reinforce the target's musculoskeletal system to bear more weight. The target can carry 3 additional Bulk beyond their normal limit before becoming encumbered and up to a maximum of 6 additional Bulk.

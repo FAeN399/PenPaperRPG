@@ -1,0 +1,12 @@
+id: pf2e.feat.adopted-ancestry
+type: feat
+name: Adopted Ancestry
+summary: You have been raised by a community of another ancestry.
+source:
+  id: core-remaster
+  page: 258
+level: 1
+category: general
+traits: [General]
+description: |
+  You have been raised by a community of another ancestry. Choose a common ancestry. You can select ancestry feats from the ancestry you chose, in addition to your character's own ancestry, as long as the ancestry feats don't require any physiological feature that you lack.

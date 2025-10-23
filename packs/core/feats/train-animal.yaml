@@ -1,0 +1,18 @@
+id: pf2e.feat.train-animal
+type: feat
+name: Train Animal
+summary: You can train animals to follow your commands.
+source:
+  id: core-remaster
+  page: 267
+level: 1
+category: skill
+traits: [General, Skill, Downtime]
+prerequisites:
+  type: all
+  predicates:
+  - type: hasSkillRank
+    skillId: nature
+    rank: trained
+description: |
+  You can teach your pets to do tricks. You can spend 1 week of downtime to attempt a Nature check to teach an animal one trick from the standard tricks of its type (page 214). A critical success teaches the animal two tricks instead of one. You can also spend time training an animal you don't own. You can't teach an animal a trick it doesn't have the ability to perform.

@@ -1,0 +1,21 @@
+id: pf2e.spell.lightning-bolt
+type: spell
+name: Lightning Bolt
+rank: 3
+traditions: [arcane, primal]
+source:
+  id: core-remaster
+traits: [electricity]
+range: 120 feet
+savingThrow: Reflex
+summary: A bolt of lightning strikes in a line, dealing 4d12 electricity damage.
+description: |
+  A bolt of lightning strikes outward from your hand in a 60-foot line, dealing 4d12 electricity damage. Each creature in the line must attempt a Reflex save.
+
+  Critical Success: The creature is unaffected.
+
+  Success: The creature takes half damage.
+
+  Failure: The creature takes full damage and is flat-footed until the start of its next turn.
+
+  Critical Failure: The creature takes double damage and is stunned 1.

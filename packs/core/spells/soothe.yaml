@@ -1,0 +1,14 @@
+id: pf2e.spell.soothe
+type: spell
+name: Soothe
+rank: 1
+traditions: [occult]
+source:
+  id: core-remaster
+traits: [concentrate, emotion, healing, manipulate, mental]
+duration: 1 minute
+range: 30 feet
+targets: 1 willing living creature
+summary: Calm emotions and heal mental damage.
+description: |
+  You grace the target's mind, healing mental damage and soothing mental anguish. The target regains 1d10+4 Hit Points. You also attempt to counteract fear effects on the target.

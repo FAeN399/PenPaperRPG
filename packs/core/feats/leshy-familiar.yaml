@@ -1,0 +1,19 @@
+id: pf2e.feat.leshy-familiar
+type: feat
+name: Leshy Familiar
+summary: Gain a leshy as a familiar.
+source:
+  id: core-remaster
+  page: 133
+level: 1
+category: class
+traits: [Druid]
+prerequisites:
+  type: all
+  predicates:
+    - type: hasClass
+      classId: pf2e.class.druid
+description: >
+  You gain a leshy familiar, a Tiny plant that embodies one of the many spirits of nature. Other than taking
+  the form of a plant instead of an animal, this familiar uses all the same rules as other familiars. Your
+  leshy familiar has the plant trait instead of the animal trait.

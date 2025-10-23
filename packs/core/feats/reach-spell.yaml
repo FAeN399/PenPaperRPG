@@ -1,0 +1,21 @@
+id: pf2e.feat.reach-spell
+type: feat
+name: Reach Spell
+summary: Increase a spell's range.
+source:
+  id: core-remaster
+  page: 206
+level: 1
+category: class
+traits: [Wizard, Concentrate, Manipulate, Metamagic]
+actionCost:
+  type: one
+prerequisites:
+  type: all
+  predicates:
+    - type: hasClass
+      classId: pf2e.class.wizard
+description: >
+  You extend your spell's range. If the next action you use is to Cast a Spell that has a range, increase
+  that spell's range by 30 feet. As is standard for increasing spell ranges, if the spell normally has a
+  range of touch, you extend its range to 30 feet.

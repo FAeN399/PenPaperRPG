@@ -1,0 +1,19 @@
+id: pf2e.item.mace
+type: item
+source:
+  id: core-remaster
+name: Mace
+level: 0
+price: 1 gp
+bulk: "1"
+traits: [shove]
+summary: A weighted metal head on a handle dealing 1d6 bludgeoning damage, capable of shoving foes.
+description: |
+  A metal club with a weighted head, the mace is a simple but effective weapon favored by clerics and warriors who need to deal bludgeoning damage.
+
+  - Damage: 1d6 bludgeoning
+  - Hands: 1
+  - Group: Club
+  - Weapon Traits: shove
+
+  The mace's shove trait allows you to push enemies away from you as part of your attack, making it useful for controlling the battlefield. Its simple design makes it easy to use effectively.

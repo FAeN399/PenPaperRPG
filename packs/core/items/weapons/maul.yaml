@@ -1,0 +1,19 @@
+id: pf2e.item.maul
+type: item
+source:
+  id: core-remaster
+name: Maul
+level: 0
+price: 3 gp
+bulk: "2"
+traits: [shove]
+summary: A heavy two-handed hammer dealing 1d12 bludgeoning damage with the shove trait.
+description: |
+  A massive hammer with an enormous metal head requiring both hands to swing. The maul is designed to crush armor and bones alike.
+
+  - Damage: 1d12 bludgeoning
+  - Hands: 2
+  - Group: Hammer
+  - Weapon Traits: shove
+
+  The maul deals the highest base damage among bludgeoning weapons and can shove enemies back. Its bludgeoning damage is particularly effective against constructs and undead vulnerable to crushing attacks.

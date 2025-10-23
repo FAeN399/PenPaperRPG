@@ -1,0 +1,16 @@
+id: pf2e.feat.divine-guidance
+type: feat
+name: Divine Guidance
+summary: You pray to your deity for guidance.
+source:
+  id: core-remaster
+  page: 262
+level: 1
+category: general
+traits: [General]
+actionCost:
+  type: free
+description: |
+  Frequency: once per day
+
+  You pray to your deity or pantheon for divine guidance in a moment of need. Make a DC 5 flat check. On a success, you receive a +1 circumstance bonus to one attack roll, Perception check, saving throw, or skill check you make before the start of your next turn. On a failure, you receive no benefit but can still use this feat again later in the same day.

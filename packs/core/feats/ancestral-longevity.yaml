@@ -1,0 +1,22 @@
+id: pf2e.feat.ancestral-longevity
+type: feat
+name: Ancestral Longevity
+level: 1
+category: ancestry
+source:
+  id: core-remaster
+  page: 40
+traits:
+- elf
+prerequisites:
+  type: all
+  predicates:
+  - type: hasAncestry
+    ancestryId: pf2e.ancestry.elf
+summary: You can tap into your ancestral memories to gain training in a skill each
+  day.
+description: You have accumulated knowledge over several lifetimes. During your daily
+  preparations, you can reflect on your life experiences to gain the trained proficiency
+  rank in one skill of your choice. This proficiency lasts until you prepare again.
+  Since this proficiency is temporary, you can't use it as a prerequisite for a skill
+  increase or a permanent character option.

@@ -1,0 +1,29 @@
+id: pf2e.ancestry.grippli
+type: ancestry
+name: Grippli
+summary: Agile frog-like humanoids who defend their jungle homes with poison and cunning.
+source:
+  id: advanced-players-guide
+  page: 9
+hitPoints: 6
+size: small
+speed: 25
+boosts:
+  - type: fixed
+    abilities: [DEX, WIS]
+    value: 2
+  - type: any
+    count: 1
+    value: 2
+flaws:
+  - STR
+languages:
+  granted: [Common, Grippli]
+  choices:
+    count: 1
+    options: [Any]
+features:
+  - ancestryfeat:1
+traits:
+  - grippli
+  - humanoid

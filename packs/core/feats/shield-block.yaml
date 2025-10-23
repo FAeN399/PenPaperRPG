@@ -1,0 +1,15 @@
+id: pf2e.feat.shield-block
+type: feat
+name: Shield Block
+summary: Use your shield to ward off a blow.
+source:
+  id: core-remaster
+  page: 266
+level: 1
+category: general
+traits: [General]
+actionCost:
+  type: reaction
+trigger: While you have your shield raised, you would take damage from a physical attack.
+description: |
+  You snap your shield in place to ward off a blow. Your shield prevents you from taking an amount of damage up to the shield's Hardness. You and the shield each take any remaining damage, possibly breaking or destroying the shield.

@@ -1,0 +1,18 @@
+id: pf2e.feat.quick-repair
+type: feat
+name: Quick Repair
+summary: You can fix things more quickly than normal.
+source:
+  id: core-remaster
+  page: 266
+level: 1
+category: skill
+traits: [General, Skill]
+prerequisites:
+  type: all
+  predicates:
+  - type: hasSkillRank
+    skillId: crafting
+    rank: trained
+description: |
+  You take 1 minute to Repair an item. If you're a master, it takes 3 actions. If you're legendary, it takes 1 action.

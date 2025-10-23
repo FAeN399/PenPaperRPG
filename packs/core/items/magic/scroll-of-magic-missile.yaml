@@ -1,0 +1,22 @@
+id: pf2e.item.scroll-of-magic-missile
+type: item
+source:
+  id: core-remaster
+name: Scroll of Magic Missile (1st-Rank)
+level: 1
+price: 4 gp
+bulk: L
+traits: [magical, consumable, scroll, evocation]
+summary: A scroll containing the magic missile spell at 1st rank.
+description: |
+  This parchment scroll contains a single casting of the magic missile spell.
+
+  Usage: held in 1 hand
+  Bulk: L
+  Activate: Cast a Spell
+
+  Activating a scroll requires Casting the Spell at the spell's rank. You must have the spell on your spell list to activate the scroll. If you do, you can cast it even if you don't have spell slots remaining or if the spell isn't prepared.
+
+  Casting a spell from a scroll requires material, somatic, and verbal components. The scroll is destroyed after being activated. You can use a scroll even if the spell is of a higher rank than you can normally cast, but you must succeed at a counteract check to do so.
+
+  This scroll casts magic missile at 1st rank, firing three missiles that each deal 1d4+1 force damage to targets within 120 feet.

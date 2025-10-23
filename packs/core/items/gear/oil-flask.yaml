@@ -1,0 +1,12 @@
+id: pf2e.item.oil-flask
+type: item
+source:
+  id: core-remaster
+name: Oil (Flask)
+level: 0
+price: 1 cp
+bulk: L
+traits: []
+summary: A flask of oil for lanterns or improvised weapons.
+description: |
+  You can use oil to fuel lanterns, but you can also use it as a weapon. Splashing a creature with oil is a ranged attack. If the target takes fire damage before the oil dries (after 1 minute), it takes 1d6 persistent fire damage.

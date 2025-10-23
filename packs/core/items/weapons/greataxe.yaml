@@ -1,0 +1,19 @@
+id: pf2e.item.greataxe
+type: item
+source:
+  id: core-remaster
+name: Greataxe
+level: 0
+price: 2 gp
+bulk: "2"
+traits: [sweep]
+summary: A massive two-handed axe dealing 1d12 slashing damage with devastating strikes.
+description: |
+  An enormous axe with a large, heavy blade requiring both hands to swing. The greataxe is favored by barbarians and warriors who prioritize raw damage.
+
+  - Damage: 1d12 slashing
+  - Hands: 2
+  - Group: Axe
+  - Weapon Traits: sweep
+
+  The greataxe deals massive damage with each hit, and the sweep trait makes it effective against multiple foes. Its heavy bulk and two-handed requirement make it unwieldy but devastating.

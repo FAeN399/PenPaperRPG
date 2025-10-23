@@ -1,0 +1,16 @@
+id: pf2e.spell.ghost-sound
+type: spell
+name: Ghost Sound
+rank: 0
+traditions: [arcane, occult]
+source:
+  id: core-remaster
+traits: [auditory, cantrip, concentrate, illusion]
+duration: sustained up to 1 minute
+range: 30 feet
+summary: Make a sound appear to come from somewhere else.
+description: |
+  You create an auditory illusion of simple sounds that has a maximum volume equal to four normal humans shouting. The sounds emanate from a square you designate within range. You can't create intelligible words or other intricate sounds (such as music).
+
+  **Heightened (3rd)** The range increases to 60 feet.
+  **Heightened (5th)** The range increases to 120 feet.

@@ -1,0 +1,29 @@
+id: pf2e.ancestry.goloma
+type: ancestry
+name: Goloma
+summary: Four-eyed, four-armed humanoids from the Mwangi Expanse with superior vision and dexterity.
+rarity: uncommon
+source:
+  id: mwangi-expanse
+  page: 108
+hitPoints: 8
+size: medium
+speed: 30
+boosts:
+  - type: fixed
+    abilities: [WIS]
+    value: 2
+  - type: any
+    count: 1
+    value: 2
+flaws: []
+languages:
+  granted: [Common, Goloma]
+  choices:
+    count: 1
+    options: [Any]
+features:
+  - ancestryfeat:1
+traits:
+  - goloma
+  - humanoid

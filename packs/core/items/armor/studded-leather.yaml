@@ -1,0 +1,22 @@
+id: pf2e.item.studded-leather
+type: item
+source:
+  id: core-remaster
+name: Studded Leather Armor
+level: 0
+price: 3 gp
+bulk: "1"
+traits: []
+summary: Leather armor reinforced with metal studs for enhanced protection.
+description: |
+  This leather armor is reinforced with metal studs and sometimes small metal plates, increasing its protective qualities while still allowing considerable freedom of movement. It's a common choice for light infantry and scouts.
+
+  - AC Bonus: +2
+  - Dex Cap: +3
+  - Check Penalty: -1
+  - Speed Penalty: 0 ft
+  - Strength: 12
+  - Group: Leather
+  - Armor Traits: —
+
+  Studded leather armor is leather armor with metal studs or spikes embedded in it to provide additional protection without sacrificing too much mobility.

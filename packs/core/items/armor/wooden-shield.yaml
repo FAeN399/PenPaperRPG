@@ -1,0 +1,19 @@
+id: pf2e.item.wooden-shield
+type: item
+source:
+  id: core-remaster
+name: Wooden Shield
+level: 0
+price: 1 gp
+bulk: "1"
+traits: []
+summary: Basic wooden shield providing affordable defense for beginners.
+description: |
+  This simple wooden shield is crafted from wood and sometimes reinforced with metal. It's the most basic and affordable shield option, popular among militia and beginning adventurers.
+
+  - AC Bonus: +2 (when Raised)
+  - Speed Penalty: 0 ft
+  - Hardness: 3
+  - HP (BT): 12 (6)
+
+  You can use the Raise a Shield action to gain a +2 circumstance bonus to AC until the start of your next turn. This wooden shield can be used with the Shield Block reaction to reduce incoming damage, though it will take damage in the process.

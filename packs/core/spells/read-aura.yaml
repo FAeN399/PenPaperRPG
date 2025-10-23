@@ -1,0 +1,18 @@
+id: pf2e.spell.read-aura
+type: spell
+name: Read Aura
+rank: 0
+traditions: [arcane, divine, occult, primal]
+source:
+  id: core-remaster
+traits: [cantrip, concentrate, detection]
+range: 30 feet
+targets: 1 object
+summary: Read the magic aura of an item to identify its properties.
+description: |
+  You focus on the target object, opening your mind to perceive magical auras. When the casting is complete, you know whether that item is magical, and if it is, you learn its school of magic, its rarity, and the tradition of magic it carries (if it has a magic tradition).
+
+  If the object has an illusion aura but is not actually an illusion, you learn that it has an illusion aura but can't tell what tradition the illusion spell is from. An object bearing a misleading aura can confound this spell, depending on the rank of the aura.
+
+  **Heightened (3rd)** You can target up to 10 objects.
+  **Heightened (6th)** You can target any number of objects.

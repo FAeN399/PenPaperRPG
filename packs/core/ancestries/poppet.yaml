@@ -1,0 +1,36 @@
+id: pf2e.ancestry.poppet
+type: ancestry
+name: Poppet
+summary: Magically animated dolls and stuffed toys given life through ancient rituals.
+source:
+  id: grand-bazaar
+  page: 14
+rarity: uncommon
+hitPoints: 6
+size: small
+speed: 25
+boosts:
+  - type: fixed
+    abilities: [CON, CHA]
+    value: 2
+  - type: any
+    count: 1
+    value: 2
+flaws:
+  - DEX
+languages:
+  granted: [Common]
+  choices:
+    count: 1
+    options: [Any]
+features:
+  - ancestryfeat:1
+traits:
+  - poppet
+  - construct
+  - humanoid
+effects:
+  - kind: grantSense
+    senseId: darkvision
+  - kind: grantTrait
+    traitId: construct

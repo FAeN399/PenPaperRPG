@@ -1,0 +1,18 @@
+id: pf2e.spell.divine-lance
+type: spell
+name: Divine Lance
+rank: 0
+traditions: [divine]
+source:
+  id: core-remaster
+traits: [attack, cantrip, concentrate]
+range: 30 feet
+targets: 1 creature
+summary: Throw divine energy that deals spirit, vitality, or void damage.
+description: |
+  You unleash a beam of divine energy. Choose spirit, vitality, or void damage. The spell gains that trait. Make a ranged spell attack roll against the target's AC.
+
+  **Critical Success** The target takes 2d4 damage of the chosen type, and 2d4 additional spirit damage if you chose spirit damage.
+  **Success** The target takes 1d4 damage of the chosen type, and 1d4 additional spirit damage if you chose spirit damage.
+
+  **Heightened (+1)** The damage increases by 1d4 for a success (or 2d4 for a critical success). If you chose spirit damage, the additional spirit damage increases by 1d4 (or 2d4 on a critical success).

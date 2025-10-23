@@ -1,0 +1,19 @@
+id: pf2e.item.shortsword
+type: item
+source:
+  id: core-remaster
+name: Shortsword
+level: 0
+price: 9 sp
+bulk: L
+traits: [agile, finesse, versatile-S]
+summary: A quick, light blade dealing 1d6 piercing damage with agile and finesse traits.
+description: |
+  A short blade about 2 feet long, favored by rogues and duelists for its speed and precision. The shortsword is lighter and faster than a longsword.
+
+  - Damage: 1d6 piercing
+  - Hands: 1
+  - Group: Sword
+  - Weapon Traits: agile, finesse, versatile S
+
+  The agile trait reduces the penalty for multiple attacks, and finesse lets you use Dexterity for attack rolls. The versatile S trait allows you to deal slashing damage when advantageous.

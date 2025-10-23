@@ -1,0 +1,18 @@
+id: pf2e.item.potion-of-healing-moderate
+type: item
+source:
+  id: core-remaster
+name: Potion of Healing (Moderate)
+level: 5
+price: 30 gp
+bulk: L
+traits: [magical, consumable, potion, healing]
+summary: A moderate healing potion that restores 3d8+10 Hit Points.
+description: |
+  This ruby-red potion restores vitality to those who drink it.
+
+  Usage: held in 1 hand
+  Bulk: L
+  Activate: Interact
+
+  Drinking a potion of healing restores 3d8+10 Hit Points. You gain the maximum benefit from this potion when you drink the entire potion at once.

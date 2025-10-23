@@ -1,0 +1,22 @@
+id: pf2e.item.chain-shirt
+type: item
+source:
+  id: core-remaster
+name: Chain Shirt
+level: 0
+price: 5 gp
+bulk: "1"
+traits: [flexible, noisy]
+summary: Lightweight chain mail covering the torso, offering flexible medium armor protection.
+description: |
+  This shirt of chain mail, sometimes called a byrnie, is lighter than full chain mail and covers only the torso. It's commonly worn over padding or leather for additional comfort.
+
+  - AC Bonus: +2
+  - Dex Cap: +3
+  - Check Penalty: -1
+  - Speed Penalty: 0 ft
+  - Strength: 12
+  - Group: Chain
+  - Armor Traits: flexible, noisy
+
+  A chain shirt is a light mesh of metal rings covering the torso. The flexible trait means you can use your full Dexterity modifier on Reflex saves. The noisy trait imposes a -1 penalty to Stealth checks.

@@ -1,0 +1,51 @@
+id: pf2e.class.monk
+type: class
+name: Monk
+source:
+  id: orc-remaster
+  page: 68
+keyAbility: [STR, DEX]
+hitPointsPerLevel: 10
+proficiencies:
+  perception: trained
+  savingThrows:
+    fortitude: expert
+    reflex: expert
+    will: expert
+  skills:
+    trained: 4
+    additionalChoices: []
+  attacks:
+    simple: trained
+    martial: untrained
+    advanced: untrained
+    unarmed: expert
+  defense:
+    unarmored: expert
+    light: untrained
+    medium: untrained
+    heavy: untrained
+    shields: untrained
+  classDC: trained
+progression:
+  "1":
+    featureRefs:
+      - classfeat:1
+      - monkfeatures:flurry-of-blows
+      - monkfeatures:powerful-fist
+      - monkfeatures:monks-ki
+    proficiencyBumps:
+      - target: weapons:simple
+        rank: trained
+      - target: weapons:unarmed
+        rank: expert
+      - target: armor:unarmored
+        rank: expert
+  "2":
+    featureRefs:
+      - classfeat:1
+      - skillfeat:1
+      - monkfeatures:mystic-strikes
+    proficiencyBumps: []
+summary: >
+  The strength of your fist flows from your mind and spirit. You seek perfection—honing your body into a flawless instrument and your mind into an orderly bastion of wisdom. You're a fierce combatant renowned for martial arts skills and combat stances that grant you unique fighting moves. While the challenge of mastering many fighting styles drives you to great heights, you also embody a spirituality that you train just as hard as your body.

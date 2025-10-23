@@ -1,0 +1,23 @@
+id: pf2e.feat.halfling-luck
+type: feat
+name: Halfling Luck
+level: 1
+category: ancestry
+source:
+  id: core-remaster
+  page: 48
+traits:
+- halfling
+- fortune
+actionCost:
+  type: free
+prerequisites:
+  type: all
+  predicates:
+  - type: hasAncestry
+    ancestryId: pf2e.ancestry.halfling
+summary: When you fail a saving throw, you can reroll it and use the second result.
+description: Your happy-go-lucky nature grants you incredible luck. You can use the
+  Halfling Luck free action to reroll a saving throw. You can use this free action
+  even if you have the dying condition or are otherwise unable to act. You can't use
+  this ability if you've already used Halfling Luck since your last daily preparation.

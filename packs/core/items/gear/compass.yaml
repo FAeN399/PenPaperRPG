@@ -1,0 +1,12 @@
+id: pf2e.item.compass
+type: item
+source:
+  id: core-remaster
+name: Compass
+level: 0
+price: 1 gp
+bulk: "-"
+traits: []
+summary: A navigational tool showing magnetic north.
+description: |
+  A compass helps you navigate in the wilderness. When using a compass, you gain a +1 item bonus to Survival checks to Sense Direction. A compass doesn't work in areas with strong magnetic interference or in places without access to the sky.

@@ -1,0 +1,19 @@
+id: pf2e.feat.harming-hands
+type: feat
+name: Harming Hands
+summary: Your harm spells deal additional damage.
+source:
+  id: core-remaster
+  page: 119
+level: 1
+category: class
+traits: [Cleric]
+prerequisites:
+  type: all
+  predicates:
+    - type: hasClass
+      classId: pf2e.class.cleric
+description: >
+  The mordant power of harm coursing through your veins empowers your magic. When you cast a harm spell
+  and damage at least one living creature, you gain temporary Hit Points equal to the spell rank of the
+  harm spell. These temporary Hit Points last for 1 minute.

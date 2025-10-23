@@ -1,0 +1,19 @@
+id: pf2e.item.heavy-crossbow
+type: item
+source:
+  id: core-remaster
+name: Heavy Crossbow
+level: 0
+price: 4 gp
+bulk: "2"
+traits: [range-120, reload-2]
+summary: A powerful crossbow dealing 1d10 piercing damage with excellent range but slow reload.
+description: |
+  A large, powerful crossbow that fires heavy bolts with tremendous force. The heavy crossbow sacrifices rate of fire for damage and range.
+
+  - Damage: 1d10 piercing
+  - Hands: 2
+  - Group: Bow
+  - Weapon Traits: range 120 ft., reload 2
+
+  The heavy crossbow deals excellent damage and has superior range, making it ideal for sniping. However, reload 2 means you must use two Interact actions to reload it, significantly limiting your rate of fire.

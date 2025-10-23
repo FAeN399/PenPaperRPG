@@ -1,0 +1,12 @@
+id: pf2e.item.healers-tools
+type: item
+source:
+  id: core-remaster
+name: Healer's Tools
+level: 0
+price: 5 gp
+bulk: "1"
+traits: []
+summary: A kit containing bandages, herbs, and medical tools.
+description: |
+  This kit contains bandages, herbs, and surgical tools. You need healer's tools to use Medicine to Treat Wounds. If you wear your healer's tools, you can draw and replace them as part of the action that uses them.

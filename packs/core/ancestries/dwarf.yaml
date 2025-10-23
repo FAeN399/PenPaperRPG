@@ -1,0 +1,29 @@
+id: pf2e.ancestry.dwarf
+type: ancestry
+name: Dwarf
+summary: Stout and hardy folk with unbreakable determination and resistance to magic.
+source:
+  id: orc-remaster
+  page: 30
+hitPoints: 10
+size: medium
+speed: 20
+boosts:
+  - type: fixed
+    abilities: [CON, WIS]
+    value: 2
+  - type: any
+    count: 1
+    value: 2
+flaws:
+  - CHA
+languages:
+  granted: [Common, Dwarven]
+  choices:
+    count: 1
+    options: [Any]
+features:
+  - ancestryfeat:1
+traits:
+  - dwarf
+  - humanoid

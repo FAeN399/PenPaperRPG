@@ -1,0 +1,19 @@
+id: pf2e.item.handwraps-of-mighty-blows
+type: item
+source:
+  id: core-remaster
+name: Handwraps of Mighty Blows
+level: 0
+price: 4 gp
+bulk: "-"
+traits: [invested, magical]
+summary: Magical cloth wrappings that grant fundamental runes to unarmed attacks.
+description: |
+  These cloth wrappings enfold your hands, granting your unarmed attacks the benefits of weapon runes.
+
+  - Damage: As unarmed attack
+  - Hands: -
+  - Group: Brawling
+  - Weapon Traits: invested, magical
+
+  When you invest these handwraps, they grant their fundamental runes (weapon potency and striking) to all your unarmed attacks. This is essential for martial artists and monks who rely on unarmed strikes. The handwraps don't take up a hand slot.

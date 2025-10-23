@@ -1,0 +1,12 @@
+id: pf2e.feat.toughness
+type: feat
+name: Toughness
+summary: You can withstand more punishment than most.
+source:
+  id: core-remaster
+  page: 267
+level: 1
+category: general
+traits: [General]
+description: |
+  You can withstand more punishment than most. Increase your maximum Hit Points by your level. The DC of recovery checks is equal to 9 + your dying value.

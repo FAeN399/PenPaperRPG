@@ -1,0 +1,18 @@
+id: pf2e.feat.lasting-coercion
+type: feat
+name: Lasting Coercion
+summary: Your victims can't easily escape your threats.
+source:
+  id: core-remaster
+  page: 265
+level: 2
+category: skill
+traits: [General, Skill]
+prerequisites:
+  type: all
+  predicates:
+  - type: hasSkillRank
+    skillId: intimidation
+    rank: expert
+description: |
+  When you successfully Coerce someone, the maximum time they comply is one week rather than one day. If you're legendary, the maximum time is one month.

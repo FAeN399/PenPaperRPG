@@ -1,0 +1,46 @@
+id: pf2e.class.rogue
+type: class
+name: Rogue
+source:
+  id: orc-remaster
+  page: 100
+keyAbility: [DEX, STR, INT, CHA]
+hitPointsPerLevel: 8
+proficiencies:
+  perception: expert
+  savingThrows:
+    fortitude: trained
+    reflex: expert
+    will: expert
+  skills:
+    trained: 7
+    additionalChoices: []
+  attacks:
+    simple: trained
+    martial: trained
+    advanced: untrained
+    unarmed: trained
+  defense:
+    unarmored: trained
+    light: trained
+    medium: untrained
+    heavy: untrained
+    shields: untrained
+  classDC: trained
+progression:
+  "1":
+    featureRefs:
+      - classfeat:1
+      - roguefeatures:sneak-attack
+      - roguefeatures:surprise-attack
+      - roguefeatures:rogue-feat
+    proficiencyBumps:
+      - target: skills:stealth
+        rank: expert
+  "2":
+    featureRefs:
+      - classfeat:1
+      - skillfeat:1
+      - roguefeatures:deny-advantage
+    proficiencyBumps: []
+summary: Cunning expert in stealth and precision, striking from the shadows.

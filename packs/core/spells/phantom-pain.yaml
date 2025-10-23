@@ -1,0 +1,20 @@
+id: pf2e.spell.phantom-pain
+type: spell
+name: Phantom Pain
+rank: 1
+traditions: [occult]
+source:
+  id: core-remaster
+traits: [concentrate, illusion, manipulate, mental, nonlethal]
+duration: 1 minute
+range: 30 feet
+targets: 1 creature
+savingThrow: Will
+summary: Illusory pain causes mental damage and debuffs.
+description: |
+  Illusory pain wracks the target, dealing 2d4 mental damage and 1d4 persistent mental damage. The target must attempt a Will save.
+
+  Critical Success: The target is unaffected.
+  Success: The target takes full initial damage but no persistent damage, and the spell ends immediately.
+  Failure: The target takes full initial and persistent damage, and the target is sickened 1. If the target recovers from being sickened, the persistent damage ends and the spell ends.
+  Critical Failure: As failure, but the target is sickened 2.

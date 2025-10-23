@@ -1,0 +1,11 @@
+id: pf2e.spell.hypercognition
+type: spell
+name: Hypercognition
+rank: 3
+traditions: [occult]
+source:
+  id: core-remaster
+traits: [divination]
+summary: You rapidly catalog and collate information.
+description: |
+  You rapidly catalog and collate information relevant to your current environment. You can instantly Recall Knowledge any number of times, each taking 1 action. You can use any skill you have to Recall Knowledge, even if you haven't prepared to do so. For 1 minute, you can use any skill you have to Recall Knowledge, even if you haven't prepared to do so (such as by using the Assurance feat).

@@ -1,0 +1,29 @@
+id: pf2e.ancestry.gnoll
+type: ancestry
+name: Gnoll
+summary: Fierce hyena-like humanoids who embrace strength and pragmatic survival.
+source:
+  id: advanced-players-guide
+  page: 10
+hitPoints: 8
+size: medium
+speed: 25
+boosts:
+  - type: fixed
+    abilities: [STR, INT]
+    value: 2
+  - type: any
+    count: 1
+    value: 2
+flaws:
+  - WIS
+languages:
+  granted: [Common, Gnoll]
+  choices:
+    count: 1
+    options: [Any]
+features:
+  - ancestryfeat:1
+traits:
+  - gnoll
+  - humanoid

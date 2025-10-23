@@ -1,0 +1,19 @@
+id: pf2e.item.scimitar
+type: item
+source:
+  id: core-remaster
+name: Scimitar
+level: 0
+price: 1 gp
+bulk: "1"
+traits: [forceful, sweep]
+summary: A curved sword dealing 1d6 slashing damage with forceful and sweep traits.
+description: |
+  A curved blade designed for powerful slashing attacks. The scimitar is favored in desert regions and by cavalry.
+
+  - Damage: 1d6 slashing
+  - Hands: 1
+  - Group: Sword
+  - Weapon Traits: forceful, sweep
+
+  The forceful trait increases damage on subsequent attacks in a turn, while sweep grants a bonus to hit after attacking a different target. This combination makes the scimitar excellent for fighting multiple opponents.

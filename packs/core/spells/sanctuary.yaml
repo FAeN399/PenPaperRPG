@@ -1,0 +1,19 @@
+id: pf2e.spell.sanctuary
+type: spell
+name: Sanctuary
+rank: 1
+traditions: [divine, occult]
+source:
+  id: core-remaster
+traits: [concentrate, manipulate]
+duration: 1 minute
+range: touch
+targets: 1 creature
+summary: Protect a creature from hostile actions.
+description: |
+  You ward a creature with a protective aura. Creatures attempting to attack the target must attempt a Will save each time. If the target uses a hostile action, the spell ends.
+
+  Critical Success: The attacker can attempt its attack and any other attacks against the target this turn.
+  Success: The attacker can't attack the target and wastes the action. The attacker can't attempt further attacks against the target this turn.
+  Failure: As success, and the attacker is frightened 1.
+  Critical Failure: As success, and the attacker is frightened 2.

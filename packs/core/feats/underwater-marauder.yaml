@@ -1,0 +1,22 @@
+id: pf2e.feat.underwater-marauder
+type: feat
+name: Underwater Marauder
+summary: Ignore penalties for fighting underwater.
+source:
+  id: core-remaster
+level: 1
+category: skill
+traits:
+- skill
+- general
+prerequisites:
+  type: all
+  predicates:
+  - type: hasSkillRank
+    skillId: athletics
+    rank: trained
+description: 'You''ve learned to fight underwater. You are not off-guard while in
+  water, and you don''t take the usual penalties for using a bludgeoning or slashing
+  melee weapon in water.
+
+  '

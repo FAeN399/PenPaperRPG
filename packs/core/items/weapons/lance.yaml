@@ -1,0 +1,19 @@
+id: pf2e.item.lance
+type: item
+source:
+  id: core-remaster
+name: Lance
+level: 0
+price: 1 gp
+bulk: "2"
+traits: [deadly-d8, jousting-d6, reach]
+summary: A cavalry weapon dealing 1d8 piercing damage with reach, deadly d8, and jousting.
+description: |
+  A long, tapered weapon designed for mounted combat. The lance is most effective when charging on horseback.
+
+  - Damage: 1d8 piercing
+  - Hands: 2
+  - Group: Spear
+  - Weapon Traits: deadly d8, jousting d6, reach
+
+  The reach trait lets you attack from 10 feet away. Deadly d8 increases critical hit damage. Jousting d6 increases the damage die by one step when charging on a mount, making mounted charges devastating.

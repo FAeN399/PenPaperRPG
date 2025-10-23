@@ -1,0 +1,16 @@
+id: pf2e.spell.know-the-way
+type: spell
+name: Know the Way
+rank: 0
+traditions: [divine, occult, primal]
+source:
+  id: core-remaster
+traits: [cantrip, concentrate, detection]
+duration: sustained up to 1 minute
+range: 30 feet
+targets: 1 creature
+summary: Show a creature the best way forward.
+description: |
+  You tell the target which direction is north. The target also gains a +2 status bonus to Survival checks to Sense Direction and to Track while this spell is sustained.
+
+  **Heightened (7th)** The bonus increases to +3.

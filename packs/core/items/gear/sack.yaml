@@ -1,0 +1,12 @@
+id: pf2e.item.sack
+type: item
+source:
+  id: core-remaster
+name: Sack
+level: 0
+price: 1 cp
+bulk: L
+traits: []
+summary: A simple cloth or burlap bag for carrying items.
+description: |
+  A sack can hold up to 8 Bulk of items (though no more than 4 Bulk of this can be items of 1 Bulk or greater, as the rest must be light items). A sack held in two hands can be used as an improvised weapon that deals 1d2 bludgeoning damage.

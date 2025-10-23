@@ -1,0 +1,19 @@
+id: pf2e.background.scholar
+type: background
+name: Scholar
+source:
+  id: orc-remaster
+  page: 53
+boosts:
+  - type: choice
+    count: 1
+    options: [INT, WIS]
+    value: 2
+  - type: any
+    count: 1
+    value: 2
+skillTraining:
+  - Arcana
+  - Academia Lore
+feat: pf2e.feat.assurance
+summary: You dedicated yourself to learning and uncovering the mysteries of the world.

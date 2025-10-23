@@ -1,0 +1,29 @@
+id: pf2e.ancestry.goblin
+type: ancestry
+name: Goblin
+summary: Small scrappy survivors who thrive through cunning and adaptability.
+source:
+  id: orc-remaster
+  page: 34
+hitPoints: 6
+size: small
+speed: 25
+boosts:
+  - type: fixed
+    abilities: [DEX, CHA]
+    value: 2
+  - type: any
+    count: 1
+    value: 2
+flaws:
+  - WIS
+languages:
+  granted: [Common, Goblin]
+  choices:
+    count: 0
+    options: []
+features:
+  - ancestryfeat:1
+traits:
+  - goblin
+  - humanoid

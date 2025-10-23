@@ -1,0 +1,12 @@
+id: pf2e.spell.see-the-unseen
+type: spell
+name: See the Unseen
+rank: 2
+traditions: [arcane, divine, occult]
+source:
+  id: core-remaster
+traits: [detection, revelation]
+duration: 10 minutes
+summary: You gain the ability to see invisible creatures and objects.
+description: |
+  You gain the ability to see invisible creatures and objects. They appear to you as translucent shapes, though they might still be concealed to you due to other factors, such as being hidden behind an object. You can also see incorporeal creatures and objects, though they appear even more translucent.

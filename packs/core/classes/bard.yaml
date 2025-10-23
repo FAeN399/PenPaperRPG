@@ -1,0 +1,53 @@
+id: pf2e.class.bard
+type: class
+name: Bard
+source:
+  id: orc-remaster
+  page: 66
+keyAbility: [CHA]
+hitPointsPerLevel: 8
+proficiencies:
+  perception: expert
+  savingThrows:
+    fortitude: trained
+    reflex: expert
+    will: expert
+  skills:
+    trained: 4
+    additionalChoices: []
+  attacks:
+    simple: trained
+    martial: untrained
+    advanced: untrained
+    unarmed: trained
+  defense:
+    unarmored: trained
+    light: trained
+    medium: untrained
+    heavy: untrained
+    shields: untrained
+  classDC: trained
+  spellcasting:
+    occult: trained
+progression:
+  "1":
+    featureRefs:
+      - classfeat:1
+      - bardfeatures:occult-spellcasting
+      - bardfeatures:composition-spells
+      - bardfeatures:muse
+    proficiencyBumps:
+      - target: weapons:simple
+        rank: trained
+      - target: armor:light
+        rank: trained
+      - target: spells:occult
+        rank: trained
+  "2":
+    featureRefs:
+      - classfeat:1
+      - skillfeat:1
+      - bardfeatures:bardic-lore
+    proficiencyBumps: []
+summary: >
+  You are a master of artistry, a scholar of hidden secrets, and a captivating persuader. Using powerful performances, you influence minds and elevate souls to new levels of heroics. You might use your powers to become a charismatic leader, or you might instead be a counselor, manipulator, scholar, or virtuoso. While your versatility leads some to consider you a beguiling ne'er-do-well, you know you're capable of so much more.

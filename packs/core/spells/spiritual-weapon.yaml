@@ -1,0 +1,13 @@
+id: pf2e.spell.spiritual-weapon
+type: spell
+name: Spiritual Weapon
+rank: 2
+traditions: [divine, occult]
+source:
+  id: core-remaster
+traits: [attack, force]
+range: 120 feet
+duration: sustained up to 1 minute
+summary: A weapon made of pure magical force manifests and attacks foes.
+description: |
+  A weapon made of pure magical force manifests and attacks foes you designate within range. This weapon has a reach of 5 feet. When you Cast the Spell, you make a melee spell attack roll against a creature within the weapon's reach. On a hit, the weapon deals 2d8 force damage. Each time you Sustain the Spell, you can move the weapon up to 20 feet and repeat the Strike. The weapon has the traits you choose when you cast the spell, either those of a sword or those of your deity's favored weapon.

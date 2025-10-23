@@ -1,0 +1,19 @@
+id: pf2e.item.spear
+type: item
+source:
+  id: core-remaster
+name: Spear
+level: 0
+price: 1 sp
+bulk: "1"
+traits: [thrown-20]
+summary: A piercing polearm dealing 1d6 piercing damage, throwable up to 20 feet.
+description: |
+  A simple weapon consisting of a sharpened point mounted on a wooden shaft. The spear is one of humanity's oldest weapons.
+
+  - Damage: 1d6 piercing
+  - Hands: 1
+  - Group: Spear
+  - Weapon Traits: thrown 20 ft.
+
+  The spear is versatile and inexpensive, making it a popular choice for militia and guards. Its thrown range of 20 feet is better than most melee weapons, allowing you to engage enemies at range before they close to melee.

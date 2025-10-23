@@ -1,0 +1,24 @@
+id: pf2e.feat.assurance-athletics
+type: feat
+name: Assurance (Athletics)
+summary: Achieve a consistent result on Athletics checks without rolling.
+source:
+  id: core-remaster
+level: 1
+category: skill
+traits:
+- skill
+- general
+prerequisites:
+  type: all
+  predicates:
+  - type: hasSkillRank
+    skillId: athletics
+    rank: trained
+description: 'Even in the worst circumstances, you can perform basic Athletics tasks.
+  You can forgo rolling an Athletics skill check to instead receive a result of 10
+  + your proficiency bonus (do not apply any other bonuses, penalties, or modifiers).
+  Special: You can select this feat multiple times. Each time, choose a different
+  skill and gain the benefits for that skill.
+
+  '

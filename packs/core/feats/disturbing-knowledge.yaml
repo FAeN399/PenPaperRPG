@@ -1,0 +1,22 @@
+id: pf2e.feat.disturbing-knowledge
+type: feat
+name: Disturbing Knowledge
+summary: You use disturbing lore to frighten your foes.
+source:
+  id: core-remaster
+  page: 262
+level: 7
+category: skill
+traits: [General, Skill]
+actionCost:
+  type: one
+prerequisites:
+  type: all
+  predicates:
+  - type: hasSkillRank
+    skillId: any-lore
+    rank: master
+description: |
+  Prerequisites: master in a Recall Knowledge skill
+
+  You can bring up disturbing lore from your wealth of knowledge. You attempt to Demoralize using a skill that you can use to Recall Knowledge about the creature instead of Intimidation. If you use this ability to Demoralize a creature whose true name you know, you gain a +2 circumstance bonus to your check.

@@ -1,0 +1,21 @@
+id: pf2e.feat.prescient-consumable
+type: feat
+name: Prescient Consumable
+summary: You even planned for this consumable.
+source:
+  id: core-remaster
+  page: 266
+level: 4
+category: general
+traits: [General]
+actionCost:
+  type: free
+prerequisites:
+  type: all
+  predicates:
+  - type: hasFeat
+    featId: prescient-planner
+description: |
+  Requirements: You haven't used this ability since the last time you were able to purchase goods.
+
+  As Prescient Planner, but you can pull out any common consumable item with a level of half your level or less. The consumable must still be one you could have purchased, meaning you must be at a location where you can purchase items, or must have earned income to purchase items during downtime.

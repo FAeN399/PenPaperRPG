@@ -1,0 +1,22 @@
+id: pf2e.item.full-plate
+type: item
+source:
+  id: core-remaster
+name: Full Plate
+level: 0
+price: 30 gp
+bulk: "4"
+traits: [bulwark]
+summary: Complete suit of shaped and fitted metal plates providing maximum heavy armor protection.
+description: |
+  This complete suit of armor is carefully crafted from shaped and fitted metal plates. The plates are joined and held in place with leather straps and rivets. Full plate provides the best protection available, though it is heavy and expensive.
+
+  - AC Bonus: +6
+  - Dex Cap: +0
+  - Check Penalty: -3
+  - Speed Penalty: -10 ft
+  - Strength: 18
+  - Group: Plate
+  - Armor Traits: bulwark
+
+  Full plate consists of a complete suit of interlocking and overlaying metal plates, including gauntlets, heavy leather boots, and a visored helmet. The bulwark trait lets you use your Strength modifier in place of your Dexterity modifier on Reflex saves, but only if your Strength modifier is higher.

@@ -1,0 +1,19 @@
+id: pf2e.item.glaive
+type: item
+source:
+  id: core-remaster
+name: Glaive
+level: 0
+price: 1 gp
+bulk: "2"
+traits: [deadly-d8, forceful, reach]
+summary: A polearm with a blade dealing 1d8 slashing damage with reach, deadly d8, and forceful.
+description: |
+  A long pole with a curved blade mounted at the end. The glaive combines the reach of a polearm with the cutting power of a blade.
+
+  - Damage: 1d8 slashing
+  - Hands: 2
+  - Group: Polearm
+  - Weapon Traits: deadly d8, forceful, reach
+
+  The reach trait lets you attack enemies 10 feet away. Deadly d8 adds extra damage on critical hits. Forceful means your second attack on a turn deals extra damage if your first hit, and even more on subsequent attacks.

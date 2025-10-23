@@ -1,0 +1,29 @@
+id: pf2e.ancestry.halfling
+type: ancestry
+name: Halfling
+summary: Small and nimble people known for their optimism and quick reflexes.
+source:
+  id: orc-remaster
+  page: 32
+hitPoints: 6
+size: small
+speed: 25
+boosts:
+  - type: fixed
+    abilities: [DEX, WIS]
+    value: 2
+  - type: any
+    count: 1
+    value: 2
+flaws:
+  - STR
+languages:
+  granted: [Common, Halfling]
+  choices:
+    count: 1
+    options: [Any]
+features:
+  - ancestryfeat:1
+traits:
+  - halfling
+  - humanoid

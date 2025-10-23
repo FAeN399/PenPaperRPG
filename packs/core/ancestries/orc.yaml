@@ -1,0 +1,28 @@
+id: pf2e.ancestry.orc
+type: ancestry
+name: Orc
+summary: Strong and fierce warriors with indomitable will.
+source:
+  id: orc-remaster
+  page: 30
+hitPoints: 10
+size: medium
+speed: 25
+boosts:
+  - type: fixed
+    abilities: [STR]
+    value: 2
+  - type: any
+    count: 1
+    value: 2
+flaws: []
+languages:
+  granted: [Common, Orcish]
+  choices:
+    count: 1
+    options: [Any]
+features:
+  - ancestryfeat:1
+traits:
+  - orc
+  - humanoid

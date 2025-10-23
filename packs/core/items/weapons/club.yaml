@@ -1,0 +1,20 @@
+id: pf2e.item.club
+type: item
+source:
+  id: core-remaster
+name: Club
+level: 0
+price: 0 cp
+bulk: "1"
+traits: [ thrown-10 ]
+summary: A simple bludgeoning weapon dealing 1d6 bludgeoning damage, throwable
+  up to 10 feet.
+description: |
+  A heavy piece of shaped wood used as a simple weapon. Clubs are often improvised from available materials.
+
+  - Damage: 1d6 bludgeoning
+  - Hands: 1
+  - Group: Club
+  - Weapon Traits: thrown 10 ft.
+
+  The club is one of the simplest weapons available and costs nothing, making it accessible to anyone. Despite its simplicity, it deals respectable damage and can be thrown in a pinch.

@@ -1,0 +1,12 @@
+id: pf2e.item.writing-set
+type: item
+source:
+  id: core-remaster
+name: Writing Set
+level: 0
+price: 1 gp
+bulk: L
+traits: []
+summary: Ink, quill, and parchment for writing documents.
+description: |
+  A writing set includes a vial of ink, an inkpen, spare nibs, and parchment. It's used for recording information, copying texts, creating maps, or sending messages. The ink and parchment are enough for roughly 20 pages of writing.

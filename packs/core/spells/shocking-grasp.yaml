@@ -1,0 +1,17 @@
+id: pf2e.spell.shocking-grasp
+type: spell
+name: Shocking Grasp
+rank: 1
+traditions: [arcane, primal]
+source:
+  id: core-remaster
+traits: [attack, concentrate, electricity, manipulate]
+duration: instantaneous
+range: touch
+targets: 1 creature
+summary: Zap a creature with an electrified touch attack.
+description: |
+  You shroud your hands in a crackling field of lightning. Make a melee spell attack. On a hit, the target takes 2d12 electricity damage. If the target is wearing metal armor or is made of metal, you gain a +1 circumstance bonus to your attack roll with shocking grasp, and the target also takes 1d4 persistent electricity damage on a hit.
+
+  Critical Success: The target takes double damage and is stunned 1.
+  Success: The target takes full damage.

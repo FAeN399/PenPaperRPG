@@ -1,0 +1,12 @@
+id: pf2e.item.climbing-kit
+type: item
+source:
+  id: core-remaster
+name: Climbing Kit
+level: 0
+price: 5 sp
+bulk: "1"
+traits: []
+summary: A collection of tools and equipment for climbing.
+description: |
+  A climbing kit includes assorted pitons, a small hammer, a grappling hook, and 50 feet of rope. You can use the items in the kit separately, but it's more efficient to keep them together. Using a climbing kit grants you a +1 item bonus to Athletics checks to Climb.

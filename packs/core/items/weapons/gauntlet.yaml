@@ -1,0 +1,19 @@
+id: pf2e.item.gauntlet
+type: item
+source:
+  id: core-remaster
+name: Gauntlet
+level: 0
+price: 2 sp
+bulk: L
+traits: [free-hand]
+summary: An armored glove dealing 1d4 bludgeoning damage while keeping your hand free.
+description: |
+  A reinforced metal glove worn over the hand. Unlike most weapons, you can hold items in a hand wearing a gauntlet.
+
+  - Damage: 1d4 bludgeoning
+  - Hands: 1
+  - Group: Brawling
+  - Weapon Traits: free-hand
+
+  The free-hand trait means you can use the hand wearing the gauntlet for other purposes, such as holding items or casting spells with somatic components, while still threatening enemies with the weapon.

@@ -1,0 +1,19 @@
+id: pf2e.item.steel-shield
+type: item
+source:
+  id: core-remaster
+name: Steel Shield
+level: 0
+price: 2 gp
+bulk: "1"
+traits: []
+summary: Durable metal shield providing superior defense and damage resistance.
+description: |
+  This sturdy metal shield is crafted from steel, making it significantly more durable than its wooden counterpart. It's a reliable choice for professional soldiers and experienced adventurers.
+
+  - AC Bonus: +2 (when Raised)
+  - Speed Penalty: 0 ft
+  - Hardness: 5
+  - HP (BT): 20 (10)
+
+  You can use the Raise a Shield action to gain a +2 circumstance bonus to AC until the start of your next turn. This steel shield's superior hardness makes it excellent for the Shield Block reaction, allowing you to reduce more damage before the shield itself takes harm.

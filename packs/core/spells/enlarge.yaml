@@ -1,0 +1,13 @@
+id: pf2e.spell.enlarge
+type: spell
+name: Enlarge
+rank: 2
+traditions: [arcane, primal]
+source:
+  id: core-remaster
+traits: [polymorph]
+duration: 5 minutes
+targets: 1 willing creature
+summary: You make the target Large, increasing its size and reach.
+description: |
+  Bolstered by magical power, the target grows to size Large. Its equipment grows with it but returns to natural size if removed. The creature is clumsy 1. Its reach increases by 5 feet (or by 10 feet if it started out Tiny), and it gains a +2 status bonus to melee damage. This spell has no effect on a Large or larger creature.

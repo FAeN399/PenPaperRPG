@@ -1,0 +1,16 @@
+id: pf2e.feat.prescient-planner
+type: feat
+name: Prescient Planner
+summary: You planned for this eventuality long ago.
+source:
+  id: core-remaster
+  page: 266
+level: 2
+category: general
+traits: [General]
+actionCost:
+  type: free
+description: |
+  Requirements: You haven't used this ability since the last time you were able to purchase goods.
+
+  You pull out the exact item you need for a situation. You can spend 1 bulk of your current Bulk capacity to pull out any common piece of adventuring gear from your backpack, provided the item has a Bulk of 1 or less and a level of half your level or less.

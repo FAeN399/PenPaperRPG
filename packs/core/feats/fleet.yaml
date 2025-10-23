@@ -1,0 +1,12 @@
+id: pf2e.feat.fleet
+type: feat
+name: Fleet
+summary: You move more quickly on foot.
+source:
+  id: core-remaster
+  page: 264
+level: 1
+category: general
+traits: [General]
+description: |
+  You move more quickly on foot. Your Speed increases by 5 feet.

@@ -1,0 +1,14 @@
+id: pf2e.spell.jump
+type: spell
+name: Jump
+rank: 1
+traditions: [arcane, primal]
+source:
+  id: core-remaster
+traits: [concentrate, manipulate]
+duration: 1 minute
+range: touch
+targets: 1 creature
+summary: Enhance a creature's leaping ability.
+description: |
+  The target can immediately use the Leap action. For the spell's duration, the target can Leap up to 15 feet in any direction without touching the ground. You can Dismiss this spell.

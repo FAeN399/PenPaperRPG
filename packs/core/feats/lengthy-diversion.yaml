@@ -1,0 +1,18 @@
+id: pf2e.feat.lengthy-diversion
+type: feat
+name: Lengthy Diversion
+summary: Your diversions keep creatures distracted longer.
+source:
+  id: core-remaster
+  page: 265
+level: 1
+category: skill
+traits: [General, Skill]
+prerequisites:
+  type: all
+  predicates:
+  - type: hasSkillRank
+    skillId: deception
+    rank: trained
+description: |
+  When you critically succeed at Create a Diversion, creatures are off-guard against your attacks until the end of your next turn instead of until the start of your next turn.

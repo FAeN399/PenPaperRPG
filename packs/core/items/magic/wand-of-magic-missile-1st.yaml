@@ -1,0 +1,21 @@
+id: pf2e.item.wand-of-magic-missile-1st
+type: item
+source:
+  id: core-remaster
+name: Wand of Magic Missile (1st-Rank)
+level: 3
+price: 60 gp
+bulk: L
+traits: [magical, evocation, wand]
+summary: A wand that can cast magic missile at 1st rank.
+description: |
+  This wand is carved from rowan wood and tipped with a gleaming crystal that glows with arcane energy.
+
+  Usage: held in 1 hand
+  Bulk: L
+  Activate: Cast a Spell
+  Frequency: once per day, plus overcharge
+
+  You cast magic missile at 1st rank. The spell fires three missiles that each deal 1d4+1 force damage to a target of your choice within 120 feet.
+
+  Overcharge: You can attempt to overcharge the wand by activating it even if you've already done so that day. This requires a DC 10 flat check. On a success, you cast the spell normally. On a failure, the spell is not cast, the charge is wasted, and you can't activate the wand again until your next daily preparations.

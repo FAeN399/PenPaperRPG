@@ -2,8 +2,11 @@
 
 import { useMemo, useState } from "react";
 
-import { StepList } from "./StepList";
+import { WizardHeader } from "./WizardHeader";
+import { HorizontalStepIndicator } from "./HorizontalStepIndicator";
+import { CharacterStatsSidebar } from "./CharacterStatsSidebar";
 import { WizardViewport } from "./WizardViewport";
+import { WizardFooter } from "./WizardFooter";
 
 import { useCharacterBuilder } from "@/hooks/useCharacterBuilder";
 import type { DesktopBridge } from "@/types/desktop";
@@ -61,6 +64,8 @@ export function CreationWizard(): JSX.Element {
   const steps = useMemo(() => DEFAULT_STEPS, []);
   const [activeStepId, setActiveStepId] = useState<string>(steps[0]?.id ?? "ancestry");
   const activeStep = steps.find((step) => step.id === activeStepId) ?? steps[0];
+  const activeStepIndex = steps.findIndex((s) => s.id === activeStepId);
+
   const {
     state: builderState,
     status,
@@ -70,98 +75,121 @@ export function CreationWizard(): JSX.Element {
     selectBackground,
     selectClass,
     resolveAbilityBoost,
+    trainSkills,
+    learnSpells,
+    resetCharacter,
   } = useCharacterBuilder();
-  const desktopBridge = getDesktopBridge();
-  const isDesktop = Boolean(desktopBridge);
+
   const isLoading = status === "idle" || status === "loading";
   const hasError = status === "error";
 
+  const handleNext = (): void => {
+    if (activeStepIndex < steps.length - 1) {
+      setActiveStepId(steps[activeStepIndex + 1].id);
+    }
+  };
+
+  const handleBack = (): void => {
+    if (activeStepIndex > 0) {
+      setActiveStepId(steps[activeStepIndex - 1].id);
+    }
+  };
+
+  const handleNewCharacter = (): void => {
+    resetCharacter();
+    setActiveStepId(steps[0]?.id ?? "ancestry");
+  };
+
+  const characterName = builderState?.character.metadata.name || "Unnamed Character";
+
   return (
-    <div style={{ display: "grid", gridTemplateColumns: "280px 1fr", gap: "2rem", padding: "2rem" }}>
-      <aside>
-        <h1 style={{ fontSize: "1.5rem", marginBottom: "1rem" }}>Create Your Character</h1>
-        <StepList
-          steps={steps}
-          activeStepId={activeStepId}
-          onStepSelect={setActiveStepId}
-        />
-      </aside>
-      <main>
-        {builderState ? (
-          <section
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "1rem",
-              padding: "0.75rem 1rem",
-              marginBottom: "1rem",
-              border: "1px solid #e5e7eb",
-              borderRadius: 8,
-              background: "#fafafa",
-            }}
-          >
-            <span style={{ fontWeight: 600 }}>Catalog</span>
-            <span style={{ color: "#4b5563" }}>
-              Entities: {builderState.catalog.entities.length}
-            </span>
-            <span style={{ color: "#4b5563" }}>
-              Packs: {Object.keys(builderState.catalog.packs ?? {}).length}
-            </span>
-            {isDesktop && desktopBridge ? (
-              <>
-                <span style={{ marginLeft: "auto", fontStyle: "italic", color: "#065f46" }}>
-                  Desktop mode
-                </span>
-                <button
-                  type="button"
-                  onClick={() => {
-                    void desktopBridge.openPacksDirectory();
-                  }}
-                  style={{ padding: "0.25rem 0.5rem" }}
-                >
-                  Open Packs
-                </button>
-                <button
-                  type="button"
-                  onClick={() => {
-                    void desktopBridge.selectPacksDirectory();
-                  }}
-                  style={{ padding: "0.25rem 0.5rem" }}
-                >
-                  Change Packs...
-                </button>
-              </>
-            ) : null}
-          </section>
-        ) : null}
-        {isLoading && <p>Loading catalog...</p>}
-        {hasError && (
-          <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
-            <p role="alert" style={{ color: "#b91c1c" }}>
-              Failed to load catalog data. {error?.message ?? "Unknown error"}
-            </p>
-            <button
-              type="button"
-              onClick={() => {
-                void refresh();
-              }}
-              style={{ alignSelf: "start" }}
-            >
-              Retry
-            </button>
-          </div>
-        )}
+    <div style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
+      {/* Header */}
+      <WizardHeader
+        characterName={characterName}
+        currentStepNum={activeStepIndex + 1}
+        totalSteps={steps.length}
+        onNewCharacter={handleNewCharacter}
+      />
+
+      {/* Step Indicator */}
+      <HorizontalStepIndicator steps={steps} activeStepId={activeStepId} />
+
+      {/* Main Container */}
+      <div style={{ display: "flex", flex: 1, overflow: "hidden" }}>
+        {/* Left Sidebar - Character Stats */}
         {status === "ready" && builderState ? (
-          <WizardViewport
-            step={activeStep}
-            builderState={builderState}
-            onSelectAncestry={selectAncestry}
-            onSelectBackground={selectBackground}
-            onSelectClass={selectClass}
-            onResolveAbilityBoost={resolveAbilityBoost}
-          />
+          <CharacterStatsSidebar builderState={builderState} />
         ) : null}
-      </main>
+
+        {/* Main Content */}
+        <main style={{ flex: 1, padding: "1.5rem", overflowY: "auto" }}>
+          <div style={{ maxWidth: "1024px", margin: "0 auto" }}>
+            {isLoading && (
+              <div style={{ textAlign: "center", color: "#a0a0a0", padding: "2rem" }}>
+                Loading catalog...
+              </div>
+            )}
+
+            {hasError && (
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.75rem",
+                  padding: "2rem",
+                  backgroundColor: "#2d2d2d",
+                  borderRadius: "0.5rem",
+                  border: "1px solid #444",
+                }}
+              >
+                <p role="alert" style={{ color: "#ff6b6b" }}>
+                  Failed to load catalog data. {error?.message ?? "Unknown error"}
+                </p>
+                <button
+                  type="button"
+                  onClick={() => {
+                    void refresh();
+                  }}
+                  style={{
+                    alignSelf: "start",
+                    padding: "0.5rem 1rem",
+                    backgroundColor: "#8b0000",
+                    color: "white",
+                    border: "none",
+                    borderRadius: "0.25rem",
+                    cursor: "pointer",
+                  }}
+                >
+                  Retry
+                </button>
+              </div>
+            )}
+
+            {status === "ready" && builderState ? (
+              <WizardViewport
+                step={activeStep}
+                builderState={builderState}
+                onSelectAncestry={selectAncestry}
+                onSelectBackground={selectBackground}
+                onSelectClass={selectClass}
+                onResolveAbilityBoost={resolveAbilityBoost}
+                onTrainSkills={trainSkills}
+                onLearnSpells={learnSpells}
+              />
+            ) : null}
+          </div>
+        </main>
+      </div>
+
+      {/* Footer */}
+      <WizardFooter
+        canGoBack={activeStepIndex > 0}
+        canGoNext={activeStepIndex < steps.length - 1}
+        isLastStep={activeStepIndex === steps.length - 1}
+        onBack={handleBack}
+        onNext={handleNext}
+      />
     </div>
   );
 }

@@ -1,0 +1,14 @@
+id: pf2e.spell.stinking-cloud
+type: spell
+name: Stinking Cloud
+rank: 3
+traditions: [arcane, primal]
+source:
+  id: core-remaster
+traits: [poison]
+range: 120 feet
+duration: 1 minute
+savingThrow: Fortitude
+summary: A cloud of foul-smelling gas nauseates creatures within it.
+description: |
+  You create a 20-foot burst of foul-smelling, yellow-green fog. The cloud doesn't block vision but creatures within it are concealed. Creatures that start their turn in the cloud or enter it must attempt a Fortitude save or become sickened 1 (sickened 2 on a critical failure). Creatures in the cloud also take a -2 circumstance penalty to Fortitude saves against disease and inhaled poisons.

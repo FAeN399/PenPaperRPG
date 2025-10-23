@@ -1,0 +1,52 @@
+id: pf2e.class.barbarian
+type: class
+name: Barbarian
+source:
+  id: orc-remaster
+  page: 64
+keyAbility: [STR]
+hitPointsPerLevel: 12
+proficiencies:
+  perception: expert
+  savingThrows:
+    fortitude: expert
+    reflex: trained
+    will: expert
+  skills:
+    trained: 3
+    additionalChoices: []
+  attacks:
+    simple: trained
+    martial: trained
+    advanced: untrained
+    unarmed: trained
+  defense:
+    unarmored: trained
+    light: trained
+    medium: trained
+    heavy: untrained
+    shields: trained
+  classDC: trained
+progression:
+  "1":
+    featureRefs:
+      - classfeat:1
+      - barbarianfeatures:rage
+      - barbarianfeatures:instinct
+    proficiencyBumps:
+      - target: weapons:simple
+        rank: trained
+      - target: weapons:martial
+        rank: trained
+      - target: armor:light
+        rank: trained
+      - target: armor:medium
+        rank: trained
+  "2":
+    featureRefs:
+      - classfeat:1
+      - skillfeat:1
+      - barbarianfeatures:instinct-ability
+    proficiencyBumps: []
+summary: >
+  Rage consumes you in battle. You delight in wreaking havoc and using powerful attacks to defeat your enemies. Your rages draw upon a vicious instinct, which you might associate with an animal, a spirit, or some part of yourself. To many barbarians, brute force is a hammer and every problem looks like a nail, whereas others try to hold back the storm of emotions inside them and release their rage only when it matters most.

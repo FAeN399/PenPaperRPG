@@ -1,0 +1,14 @@
+id: pf2e.spell.mage-armor
+type: spell
+name: Mage Armor
+rank: 1
+traditions: [arcane, occult]
+source:
+  id: core-remaster
+traits: [cantrip, concentrate, force, manipulate]
+duration: until your next daily preparations
+range: touch
+targets: 1 willing unarmored creature
+summary: Ward a creature with armor made of force.
+description: |
+  You ward yourself with shimmering magical energy, gaining a +1 item bonus to AC and a maximum Dexterity modifier of +5. While wearing mage armor, you use your unarmored proficiency to calculate your AC. Mage armor's duration is until the next time you make your daily preparations.

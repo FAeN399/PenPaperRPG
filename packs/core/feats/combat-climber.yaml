@@ -1,0 +1,18 @@
+id: pf2e.feat.combat-climber
+type: feat
+name: Combat Climber
+summary: You can fight while climbing.
+source:
+  id: core-remaster
+  page: 260
+level: 4
+category: skill
+traits: [General, Skill]
+prerequisites:
+  type: all
+  predicates:
+  - type: hasSkillRank
+    skillId: athletics
+    rank: expert
+description: |
+  You have extensive experience fighting while climbing. You aren't off-guard while Climbing, and you can Climb with one hand occupied. While Climbing, you deal your full Strength modifier with attacks rather than having it reduced to half as normal for attacks made with a free hand.

@@ -1,0 +1,23 @@
+id: pf2e.spell.hideous-laughter
+type: spell
+name: Hideous Laughter
+rank: 2
+traditions: [arcane, occult]
+source:
+  id: core-remaster
+traits: [emotion, mental]
+range: 30 feet
+targets: 1 living creature
+duration: sustained up to 1 minute
+savingThrow: Will
+summary: The target is overtaken with uncontrollable laughter.
+description: |
+  The target is overtaken with uncontrollable laughter. It must attempt a Will save.
+
+  Critical Success: The target is unaffected.
+
+  Success: The target is slowed 1 for 1 round.
+
+  Failure: The target is slowed 1 and can't use reactions for 1 round. It must attempt a Will save at the end of each of its turns; this ongoing save has the incapacitation trait. On a failure, the target is slowed 1 for that turn, and on a second consecutive failure on these saves, the spell ends. On a success, the slowed condition ends, but the target can't use reactions for that turn. On a critical success, the spell ends, and the target can use reactions normally.
+
+  Critical Failure: The target falls prone and can't use actions or reactions for 1 round. It then follows the failure effects.

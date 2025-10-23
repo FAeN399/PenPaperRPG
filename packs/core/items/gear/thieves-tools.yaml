@@ -1,0 +1,12 @@
+id: pf2e.item.thieves-tools
+type: item
+source:
+  id: core-remaster
+name: Thieves' Tools
+level: 0
+price: 3 gp
+bulk: L
+traits: []
+summary: Lock picks and tools for bypassing locks and traps.
+description: |
+  This kit contains tools useful for picking locks and disarming traps. You need thieves' tools to use Thievery to Pick Locks or Disable Devices (of some types). If you wear your thieves' tools, you can draw and replace them as part of the action that uses them.

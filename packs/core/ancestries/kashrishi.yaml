@@ -1,0 +1,29 @@
+id: pf2e.ancestry.kashrishi
+type: ancestry
+name: Kashrishi
+summary: Small, empathic furred humanoids from the Impossible Lands with innate emotional awareness.
+rarity: uncommon
+source:
+  id: impossible-lands
+  page: 46
+hitPoints: 8
+size: small
+speed: 25
+boosts:
+  - type: fixed
+    abilities: [CON]
+    value: 2
+  - type: any
+    count: 1
+    value: 2
+flaws: []
+languages:
+  granted: [Common, Kashrishi]
+  choices:
+    count: 1
+    options: [Any]
+features:
+  - ancestryfeat:1
+traits:
+  - kashrishi
+  - humanoid

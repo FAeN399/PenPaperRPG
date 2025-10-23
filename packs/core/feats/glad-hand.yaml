@@ -1,0 +1,18 @@
+id: pf2e.feat.glad-hand
+type: feat
+name: Glad-Hand
+summary: You befriend strangers quickly.
+source:
+  id: core-remaster
+  page: 264
+level: 2
+category: skill
+traits: [General, Skill]
+prerequisites:
+  type: all
+  predicates:
+  - type: hasSkillRank
+    skillId: diplomacy
+    rank: expert
+description: |
+  You can Make an Impression using Diplomacy as a 1-minute activity, and you can make requests of anyone whose attitude is at least indifferent toward you.

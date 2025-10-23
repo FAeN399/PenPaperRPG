@@ -1,0 +1,21 @@
+id: pf2e.feat.hunted-shot
+type: feat
+name: Hunted Shot
+summary: Fire two arrows at your hunted prey.
+source:
+  id: core-remaster
+  page: 168
+level: 1
+category: class
+traits: [Ranger, Flourish]
+actionCost:
+  type: one
+prerequisites:
+  type: all
+  predicates:
+    - type: hasClass
+      classId: pf2e.class.ranger
+description: >
+  You take two quick shots against the one you hunt. Make two Strikes against your prey with the required
+  weapon. If both hit the same creature, combine their damage for the purpose of resistances and weaknesses.
+  Apply your multiple attack penalty to each Strike normally.

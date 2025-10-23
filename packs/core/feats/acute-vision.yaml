@@ -1,0 +1,19 @@
+id: pf2e.feat.acute-vision
+type: feat
+name: Acute Vision
+summary: Your senses are especially sharp while raging.
+source:
+  id: core-remaster
+  page: 83
+level: 1
+category: class
+traits: [Barbarian]
+prerequisites:
+  type: all
+  predicates:
+    - type: hasClass
+      classId: pf2e.class.barbarian
+description: >
+  Your rage heightens your senses. While you are raging, you gain darkvision if you don't already have it,
+  and the range of your darkvision increases by 60 feet. If you already have darkvision, increase its range
+  by 60 feet instead.

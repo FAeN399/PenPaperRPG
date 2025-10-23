@@ -1,0 +1,19 @@
+id: pf2e.item.warhammer
+type: item
+source:
+  id: core-remaster
+name: Warhammer
+level: 0
+price: 1 gp
+bulk: "1"
+traits: [shove]
+summary: A martial hammer dealing 1d8 bludgeoning damage, capable of shoving enemies.
+description: |
+  A metal-headed hammer designed for combat, heavier and more robust than a simple mace. The warhammer is effective against armored foes.
+
+  - Damage: 1d8 bludgeoning
+  - Hands: 1
+  - Group: Hammer
+  - Weapon Traits: shove
+
+  The warhammer deals respectable damage and its shove trait allows you to push enemies away. Bludgeoning damage is particularly effective against skeletons and other creatures resistant to slashing or piercing.

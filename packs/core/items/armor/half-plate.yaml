@@ -1,0 +1,22 @@
+id: pf2e.item.half-plate
+type: item
+source:
+  id: core-remaster
+name: Half Plate
+level: 0
+price: 18 gp
+bulk: "3"
+traits: []
+summary: Shaped metal plates covering upper body and legs with heavy armor protection.
+description: |
+  Half plate consists of most of the upper body plates used in full plate, with lighter or sparser steel plate protection for the arms and legs. This armor provides outstanding protection while being somewhat more affordable than full plate.
+
+  - AC Bonus: +5
+  - Dex Cap: +1
+  - Check Penalty: -3
+  - Speed Penalty: -10 ft
+  - Strength: 16
+  - Group: Plate
+  - Armor Traits: —
+
+  Half plate includes gauntlets, heavy leather boots, a visored helmet, and a breastplate and other metal plates covering most of the body. The joints are protected by chainmail or leather.

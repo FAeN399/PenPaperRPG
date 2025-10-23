@@ -1,0 +1,45 @@
+id: pf2e.ancestry.lizardfolk
+type: ancestry
+name: Lizardfolk
+summary: Proud reptilian humanoids with strong survival instincts and deep connections to their ancestral wetlands.
+description: |
+  Lizardfolk, who call themselves iruxi, are proud reptilian humanoids with a strong warrior tradition and deep connection to nature. They often live in tight-knit communities in wetlands and jungles, valuing strength, survival skills, and respect for the natural world.
+
+  **Physical Description**: Iruxi are tall, powerfully built reptilian humanoids standing 6 to 7 feet tall. They have scaled skin in shades of green, brown, gray, or rust-red, powerful tails for balance, and sharp teeth. Their eyes are often yellow or orange with vertical pupils.
+
+  **Society**: Lizardfolk society revolves around survival and community strength. They organize into clans led by the strongest and wisest members. Iruxi value practical skills, with even their artisans and shamans expected to contribute to hunting and defense. They live in harmony with their environment, viewing themselves as part of nature rather than separate from it.
+
+  **Alignment and Religion**: Most lizardfolk are neutral, focused on the practical needs of survival and community. They often worship nature spirits, dragon gods, or deities associated with strength and survival. Many follow the tenets of the lizardfolk deity Sgothgah.
+
+  **Adventurers**: Lizardfolk adventurers often leave their communities to gain experience and strength to bring back to their clan, or to defend their homelands from external threats. They make formidable barbarians, druids, and rangers, with natural aptitude for survival in harsh environments.
+
+  **Names**: Iruxi names often have a hissing or guttural quality. Examples include Arasheg, Essaru, Enshuk, Gishkim, Hazi, Inishish, Kutak, Nasha, Shulkuru, Tarka, and Ushketh.
+source:
+  id: orc-remaster
+  page: 46
+rarity: uncommon
+hitPoints: 8
+size: medium
+speed: 25
+boosts:
+  - type: fixed
+    abilities: [STR, WIS]
+    value: 2
+  - type: any
+    count: 1
+    value: 2
+flaws:
+  - INT
+languages:
+  granted: [Common, Iruxi]
+  choices:
+    count: 1
+    options: [Any]
+features:
+  - ancestryfeat:1
+traits:
+  - lizardfolk
+  - humanoid
+effects:
+  - kind: grantTrait
+    traitId: hold-breath

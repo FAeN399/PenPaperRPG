@@ -1,0 +1,19 @@
+id: pf2e.spell.harm
+type: spell
+name: Harm
+rank: 1
+traditions: [divine]
+source:
+  id: core-remaster
+traits: [concentrate, manipulate, void]
+duration: instantaneous
+range: varies
+targets: 1 living creature or 1 willing undead creature
+savingThrow: basic Fortitude
+summary: Void energy damages the living or heals undead.
+description: |
+  You channel void energy to harm the living or heal the undead. If the target is a living creature, you deal 1d8 void damage to it, and it gets a basic Fortitude save. If the target is a willing undead creature, you restore that amount of Hit Points. The number of actions you spend when Casting this Spell determines its targets, range, area, and other parameters.
+
+  1 action (somatic): The spell has a range of touch.
+  2 actions (somatic, verbal): The spell has a range of 30 feet. If you're dealing damage, increase the damage by 8.
+  3 actions (material, somatic, verbal): You disperse void energy in a 30-foot emanation. This targets all living and undead creatures in the area.

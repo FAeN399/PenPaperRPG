@@ -1,0 +1,19 @@
+id: pf2e.spell.grease
+type: spell
+name: Grease
+rank: 1
+traditions: [arcane, primal]
+source:
+  id: core-remaster
+traits: [concentrate, manipulate]
+duration: 1 minute
+range: 30 feet
+targets: one 10-foot square or one object of up to 1 Bulk
+savingThrow: Reflex
+summary: Coat a surface or object in slippery grease.
+description: |
+  You conjure grease, with effects based on choosing an area or target.
+
+  Area: All solid ground in the area is covered with grease. Each creature standing on the greasy surface must succeed at a Reflex save or an Acrobatics check against your spell DC or fall prone. Creatures using an action to move onto the greasy surface during the spell's duration must attempt either a Reflex save or an Acrobatics check to Balance. A creature that Steps or Crawls doesn't have to attempt a check or save.
+
+  Target: If you cast the spell on an unattended object, anyone trying to pick up the object must succeed at an Acrobatics check or Reflex save against your spell DC to do so. If you target an attended object, the creature that has the object must attempt an Acrobatics check or Reflex save. On a failure, the holder drops the object, and on a critical failure, the holder drops the object and it lands in an adjacent square of the GM's choice. If the holder succeeds, the spell has no effect.

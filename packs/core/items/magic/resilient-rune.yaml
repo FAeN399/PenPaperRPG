@@ -1,0 +1,16 @@
+id: pf2e.item.resilient-rune
+type: item
+source:
+  id: core-remaster
+name: Resilient Rune
+level: 5
+price: 160 gp
+bulk: "-"
+traits: [magical, abjuration]
+summary: A fundamental rune that grants a +1 item bonus to saving throws.
+description: |
+  Resilient runes imbue armor with additional protective magic. A resilient rune grants a +1 item bonus to saving throws.
+
+  Usage: etched onto armor
+
+  A resilient rune grants you a +1 item bonus to saving throws. You can upgrade a resilient rune already etched on a suit of armor to a greater version, increasing the values by 1.

@@ -1,0 +1,21 @@
+id: pf2e.spell.fireball
+type: spell
+name: Fireball
+rank: 3
+traditions: [arcane, primal]
+source:
+  id: core-remaster
+traits: [fire]
+range: 500 feet
+savingThrow: Reflex
+summary: A burst of fire explodes, dealing 6d6 fire damage.
+description: |
+  A roaring blast of fire appears at a spot you designate, dealing 6d6 fire damage. All creatures in a 20-foot burst must attempt a Reflex save.
+
+  Critical Success: The creature is unaffected.
+
+  Success: The creature takes half damage.
+
+  Failure: The creature takes full damage.
+
+  Critical Failure: The creature takes double damage.

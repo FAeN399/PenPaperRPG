@@ -1,0 +1,13 @@
+id: pf2e.spell.stabilize
+type: spell
+name: Stabilize
+rank: 0
+traditions: [divine, primal]
+source:
+  id: core-remaster
+traits: [cantrip, concentrate, healing]
+range: 30 feet
+targets: 1 dying creature
+summary: Stabilize a dying creature.
+description: |
+  Positive energy shuts death's door. The target loses the dying condition, though it remains unconscious at 0 Hit Points.

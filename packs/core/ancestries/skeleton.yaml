@@ -1,0 +1,41 @@
+id: pf2e.ancestry.skeleton
+type: ancestry
+name: Skeleton
+summary: Undead beings of animated bones, freed from death but bound to unlife.
+source:
+  id: book-of-the-dead
+  page: 54
+rarity: rare
+hitPoints: 6
+size: medium
+speed: 25
+boosts:
+  - type: fixed
+    abilities: [DEX, CHA]
+    value: 2
+  - type: any
+    count: 1
+    value: 2
+flaws:
+  - INT
+languages:
+  granted: [Common, Necril]
+  choices:
+    count: 1
+    options: [Any]
+features:
+  - ancestryfeat:1
+traits:
+  - skeleton
+  - undead
+effects:
+  - kind: grantSense
+    senseId: darkvision
+  - kind: grantTrait
+    traitId: undead
+  - kind: grantFlag
+    flag: immunity:death
+  - kind: grantFlag
+    flag: immunity:disease
+  - kind: grantFlag
+    flag: immunity:poison

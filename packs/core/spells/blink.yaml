@@ -1,0 +1,12 @@
+id: pf2e.spell.blink
+type: spell
+name: Blink
+rank: 3
+traditions: [arcane, occult]
+source:
+  id: core-remaster
+traits: [teleportation]
+duration: 1 minute
+summary: You blink rapidly between the Material Plane and the Ethereal Plane.
+description: |
+  You blink quickly between the Material Plane and the Ethereal Plane. You gain resistance 5 to all damage (except force). You can Sustain the Spell to vanish and reappear 10 feet away in a random direction determined by the GM; the movement doesn't trigger reactions. At the end of your turn, you vanish and reappear as above.

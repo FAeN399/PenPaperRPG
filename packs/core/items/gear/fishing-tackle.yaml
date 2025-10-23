@@ -1,0 +1,12 @@
+id: pf2e.item.fishing-tackle
+type: item
+source:
+  id: core-remaster
+name: Fishing Tackle
+level: 0
+price: 8 sp
+bulk: "1"
+traits: []
+summary: Equipment for catching fish including hooks, line, and lures.
+description: |
+  This kit includes a fishing hook, line, lures, and a simple rod. You can use it to catch fish with the Survival skill. Having fishing tackle grants you a +1 item bonus to Survival checks to Subsist by fishing.

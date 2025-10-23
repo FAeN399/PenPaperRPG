@@ -1,0 +1,20 @@
+id: pf2e.feat.distracting-shadows
+type: feat
+name: Distracting Shadows
+level: 1
+category: ancestry
+source:
+  id: core-remaster
+  page: 48
+traits:
+- halfling
+prerequisites:
+  type: all
+  predicates:
+  - type: hasAncestry
+    ancestryId: pf2e.ancestry.halfling
+summary: You have a knack for using larger folk as a distraction to slip by foes.
+description: You have a knack for using larger folk as a distraction to slip by foes.
+  You can use creatures that are at least one size larger than you as cover for the
+  Take Cover and Hide actions, though you still can't use such creatures as cover
+  for other uses, such as the Cover rules.

@@ -1,0 +1,44 @@
+id: pf2e.class.cleric
+type: class
+name: Cleric
+source:
+  id: orc-remaster
+  page: 80
+keyAbility: [WIS]
+hitPointsPerLevel: 8
+proficiencies:
+  perception: trained
+  savingThrows:
+    fortitude: expert
+    reflex: trained
+    will: expert
+  skills:
+    trained: 2
+    additionalChoices: []
+  attacks:
+    simple: trained
+    martial: untrained
+    advanced: untrained
+    unarmed: trained
+  defense:
+    unarmored: trained
+    light: trained
+    medium: trained
+    heavy: untrained
+    shields: trained
+  classDC: trained
+progression:
+  "1":
+    featureRefs:
+      - classfeat:1
+      - clericfeatures:divine-spellcasting
+      - clericfeatures:divine-font
+      - clericfeatures:deity
+      - clericfeatures:doctrine
+    proficiencyBumps: []
+  "2":
+    featureRefs:
+      - classfeat:1
+      - skillfeat:1
+    proficiencyBumps: []
+summary: Devoted champion of a deity, channeling divine magic to heal and protect.

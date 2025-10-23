@@ -1,0 +1,32 @@
+id: pf2e.ancestry.fetchling
+type: ancestry
+name: Fetchling
+summary: Shadow-touched humanoids who trace their heritage to the Shadow Plane, also known as kayal.
+source:
+  id: ancestry-guide
+  page: 84
+hitPoints: 8
+size: medium
+speed: 25
+rarity: uncommon
+boosts:
+  - type: fixed
+    abilities: [DEX]
+    value: 2
+  - type: any
+    count: 1
+    value: 2
+flaws: []
+languages:
+  granted: [Common, Shadowtongue]
+  choices:
+    count: 1
+    options: [Any]
+features:
+  - ancestryfeat:1
+traits:
+  - fetchling
+  - humanoid
+effects:
+  - kind: grantSense
+    senseId: darkvision

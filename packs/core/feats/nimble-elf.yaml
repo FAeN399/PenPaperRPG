@@ -1,0 +1,17 @@
+id: pf2e.feat.nimble-elf
+type: feat
+name: Nimble Elf
+level: 1
+category: ancestry
+source:
+  id: core-remaster
+  page: 40
+traits:
+- elf
+prerequisites:
+  type: all
+  predicates:
+  - type: hasAncestry
+    ancestryId: pf2e.ancestry.elf
+summary: Your muscles are tightly honed, increasing your Speed by 5 feet.
+description: Your muscles are tightly honed. Your Speed increases by 5 feet.

@@ -1,0 +1,21 @@
+id: pf2e.feat.haughty-obstinacy
+type: feat
+name: Haughty Obstinacy
+level: 1
+category: ancestry
+source:
+  id: core-remaster
+  page: 56
+traits:
+- human
+prerequisites:
+  type: all
+  predicates:
+  - type: hasAncestry
+    ancestryId: pf2e.ancestry.human
+summary: Your confidence borders on arrogance, granting you a bonus to resist mental
+  effects.
+description: Your unshakeable confidence in yourself and your abilities makes it harder
+  for others to sway your mind. You gain a +1 circumstance bonus to saving throws
+  against mental effects. When you roll a success on a saving throw against a mental
+  effect, you get a critical success instead.

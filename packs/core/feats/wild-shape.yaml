@@ -1,0 +1,19 @@
+id: pf2e.feat.wild-shape
+type: feat
+name: Wild Shape
+summary: Transform into an animal using primal magic.
+source:
+  id: core-remaster
+  page: 134
+level: 1
+category: class
+traits: [Druid]
+prerequisites:
+  type: all
+  predicates:
+    - type: hasClass
+      classId: pf2e.class.druid
+description: >
+  You can transform into a wild creature. You gain the Wild Shape focus spell. If you don't already have one,
+  you gain a focus pool of 1 Focus Point, which you can Refocus by being one with nature. This feat counts as
+  Plant Shape and Insect Shape for the purpose of meeting feat prerequisites.

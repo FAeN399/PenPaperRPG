@@ -1,0 +1,21 @@
+id: pf2e.feat.ki-strike
+type: feat
+name: Ki Strike
+summary: Channel ki to make your unarmed attacks magical.
+source:
+  id: core-remaster
+  page: 157
+level: 1
+category: class
+traits: [Monk]
+prerequisites:
+  type: all
+  predicates:
+    - type: hasClass
+      classId: pf2e.class.monk
+description: >
+  Your study of the flow of mystical energy allows you to harness it into your physical strikes. Your unarmed
+  attacks gain the benefits of a +1 striking rune. At 4th level, your unarmed attacks gain the benefits of a
+  weapon potency rune and each of your unarmed attacks counts as magical. At 12th level, your unarmed attacks
+  gain the benefits of a +2 striking rune. At 16th level, your unarmed attacks gain the benefits of a +3
+  striking rune and a +2 weapon potency rune.

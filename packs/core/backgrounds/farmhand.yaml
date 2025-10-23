@@ -1,0 +1,18 @@
+id: pf2e.background.farmhand
+type: background
+name: Farmhand
+source:
+  id: core-remaster
+boosts:
+  - type: choice
+    count: 1
+    options: [CON, WIS]
+    value: 2
+  - type: any
+    count: 1
+    value: 2
+skillTraining:
+  - Athletics
+  - Farming Lore
+feat: pf2e.feat.assurance
+summary: You worked hard labor on a farm, developing strength and endurance from dawn to dusk.

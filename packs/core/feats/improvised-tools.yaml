@@ -1,0 +1,14 @@
+id: pf2e.feat.improvised-tools
+type: feat
+name: Improvised Tools
+summary: You can cobble together temporary tools out of anything.
+source:
+  id: core-remaster
+  page: 265
+level: 1
+category: skill
+traits: [General, Skill]
+actionCost:
+  type: one
+description: |
+  You can fashion temporary tools out of found materials. Using improvised tools with a skill check takes 1 minute to set up and doesn't apply the item penalty to your check. Improvised tools can't be enhanced or enchanted, and using them in this way leaves them too damaged for further use. When you Craft with improvised tools, you can't use them to reduce the base cost of the item you're Crafting.

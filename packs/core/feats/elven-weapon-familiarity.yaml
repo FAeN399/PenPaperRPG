@@ -1,0 +1,21 @@
+id: pf2e.feat.elven-weapon-familiarity
+type: feat
+name: Elven Weapon Familiarity
+level: 1
+category: ancestry
+source:
+  id: core-remaster
+  page: 40
+traits:
+- elf
+prerequisites:
+  type: all
+  predicates:
+  - type: hasAncestry
+    ancestryId: pf2e.ancestry.elf
+summary: You favor the traditional weapons of your elven ancestors.
+description: You favor the traditional weapons of your elven ancestors. You are trained
+  with longbows, composite longbows, longswords, rapiers, shortbows, and composite
+  shortbows. In addition, you gain access to all uncommon elf weapons. For the purpose
+  of determining your proficiency, martial elf weapons are simple weapons and advanced
+  elf weapons are martial weapons.

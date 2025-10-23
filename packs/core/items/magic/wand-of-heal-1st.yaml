@@ -1,0 +1,21 @@
+id: pf2e.item.wand-of-heal-1st
+type: item
+source:
+  id: core-remaster
+name: Wand of Heal (1st-Rank)
+level: 3
+price: 60 gp
+bulk: L
+traits: [magical, healing, wand]
+summary: A wand that can cast heal at 1st rank.
+description: |
+  This simple wooden wand is carved with holy symbols and glows with a soft white light when activated.
+
+  Usage: held in 1 hand
+  Bulk: L
+  Activate: Cast a Spell
+  Frequency: once per day, plus overcharge
+
+  You cast heal at 1st rank. You restore 1d8 Hit Points to a living creature within 30 feet. If you have fewer than maximum Hit Points and cast heal targeting yourself, you restore an additional 1d8 Hit Points. The spell has the somatic and verbal components.
+
+  Overcharge: You can attempt to overcharge the wand by activating it even if you've already done so that day. This requires a DC 10 flat check. On a success, you cast the spell normally. On a failure, the spell is not cast, the charge is wasted, and you can't activate the wand again until your next daily preparations.

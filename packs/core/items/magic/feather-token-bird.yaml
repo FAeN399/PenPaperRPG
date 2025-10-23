@@ -1,0 +1,17 @@
+id: pf2e.item.feather-token-bird
+type: item
+source:
+  id: core-remaster
+name: Feather Token (Bird)
+level: 1
+price: 4 gp
+bulk: "-"
+traits: [magical, consumable, conjuration]
+summary: A token that becomes a bird messenger.
+description: |
+  Each feather token is a miniature craft encoded with magical power. When activated, this token transforms into a bird to deliver a message.
+
+  Usage: held in 1 hand
+  Activate: Interact
+
+  You activate this feather token by writing or speaking a message (of 25 words or fewer) and the name of a recipient, then releasing the feather into the air. The feather becomes a Tiny bird that flies at a Speed of 60 feet toward the recipient, and the bird seeks out the named recipient for up to 24 hours, traveling any distance and even across planes if necessary. The bird delivers its message when it reaches the recipient, and the recipient can send a response back with the bird immediately (a message of 25 words or fewer) before the bird vanishes. The bird can always find the recipient, even if they're using magic to hide, though physical barriers can still prevent the bird from reaching them.

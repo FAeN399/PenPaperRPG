@@ -1,0 +1,19 @@
+id: pf2e.feat.animal-accomplice
+type: feat
+name: Animal Accomplice
+level: 1
+category: ancestry
+source:
+  id: core-remaster
+  page: 44
+traits:
+- gnome
+prerequisites:
+  type: all
+  predicates:
+  - type: hasAncestry
+    ancestryId: pf2e.ancestry.gnome
+summary: You have forged a bond with an animal, gaining a familiar to accompany you.
+description: You have forged a bond with an animal, which has become mystically bonded
+  to you. You gain a familiar. The type of animal is up to you, but most gnomes choose
+  animals with burrowing capabilities.

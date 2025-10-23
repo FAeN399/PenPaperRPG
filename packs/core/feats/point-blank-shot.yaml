@@ -1,0 +1,21 @@
+id: pf2e.feat.point-blank-shot
+type: feat
+name: Point-Blank Shot
+summary: Reduce the penalty for firing at close range.
+source:
+  id: core-remaster
+  page: 147
+level: 1
+category: class
+traits: [Fighter, Open]
+actionCost:
+  type: one
+prerequisites:
+  type: all
+  predicates:
+    - type: hasClass
+      classId: pf2e.class.fighter
+description: >
+  You take aim at your foe from close range. When using a ranged volley weapon, you don't take the penalty
+  for attacking within the weapon's volley range. When using a ranged weapon that doesn't have the volley
+  trait, you gain a +2 circumstance bonus to the attack roll.

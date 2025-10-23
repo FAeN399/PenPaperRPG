@@ -1,0 +1,18 @@
+id: pf2e.background.sailor
+type: background
+name: Sailor
+source:
+  id: core-remaster
+boosts:
+  - type: choice
+    count: 1
+    options: [STR, DEX]
+    value: 2
+  - type: any
+    count: 1
+    value: 2
+skillTraining:
+  - Athletics
+  - Sailing Lore
+feat: pf2e.feat.underwater-marauder
+summary: You've spent your life at sea, working aboard ships and mastering nautical skills.

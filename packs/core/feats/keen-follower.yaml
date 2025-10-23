@@ -1,0 +1,18 @@
+id: pf2e.feat.keen-follower
+type: feat
+name: Keen Follower
+summary: You are particularly watchful when following others.
+source:
+  id: core-remaster
+  page: 265
+level: 1
+category: skill
+traits: [General, Skill]
+prerequisites:
+  type: all
+  predicates:
+  - type: hasSkillRank
+    skillId: perception
+    rank: trained
+description: |
+  You are particularly perceptive when following others. When following the trails of creatures that haven't tried to conceal their tracks, you can move at your full Speed and use Survival instead of Perception to Avoid Notice while doing so.

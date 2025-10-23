@@ -1,0 +1,12 @@
+id: pf2e.item.hammer
+type: item
+source:
+  id: core-remaster
+name: Hammer
+level: 0
+price: 1 sp
+bulk: L
+traits: []
+summary: A basic carpentry tool for driving nails and light construction.
+description: |
+  A basic tool hammer is useful for construction and driving pitons or spikes. It can be used as an improvised weapon that deals 1d4 bludgeoning damage.

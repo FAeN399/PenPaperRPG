@@ -1,0 +1,19 @@
+id: pf2e.item.greatclub
+type: item
+source:
+  id: core-remaster
+name: Greatclub
+level: 0
+price: 1 gp
+bulk: "2"
+traits: [backswing, shove]
+summary: A massive two-handed club dealing 1d10 bludgeoning damage with backswing and shove.
+description: |
+  An enormous piece of heavy wood or a tree trunk fashioned into a weapon. The greatclub is a simple but devastating weapon.
+
+  - Damage: 1d10 bludgeoning
+  - Hands: 2
+  - Group: Club
+  - Weapon Traits: backswing, shove
+
+  The backswing trait grants a bonus to attack on your second attack if your first missed, representing the momentum of your swing. The shove trait allows you to push enemies back. Despite being a simple weapon, the greatclub deals impressive damage.

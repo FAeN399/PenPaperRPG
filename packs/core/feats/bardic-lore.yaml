@@ -1,0 +1,20 @@
+id: pf2e.feat.bardic-lore
+type: feat
+name: Bardic Lore
+summary: Your knowledge is vast and varied.
+source:
+  id: core-remaster
+  page: 98
+level: 1
+category: class
+traits: [Bard]
+prerequisites:
+  type: all
+  predicates:
+    - type: hasClass
+      classId: pf2e.class.bard
+description: >
+  Your studies make you informed on every subject. You are trained in Bardic Lore, a special Lore skill that
+  can be used only to Recall Knowledge, but on any topic. If you have legendary proficiency in Occultism,
+  you gain expert proficiency in Bardic Lore, but you can't increase your proficiency rank in Bardic Lore
+  by any other means.

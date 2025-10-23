@@ -1,0 +1,17 @@
+id: pf2e.spell.searing-light
+type: spell
+name: Searing Light
+rank: 3
+traditions: [divine, primal]
+source:
+  id: core-remaster
+traits: [attack, fire, light]
+range: 120 feet
+targets: 1 creature
+summary: You shoot a blazing ray of light at a foe.
+description: |
+  You shoot a blazing ray of light tinged with holy energy. Make a ranged spell attack roll. The ray deals 5d6 fire damage. If the target is a fiend or undead, you deal an extra 5d6 spirit damage.
+
+  Critical Success: The target takes double damage.
+
+  Success: The target takes full damage.

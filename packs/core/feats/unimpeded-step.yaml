@@ -1,0 +1,18 @@
+id: pf2e.feat.unimpeded-step
+type: feat
+name: Unimpeded Step
+summary: Move freely when using the Step action.
+source:
+  id: core-remaster
+  page: 108
+level: 1
+category: class
+traits: [Champion]
+prerequisites:
+  type: all
+  predicates:
+    - type: hasClass
+      classId: pf2e.class.champion
+description: >
+  You are never slowed by your surroundings. You can Step into difficult terrain and greater difficult terrain.
+  You can also Step into hazardous terrain, but you still trigger the hazard.

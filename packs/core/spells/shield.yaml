@@ -1,0 +1,20 @@
+id: pf2e.spell.shield
+type: spell
+name: Shield
+rank: 0
+traditions: [arcane, divine, occult]
+source:
+  id: core-remaster
+traits: [cantrip, concentrate]
+duration: sustained up to 1 minute
+summary: A shield of magical force blocks attacks and can be sacrificed to save you from damage.
+description: |
+  You raise a magical shield of force. This counts as using the Raise a Shield action, giving you a +1 circumstance bonus to AC until the start of your next turn, but it doesn't require a hand to use.
+
+  While the spell is active, you can use the Shield Block reaction with your magic shield. The shield has Hardness 5. After the shield takes damage, the spell ends and you can't cast shield again for 10 minutes. Unlike a normal Shield Block, you can use this spell's reaction against the magic missile spell.
+
+  Heightening the spell increases the Hardness.
+
+  **Heightened (3rd)** The shield has Hardness 10.
+  **Heightened (5th)** The shield has Hardness 15.
+  **Heightened (7th)** The shield has Hardness 20.

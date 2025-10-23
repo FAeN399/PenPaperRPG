@@ -1,0 +1,20 @@
+id: pf2e.spell.grim-tendrils
+type: spell
+name: Grim Tendrils
+rank: 1
+traditions: [arcane, occult]
+source:
+  id: core-remaster
+traits: [concentrate, manipulate, void]
+duration: instantaneous
+range: 30 feet
+targets: 1 creature
+savingThrow: Fortitude
+summary: Void tendrils sap life force.
+description: |
+  Tendrils of darkness curl out from your fingertips and reach for a target. The target takes 2d4 void damage, with a Fortitude save.
+
+  Critical Success: The target is unaffected.
+  Success: The target takes half damage.
+  Failure: The target takes full damage and you regain Hit Points equal to half the void damage the target takes (after applying resistances and the like).
+  Critical Failure: The target takes double damage and you regain Hit Points equal to half the void damage the target takes (after applying resistances and the like).

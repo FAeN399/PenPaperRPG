@@ -1,0 +1,12 @@
+id: pf2e.feat.untrained-improvisation
+type: feat
+name: Untrained Improvisation
+summary: You can use any skill untrained with ease.
+source:
+  id: core-remaster
+  page: 267
+level: 1
+category: general
+traits: [General]
+description: |
+  You've learned how to handle situations when you're out of your depth. You can attempt skill actions requiring you to be trained, even if you are untrained. When attempting a skill check with a skill you're untrained in, your proficiency bonus is equal to your level instead of 0. You can add your proficiency bonus for the skill only if you have a feature that allows you to add your proficiency bonus for untrained skills. If you roll a critical failure on a skill check for a skill you're untrained in, it's instead a failure.

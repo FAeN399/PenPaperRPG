@@ -1,0 +1,35 @@
+id: pf2e.ancestry.strix
+type: ancestry
+name: Strix
+summary: Winged humanoids who dwell in isolated mountain communities and fiercely guard their independence.
+source:
+  id: ancestry-guide
+  page: 130
+hitPoints: 8
+size: medium
+speed: 25
+rarity: uncommon
+boosts:
+  - type: fixed
+    abilities: [DEX]
+    value: 2
+  - type: any
+    count: 1
+    value: 2
+flaws: []
+languages:
+  granted: [Common, Strix]
+  choices:
+    count: 1
+    options: [Any]
+features:
+  - ancestryfeat:1
+traits:
+  - strix
+  - humanoid
+effects:
+  - kind: grantSense
+    senseId: low-light-vision
+  - kind: addSpeed
+    speedType: fly
+    value: 25

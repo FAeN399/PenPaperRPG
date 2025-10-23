@@ -1,0 +1,18 @@
+id: pf2e.spell.heal
+type: spell
+name: Heal
+rank: 1
+traditions: [divine, primal]
+source:
+  id: core-remaster
+traits: [concentrate, healing, manipulate, vitality]
+duration: instantaneous
+range: varies
+targets: 1 willing living creature or 1 undead creature
+summary: Positive energy heals the living or damages undead.
+description: |
+  You channel vital energy to heal the living or damage the undead. If the target is a willing living creature, you restore 1d8 Hit Points. If the target is undead, you deal that amount of vitality damage to it, and it gets a basic Fortitude save. The number of actions you spend when Casting this Spell determines its targets, range, area, and other parameters.
+
+  1 action (somatic): The spell has a range of touch.
+  2 actions (somatic, verbal): The spell has a range of 30 feet. If you're healing a living creature, increase the Hit Points restored by 8.
+  3 actions (material, somatic, verbal): You disperse vitality energy in a 30-foot emanation. This targets all living and undead creatures in the area.

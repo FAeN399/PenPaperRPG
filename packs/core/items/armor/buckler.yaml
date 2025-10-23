@@ -1,0 +1,19 @@
+id: pf2e.item.buckler
+type: item
+source:
+  id: core-remaster
+name: Buckler
+level: 0
+price: 1 gp
+bulk: L
+traits: []
+summary: Small metal shield strapped to the forearm, providing minimal defense without hindering weapon use.
+description: |
+  This very small shield is a metal disk with a central grip that is typically strapped to your forearm. Bucklers don't provide the same defensive benefits as larger shields, but they can be used while your hands are occupied.
+
+  - AC Bonus: +1 (when Raised)
+  - Speed Penalty: 0 ft
+  - Hardness: 3
+  - HP (BT): 6 (3)
+
+  A buckler can't be used with the Shield Block reaction. You can Raise a Shield with your buckler as long as you have that hand free or are holding a light object that's not a weapon in that hand. Unlike other shields, you can use the hand covered by a buckler for other things, but because it's strapped to your forearm, you can't hold anything in that hand.

@@ -1,0 +1,14 @@
+id: pf2e.spell.fleet-step
+type: spell
+name: Fleet Step
+rank: 1
+traditions: [arcane, primal]
+source:
+  id: core-remaster
+traits: [concentrate, manipulate]
+duration: 1 minute
+range: touch
+targets: 1 creature
+summary: Enhance a creature's mobility.
+description: |
+  You make the target's legs quicker and their steps lighter. The target gains a +30-foot status bonus to their Speed. In addition, they aren't off-guard when attempting to Balance, they don't trigger reactions triggered by movement when Stepping, and their movement doesn't trigger reactions when they move at half their Speed or less.

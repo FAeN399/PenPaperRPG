@@ -1,0 +1,18 @@
+id: pf2e.spell.daze
+type: spell
+name: Daze
+rank: 0
+traditions: [arcane, divine, occult]
+source:
+  id: core-remaster
+traits: [cantrip, concentrate, mental, nonlethal]
+range: 60 feet
+targets: 1 creature
+savingThrow: basic Will
+summary: Damage a creature's mind to daze it.
+description: |
+  You cloud the target's mind and daze it with a mental jolt. The target must attempt a basic Will save. If the target critically fails, it is also stunned 1.
+
+  **Damage** 3d4 mental damage
+
+  **Heightened (+1)** The damage increases by 1d4.

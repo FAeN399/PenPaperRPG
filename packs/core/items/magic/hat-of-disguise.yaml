@@ -1,0 +1,20 @@
+id: pf2e.item.hat-of-disguise
+type: item
+source:
+  id: core-remaster
+name: Hat of Disguise
+level: 2
+price: 30 gp
+bulk: "-"
+traits: [magical, illusion, invested]
+summary: A hat that allows you to change your appearance.
+description: |
+  This ordinary-looking hat allows you to cloak yourself in illusions.
+
+  Usage: worn headwear
+
+  When you invest this hat, you either increase or decrease your size by one size category or change the details of your appearance. This can't change your general shape or body type, but it can alter coloration, sound, and other cosmetic effects. This alteration is an illusion, so creatures that disbelieve the illusion see you as you truly are.
+
+  Activate: Interact
+  Frequency: once per day
+  Effect: You cast illusory disguise on yourself. The spell lasts until your next daily preparations.

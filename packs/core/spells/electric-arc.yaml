@@ -1,0 +1,18 @@
+id: pf2e.spell.electric-arc
+type: spell
+name: Electric Arc
+rank: 0
+traditions: [arcane, primal]
+source:
+  id: core-remaster
+traits: [cantrip, concentrate, electricity]
+range: 30 feet
+targets: 1 or 2 creatures
+savingThrow: basic Reflex
+summary: Zap one or two creatures with lightning.
+description: |
+  An arc of lightning leaps from your hand. Choose one or two targets. Each must be within range and you must have line of effect to it. Your spell's area of effect can't include more than one creature unless they're both within 10 feet of each other. Roll the damage only once and apply it to each target. Each target must attempt a basic Reflex save.
+
+  **Damage** 1d4 electricity damage
+
+  **Heightened (+1)** The damage increases by 1d4.

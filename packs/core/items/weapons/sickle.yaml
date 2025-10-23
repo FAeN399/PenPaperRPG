@@ -1,0 +1,19 @@
+id: pf2e.item.sickle
+type: item
+source:
+  id: core-remaster
+name: Sickle
+level: 0
+price: 2 sp
+bulk: L
+traits: [agile, finesse, trip]
+summary: A curved farming tool dealing 1d4 slashing damage with agile, finesse, and trip.
+description: |
+  A curved blade on a short handle, traditionally used for harvesting crops. The sickle makes an effective improvised weapon.
+
+  - Damage: 1d4 slashing
+  - Hands: 1
+  - Group: Knife
+  - Weapon Traits: agile, finesse, trip
+
+  The sickle's agile and finesse traits make it suitable for quick, dexterous fighters. The trip trait allows you to knock enemies prone, making it useful for setting up attacks by allies.

@@ -1,0 +1,35 @@
+id: pf2e.ancestry.automaton
+type: ancestry
+name: Automaton
+summary: Ancient mechanical beings powered by clockwork and elemental cores.
+source:
+  id: guns-and-gears
+  page: 36
+rarity: rare
+hitPoints: 8
+size: medium
+speed: 25
+boosts:
+  - type: fixed
+    abilities: [STR]
+    value: 2
+  - type: any
+    count: 1
+    value: 2
+flaws: []
+languages:
+  granted: [Common, Utopian]
+  choices:
+    count: 1
+    options: [Any]
+features:
+  - ancestryfeat:1
+traits:
+  - automaton
+  - construct
+  - humanoid
+effects:
+  - kind: grantSense
+    senseId: low-light-vision
+  - kind: grantTrait
+    traitId: construct

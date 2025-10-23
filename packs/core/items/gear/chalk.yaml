@@ -1,0 +1,12 @@
+id: pf2e.item.chalk
+type: item
+source:
+  id: core-remaster
+name: Chalk (10 pieces)
+level: 0
+price: 1 cp
+bulk: "-"
+traits: []
+summary: Sticks of white chalk for marking surfaces.
+description: |
+  Chalk can be used to mark surfaces, create temporary symbols, or leave messages. It's particularly useful for marking passages in dungeons or caves to avoid getting lost.

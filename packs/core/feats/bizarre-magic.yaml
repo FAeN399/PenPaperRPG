@@ -1,0 +1,14 @@
+id: pf2e.feat.bizarre-magic
+type: feat
+name: Bizarre Magic
+summary: Your magic is unpredictable and strange.
+source:
+  id: core-remaster
+  page: 259
+level: 1
+category: general
+traits: [General]
+description: |
+  You must have the ability to cast spells.
+
+  You can make your spells harder to identify. Whenever you cast a spell, other creatures must succeed at a DC 5 flat check to identify your spells with Recognize Spell; on a failure, they misidentify it as another spell of your choice that has the same school and is the same or lower rank. You can choose a different spell for each creature that attempts to Recognize your Spell.

@@ -1,0 +1,16 @@
+id: pf2e.spell.flaming-sphere
+type: spell
+name: Flaming Sphere
+rank: 2
+traditions: [arcane, primal]
+source:
+  id: core-remaster
+traits: [fire]
+range: 30 feet
+duration: 1 minute
+savingThrow: Reflex
+summary: A ball of fire rolls about at your command.
+description: |
+  A 5-foot-diameter sphere of fire appears in an unoccupied space of your choice within range and lasts for the duration. Any creature that ends its turn within 5 feet of the sphere must succeed at a Reflex save or take 3d6 fire damage.
+
+  On subsequent rounds, you can Sustain the spell to move the sphere up to 30 feet. If you move the sphere into a creature's space, that creature must attempt the save against the sphere's damage, and the sphere stops moving. You can't move the sphere into a space occupied by a creature unless you want it to stop there.

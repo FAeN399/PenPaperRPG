@@ -1,0 +1,12 @@
+id: pf2e.item.torch
+type: item
+source:
+  id: core-remaster
+name: Torch
+level: 0
+price: 1 cp
+bulk: L
+traits: []
+summary: A simple wooden torch that provides light.
+description: |
+  A torch sheds bright light in a 20-foot radius (and dim light to the next 40 feet). It can be used as an improvised weapon that deals 1d4 bludgeoning damage plus 1 fire damage. A torch burns for 1 hour.

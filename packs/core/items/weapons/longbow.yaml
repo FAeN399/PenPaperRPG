@@ -1,0 +1,19 @@
+id: pf2e.item.longbow
+type: item
+source:
+  id: core-remaster
+name: Longbow
+level: 0
+price: 6 gp
+bulk: "2"
+traits: [deadly-d10, propulsive, range-100, reload-0, volley-30]
+summary: A powerful bow dealing 1d8 piercing damage with 100 foot range and deadly d10.
+description: |
+  A tall bow, as long as a person, designed for maximum range and power. The longbow is the weapon of choice for archers.
+
+  - Damage: 1d8 piercing
+  - Hands: 1+
+  - Group: Bow
+  - Weapon Traits: deadly d10, propulsive, range 100 ft., reload 0, volley 30 ft.
+
+  The deadly d10 trait makes critical hits devastating. Propulsive adds half your Strength modifier to damage. Reload 0 means you can shoot repeatedly. Volley 30 ft. imposes a -2 penalty when attacking targets within 30 feet.

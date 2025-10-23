@@ -1,0 +1,12 @@
+id: pf2e.item.musical-instrument
+type: item
+source:
+  id: core-remaster
+name: Musical Instrument (Handheld)
+level: 0
+price: 8 sp
+bulk: "1"
+traits: []
+summary: A portable musical instrument for performances.
+description: |
+  This is a common handheld musical instrument such as a flute, lute, or fiddle. You need an instrument to use the Performance skill for musical performances. Handheld instruments are versatile and relatively easy to transport.

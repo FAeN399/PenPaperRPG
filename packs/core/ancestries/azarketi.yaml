@@ -1,0 +1,37 @@
+id: pf2e.ancestry.azarketi
+type: ancestry
+name: Azarketi
+summary: Amphibious humanoids descended from the people of Azlant, adapted to life beneath the waves.
+source:
+  id: ancestry-guide
+  page: 8
+hitPoints: 8
+size: medium
+speed: 20
+rarity: uncommon
+boosts:
+  - type: fixed
+    abilities: [CON, CHA]
+    value: 2
+  - type: any
+    count: 1
+    value: 2
+flaws:
+  - WIS
+languages:
+  granted: [Common, Alghollthu]
+  choices:
+    count: 1
+    options: [Any]
+features:
+  - ancestryfeat:1
+traits:
+  - azarketi
+  - amphibious
+  - humanoid
+effects:
+  - kind: grantSense
+    senseId: low-light-vision
+  - kind: addSpeed
+    speedType: swim
+    value: 20

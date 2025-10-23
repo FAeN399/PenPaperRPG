@@ -1,0 +1,18 @@
+id: pf2e.item.elixir-of-life-minor
+type: item
+source:
+  id: core-remaster
+name: Elixir of Life (Minor)
+level: 1
+price: 3 gp
+bulk: L
+traits: [magical, consumable, elixir, healing]
+summary: An alchemical elixir that restores 1d6 Hit Points.
+description: |
+  Elixirs of life accelerate a living creature's natural healing processes and immune system. Upon drinking this elixir, you gain the listed number of Hit Points.
+
+  Usage: held in 1 hand
+  Bulk: L
+  Activate: Interact
+
+  Drinking this elixir restores 1d6 Hit Points and grants you a +1 item bonus to saving throws against diseases and poisons for 10 minutes.

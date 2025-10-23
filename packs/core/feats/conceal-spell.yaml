@@ -1,0 +1,16 @@
+id: pf2e.feat.conceal-spell
+type: feat
+name: Conceal Spell
+summary: You can hide your spellcasting.
+source:
+  id: core-remaster
+  page: 260
+level: 2
+category: general
+traits: [General, Manipulate, Metamagic]
+actionCost:
+  type: one
+description: |
+  You must have the ability to cast spells.
+
+  Hiding your gestures and incantations, you attempt to conceal the fact that you are casting a spell. If the next action you take is to Cast a Spell, attempt a Stealth check against one or more observers' Perception DCs; if the spell has verbal components, you must also attempt a Deception check against the observers' Perception DC. If you succeed at your check (or checks) against an observer's DC, that observer doesn't notice you're casting a spell, even though the spell's effects are still obvious.

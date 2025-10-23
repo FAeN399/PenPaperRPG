@@ -1,0 +1,12 @@
+id: pf2e.item.rope
+type: item
+source:
+  id: core-remaster
+name: Rope (50 ft)
+level: 0
+price: 5 sp
+bulk: L
+traits: []
+summary: A length of strong hemp rope.
+description: |
+  This length of strong hemp rope is 50 feet long and has 2 Hit Points. A creature can burst it with a DC 17 Athletics check.

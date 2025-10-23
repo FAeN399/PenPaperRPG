@@ -55,6 +55,9 @@ interface BuilderHookResult {
   selectBackground: (id: string) => void;
   selectClass: (id: string) => void;
   resolveAbilityBoost: (choiceId: string, selectedAbilities: AbilityId[]) => void;
+  trainSkills: (skillIds: string[]) => void;
+  learnSpells: (cantrips: string[], rank1Spells: string[]) => void;
+  resetCharacter: () => void;
 }
 
 function getDesktopBridge(): DesktopBridge | undefined {
@@ -264,44 +267,82 @@ export function useCharacterBuilder(): BuilderHookResult {
         const { character, catalogLookup, derivedContext } = current;
         const { identity } = character;
 
-        // Determine which entity this choice came from
         let updatedCharacter: Character = character;
-        const resolution: ChoiceResolution = {
-          choiceId,
-          selectedIds: selectedAbilities,
-        };
 
-        // Re-apply the entity selection with the choice resolution
-        if (choice.id.includes("ancestry:") && identity.ancestryId) {
-          updatedCharacter = engineSelectAncestry(
-            character,
-            identity.ancestryId,
-            catalogLookup,
+        // Check if this is a final boost (level 1 free boosts)
+        if (choice.id.startsWith("level1:final-boost-")) {
+          // Apply final boost directly to character's ability scores
+          const newAdjustments = [...character.abilityAdjustments];
+
+          for (const abilityId of selectedAbilities) {
+            newAdjustments.push({
+              type: "boost",
+              abilities: [abilityId],
+              value: 2,
+              source: "Level 1 Free Boost",
+              level: 1,
+            });
+          }
+
+          // Create updated character with new adjustments
+          updatedCharacter = createCharacter({
+            metadata: character.metadata,
+            identity: character.identity,
+            baseAbilities: character.abilityScores.base,
+            abilityAdjustments: newAdjustments,
+            proficiencies: character.proficiencies,
             derivedContext,
-            [resolution],
-          );
-        } else if (choice.id.includes("background:") && identity.backgroundId) {
-          updatedCharacter = engineSelectBackground(
-            character,
-            identity.backgroundId,
-            catalogLookup,
-            derivedContext,
-            [resolution],
-          );
-        } else if (choice.id.includes("class:") && identity.classId) {
-          updatedCharacter = engineSelectClass(
-            character,
-            identity.classId,
-            catalogLookup,
-            derivedContext,
-            [resolution],
-          );
+          });
+        } else {
+          // Handle entity-based boosts
+          const resolution: ChoiceResolution = {
+            choiceId,
+            selectedIds: selectedAbilities,
+          };
+
+          // Re-apply the entity selection with the choice resolution
+          if (choice.id.includes("ancestry:") && identity.ancestryId) {
+            updatedCharacter = engineSelectAncestry(
+              character,
+              identity.ancestryId,
+              catalogLookup,
+              derivedContext,
+              [resolution],
+            );
+          } else if (choice.id.includes("background:") && identity.backgroundId) {
+            updatedCharacter = engineSelectBackground(
+              character,
+              identity.backgroundId,
+              catalogLookup,
+              derivedContext,
+              [resolution],
+            );
+          } else if (choice.id.includes("class:") && identity.classId) {
+            updatedCharacter = engineSelectClass(
+              character,
+              identity.classId,
+              catalogLookup,
+              derivedContext,
+              [resolution],
+            );
+          }
         }
 
         nextCharacter = updatedCharacter;
 
         // Remove the resolved choice from pending
-        const remainingChoices = current.pendingChoices.filter((c) => c.id !== choiceId);
+        let remainingChoices = current.pendingChoices.filter((c) => c.id !== choiceId);
+
+        // Check if we should add final boosts
+        // Add them if: all entity boosts resolved, character is level 1, and final boosts not already added
+        if (
+          identity.level === 1 &&
+          hasResolvedAllEntityBoosts(remainingChoices) &&
+          !hasFinalBoosts(remainingChoices)
+        ) {
+          const finalBoosts = createFinalAbilityBoosts();
+          remainingChoices = [...remainingChoices, ...finalBoosts];
+        }
 
         return {
           ...current,
@@ -320,6 +361,153 @@ export function useCharacterBuilder(): BuilderHookResult {
   const selectAncestry = useCallback((id: string) => selectEntity("ancestry", id), [selectEntity]);
   const selectBackground = useCallback((id: string) => selectEntity("background", id), [selectEntity]);
   const selectClass = useCallback((id: string) => selectEntity("class", id), [selectEntity]);
+
+  const resetCharacter = useCallback(() => {
+    setState((current) => {
+      if (!current) {
+        return current;
+      }
+
+      // Clear localStorage
+      try {
+        if (typeof window !== "undefined") {
+          localStorage.removeItem(CHARACTER_STORAGE_KEY);
+        }
+      } catch {
+        // ignore
+      }
+
+      // Create fresh initial character
+      const initial = createInitialCharacter(current.catalog, current.catalogLookup);
+
+      return {
+        ...current,
+        character: initial.character,
+        pendingChoices: initial.pendingChoices,
+        derivedContext: initial.derivedContext,
+      };
+    });
+  }, []);
+
+  const trainSkills = useCallback((skillIds: string[]) => {
+    let nextCharacter: Character | null = null;
+
+    setState((current) => {
+      if (!current) {
+        return current;
+      }
+
+      const { character, derivedContext } = current;
+
+      // Update proficiencies with trained skills
+      const updatedProficiencies: ProficiencySummary = {
+        ...character.proficiencies,
+        skills: {
+          ...character.proficiencies.skills,
+        },
+      };
+
+      // Add each skill as trained
+      for (const skillId of skillIds) {
+        updatedProficiencies.skills[skillId] = "trained";
+      }
+
+      // Create updated character
+      const updatedCharacter = createCharacter({
+        metadata: character.metadata,
+        identity: character.identity,
+        baseAbilities: character.abilityScores.base,
+        abilityAdjustments: character.abilityAdjustments,
+        proficiencies: updatedProficiencies,
+        derivedContext,
+      });
+
+      nextCharacter = updatedCharacter;
+
+      return {
+        ...current,
+        character: updatedCharacter,
+      };
+    });
+
+    if (nextCharacter) {
+      persistCharacterState(nextCharacter);
+    }
+  }, []);
+
+  const learnSpells = useCallback((cantrips: string[], rank1Spells: string[]) => {
+    let nextCharacter: Character | null = null;
+
+    setState((current) => {
+      if (!current) {
+        return current;
+      }
+
+      const { character, catalogLookup } = current;
+
+      // Get class entity to determine spell tradition and casting type
+      const classEntity = character.identity.classId
+        ? catalogLookup.byId.get(character.identity.classId)?.entity
+        : null;
+
+      if (!classEntity || classEntity.type !== "class") {
+        return current;
+      }
+
+      // Map class to spellcasting details
+      const spellcastingConfig: Record<string, { tradition: string; castingType: string; ability: AbilityId }> = {
+        "pf2e.class.wizard": { tradition: "arcane", castingType: "prepared", ability: "INT" },
+        "pf2e.class.cleric": { tradition: "divine", castingType: "prepared", ability: "WIS" },
+        "pf2e.class.druid": { tradition: "primal", castingType: "prepared", ability: "WIS" },
+        "pf2e.class.sorcerer": { tradition: "arcane", castingType: "spontaneous", ability: "CHA" }, // Default to arcane, should be based on bloodline
+        "pf2e.class.bard": { tradition: "occult", castingType: "spontaneous", ability: "CHA" },
+      };
+
+      const config = spellcastingConfig[classEntity.id];
+      if (!config) {
+        // Not a spellcasting class
+        return current;
+      }
+
+      // Create spells array
+      const spells: Array<{ id: string; rank: number; prepared: boolean; slots: number }> = [
+        ...cantrips.map((id) => ({ id, rank: 0, prepared: false, slots: 0 })),
+        ...rank1Spells.map((id) => ({ id, rank: 1, prepared: false, slots: 0 })),
+      ];
+
+      // Create spellcasting entry
+      const spellcastingEntry = {
+        id: `${classEntity.id}-spellcasting`,
+        tradition: config.tradition as any,
+        castingType: config.castingType as any,
+        ability: config.ability,
+        focusPoints: 0,
+        maxFocusPoints: 0,
+        slots: {
+          "0": 5, // 5 cantrip slots at level 1
+          "1": 2, // 2 rank-1 slots at level 1
+        },
+        spells,
+      };
+
+      // Create updated character with spellcasting
+      const updatedCharacter = {
+        ...character,
+        spellcasting: [spellcastingEntry],
+      };
+
+      nextCharacter = updatedCharacter;
+
+      return {
+        ...current,
+        character: updatedCharacter,
+      };
+    });
+
+    if (nextCharacter) {
+      persistCharacterState(nextCharacter);
+    }
+  }, []);
 
   return {
     status,
@@ -344,6 +532,9 @@ export function useCharacterBuilder(): BuilderHookResult {
     selectBackground,
     selectClass,
     resolveAbilityBoost,
+    trainSkills,
+    learnSpells,
+    resetCharacter,
   };
 }
 
@@ -437,6 +628,62 @@ function extractChoicesFromEntity(entityId: string, catalogLookup: CatalogLookup
 function findFirstEntityId(catalog: CatalogIndex, type: string): string | undefined {
   const entry = catalog.entities.find((item) => item.entity.type === type);
   return entry?.entity.id;
+}
+
+/**
+ * Creates the 4 final free ability boosts that all level 1 characters receive.
+ * These are granted after ancestry, background, and class boosts are resolved.
+ */
+function createFinalAbilityBoosts(): ChoiceDefinition[] {
+  return [
+    {
+      id: "level1:final-boost-1",
+      label: "Final Ability Boost 1 of 4",
+      count: 1,
+      scope: "abilityBoost",
+      allowDuplicates: false,
+    },
+    {
+      id: "level1:final-boost-2",
+      label: "Final Ability Boost 2 of 4",
+      count: 1,
+      scope: "abilityBoost",
+      allowDuplicates: false,
+    },
+    {
+      id: "level1:final-boost-3",
+      label: "Final Ability Boost 3 of 4",
+      count: 1,
+      scope: "abilityBoost",
+      allowDuplicates: false,
+    },
+    {
+      id: "level1:final-boost-4",
+      label: "Final Ability Boost 4 of 4",
+      count: 1,
+      scope: "abilityBoost",
+      allowDuplicates: false,
+    },
+  ];
+}
+
+/**
+ * Checks if all entity-based ability boost choices have been resolved.
+ * Returns true if there are no pending choices with ancestry/background/class prefixes.
+ */
+function hasResolvedAllEntityBoosts(pendingChoices: ChoiceDefinition[]): boolean {
+  return !pendingChoices.some(
+    (choice) =>
+      choice.scope === "abilityBoost" &&
+      (choice.id.includes("ancestry:") || choice.id.includes("background:") || choice.id.includes("class:")),
+  );
+}
+
+/**
+ * Checks if final boosts have already been added to pending choices.
+ */
+function hasFinalBoosts(pendingChoices: ChoiceDefinition[]): boolean {
+  return pendingChoices.some((choice) => choice.id.startsWith("level1:final-boost-"));
 }
 
 

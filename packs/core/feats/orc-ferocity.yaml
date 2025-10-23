@@ -1,0 +1,23 @@
+id: pf2e.feat.orc-ferocity
+type: feat
+name: Orc Ferocity
+level: 1
+category: ancestry
+source:
+  id: core-remaster
+  page: 52
+traits:
+- orc
+actionCost:
+  type: reaction
+prerequisites:
+  type: all
+  predicates:
+  - type: hasAncestry
+    ancestryId: pf2e.ancestry.orc
+summary: Fierceness in battle runs through your blood, allowing you to avoid death.
+description: Fierceness in battle runs through your blood, and you refuse to fall
+  from your injuries. You gain the Orc Ferocity reaction. You can use Orc Ferocity
+  when you would be reduced to 0 Hit Points but not immediately killed. You avoid
+  being knocked out and remain at 1 Hit Point, and your wounded condition increases
+  by 1. You can't use this ability if your wounded value is 3 or higher.

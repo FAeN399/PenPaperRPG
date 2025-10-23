@@ -1,0 +1,13 @@
+id: pf2e.spell.fly
+type: spell
+name: Fly
+rank: 3
+traditions: [arcane, occult, primal]
+source:
+  id: core-remaster
+traits: []
+duration: 5 minutes
+targets: 1 creature
+summary: The target can soar through the air.
+description: |
+  The target can soar through the air, gaining a fly Speed equal to its Speed or 20 feet, whichever is greater.

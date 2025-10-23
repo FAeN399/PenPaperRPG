@@ -1,0 +1,18 @@
+id: pf2e.background.criminal
+type: background
+name: Criminal
+source:
+  id: core-remaster
+boosts:
+  - type: choice
+    count: 1
+    options: [DEX, STR]
+    value: 2
+  - type: any
+    count: 1
+    value: 2
+skillTraining:
+  - Stealth
+  - Underworld Lore
+feat: pf2e.feat.experienced-smuggler
+summary: You have a history of breaking the law and surviving in the criminal underworld.
