@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "module": "ESNext",
+    "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "lib": [
       "ES2023"
@@ -27,13 +27,28 @@
         "packages/shared/src/index.ts"
       ],
       "@pen-paper-rpg/catalog": [
-        "packages/catalog/src/index.ts"
+        "packages/catalog/dist/index.d.ts"
       ],
       "@pen-paper-rpg/engine": [
-        "packages/engine/src/index.ts"
+        "packages/engine/dist/index.d.ts"
       ],
       "@pen-paper-rpg/pdf": [
         "packages/pdf/src/index.tsx"
+      ],
+      "@pen-paper-rpg/schemas/*": [
+        "packages/schemas/dist/*"
+      ],
+      "@pen-paper-rpg/shared/*": [
+        "packages/shared/src/*"
+      ],
+      "@pen-paper-rpg/catalog/*": [
+        "packages/catalog/dist/*"
+      ],
+      "@pen-paper-rpg/engine/*": [
+        "packages/engine/dist/*"
+      ],
+      "@pen-paper-rpg/pdf/*": [
+        "packages/pdf/src/*"
       ]
     }
   },

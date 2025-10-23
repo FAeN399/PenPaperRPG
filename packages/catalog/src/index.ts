@@ -59,7 +59,7 @@ async function readPackManifest(packDir: string, packId: string): Promise<Catalo
 }
 
 async function loadRawDocuments(packDir: string, packId: string): Promise<RawEntityDocument[]> {
-  const pattern = path.join(packDir, "**/*.yaml");
+  const pattern = path.join(packDir, "**/*.yaml").replace(/\\/g, "/");
   const entries = await fg(pattern, { dot: false, onlyFiles: true });
   const documents: RawEntityDocument[] = [];
 
