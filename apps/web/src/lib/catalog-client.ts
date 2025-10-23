@@ -1,31 +1,33 @@
 import type { CatalogIndex } from "@pen-paper-rpg/schemas";
+import { catalogIndexSchema } from "@pen-paper-rpg/schemas";
+
+// In-memory cache for catalog data
+let catalogCache: { data: CatalogIndex; timestamp: number } | null = null;
+const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
 
 /**
- * Fetch the catalog from the local API route. The API will source YAML packs and
- * build an index via the catalog package. This helper centralises the request so
- * client and server components can share the same contract.
+ * Fetch the catalog index with caching.
+ * Loads from pre-built /catalog/catalog.json
  */
 export async function fetchCatalogIndex(signal?: AbortSignal): Promise<CatalogIndex> {
-  const response = await fetch("/api/catalog", { signal, cache: "no-store" });
+  // Check cache first
+  if (catalogCache && Date.now() - catalogCache.timestamp < CACHE_DURATION) {
+    return catalogCache.data;
+  }
 
+  // Load from pre-built JSON
+  const response = await fetch('/catalog/catalog.json', { signal });
   if (!response.ok) {
-    throw new Error(`Failed to load catalog index (${response.status})`);
+    throw new Error(`Failed to load catalog: ${response.statusText}`);
   }
+  const data = await response.json();
+  const validated = catalogIndexSchema.parse(data);
 
-  return (await response.json()) as CatalogIndex;
-}
+  // Update cache
+  catalogCache = {
+    data: validated,
+    timestamp: Date.now(),
+  };
 
-/**
- * A placeholder loader for server components. Once the API route is implemented,
- * this function can delegate to the same underlying catalog builder used by the
- * desktop app.
- */
-export async function loadCatalogIndexServer(): Promise<CatalogIndex> {
-  if (process.env.NODE_ENV !== "production") {
-    const { buildCatalogIndex } = await import("@pen-paper-rpg/catalog");
-    const result = await buildCatalogIndex({ packRoots: ["packs"] });
-    return result.index;
-  }
-
-  throw new Error("Server-side catalog loading is not yet configured for production.");
+  return validated;
 }

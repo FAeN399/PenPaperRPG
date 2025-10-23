@@ -57,6 +57,7 @@ interface BuilderHookResult {
   resolveAbilityBoost: (choiceId: string, selectedAbilities: AbilityId[]) => void;
   trainSkills: (skillIds: string[]) => void;
   learnSpells: (cantrips: string[], rank1Spells: string[]) => void;
+  selectFeats: (selections: Array<{ slotIndex: number; featId: string; grantedBy: string }>) => void;
   resetCharacter: () => void;
 }
 
@@ -509,6 +510,37 @@ export function useCharacterBuilder(): BuilderHookResult {
     }
   }, []);
 
+  const selectFeats = useCallback((selections: Array<{ slotIndex: number; featId: string; grantedBy: string }>) => {
+    let nextCharacter: Character | null = null;
+
+    setState((current) => {
+      if (!current) return current;
+      const { character } = current;
+
+      // Convert selections to CharacterFeatSelection format
+      const featSelections = selections.map((selection, index) => ({
+        id: selection.featId,
+        grantedBy: selection.grantedBy,
+        level: 1, // All level 1 feats at character creation
+        replaced: false,
+        choices: {},
+      }));
+
+      // Create updated character with feat selections
+      const updatedCharacter = {
+        ...character,
+        feats: featSelections,
+      };
+
+      nextCharacter = updatedCharacter;
+      return { ...current, character: updatedCharacter };
+    });
+
+    if (nextCharacter) {
+      persistCharacterState(nextCharacter);
+    }
+  }, []);
+
   return {
     status,
     state,
@@ -534,6 +566,7 @@ export function useCharacterBuilder(): BuilderHookResult {
     resolveAbilityBoost,
     trainSkills,
     learnSpells,
+    selectFeats,
     resetCharacter,
   };
 }

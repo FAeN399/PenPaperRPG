@@ -77,6 +77,7 @@ export function CreationWizard(): JSX.Element {
     resolveAbilityBoost,
     trainSkills,
     learnSpells,
+    selectFeats,
     resetCharacter,
   } = useCharacterBuilder();
 
@@ -176,6 +177,7 @@ export function CreationWizard(): JSX.Element {
                 onResolveAbilityBoost={resolveAbilityBoost}
                 onTrainSkills={trainSkills}
                 onLearnSpells={learnSpells}
+                onSelectFeats={selectFeats}
               />
             ) : null}
           </div>

@@ -11,6 +11,7 @@ import React, { useMemo } from "react";
 import type { CreationStep } from "./CreationWizard";
 import { AbilityBoostSelector } from "./AbilityBoostSelector";
 import { SpellSelector } from "./SpellSelector";
+import { FeatSelector } from "./FeatSelector";
 import { CharacterSheet } from "../character/CharacterSheet";
 
 import type { CharacterBuilderState } from "@/hooks/useCharacterBuilder";
@@ -26,6 +27,7 @@ interface WizardViewportProps {
   onResolveAbilityBoost: (choiceId: string, selectedAbilities: AbilityId[]) => void;
   onTrainSkills: (skillIds: string[]) => void;
   onLearnSpells: (cantrips: string[], rank1Spells: string[]) => void;
+  onSelectFeats: (selections: Array<{ slotIndex: number; featId: string; grantedBy: string }>) => void;
 }
 
 const STEP_PLACEHOLDER: Record<string, string> = {
@@ -50,6 +52,7 @@ export function WizardViewport({
   onResolveAbilityBoost,
   onTrainSkills,
   onLearnSpells,
+  onSelectFeats,
 }: WizardViewportProps): JSX.Element {
   const selectableStepId = isSelectableStep(step.id) ? step.id : null;
 
@@ -119,7 +122,7 @@ export function WizardViewport({
           onResolveAbilityBoost={onResolveAbilityBoost}
         />
       ) : step.id === "starting-feats" ? (
-        <FeatSelectionSection builderState={builderState} onLearnSpells={onLearnSpells} />
+        <FeatSelectionSection builderState={builderState} onLearnSpells={onLearnSpells} onSelectFeats={onSelectFeats} />
       ) : step.id === "proficiencies" ? (
         <ProficienciesSection builderState={builderState} onTrainSkills={onTrainSkills} />
       ) : step.id === "equipment" ? (
@@ -474,12 +477,14 @@ interface AbilityBoostSectionProps {
 interface FeatSelectionSectionProps {
   builderState: CharacterBuilderState;
   onLearnSpells: (cantrips: string[], rank1Spells: string[]) => void;
+  onSelectFeats: (selections: Array<{ slotIndex: number; featId: string; grantedBy: string }>) => void;
 }
 
-function FeatSelectionSection({ builderState, onLearnSpells }: FeatSelectionSectionProps): JSX.Element {
+function FeatSelectionSection({ builderState, onLearnSpells, onSelectFeats }: FeatSelectionSectionProps): JSX.Element {
   const { catalog, catalogLookup, character } = builderState;
   const [selectedCantrips, setSelectedCantrips] = React.useState<string[]>([]);
   const [selectedRank1Spells, setSelectedRank1Spells] = React.useState<string[]>([]);
+  const [selectedFeats, setSelectedFeats] = React.useState<Array<{ slotIndex: number; featId: string }>>([]);
 
   // Check if character is a spellcaster
   const spellcasterInfo = useMemo(() => {
@@ -498,43 +503,44 @@ function FeatSelectionSection({ builderState, onLearnSpells }: FeatSelectionSect
   }, [character.identity.classId]);
 
   const hasLearnedSpells = character.spellcasting && character.spellcasting.length > 0;
+  const hasSelectedFeats = character.feats && character.feats.length > 0;
 
-  // Get all feats from catalog
-  const allFeats = catalog.entities.filter((entry) => entry.entity.type === "feat");
+  // Determine feat slots at level 1
+  const featSlots = useMemo(() => {
+    const slots = [];
 
-  // Group feats by category
-  const featsByCategory = useMemo(() => {
-    const groups: Record<string, CatalogIndexEntry[]> = {
-      ancestry: [],
-      class: [],
-      skill: [],
-      general: [],
-    };
+    // All characters get 1 ancestry feat at level 1
+    if (character.identity.ancestryId) {
+      slots.push({
+        category: "ancestry" as const,
+        label: "Ancestry Feat",
+        grantedBy: "ancestry",
+      });
+    }
 
-    allFeats.forEach((entry) => {
-      const feat = entry.entity as any;
-      if (feat.category && groups[feat.category]) {
-        groups[feat.category].push(entry);
+    // All characters get 1 class feat at level 1
+    if (character.identity.classId) {
+      slots.push({
+        category: "class" as const,
+        label: "Class Feat",
+        grantedBy: "class",
+      });
+    }
+
+    // Check if background grants a skill feat
+    if (character.identity.backgroundId) {
+      const backgroundEntity = catalogLookup.byId.get(character.identity.backgroundId)?.entity;
+      if (backgroundEntity && backgroundEntity.type === "background") {
+        const background = backgroundEntity as any;
+        if (background.feat) {
+          // Background grants a specific skill feat (auto-granted, not a choice)
+          // We don't add it to slots since it's automatic
+        }
       }
-    });
+    }
 
-    return groups;
-  }, [allFeats]);
-
-  // Filter feats by ancestry/class
-  const ancestryFeats = featsByCategory.ancestry.filter((entry) => {
-    const feat = entry.entity as any;
-    return feat.traits?.some((t: string) =>
-      t.toLowerCase() === character.identity.ancestryId?.split('.').pop()?.toLowerCase()
-    );
-  });
-
-  const classFeats = featsByCategory.class.filter((entry) => {
-    const feat = entry.entity as any;
-    return feat.traits?.some((t: string) =>
-      t.toLowerCase() === character.identity.classId?.split('.').pop()?.toLowerCase()
-    );
-  });
+    return slots;
+  }, [character.identity.ancestryId, character.identity.classId, character.identity.backgroundId, catalogLookup]);
 
   const handleSpellSelectionChange = (cantrips: string[], rank1: string[]) => {
     setSelectedCantrips(cantrips);
@@ -543,6 +549,19 @@ function FeatSelectionSection({ builderState, onLearnSpells }: FeatSelectionSect
 
   const handleConfirmSpells = () => {
     onLearnSpells(selectedCantrips, selectedRank1Spells);
+  };
+
+  const handleFeatSelectionChange = (selections: Array<{ slotIndex: number; featId: string }>) => {
+    setSelectedFeats(selections);
+  };
+
+  const handleConfirmFeats = () => {
+    // Add grantedBy field to selections
+    const selectionsWithGrantedBy = selectedFeats.map((selection) => ({
+      ...selection,
+      grantedBy: featSlots[selection.slotIndex]?.grantedBy || "unknown",
+    }));
+    onSelectFeats(selectionsWithGrantedBy);
   };
 
   return (
@@ -579,117 +598,46 @@ function FeatSelectionSection({ builderState, onLearnSpells }: FeatSelectionSect
         </div>
       )}
 
-      {/* Ancestry Feats */}
-      {ancestryFeats.length > 0 && (
+      {/* Feat Selection */}
+      {!hasSelectedFeats && featSlots.length > 0 && ((!spellcasterInfo || hasLearnedSpells)) && (
         <div>
-          <h3 style={{ color: "#daa520", fontSize: "1.25rem", marginBottom: "1rem" }}>
-            Ancestry Feats
+          <h3 style={{ color: "#daa520", fontSize: "1.5rem", marginBottom: "1rem" }}>
+            Starting Feats
           </h3>
           <p style={{ color: "#a0a0a0", fontSize: "0.875rem", marginBottom: "1rem" }}>
-            Select 1 ancestry feat from your {character.identity.ancestryId?.split('.').pop() || 'ancestry'}
+            Select your starting feats. At level 1, you gain an ancestry feat and a class feat.
           </p>
-          <div style={{ display: "grid", gap: "1rem", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))" }}>
-            {ancestryFeats.map((entry) => (
-              <FeatCard key={entry.entity.id} entry={entry} />
-            ))}
-          </div>
+          <FeatSelector
+            catalog={catalog}
+            catalogLookup={catalogLookup}
+            ancestryId={character.identity.ancestryId}
+            classId={character.identity.classId}
+            backgroundId={character.identity.backgroundId}
+            slots={featSlots}
+            selectedFeats={selectedFeats}
+            onSelectionChange={handleFeatSelectionChange}
+            onConfirm={handleConfirmFeats}
+          />
         </div>
       )}
 
-      {/* Class Feats */}
-      {classFeats.length > 0 && (
-        <div>
-          <h3 style={{ color: "#daa520", fontSize: "1.25rem", marginBottom: "1rem" }}>
-            Class Feats
-          </h3>
-          <p style={{ color: "#a0a0a0", fontSize: "0.875rem", marginBottom: "1rem" }}>
-            Select 1 class feat from your {character.identity.classId?.split('.').pop() || 'class'}
+      {hasSelectedFeats && (
+        <div style={{ padding: "1rem", backgroundColor: "#2d2d2d", border: "1px solid #4ade80", borderRadius: "8px" }}>
+          <p style={{ color: "#4ade80", margin: 0 }}>
+            ✓ Starting feats selected ({character.feats.length} total)
           </p>
-          <div style={{ display: "grid", gap: "1rem", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))" }}>
-            {classFeats.map((entry) => (
-              <FeatCard key={entry.entity.id} entry={entry} />
-            ))}
-          </div>
+          <ul style={{ color: "#ccc", marginTop: "0.5rem", paddingLeft: "1.5rem" }}>
+            {character.feats.map((feat) => {
+              const featEntity = catalogLookup.byId.get(feat.id)?.entity;
+              return (
+                <li key={feat.id}>
+                  {featEntity?.name || feat.id} <em style={{ opacity: 0.7 }}>({feat.grantedBy})</em>
+                </li>
+              );
+            })}
+          </ul>
         </div>
       )}
-
-      {/* Skill Feats */}
-      {featsByCategory.skill.length > 0 && (
-        <div>
-          <h3 style={{ color: "#daa520", fontSize: "1.25rem", marginBottom: "1rem" }}>
-            Skill Feats
-          </h3>
-          <p style={{ color: "#a0a0a0", fontSize: "0.875rem", marginBottom: "1rem" }}>
-            Available skill feats (your background may grant one)
-          </p>
-          <div style={{ display: "grid", gap: "1rem", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))" }}>
-            {featsByCategory.skill.slice(0, 12).map((entry) => (
-              <FeatCard key={entry.entity.id} entry={entry} />
-            ))}
-          </div>
-        </div>
-      )}
-    </div>
-  );
-}
-
-interface FeatCardProps {
-  entry: CatalogIndexEntry;
-}
-
-function FeatCard({ entry }: FeatCardProps): JSX.Element {
-  const feat = entry.entity as any;
-
-  return (
-    <div
-      style={{
-        background: "#2d2d2d",
-        border: "1px solid #444",
-        borderRadius: "0.5rem",
-        padding: "1rem",
-        display: "flex",
-        flexDirection: "column",
-        gap: "0.5rem",
-        transition: "all 0.2s",
-        cursor: "pointer",
-      }}
-      onMouseEnter={(e) => {
-        e.currentTarget.style.borderColor = "#daa520";
-        e.currentTarget.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.4)";
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.borderColor = "#444";
-        e.currentTarget.style.boxShadow = "none";
-      }}
-    >
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "start" }}>
-        <h4 style={{ color: "#e0e0e0", fontSize: "1rem", margin: 0 }}>{feat.name}</h4>
-        {feat.level && (
-          <span style={{ color: "#a0a0a0", fontSize: "0.75rem" }}>Level {feat.level}</span>
-        )}
-      </div>
-      {feat.traits && feat.traits.length > 0 && (
-        <div style={{ display: "flex", flexWrap: "wrap", gap: "0.25rem" }}>
-          {feat.traits.map((trait: string) => (
-            <span
-              key={trait}
-              style={{
-                background: "#1a1a1a",
-                color: "#a0a0a0",
-                fontSize: "0.65rem",
-                padding: "0.125rem 0.375rem",
-                borderRadius: "9999px",
-                textTransform: "capitalize",
-              }}
-            >
-              {trait}
-            </span>
-          ))}
-        </div>
-      )}
-      <p style={{ color: "#a0a0a0", fontSize: "0.875rem", margin: 0, lineHeight: 1.4 }}>
-        {feat.summary || "No description available"}
-      </p>
     </div>
   );
 }
@@ -1106,7 +1054,7 @@ function ReviewSection({ builderState }: ReviewSectionProps): JSX.Element {
       </div>
 
       {/* Character Sheet */}
-      <CharacterSheet character={character} />
+      <CharacterSheet character={character} catalogLookup={builderState.catalogLookup} />
     </div>
   );
 }
