@@ -1,0 +1,13 @@
+id: pf2e.heritage.skilled-human
+type: heritage
+name: Skilled Human
+ancestryId: pf2e.ancestry.human
+summary: Your ingenuity allows you to train in a wide variety of skills.
+source:
+  id: core-remaster
+  page: 58
+description: >
+  Your ingenuity allows you to train in a wide variety of skills. You become trained in one skill of your choice.
+  At 5th level, you become an expert in the chosen skill.
+traits:
+  - human

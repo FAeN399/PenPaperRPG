@@ -12,16 +12,18 @@ import type { CreationStep } from "./CreationWizard";
 import { AbilityBoostSelector } from "./AbilityBoostSelector";
 import { SpellSelector } from "./SpellSelector";
 import { FeatSelector } from "./FeatSelector";
+import { HeritageSelector } from "./HeritageSelector";
 import { CharacterSheet } from "../character/CharacterSheet";
 
 import type { CharacterBuilderState } from "@/hooks/useCharacterBuilder";
 
-type SelectableStepId = "ancestry" | "background" | "class";
+type SelectableStepId = "ancestry" | "heritage" | "background" | "class";
 
 interface WizardViewportProps {
   step: CreationStep;
   builderState: CharacterBuilderState;
   onSelectAncestry: (id: string) => void;
+  onSelectHeritage: (id: string) => void;
   onSelectBackground: (id: string) => void;
   onSelectClass: (id: string) => void;
   onResolveAbilityBoost: (choiceId: string, selectedAbilities: AbilityId[]) => void;
@@ -47,6 +49,7 @@ export function WizardViewport({
   step,
   builderState,
   onSelectAncestry,
+  onSelectHeritage,
   onSelectBackground,
   onSelectClass,
   onResolveAbilityBoost,
@@ -78,6 +81,9 @@ export function WizardViewport({
     switch (selectableStepId) {
       case "ancestry":
         onSelectAncestry(entityId);
+        break;
+      case "heritage":
+        onSelectHeritage(entityId);
         break;
       case "background":
         onSelectBackground(entityId);
@@ -116,7 +122,15 @@ export function WizardViewport({
         <p style={{ margin: 0, color: "#a0a0a0", lineHeight: 1.5 }}>{step.description}</p>
       </header>
 
-      {step.id === "abilities" ? (
+      {step.id === "heritage" ? (
+        <HeritageSelector
+          catalog={builderState.catalog}
+          catalogLookup={builderState.catalogLookup}
+          ancestryId={builderState.character.identity.ancestryId}
+          selectedHeritageId={builderState.character.identity.heritageId || null}
+          onSelect={onSelectHeritage}
+        />
+      ) : step.id === "abilities" ? (
         <AbilityBoostSection
           builderState={builderState}
           onResolveAbilityBoost={onResolveAbilityBoost}
@@ -168,7 +182,7 @@ export function WizardViewport({
 }
 
 function isSelectableStep(stepId: string): stepId is SelectableStepId {
-  return stepId === "ancestry" || stepId === "background" || stepId === "class";
+  return stepId === "ancestry" || stepId === "heritage" || stepId === "background" || stepId === "class";
 }
 
 function getSelectedEntityId(
@@ -177,6 +191,9 @@ function getSelectedEntityId(
 ): string | undefined {
   if (stepId === "ancestry") {
     return builderState.character.identity.ancestryId;
+  }
+  if (stepId === "heritage") {
+    return builderState.character.identity.heritageId || undefined;
   }
   if (stepId === "background") {
     return builderState.character.identity.backgroundId;

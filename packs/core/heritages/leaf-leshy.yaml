@@ -1,0 +1,12 @@
+id: pf2e.heritage.leaf-leshy
+type: heritage
+name: Leaf Leshy
+ancestryId: pf2e.ancestry.leshy
+summary: Your body is made mostly from natural foliage.
+source:
+  id: core-remaster
+  page: 50
+description: >
+  Your body is made mostly from natural foliage, making you particularly susceptible to fire. However, you can constantly draw nutrients from the air through photosynthesis. You gain a +2 circumstance bonus to Survival checks to Subsist, and you can Subsist without needing to attempt checks to find food, even in the wild. You take double damage from fire.
+traits:
+  - leshy

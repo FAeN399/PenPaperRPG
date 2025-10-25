@@ -1,0 +1,12 @@
+id: pf2e.heritage.nomadic-halfling
+type: heritage
+name: Nomadic Halfling
+ancestryId: pf2e.ancestry.halfling
+summary: Your ancestors have traveled from place to place for generations, never content to settle down.
+source:
+  id: core-remaster
+  page: 46
+description: >
+  Your ancestors have traveled from place to place for generations, never content to settle down. You gain two additional languages of your choice, chosen from among the common and uncommon languages available to you, and every time you take the Multilingual feat, you gain another new language.
+traits:
+  - halfling

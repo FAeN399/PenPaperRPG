@@ -52,6 +52,7 @@ interface BuilderHookResult {
   error: Error | null;
   refresh: () => Promise<void>;
   selectAncestry: (id: string) => void;
+  selectHeritage: (id: string) => void;
   selectBackground: (id: string) => void;
   selectClass: (id: string) => void;
   resolveAbilityBoost: (choiceId: string, selectedAbilities: AbilityId[]) => void;
@@ -360,6 +361,33 @@ export function useCharacterBuilder(): BuilderHookResult {
   );
 
   const selectAncestry = useCallback((id: string) => selectEntity("ancestry", id), [selectEntity]);
+
+  const selectHeritage = useCallback((id: string) => {
+    let nextCharacter: Character | null = null;
+
+    setState((current) => {
+      if (!current) return current;
+
+      const { character } = current;
+
+      // Simply update the heritageId in character identity
+      const updatedCharacter = {
+        ...character,
+        identity: {
+          ...character.identity,
+          heritageId: id,
+        },
+      };
+
+      nextCharacter = updatedCharacter;
+      return { ...current, character: updatedCharacter };
+    });
+
+    if (nextCharacter) {
+      persistCharacterState(nextCharacter);
+    }
+  }, []);
+
   const selectBackground = useCallback((id: string) => selectEntity("background", id), [selectEntity]);
   const selectClass = useCallback((id: string) => selectEntity("class", id), [selectEntity]);
 
@@ -561,6 +589,7 @@ export function useCharacterBuilder(): BuilderHookResult {
       await loadCatalog();
     },
     selectAncestry,
+    selectHeritage,
     selectBackground,
     selectClass,
     resolveAbilityBoost,

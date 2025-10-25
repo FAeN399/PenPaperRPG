@@ -21,7 +21,12 @@ const DEFAULT_STEPS: CreationStep[] = [
   {
     id: "ancestry",
     title: "Choose Ancestry",
-    description: "Pick a core ancestry or heritage from the available catalog packs.",
+    description: "Pick a core ancestry from the available catalog packs.",
+  },
+  {
+    id: "heritage",
+    title: "Choose Heritage",
+    description: "Select a heritage that represents your lineage and grants unique abilities.",
   },
   {
     id: "background",
@@ -72,6 +77,7 @@ export function CreationWizard(): JSX.Element {
     error,
     refresh,
     selectAncestry,
+    selectHeritage,
     selectBackground,
     selectClass,
     resolveAbilityBoost,
@@ -172,6 +178,7 @@ export function CreationWizard(): JSX.Element {
                 step={activeStep}
                 builderState={builderState}
                 onSelectAncestry={selectAncestry}
+                onSelectHeritage={selectHeritage}
                 onSelectBackground={selectBackground}
                 onSelectClass={selectClass}
                 onResolveAbilityBoost={resolveAbilityBoost}

@@ -1,0 +1,12 @@
+id: pf2e.heritage.cavern-elf
+type: heritage
+name: Cavern Elf
+ancestryId: pf2e.ancestry.elf
+summary: You were born or spent many years in underground tunnels or caverns where light is scarce.
+source:
+  id: core-remaster
+  page: 38
+description: >
+  You were born or spent many years in underground tunnels or caverns where light is scarce. You gain darkvision.
+traits:
+  - elf

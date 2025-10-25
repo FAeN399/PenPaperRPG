@@ -1,0 +1,14 @@
+id: pf2e.heritage.wintertouched-human
+type: heritage
+name: Wintertouched Human
+ancestryId: pf2e.ancestry.human
+summary: You gain cold resistance and treat environmental cold effects as less severe.
+source:
+  id: core-remaster
+  page: 58
+description: >
+  The power of winter flows through you. This heritage is most common among the Jadwiga of Irrisen, due to their
+  descent from Baba Yaga, and certain Erutaki touched by the spirits. You gain cold resistance equal to half
+  your level (minimum 1), and you treat environmental cold effects as if they were one step less extreme.
+traits:
+  - human

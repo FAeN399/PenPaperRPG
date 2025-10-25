@@ -1,0 +1,13 @@
+id: pf2e.heritage.ancient-blooded-dwarf
+type: heritage
+name: Ancient-Blooded Dwarf
+ancestryId: pf2e.ancestry.dwarf
+summary: Dwarven heroes of old could shrug off their enemies' magic.
+source:
+  id: core-remaster
+  page: 32
+description: >
+  Dwarven heroes of old could shrug off their enemies' magic, and some of that resistance manifests in you.
+  You gain the Call on Ancient Blood reaction.
+traits:
+  - dwarf

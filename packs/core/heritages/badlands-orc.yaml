@@ -1,0 +1,12 @@
+id: pf2e.heritage.badlands-orc
+type: heritage
+name: Badlands Orc
+ancestryId: pf2e.ancestry.orc
+summary: You come from sun-scorched badlands, where long legs and an efficient walk help you cover vast distances.
+source:
+  id: orc-remaster
+  page: 52
+description: >
+  You come from sun-scorched badlands, where long legs and an efficient walk help you cover vast distances and keep a safe distance from dangerous predators. You gain a +5-foot circumstance bonus to your Speed. This bonus increases to +10 feet when you use the Hustle exploration activity.
+traits:
+  - orc

@@ -1,0 +1,13 @@
+id: pf2e.heritage.gutsy-halfling
+type: heritage
+name: Gutsy Halfling
+ancestryId: pf2e.ancestry.halfling
+summary: Your family line is known for keeping a level head in times of crisis.
+source:
+  id: core-remaster
+  page: 46
+description: >
+  Your family line is known for keeping a level head in times of crisis and your ancestors have passed this resilience onto you.
+  You gain a +2 circumstance bonus to saving throws against emotion effects. If you roll a success on a saving throw against an emotion effect, you get a critical success instead.
+traits:
+  - halfling

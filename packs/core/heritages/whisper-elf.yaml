@@ -1,0 +1,14 @@
+id: pf2e.heritage.whisper-elf
+type: heritage
+name: Whisper Elf
+ancestryId: pf2e.ancestry.elf
+summary: Your ears are finely tuned, able to detect even the slightest whispers of sound.
+source:
+  id: core-remaster
+  page: 38
+description: >
+  Your ears are finely tuned, able to detect even the slightest whispers of sound. As long as you can hear normally,
+  you can use the Seek action to sense undetected creatures in a 60-foot cone instead of a 30-foot cone.
+  You also gain a +2 circumstance bonus to locate undetected creatures that you could hear within 30 feet with a Seek action.
+traits:
+  - elf

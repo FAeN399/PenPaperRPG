@@ -1,0 +1,14 @@
+id: pf2e.heritage.seer-elf
+type: heritage
+name: Seer Elf
+ancestryId: pf2e.ancestry.elf
+summary: You have an inborn ability to detect and understand magical phenomena.
+source:
+  id: core-remaster
+  page: 38
+description: >
+  You have an inborn ability to detect and understand magical phenomena. You can cast the detect magic cantrip as an arcane innate spell at will.
+  A cantrip is heightened to a spell rank equal to half your level rounded up. In addition, you gain a +1 circumstance bonus to checks to Identify Magic
+  and to Decipher Writing of a magical nature.
+traits:
+  - elf

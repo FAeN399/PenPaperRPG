@@ -1,0 +1,12 @@
+id: pf2e.heritage.rainfall-orc
+type: heritage
+name: Rainfall Orc
+ancestryId: pf2e.ancestry.orc
+summary: You were born in a rain forest with only tangles of trees providing protection from torrential rainstorms.
+source:
+  id: orc-remaster
+  page: 52
+description: >
+  You were born in a rain forest with only tangles of trees providing protection from torrential rainstorms and flash floods. You've learned to move adeptly through jungle terrain and resist the various ailments common in humid environs. You gain a +2 circumstance bonus to Athletics checks to Climb or Swim and a +1 circumstance bonus to saves against diseases.
+traits:
+  - orc
