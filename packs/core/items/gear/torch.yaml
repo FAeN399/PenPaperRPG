@@ -2,11 +2,17 @@ id: pf2e.item.torch
 type: item
 source:
   id: core-remaster
+  page: 291
 name: Torch
 level: 0
 price: 1 cp
 bulk: L
 traits: []
-summary: A simple wooden torch that provides light.
+summary: A simple light source burning for 1 hour, providing bright light in 20-foot radius.
 description: |
-  A torch sheds bright light in a 20-foot radius (and dim light to the next 40 feet). It can be used as an improvised weapon that deals 1d4 bludgeoning damage plus 1 fire damage. A torch burns for 1 hour.
+  A torch burns for 1 hour, shedding bright light in a 20-foot radius (and dim light to the next 20 feet). You can use an Interact action to touch a torch to a flammable object to light it on fire.
+
+  - Duration: 1 hour
+  - Light: Bright 20 ft., dim 40 ft.
+
+  Torches are the most basic form of portable light. They're cheap and readily available, but they burn out quickly.

@@ -2,11 +2,17 @@ id: pf2e.item.backpack
 type: item
 source:
   id: core-remaster
+  page: 287
 name: Backpack
 level: 0
 price: 1 sp
 bulk: L
 traits: []
-summary: A sturdy leather pack for carrying equipment.
+summary: A sturdy pack for carrying adventuring gear, holds up to 4 Bulk of items.
 description: |
-  A backpack holds up to 4 Bulk of items. The first 2 Bulk of these items don't count against your Bulk limits.
+  A backpack holds up to 4 Bulk of items. If you're carrying or stowing a backpack, you can Interact to draw items from it as easily as drawing a weapon.
+
+  - Capacity: 4 Bulk
+  - Bulk: L (when worn or carried)
+
+  A backpack is essential for any adventurer. Items stored in a backpack don't count toward your Bulk limit until you exceed the backpack's capacity.

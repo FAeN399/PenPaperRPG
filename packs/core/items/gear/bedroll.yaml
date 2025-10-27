@@ -2,11 +2,17 @@ id: pf2e.item.bedroll
 type: item
 source:
   id: core-remaster
+  page: 287
 name: Bedroll
 level: 0
-price: 2 cp
+price: 2 sp
 bulk: L
 traits: []
-summary: A sleeping bag with a blanket and cushion.
+summary: Portable bedding for resting while traveling or camping.
 description: |
-  A bedroll consists of bedding and a blanket thin enough to be rolled up and tied. It's suited only for people up to 8 feet tall.
+  A bedroll consists of bedding and a blanket thin enough to be rolled up and tied. It's a common item for adventurers.
+
+  - Can be rolled up for easy transport
+  - Provides basic comfort when sleeping outdoors
+
+  A bedroll helps you get a good night's rest even when sleeping on the ground.

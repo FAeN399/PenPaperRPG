@@ -1,0 +1,23 @@
+id: pf2e.item.plate-armor
+type: item
+source:
+  id: core-remaster
+  page: 276
+name: Plate Armor
+level: 0
+price: 30 gp
+bulk: "4"
+traits: [bulwark]
+summary: Heavy armor providing maximum +6 AC bonus at the cost of mobility.
+description: |
+  Plate armor consists of interlocking plates that encase nearly the entire body in a carapace of steel.
+
+  - AC Bonus: +6
+  - Dex Cap: +0
+  - Check Penalty: -3
+  - Speed Penalty: -10 ft.
+  - Strength: 18
+  - Group: Plate
+  - Armor Traits: bulwark
+
+  Plate armor provides the best protection available. The bulwark trait gives you a +3 bonus to Reflex saves against damaging effects, but you get only a +1 bonus if you have a Dexterity modifier of +3 or higher.

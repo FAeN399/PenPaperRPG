@@ -1,0 +1,19 @@
+id: pf2e.item.healer-tools
+type: item
+source:
+  id: core-remaster
+  page: 289
+name: Healer's Tools
+level: 0
+price: 5 gp
+bulk: "1"
+traits: []
+summary: Medical supplies for treating wounds, disease, and poison, with 10 uses.
+description: |
+  This kit of bandages, herbs, and suturing tools is necessary for Medicine checks to Administer First Aid, Treat Disease, Treat Poison, or Treat Wounds.
+
+  - Uses: 10
+  - Required for: Medicine checks
+  - Replenish cost: 5 sp per use
+
+  You need healer's tools to use most Medicine skill actions. The kit has 10 uses; when you use the last one, you can refill it with 5 sp worth of supplies.

@@ -2,11 +2,19 @@ id: pf2e.item.rope
 type: item
 source:
   id: core-remaster
-name: Rope (50 ft)
+  page: 290
+name: Rope (50 ft.)
 level: 0
 price: 5 sp
 bulk: L
 traits: []
-summary: A length of strong hemp rope.
+summary: Fifty feet of sturdy rope for climbing, binding, and various adventuring needs.
 description: |
-  This length of strong hemp rope is 50 feet long and has 2 Hit Points. A creature can burst it with a DC 17 Athletics check.
+  Rope can be made from hemp, silk, or other fibers. It's used for climbing, tying up prisoners, and many other purposes.
+
+  - Length: 50 feet
+  - DC to burst: 24
+  - Hardness: 2
+  - HP: 8
+
+  A standard length of rope is 50 feet. You can tie knots in it, use it to climb, lower yourself down a cliff, or bind a prisoner.

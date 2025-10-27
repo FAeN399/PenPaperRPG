@@ -2,21 +2,22 @@ id: pf2e.item.leather-armor
 type: item
 source:
   id: core-remaster
+  page: 275
 name: Leather Armor
 level: 0
 price: 2 gp
 bulk: "1"
-traits: []
-summary: Boiled leather provides reliable light armor protection for agile combatants.
+traits: [comfort]
+summary: Light armor made of hardened leather, providing +1 AC bonus with excellent mobility.
 description: |
-  This suit of leather armor consists of multiple pieces of boiled or treated leather, carefully sewn together to provide protection without hindering movement. It's a popular choice for rogues and other agile warriors.
+  A mix of hardened leather and flexible materials, leather armor provides moderate protection with excellent mobility.
 
   - AC Bonus: +1
   - Dex Cap: +4
   - Check Penalty: -1
-  - Speed Penalty: 0 ft
+  - Speed Penalty: —
   - Strength: 10
   - Group: Leather
-  - Armor Traits: —
+  - Armor Traits: comfort
 
-  Leather armor is made from boiled or specially treated leather. It provides good protection while still allowing for excellent mobility.
+  Leather armor is the lightest armor with actual protective value. The comfort trait means you can rest normally while wearing it.

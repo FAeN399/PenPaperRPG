@@ -2,18 +2,19 @@ id: pf2e.item.staff
 type: item
 source:
   id: core-remaster
+  page: 282
 name: Staff
 level: 0
 price: 0 cp
 bulk: "1"
 traits: [two-hand-d8]
-summary: A long wooden pole dealing 1d4 bludgeoning damage, or 1d8 when wielded in two hands.
+summary: A simple wooden staff dealing 1d4 bludgeoning damage, two-hand d8.
 description: |
-  A long, straight piece of wood used as both a walking aid and a weapon. The staff is a favored weapon of monks and wizards.
+  This long piece of wood can aid in walking and deliver a mighty blow.
 
-  - Damage: 1d4 bludgeoning (1d8 two-handed)
+  - Damage: 1d4 bludgeoning (1d8 with two hands)
   - Hands: 1
   - Group: Club
   - Weapon Traits: two-hand d8
 
-  The staff costs nothing and can be found almost anywhere. While it deals modest damage in one hand, wielding it with both hands increases its damage die to 1d8, making it surprisingly effective.
+  The staff is a versatile weapon. When wielded with two hands, it deals 1d8 damage instead of 1d4.

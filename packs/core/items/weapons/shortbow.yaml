@@ -2,18 +2,20 @@ id: pf2e.item.shortbow
 type: item
 source:
   id: core-remaster
+  page: 281
 name: Shortbow
 level: 0
 price: 3 gp
 bulk: "1"
-traits: [deadly-d10, range-60, reload-0]
-summary: A compact bow dealing 1d6 piercing damage with 60 foot range and deadly d10.
+traits: [deadly-d10]
+summary: A martial bow with 60-foot range, dealing 1d6 piercing damage with deadly d10.
 description: |
-  A compact bow suitable for use in confined spaces or on horseback. The shortbow is easier to use than a longbow but has less range.
+  This smaller bow is made of a single piece of wood and shoots farther than a crossbow, though not as far as a longbow.
 
   - Damage: 1d6 piercing
-  - Hands: 1+
+  - Hands: 2
+  - Range: 60 feet
   - Group: Bow
-  - Weapon Traits: deadly d10, range 60 ft., reload 0
+  - Weapon Traits: deadly d10
 
-  The deadly d10 trait adds an extra d10 to damage when you critically hit. Reload 0 means you can fire repeatedly without needing to reload. The shortbow requires one hand to hold and one hand to shoot.
+  The shortbow is lighter and easier to use than a longbow, making it a good choice for mobile archers.
