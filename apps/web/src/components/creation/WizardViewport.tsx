@@ -998,7 +998,9 @@ interface ReviewSectionProps {
 }
 
 function ReviewSection({ builderState }: ReviewSectionProps): JSX.Element {
-  const { character } = builderState;
+  const { character, catalogLookup } = builderState;
+  const [exportingFormat, setExportingFormat] = React.useState<string | null>(null);
+  const [exportError, setExportError] = React.useState<string | null>(null);
 
   const handleExport = () => {
     const dataStr = JSON.stringify(character, null, 2);
@@ -1013,6 +1015,48 @@ function ReviewSection({ builderState }: ReviewSectionProps): JSX.Element {
 
   const handlePrint = () => {
     window.print();
+  };
+
+  const handleProfessionalExport = async (format: "pdf" | "excel" | "word") => {
+    setExportingFormat(format);
+    setExportError(null);
+
+    try {
+      // Convert CatalogLookup Maps to serializable format
+      const catalogLookupData = catalogLookup ? {
+        byId: Array.from(catalogLookup.byId.entries()),
+        byType: Array.from(catalogLookup.byType.entries()),
+      } : null;
+
+      const response = await fetch("/api/export", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          character,
+          catalogLookup: catalogLookupData,
+          format,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.error || "Export failed");
+      }
+
+      // Download the file
+      const link = document.createElement("a");
+      link.href = result.downloadUrl;
+      link.download = result.filename;
+      link.click();
+    } catch (error) {
+      setExportError(error instanceof Error ? error.message : "Export failed");
+      console.error("Export error:", error);
+    } finally {
+      setExportingFormat(null);
+    }
   };
 
   return (
@@ -1081,6 +1125,137 @@ function ReviewSection({ builderState }: ReviewSectionProps): JSX.Element {
             🖨️ Print Sheet
           </button>
         </div>
+      </div>
+
+      {/* Professional Export Section */}
+      <div style={{
+        background: "#2d2d2d",
+        border: "1px solid #444",
+        borderRadius: "0.5rem",
+        padding: "1.5rem",
+      }}>
+        <h3 style={{ color: "#daa520", fontSize: "1.25rem", margin: "0 0 0.5rem 0" }}>
+          Export Professional Character Sheet
+        </h3>
+        <p style={{ color: "#a0a0a0", fontSize: "0.875rem", marginBottom: "1rem" }}>
+          Download your character sheet in professional format with all features, formulas, and formatting.
+        </p>
+
+        {exportError && (
+          <div style={{
+            padding: "0.75rem",
+            background: "#3d1f1f",
+            border: "1px solid #ff4444",
+            borderRadius: "0.375rem",
+            color: "#ff4444",
+            fontSize: "0.875rem",
+            marginBottom: "1rem",
+          }}>
+            Error: {exportError}
+          </div>
+        )}
+
+        <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+          <button
+            type="button"
+            onClick={() => handleProfessionalExport("pdf")}
+            disabled={exportingFormat !== null}
+            style={{
+              padding: "0.75rem 1.5rem",
+              background: exportingFormat === "pdf" ? "#555" : "#daa520",
+              color: exportingFormat === "pdf" ? "#ccc" : "#1a1a1a",
+              border: "none",
+              borderRadius: "0.375rem",
+              fontWeight: "600",
+              cursor: exportingFormat !== null ? "not-allowed" : "pointer",
+              transition: "all 0.2s",
+              display: "flex",
+              alignItems: "center",
+              gap: "0.5rem",
+            }}
+            onMouseEnter={(e) => {
+              if (exportingFormat === null) {
+                e.currentTarget.style.background = "#c49520";
+              }
+            }}
+            onMouseLeave={(e) => {
+              if (exportingFormat === null) {
+                e.currentTarget.style.background = "#daa520";
+              }
+            }}
+          >
+            <span>📄</span>
+            <span>{exportingFormat === "pdf" ? "Generating PDF..." : "Download PDF"}</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => handleProfessionalExport("excel")}
+            disabled={exportingFormat !== null}
+            style={{
+              padding: "0.75rem 1.5rem",
+              background: exportingFormat === "excel" ? "#555" : "#daa520",
+              color: exportingFormat === "excel" ? "#ccc" : "#1a1a1a",
+              border: "none",
+              borderRadius: "0.375rem",
+              fontWeight: "600",
+              cursor: exportingFormat !== null ? "not-allowed" : "pointer",
+              transition: "all 0.2s",
+              display: "flex",
+              alignItems: "center",
+              gap: "0.5rem",
+            }}
+            onMouseEnter={(e) => {
+              if (exportingFormat === null) {
+                e.currentTarget.style.background = "#c49520";
+              }
+            }}
+            onMouseLeave={(e) => {
+              if (exportingFormat === null) {
+                e.currentTarget.style.background = "#daa520";
+              }
+            }}
+          >
+            <span>📊</span>
+            <span>{exportingFormat === "excel" ? "Generating Excel..." : "Download Excel"}</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => handleProfessionalExport("word")}
+            disabled={exportingFormat !== null}
+            style={{
+              padding: "0.75rem 1.5rem",
+              background: exportingFormat === "word" ? "#555" : "#daa520",
+              color: exportingFormat === "word" ? "#ccc" : "#1a1a1a",
+              border: "none",
+              borderRadius: "0.375rem",
+              fontWeight: "600",
+              cursor: exportingFormat !== null ? "not-allowed" : "pointer",
+              transition: "all 0.2s",
+              display: "flex",
+              alignItems: "center",
+              gap: "0.5rem",
+            }}
+            onMouseEnter={(e) => {
+              if (exportingFormat === null) {
+                e.currentTarget.style.background = "#c49520";
+              }
+            }}
+            onMouseLeave={(e) => {
+              if (exportingFormat === null) {
+                e.currentTarget.style.background = "#daa520";
+              }
+            }}
+          >
+            <span>📝</span>
+            <span>{exportingFormat === "word" ? "Generating Word..." : "Download Word"}</span>
+          </button>
+        </div>
+
+        <p style={{ color: "#666", fontSize: "0.75rem", marginTop: "1rem", fontStyle: "italic" }}>
+          PDF: Multi-page professional layout • Excel: Dynamic spreadsheet with formulas • Word: Formatted document
+        </p>
       </div>
 
       {/* Character Sheet */}
