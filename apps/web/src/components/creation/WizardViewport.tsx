@@ -13,6 +13,7 @@ import { AbilityBoostSelector } from "./AbilityBoostSelector";
 import { SpellSelector } from "./SpellSelector";
 import { FeatSelector } from "./FeatSelector";
 import { HeritageSelector } from "./HeritageSelector";
+import { EquipmentSelector } from "./EquipmentSelector";
 import { CharacterSheet } from "../character/CharacterSheet";
 
 import type { CharacterBuilderState } from "@/hooks/useCharacterBuilder";
@@ -30,6 +31,7 @@ interface WizardViewportProps {
   onTrainSkills: (skillIds: string[]) => void;
   onLearnSpells: (cantrips: string[], rank1Spells: string[]) => void;
   onSelectFeats: (selections: Array<{ slotIndex: number; featId: string; grantedBy: string }>) => void;
+  onEquipmentChange: (equipment: any[], wealthRemaining: number) => void;
 }
 
 const STEP_PLACEHOLDER: Record<string, string> = {
@@ -56,6 +58,7 @@ export function WizardViewport({
   onTrainSkills,
   onLearnSpells,
   onSelectFeats,
+  onEquipmentChange,
 }: WizardViewportProps): JSX.Element {
   const selectableStepId = isSelectableStep(step.id) ? step.id : null;
 
@@ -140,7 +143,17 @@ export function WizardViewport({
       ) : step.id === "proficiencies" ? (
         <ProficienciesSection builderState={builderState} onTrainSkills={onTrainSkills} />
       ) : step.id === "equipment" ? (
-        <EquipmentSelectionSection builderState={builderState} />
+        <div>
+          <h2 style={{ color: "#daa520", fontSize: "1.5rem", marginBottom: "1rem" }}>Equipment & Wealth</h2>
+          <p style={{ color: "#ccc", marginBottom: "1.5rem" }}>
+            You begin with <strong>15 gp</strong> to purchase your starting equipment. Choose weapons, armor, and adventuring gear.
+          </p>
+          <EquipmentSelector
+            catalog={builderState.catalog}
+            strengthModifier={Math.floor((builderState.character.abilityScores.final.STR - 10) / 2)}
+            onEquipmentChange={onEquipmentChange}
+          />
+        </div>
       ) : step.id === "review" ? (
         <ReviewSection builderState={builderState} />
       ) : selectableStepId ? (

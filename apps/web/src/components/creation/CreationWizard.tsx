@@ -84,6 +84,7 @@ export function CreationWizard(): JSX.Element {
     trainSkills,
     learnSpells,
     selectFeats,
+    updateEquipment,
     resetCharacter,
   } = useCharacterBuilder();
 
@@ -185,6 +186,7 @@ export function CreationWizard(): JSX.Element {
                 onTrainSkills={trainSkills}
                 onLearnSpells={learnSpells}
                 onSelectFeats={selectFeats}
+                onEquipmentChange={updateEquipment}
               />
             ) : null}
           </div>

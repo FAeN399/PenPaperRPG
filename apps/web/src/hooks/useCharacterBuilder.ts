@@ -59,6 +59,7 @@ interface BuilderHookResult {
   trainSkills: (skillIds: string[]) => void;
   learnSpells: (cantrips: string[], rank1Spells: string[]) => void;
   selectFeats: (selections: Array<{ slotIndex: number; featId: string; grantedBy: string }>) => void;
+  updateEquipment: (equipment: any[], wealthRemaining: number) => void;
   resetCharacter: () => void;
 }
 
@@ -568,6 +569,29 @@ export function useCharacterBuilder(): BuilderHookResult {
       persistCharacterState(nextCharacter);
     }
   }, []);
+  const updateEquipment = useCallback((equipment: any[], wealthRemaining: number) => {
+    let nextCharacter: Character | null = null;
+
+    setState((current) => {
+      if (!current) return current;
+
+      const { character } = current;
+
+      const updatedCharacter = {
+        ...character,
+        equipment,
+      };
+
+      nextCharacter = updatedCharacter;
+      return { ...current, character: updatedCharacter };
+    });
+
+    if (nextCharacter) {
+      persistCharacterState(nextCharacter);
+    }
+  }, []);
+
+ 
 
   return {
     status,
@@ -596,6 +620,7 @@ export function useCharacterBuilder(): BuilderHookResult {
     trainSkills,
     learnSpells,
     selectFeats,
+    updateEquipment,
     resetCharacter,
   };
 }
