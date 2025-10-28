@@ -1025,7 +1025,6 @@ function ReviewSection({ builderState }: ReviewSectionProps): JSX.Element {
       // Convert CatalogLookup Maps to serializable format
       const catalogLookupData = catalogLookup ? {
         byId: Array.from(catalogLookup.byId.entries()),
-        byType: Array.from(catalogLookup.byType.entries()),
       } : null;
 
       const response = await fetch("/api/export", {
@@ -1054,6 +1053,44 @@ function ReviewSection({ builderState }: ReviewSectionProps): JSX.Element {
     } catch (error) {
       setExportError(error instanceof Error ? error.message : "Export failed");
       console.error("Export error:", error);
+    } finally {
+      setExportingFormat(null);
+    }
+  };
+
+  const handlePrintSheet = async () => {
+    setExportingFormat("pdf");
+    setExportError(null);
+
+    try {
+      // Convert CatalogLookup Maps to serializable format
+      const catalogLookupData = catalogLookup ? {
+        byId: Array.from(catalogLookup.byId.entries()),
+      } : null;
+
+      const response = await fetch("/api/export", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          character,
+          catalogLookup: catalogLookupData,
+          format: "pdf",
+        }),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.error || "PDF generation failed");
+      }
+
+      // Open the PDF in a new tab so user can print it
+      window.open(result.downloadUrl, "_blank");
+    } catch (error) {
+      setExportError(error instanceof Error ? error.message : "PDF generation failed");
+      console.error("Print sheet error:", error);
     } finally {
       setExportingFormat(null);
     }
@@ -1251,10 +1288,42 @@ function ReviewSection({ builderState }: ReviewSectionProps): JSX.Element {
             <span>📝</span>
             <span>{exportingFormat === "word" ? "Generating Word..." : "Download Word"}</span>
           </button>
+
+          <button
+            type="button"
+            onClick={handlePrintSheet}
+            disabled={exportingFormat !== null}
+            style={{
+              padding: "0.75rem 1.5rem",
+              background: exportingFormat !== null ? "#555" : "#2a7a2a",
+              color: exportingFormat !== null ? "#ccc" : "white",
+              border: "none",
+              borderRadius: "0.375rem",
+              fontWeight: "600",
+              cursor: exportingFormat !== null ? "not-allowed" : "pointer",
+              transition: "all 0.2s",
+              display: "flex",
+              alignItems: "center",
+              gap: "0.5rem",
+            }}
+            onMouseEnter={(e) => {
+              if (exportingFormat === null) {
+                e.currentTarget.style.background = "#236a23";
+              }
+            }}
+            onMouseLeave={(e) => {
+              if (exportingFormat === null) {
+                e.currentTarget.style.background = "#2a7a2a";
+              }
+            }}
+          >
+            <span>🖨️</span>
+            <span>Print Sheet</span>
+          </button>
         </div>
 
         <p style={{ color: "#666", fontSize: "0.75rem", marginTop: "1rem", fontStyle: "italic" }}>
-          PDF: Multi-page professional layout • Excel: Dynamic spreadsheet with formulas • Word: Formatted document
+          PDF: Multi-page professional layout • Excel: Dynamic spreadsheet with formulas • Word: Formatted document • Print: Browser print dialog
         </p>
       </div>
 

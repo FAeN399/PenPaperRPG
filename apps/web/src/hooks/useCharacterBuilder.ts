@@ -427,7 +427,7 @@ export function useCharacterBuilder(): BuilderHookResult {
         return current;
       }
 
-      const { character, derivedContext } = current;
+      const { character } = current;
 
       // Update proficiencies with trained skills
       const updatedProficiencies: ProficiencySummary = {
@@ -442,15 +442,11 @@ export function useCharacterBuilder(): BuilderHookResult {
         updatedProficiencies.skills[skillId] = "trained";
       }
 
-      // Create updated character
-      const updatedCharacter = createCharacter({
-        metadata: character.metadata,
-        identity: character.identity,
-        baseAbilities: character.abilityScores.base,
-        abilityAdjustments: character.abilityAdjustments,
+      // Create updated character preserving all existing properties
+      const updatedCharacter = {
+        ...character,
         proficiencies: updatedProficiencies,
-        derivedContext,
-      });
+      };
 
       nextCharacter = updatedCharacter;
 
