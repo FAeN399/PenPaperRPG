@@ -5,7 +5,8 @@
 
 import path from "path";
 import { promises as fs } from "fs";
-import type { Character, CatalogLookup } from "@pen-paper-rpg/catalog";
+import type { Character } from "@pen-paper-rpg/schemas";
+import type { CatalogLookup } from "@pen-paper-rpg/engine";
 import { generateCharacterPDF } from "./generate-character-pdf";
 import { generateCharacterExcel } from "./generate-character-excel";
 import { generateCharacterWord } from "./generate-character-word";

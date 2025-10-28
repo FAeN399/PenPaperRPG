@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import type { CatalogIndex, Item } from "@pen-paper-rpg/catalog";
+import type { CatalogIndex, Item } from "@pen-paper-rpg/schemas";
 
 interface PurchasedItem {
   id: string;

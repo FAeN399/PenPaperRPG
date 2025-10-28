@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
-import type { Character, AbilityId, CatalogLookup } from "@pen-paper-rpg/catalog";
+import type { Character, AbilityId } from "@pen-paper-rpg/schemas";
+import type { CatalogLookup } from "@pen-paper-rpg/engine";
 
 interface CharacterSheetProps {
   character: Character;
@@ -173,8 +174,8 @@ export function CharacterSheet({ character, catalogLookup }: CharacterSheetProps
             </h2>
             <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
               <StatBox label="Hit Points" value={`${derived.hitPoints.current} / ${derived.hitPoints.max}`} />
-              <StatBox label="Armor Class" value={derived.armorClass.toString()} />
-              <StatBox label="Class DC" value={derived.classDC.toString()} />
+              <StatBox label="Armor Class" value={derived.armorClass.value.toString()} />
+              {derived.classDC && <StatBox label="Class DC" value={derived.classDC.value.toString()} />}
               <StatBox label="Perception" value={perceptionMod >= 0 ? `+${perceptionMod}` : `${perceptionMod}`} />
               <StatBox label="Speed" value={`${derived.speeds.land || 0} ft`} />
             </div>

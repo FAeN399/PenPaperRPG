@@ -1,6 +1,6 @@
 import { contextBridge, ipcRenderer } from "electron";
 import type { CatalogIndex } from "@pen-paper-rpg/schemas";
-import type { CatalogLoadError, CatalogLoadWarning } from "@pen-paper-rpg/catalog/src/index.js";
+import type { CatalogLoadError, CatalogLoadWarning } from "@pen-paper-rpg/catalog";
 
 export type SelectPacksResult =
   | { canceled: true }

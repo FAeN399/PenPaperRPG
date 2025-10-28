@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useMemo, useState } from "react";
-import type { CatalogIndex, CatalogLookup, CatalogIndexEntry } from "@pen-paper-rpg/catalog";
+import type { CatalogIndex, CatalogIndexEntry } from "@pen-paper-rpg/schemas";
+import type { CatalogLookup } from "@pen-paper-rpg/engine";
 import type { FeatCategory } from "@pen-paper-rpg/schemas";
 
 interface FeatSlot {

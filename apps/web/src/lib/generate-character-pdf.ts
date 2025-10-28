@@ -6,7 +6,7 @@
  */
 
 import type { Character } from "@pen-paper-rpg/schemas";
-import type { CatalogLookup } from "@pen-paper-rpg/catalog";
+import type { CatalogLookup } from "@pen-paper-rpg/engine";
 import { exec } from "child_process";
 import { promisify } from "util";
 import fs from "fs/promises";
@@ -38,7 +38,6 @@ export async function generateCharacterPDF(data: CharacterPDFData): Promise<stri
       character,
       catalogLookup: catalogLookup ? {
         byId: Array.from(catalogLookup.byId.entries()),
-        byType: Array.from(catalogLookup.byType.entries()),
       } : null,
     }),
     "utf-8"

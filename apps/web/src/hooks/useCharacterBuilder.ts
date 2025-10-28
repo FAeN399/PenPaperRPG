@@ -275,7 +275,7 @@ export function useCharacterBuilder(): BuilderHookResult {
         // Check if this is a final boost (level 1 free boosts)
         if (choice.id.startsWith("level1:final-boost-")) {
           // Apply final boost directly to character's ability scores
-          const newAdjustments = [...character.abilityAdjustments];
+          const newAdjustments = [...character.abilityScores.boosts];
 
           for (const abilityId of selectedAbilities) {
             newAdjustments.push({

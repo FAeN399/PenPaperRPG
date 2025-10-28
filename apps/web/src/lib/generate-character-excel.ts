@@ -5,7 +5,8 @@
 import { execAsync } from "./exec-async";
 import { promises as fs } from "fs";
 import path from "path";
-import type { Character, CatalogLookup } from "@pen-paper-rpg/catalog";
+import type { Character } from "@pen-paper-rpg/schemas";
+import type { CatalogLookup } from "@pen-paper-rpg/engine";
 
 export interface CharacterExcelData {
   character: Character;
@@ -30,7 +31,6 @@ export async function generateCharacterExcel(data: CharacterExcelData): Promise<
         catalogLookup: catalogLookup
           ? {
               byId: Array.from(catalogLookup.byId.entries()),
-              byType: Array.from(catalogLookup.byType.entries()),
             }
           : null,
       },

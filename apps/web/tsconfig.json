@@ -30,13 +30,13 @@
         "./src/types/*"
       ],
       "@pen-paper-rpg/schemas": [
-        "../../packages/schemas/src/index.ts"
+        "../../packages/schemas/dist/index.d.ts"
       ],
       "@pen-paper-rpg/engine": [
-        "../../packages/engine/src/index.ts"
+        "../../packages/engine/dist/index.d.ts"
       ],
       "@pen-paper-rpg/catalog": [
-        "../../packages/catalog/src/index.ts"
+        "../../packages/catalog/dist/index.d.ts"
       ],
       "@pen-paper-rpg/shared": [
         "../../packages/shared/src/index.ts"

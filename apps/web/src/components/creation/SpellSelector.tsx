@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
-import type { CatalogIndex, CatalogLookup } from "@pen-paper-rpg/catalog";
+import type { CatalogIndex } from "@pen-paper-rpg/schemas";
+import type { CatalogLookup } from "@pen-paper-rpg/engine";
 
 interface SpellSelectorProps {
   catalog: CatalogIndex;

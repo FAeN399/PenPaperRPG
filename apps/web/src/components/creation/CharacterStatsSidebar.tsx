@@ -122,7 +122,7 @@ export function CharacterStatsSidebar({ builderState }: CharacterStatsSidebarPro
       <div>
         <StatRow label="HP" value={`${derived.hitPoints.current} / ${derived.hitPoints.max}`} />
         <StatRow label="AC" value={derived.armorClass.value.toString()} />
-        <StatRow label="Class DC" value={derived.classDC.value.toString()} />
+        {derived.classDC && <StatRow label="Class DC" value={derived.classDC.value.toString()} />}
         <StatRow label="Perception" value={`${derived.perception.modifier >= 0 ? "+" : ""}${derived.perception.modifier}`} />
         <StatRow label="Speed" value={`${derived.speeds.land} ft`} />
       </div>
