@@ -1,0 +1,12 @@
+id: pf2e.heritage.umbral-gnome
+type: heritage
+name: Umbral Gnome
+ancestryId: pf2e.ancestry.gnome
+summary: Whether from a connection to dark or shadowy fey, from the underground deep gnomes also known as svirfneblin, or another source, you can see in complete darkness.
+source:
+  id: core-remaster
+  page: 44
+description: >
+  Whether from a connection to dark or shadowy fey, from the underground deep gnomes also known as svirfneblin, or another source, you can see in complete darkness. You gain darkvision.
+traits:
+  - gnome

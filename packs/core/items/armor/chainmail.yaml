@@ -1,0 +1,23 @@
+id: pf2e.item.chainmail
+type: item
+source:
+  id: core-remaster
+  page: 275
+name: Chain Mail
+level: 0
+price: 6 gp
+bulk: "2"
+traits: [flexible, noisy]
+summary: Medium armor of interlocking rings, providing +4 AC bonus with flexibility.
+description: |
+  A suit of chain mail consists of several pieces of armor composed of small metal rings linked together in a protective mesh.
+
+  - AC Bonus: +4
+  - Dex Cap: +1
+  - Check Penalty: -2
+  - Speed Penalty: -5 ft.
+  - Strength: 16
+  - Group: Chain
+  - Armor Traits: flexible, noisy
+
+  Chain mail provides excellent protection. The flexible trait means you can use your full Dexterity modifier on Reflex saves. The noisy trait imposes a -1 penalty to Stealth checks.

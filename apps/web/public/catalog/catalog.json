@@ -1737,467 +1737,6 @@
     },
     {
       "entity": {
-        "id": "pf2e.background.acolyte",
-        "type": "background",
-        "name": "Acolyte",
-        "summary": "You served at a temple, learning the traditions and secrets of your faith.",
-        "source": {
-          "id": "orc-remaster",
-          "page": 50
-        },
-        "rarity": "common",
-        "traits": [],
-        "tags": [],
-        "effects": [],
-        "boosts": [
-          {
-            "type": "choice",
-            "count": 1,
-            "options": [
-              "INT",
-              "WIS"
-            ],
-            "value": 2
-          },
-          {
-            "type": "any",
-            "count": 1,
-            "value": 2
-          }
-        ],
-        "skillTraining": [
-          "Religion",
-          "Scribing Lore"
-        ],
-        "feat": "pf2e.feat.student-of-the-canon"
-      },
-      "packId": "core",
-      "hash": "5435f9dd256c27a874d6aebf76324c732932aa76540d7282793092ac657a4561"
-    },
-    {
-      "entity": {
-        "id": "pf2e.background.blacksmith",
-        "type": "background",
-        "name": "Blacksmith",
-        "summary": "You apprenticed at the forge and learned the value of hard work.",
-        "source": {
-          "id": "orc-remaster",
-          "page": 52
-        },
-        "rarity": "common",
-        "traits": [],
-        "tags": [],
-        "effects": [],
-        "boosts": [
-          {
-            "type": "choice",
-            "count": 1,
-            "options": [
-              "STR",
-              "INT"
-            ],
-            "value": 2
-          },
-          {
-            "type": "any",
-            "count": 1,
-            "value": 2
-          }
-        ],
-        "skillTraining": [
-          "Crafting",
-          "Athletics"
-        ],
-        "feat": "pf2e.feat.specialty-crafting"
-      },
-      "packId": "core",
-      "hash": "c7b68781e3bff0dc50649f142816a57f733f5980ecb0476239ea4dd71cdfcbfd"
-    },
-    {
-      "entity": {
-        "id": "pf2e.background.criminal",
-        "type": "background",
-        "name": "Criminal",
-        "summary": "You have a history of breaking the law and surviving in the criminal underworld.",
-        "source": {
-          "id": "core-remaster"
-        },
-        "rarity": "common",
-        "traits": [],
-        "tags": [],
-        "effects": [],
-        "boosts": [
-          {
-            "type": "choice",
-            "count": 1,
-            "options": [
-              "DEX",
-              "STR"
-            ],
-            "value": 2
-          },
-          {
-            "type": "any",
-            "count": 1,
-            "value": 2
-          }
-        ],
-        "skillTraining": [
-          "Stealth",
-          "Underworld Lore"
-        ],
-        "feat": "pf2e.feat.experienced-smuggler"
-      },
-      "packId": "core",
-      "hash": "47b3cfd4328523ef6fa413c5caeb95619e00d793acf6f88087fd1d4d7c8e633a"
-    },
-    {
-      "entity": {
-        "id": "pf2e.background.entertainer",
-        "type": "background",
-        "name": "Entertainer",
-        "summary": "You've spent years performing for crowds, learning to captivate and entertain.",
-        "source": {
-          "id": "core-remaster"
-        },
-        "rarity": "common",
-        "traits": [],
-        "tags": [],
-        "effects": [],
-        "boosts": [
-          {
-            "type": "choice",
-            "count": 1,
-            "options": [
-              "DEX",
-              "CHA"
-            ],
-            "value": 2
-          },
-          {
-            "type": "any",
-            "count": 1,
-            "value": 2
-          }
-        ],
-        "skillTraining": [
-          "Performance",
-          "Theater Lore"
-        ],
-        "feat": "pf2e.feat.fascinating-performance"
-      },
-      "packId": "core",
-      "hash": "ec815ecacfd785eeb258096b21716bf5e175e9205b3c0c7ca28b1d362b3496c3"
-    },
-    {
-      "entity": {
-        "id": "pf2e.background.farmhand",
-        "type": "background",
-        "name": "Farmhand",
-        "summary": "You worked hard labor on a farm, developing strength and endurance from dawn to dusk.",
-        "source": {
-          "id": "core-remaster"
-        },
-        "rarity": "common",
-        "traits": [],
-        "tags": [],
-        "effects": [],
-        "boosts": [
-          {
-            "type": "choice",
-            "count": 1,
-            "options": [
-              "CON",
-              "WIS"
-            ],
-            "value": 2
-          },
-          {
-            "type": "any",
-            "count": 1,
-            "value": 2
-          }
-        ],
-        "skillTraining": [
-          "Athletics",
-          "Farming Lore"
-        ],
-        "feat": "pf2e.feat.assurance"
-      },
-      "packId": "core",
-      "hash": "4d55b918ab357b13faa977042b23d8cbaefdac25b30800434504e1632680d910"
-    },
-    {
-      "entity": {
-        "id": "pf2e.background.guard",
-        "type": "background",
-        "name": "Guard",
-        "summary": "You served as a guard, protecting people or property and maintaining order.",
-        "source": {
-          "id": "core-remaster"
-        },
-        "rarity": "common",
-        "traits": [],
-        "tags": [],
-        "effects": [],
-        "boosts": [
-          {
-            "type": "choice",
-            "count": 1,
-            "options": [
-              "STR",
-              "CHA"
-            ],
-            "value": 2
-          },
-          {
-            "type": "any",
-            "count": 1,
-            "value": 2
-          }
-        ],
-        "skillTraining": [
-          "Intimidation",
-          "Legal Lore"
-        ],
-        "feat": "pf2e.feat.quick-coercion"
-      },
-      "packId": "core",
-      "hash": "7bcf94c6ba7930b209f2d6c7c0635d0a9cbf69c08b1debc0ab9733b5f08c2013"
-    },
-    {
-      "entity": {
-        "id": "pf2e.background.herbalist",
-        "type": "background",
-        "name": "Herbalist",
-        "summary": "You studied plants and their properties, learning to craft remedies from natural ingredients.",
-        "source": {
-          "id": "core-remaster"
-        },
-        "rarity": "common",
-        "traits": [],
-        "tags": [],
-        "effects": [],
-        "boosts": [
-          {
-            "type": "choice",
-            "count": 1,
-            "options": [
-              "CON",
-              "WIS"
-            ],
-            "value": 2
-          },
-          {
-            "type": "any",
-            "count": 1,
-            "value": 2
-          }
-        ],
-        "skillTraining": [
-          "Nature",
-          "Herbalism Lore"
-        ],
-        "feat": "pf2e.feat.natural-medicine"
-      },
-      "packId": "core",
-      "hash": "5d520f85f3e696decc2dd2da507ecb41b2535e3631ab324fed1a660ba743838b"
-    },
-    {
-      "entity": {
-        "id": "pf2e.background.merchant",
-        "type": "background",
-        "name": "Merchant",
-        "summary": "You buy and sell goods for profit, traveling roads and haggling deals.",
-        "source": {
-          "id": "orc-remaster",
-          "page": 52
-        },
-        "rarity": "common",
-        "traits": [],
-        "tags": [],
-        "effects": [],
-        "boosts": [
-          {
-            "type": "choice",
-            "count": 1,
-            "options": [
-              "INT",
-              "CHA"
-            ],
-            "value": 2
-          },
-          {
-            "type": "any",
-            "count": 1,
-            "value": 2
-          }
-        ],
-        "skillTraining": [
-          "Diplomacy",
-          "Mercantile Lore"
-        ],
-        "feat": "pf2e.feat.bargain-hunter"
-      },
-      "packId": "core",
-      "hash": "332985608e638a26fa2d9459d4d3c04f3c002537112f0ab777414a17f96a3174"
-    },
-    {
-      "entity": {
-        "id": "pf2e.background.noble",
-        "type": "background",
-        "name": "Noble",
-        "summary": "You were born into privilege and raised among the elite of society.",
-        "source": {
-          "id": "core-remaster"
-        },
-        "rarity": "common",
-        "traits": [],
-        "tags": [],
-        "effects": [],
-        "boosts": [
-          {
-            "type": "choice",
-            "count": 1,
-            "options": [
-              "INT",
-              "CHA"
-            ],
-            "value": 2
-          },
-          {
-            "type": "any",
-            "count": 1,
-            "value": 2
-          }
-        ],
-        "skillTraining": [
-          "Society",
-          "Genealogy Lore"
-        ],
-        "feat": "pf2e.feat.courtly-graces"
-      },
-      "packId": "core",
-      "hash": "fe5be9016a6886c810279d07953dc6e7722f496a82d351cb114c221358fe7597"
-    },
-    {
-      "entity": {
-        "id": "pf2e.background.sailor",
-        "type": "background",
-        "name": "Sailor",
-        "summary": "You've spent your life at sea, working aboard ships and mastering nautical skills.",
-        "source": {
-          "id": "core-remaster"
-        },
-        "rarity": "common",
-        "traits": [],
-        "tags": [],
-        "effects": [],
-        "boosts": [
-          {
-            "type": "choice",
-            "count": 1,
-            "options": [
-              "STR",
-              "DEX"
-            ],
-            "value": 2
-          },
-          {
-            "type": "any",
-            "count": 1,
-            "value": 2
-          }
-        ],
-        "skillTraining": [
-          "Athletics",
-          "Sailing Lore"
-        ],
-        "feat": "pf2e.feat.underwater-marauder"
-      },
-      "packId": "core",
-      "hash": "5dfcceb3c5ee75a29f967fbc873b295d401a9c795f70fda6fa9b8ee1af576d5c"
-    },
-    {
-      "entity": {
-        "id": "pf2e.background.scholar",
-        "type": "background",
-        "name": "Scholar",
-        "summary": "You dedicated yourself to learning and uncovering the mysteries of the world.",
-        "source": {
-          "id": "orc-remaster",
-          "page": 53
-        },
-        "rarity": "common",
-        "traits": [],
-        "tags": [],
-        "effects": [],
-        "boosts": [
-          {
-            "type": "choice",
-            "count": 1,
-            "options": [
-              "INT",
-              "WIS"
-            ],
-            "value": 2
-          },
-          {
-            "type": "any",
-            "count": 1,
-            "value": 2
-          }
-        ],
-        "skillTraining": [
-          "Arcana",
-          "Academia Lore"
-        ],
-        "feat": "pf2e.feat.assurance"
-      },
-      "packId": "core",
-      "hash": "b2bbbdaf3e495a4dc281527197bdb8ba8ddd0ef13d21330a500b5c40c703f212"
-    },
-    {
-      "entity": {
-        "id": "pf2e.background.warrior",
-        "type": "background",
-        "name": "Warrior",
-        "summary": "You trained in combat and learned to survive on the battlefield.",
-        "source": {
-          "id": "orc-remaster",
-          "page": 54
-        },
-        "rarity": "common",
-        "traits": [],
-        "tags": [],
-        "effects": [],
-        "boosts": [
-          {
-            "type": "choice",
-            "count": 1,
-            "options": [
-              "STR",
-              "CON"
-            ],
-            "value": 2
-          },
-          {
-            "type": "any",
-            "count": 1,
-            "value": 2
-          }
-        ],
-        "skillTraining": [
-          "Intimidation",
-          "Warfare Lore"
-        ],
-        "feat": "pf2e.feat.intimidating-glare"
-      },
-      "packId": "core",
-      "hash": "8cd001451a6b7a278de818debb9adabedd88a9c215107d9ad9af5a509c683911"
-    },
-    {
-      "entity": {
         "id": "pf2e.class.barbarian",
         "type": "class",
         "name": "Barbarian",
@@ -3093,6 +2632,467 @@
       },
       "packId": "core",
       "hash": "05d5d23cac7c4630d40ee7659b09910580f26ef1a8c04b25bba6ec78d464d061"
+    },
+    {
+      "entity": {
+        "id": "pf2e.background.acolyte",
+        "type": "background",
+        "name": "Acolyte",
+        "summary": "You served at a temple, learning the traditions and secrets of your faith.",
+        "source": {
+          "id": "orc-remaster",
+          "page": 50
+        },
+        "rarity": "common",
+        "traits": [],
+        "tags": [],
+        "effects": [],
+        "boosts": [
+          {
+            "type": "choice",
+            "count": 1,
+            "options": [
+              "INT",
+              "WIS"
+            ],
+            "value": 2
+          },
+          {
+            "type": "any",
+            "count": 1,
+            "value": 2
+          }
+        ],
+        "skillTraining": [
+          "Religion",
+          "Scribing Lore"
+        ],
+        "feat": "pf2e.feat.student-of-the-canon"
+      },
+      "packId": "core",
+      "hash": "5435f9dd256c27a874d6aebf76324c732932aa76540d7282793092ac657a4561"
+    },
+    {
+      "entity": {
+        "id": "pf2e.background.blacksmith",
+        "type": "background",
+        "name": "Blacksmith",
+        "summary": "You apprenticed at the forge and learned the value of hard work.",
+        "source": {
+          "id": "orc-remaster",
+          "page": 52
+        },
+        "rarity": "common",
+        "traits": [],
+        "tags": [],
+        "effects": [],
+        "boosts": [
+          {
+            "type": "choice",
+            "count": 1,
+            "options": [
+              "STR",
+              "INT"
+            ],
+            "value": 2
+          },
+          {
+            "type": "any",
+            "count": 1,
+            "value": 2
+          }
+        ],
+        "skillTraining": [
+          "Crafting",
+          "Athletics"
+        ],
+        "feat": "pf2e.feat.specialty-crafting"
+      },
+      "packId": "core",
+      "hash": "c7b68781e3bff0dc50649f142816a57f733f5980ecb0476239ea4dd71cdfcbfd"
+    },
+    {
+      "entity": {
+        "id": "pf2e.background.criminal",
+        "type": "background",
+        "name": "Criminal",
+        "summary": "You have a history of breaking the law and surviving in the criminal underworld.",
+        "source": {
+          "id": "core-remaster"
+        },
+        "rarity": "common",
+        "traits": [],
+        "tags": [],
+        "effects": [],
+        "boosts": [
+          {
+            "type": "choice",
+            "count": 1,
+            "options": [
+              "DEX",
+              "STR"
+            ],
+            "value": 2
+          },
+          {
+            "type": "any",
+            "count": 1,
+            "value": 2
+          }
+        ],
+        "skillTraining": [
+          "Stealth",
+          "Underworld Lore"
+        ],
+        "feat": "pf2e.feat.experienced-smuggler"
+      },
+      "packId": "core",
+      "hash": "47b3cfd4328523ef6fa413c5caeb95619e00d793acf6f88087fd1d4d7c8e633a"
+    },
+    {
+      "entity": {
+        "id": "pf2e.background.entertainer",
+        "type": "background",
+        "name": "Entertainer",
+        "summary": "You've spent years performing for crowds, learning to captivate and entertain.",
+        "source": {
+          "id": "core-remaster"
+        },
+        "rarity": "common",
+        "traits": [],
+        "tags": [],
+        "effects": [],
+        "boosts": [
+          {
+            "type": "choice",
+            "count": 1,
+            "options": [
+              "DEX",
+              "CHA"
+            ],
+            "value": 2
+          },
+          {
+            "type": "any",
+            "count": 1,
+            "value": 2
+          }
+        ],
+        "skillTraining": [
+          "Performance",
+          "Theater Lore"
+        ],
+        "feat": "pf2e.feat.fascinating-performance"
+      },
+      "packId": "core",
+      "hash": "ec815ecacfd785eeb258096b21716bf5e175e9205b3c0c7ca28b1d362b3496c3"
+    },
+    {
+      "entity": {
+        "id": "pf2e.background.farmhand",
+        "type": "background",
+        "name": "Farmhand",
+        "summary": "You worked hard labor on a farm, developing strength and endurance from dawn to dusk.",
+        "source": {
+          "id": "core-remaster"
+        },
+        "rarity": "common",
+        "traits": [],
+        "tags": [],
+        "effects": [],
+        "boosts": [
+          {
+            "type": "choice",
+            "count": 1,
+            "options": [
+              "CON",
+              "WIS"
+            ],
+            "value": 2
+          },
+          {
+            "type": "any",
+            "count": 1,
+            "value": 2
+          }
+        ],
+        "skillTraining": [
+          "Athletics",
+          "Farming Lore"
+        ],
+        "feat": "pf2e.feat.assurance"
+      },
+      "packId": "core",
+      "hash": "4d55b918ab357b13faa977042b23d8cbaefdac25b30800434504e1632680d910"
+    },
+    {
+      "entity": {
+        "id": "pf2e.background.guard",
+        "type": "background",
+        "name": "Guard",
+        "summary": "You served as a guard, protecting people or property and maintaining order.",
+        "source": {
+          "id": "core-remaster"
+        },
+        "rarity": "common",
+        "traits": [],
+        "tags": [],
+        "effects": [],
+        "boosts": [
+          {
+            "type": "choice",
+            "count": 1,
+            "options": [
+              "STR",
+              "CHA"
+            ],
+            "value": 2
+          },
+          {
+            "type": "any",
+            "count": 1,
+            "value": 2
+          }
+        ],
+        "skillTraining": [
+          "Intimidation",
+          "Legal Lore"
+        ],
+        "feat": "pf2e.feat.quick-coercion"
+      },
+      "packId": "core",
+      "hash": "7bcf94c6ba7930b209f2d6c7c0635d0a9cbf69c08b1debc0ab9733b5f08c2013"
+    },
+    {
+      "entity": {
+        "id": "pf2e.background.herbalist",
+        "type": "background",
+        "name": "Herbalist",
+        "summary": "You studied plants and their properties, learning to craft remedies from natural ingredients.",
+        "source": {
+          "id": "core-remaster"
+        },
+        "rarity": "common",
+        "traits": [],
+        "tags": [],
+        "effects": [],
+        "boosts": [
+          {
+            "type": "choice",
+            "count": 1,
+            "options": [
+              "CON",
+              "WIS"
+            ],
+            "value": 2
+          },
+          {
+            "type": "any",
+            "count": 1,
+            "value": 2
+          }
+        ],
+        "skillTraining": [
+          "Nature",
+          "Herbalism Lore"
+        ],
+        "feat": "pf2e.feat.natural-medicine"
+      },
+      "packId": "core",
+      "hash": "5d520f85f3e696decc2dd2da507ecb41b2535e3631ab324fed1a660ba743838b"
+    },
+    {
+      "entity": {
+        "id": "pf2e.background.merchant",
+        "type": "background",
+        "name": "Merchant",
+        "summary": "You buy and sell goods for profit, traveling roads and haggling deals.",
+        "source": {
+          "id": "orc-remaster",
+          "page": 52
+        },
+        "rarity": "common",
+        "traits": [],
+        "tags": [],
+        "effects": [],
+        "boosts": [
+          {
+            "type": "choice",
+            "count": 1,
+            "options": [
+              "INT",
+              "CHA"
+            ],
+            "value": 2
+          },
+          {
+            "type": "any",
+            "count": 1,
+            "value": 2
+          }
+        ],
+        "skillTraining": [
+          "Diplomacy",
+          "Mercantile Lore"
+        ],
+        "feat": "pf2e.feat.bargain-hunter"
+      },
+      "packId": "core",
+      "hash": "332985608e638a26fa2d9459d4d3c04f3c002537112f0ab777414a17f96a3174"
+    },
+    {
+      "entity": {
+        "id": "pf2e.background.noble",
+        "type": "background",
+        "name": "Noble",
+        "summary": "You were born into privilege and raised among the elite of society.",
+        "source": {
+          "id": "core-remaster"
+        },
+        "rarity": "common",
+        "traits": [],
+        "tags": [],
+        "effects": [],
+        "boosts": [
+          {
+            "type": "choice",
+            "count": 1,
+            "options": [
+              "INT",
+              "CHA"
+            ],
+            "value": 2
+          },
+          {
+            "type": "any",
+            "count": 1,
+            "value": 2
+          }
+        ],
+        "skillTraining": [
+          "Society",
+          "Genealogy Lore"
+        ],
+        "feat": "pf2e.feat.courtly-graces"
+      },
+      "packId": "core",
+      "hash": "fe5be9016a6886c810279d07953dc6e7722f496a82d351cb114c221358fe7597"
+    },
+    {
+      "entity": {
+        "id": "pf2e.background.sailor",
+        "type": "background",
+        "name": "Sailor",
+        "summary": "You've spent your life at sea, working aboard ships and mastering nautical skills.",
+        "source": {
+          "id": "core-remaster"
+        },
+        "rarity": "common",
+        "traits": [],
+        "tags": [],
+        "effects": [],
+        "boosts": [
+          {
+            "type": "choice",
+            "count": 1,
+            "options": [
+              "STR",
+              "DEX"
+            ],
+            "value": 2
+          },
+          {
+            "type": "any",
+            "count": 1,
+            "value": 2
+          }
+        ],
+        "skillTraining": [
+          "Athletics",
+          "Sailing Lore"
+        ],
+        "feat": "pf2e.feat.underwater-marauder"
+      },
+      "packId": "core",
+      "hash": "5dfcceb3c5ee75a29f967fbc873b295d401a9c795f70fda6fa9b8ee1af576d5c"
+    },
+    {
+      "entity": {
+        "id": "pf2e.background.scholar",
+        "type": "background",
+        "name": "Scholar",
+        "summary": "You dedicated yourself to learning and uncovering the mysteries of the world.",
+        "source": {
+          "id": "orc-remaster",
+          "page": 53
+        },
+        "rarity": "common",
+        "traits": [],
+        "tags": [],
+        "effects": [],
+        "boosts": [
+          {
+            "type": "choice",
+            "count": 1,
+            "options": [
+              "INT",
+              "WIS"
+            ],
+            "value": 2
+          },
+          {
+            "type": "any",
+            "count": 1,
+            "value": 2
+          }
+        ],
+        "skillTraining": [
+          "Arcana",
+          "Academia Lore"
+        ],
+        "feat": "pf2e.feat.assurance"
+      },
+      "packId": "core",
+      "hash": "b2bbbdaf3e495a4dc281527197bdb8ba8ddd0ef13d21330a500b5c40c703f212"
+    },
+    {
+      "entity": {
+        "id": "pf2e.background.warrior",
+        "type": "background",
+        "name": "Warrior",
+        "summary": "You trained in combat and learned to survive on the battlefield.",
+        "source": {
+          "id": "orc-remaster",
+          "page": 54
+        },
+        "rarity": "common",
+        "traits": [],
+        "tags": [],
+        "effects": [],
+        "boosts": [
+          {
+            "type": "choice",
+            "count": 1,
+            "options": [
+              "STR",
+              "CON"
+            ],
+            "value": 2
+          },
+          {
+            "type": "any",
+            "count": 1,
+            "value": 2
+          }
+        ],
+        "skillTraining": [
+          "Intimidation",
+          "Warfare Lore"
+        ],
+        "feat": "pf2e.feat.intimidating-glare"
+      },
+      "packId": "core",
+      "hash": "8cd001451a6b7a278de818debb9adabedd88a9c215107d9ad9af5a509c683911"
     },
     {
       "entity": {
@@ -5856,6 +5856,688 @@
     },
     {
       "entity": {
+        "id": "pf2e.heritage.ancient-blooded-dwarf",
+        "type": "heritage",
+        "name": "Ancient-Blooded Dwarf",
+        "summary": "Dwarven heroes of old could shrug off their enemies' magic.",
+        "description": "Dwarven heroes of old could shrug off their enemies' magic, and some of that resistance manifests in you. You gain the Call on Ancient Blood reaction.\n",
+        "source": {
+          "id": "core-remaster",
+          "page": 32
+        },
+        "rarity": "common",
+        "traits": [
+          "dwarf"
+        ],
+        "tags": [],
+        "effects": [],
+        "ancestryId": "pf2e.ancestry.dwarf"
+      },
+      "packId": "core",
+      "hash": "0b3f7cf522852ea0f9cf80a60d10bd2e8696074197289cae85a19559d3a6c56c"
+    },
+    {
+      "entity": {
+        "id": "pf2e.heritage.badlands-orc",
+        "type": "heritage",
+        "name": "Badlands Orc",
+        "summary": "You come from sun-scorched badlands, where long legs and an efficient walk help you cover vast distances.",
+        "description": "You come from sun-scorched badlands, where long legs and an efficient walk help you cover vast distances and keep a safe distance from dangerous predators. You gain a +5-foot circumstance bonus to your Speed. This bonus increases to +10 feet when you use the Hustle exploration activity.\n",
+        "source": {
+          "id": "orc-remaster",
+          "page": 52
+        },
+        "rarity": "common",
+        "traits": [
+          "orc"
+        ],
+        "tags": [],
+        "effects": [],
+        "ancestryId": "pf2e.ancestry.orc"
+      },
+      "packId": "core",
+      "hash": "b5a3b89faf02dfcb2c5951b97fcfe6f4db324997be1be0247da49d4814464b8f"
+    },
+    {
+      "entity": {
+        "id": "pf2e.heritage.battle-ready-orc",
+        "type": "heritage",
+        "name": "Battle-Ready Orc",
+        "summary": "You descend from generations of warriors who fought to the death.",
+        "description": "You descend from generations of warriors who fought to the death, and these struggles have granted you a tenacious will to live. You gain the Diehard feat.\n",
+        "source": {
+          "id": "orc-remaster",
+          "page": 52
+        },
+        "rarity": "common",
+        "traits": [
+          "orc"
+        ],
+        "tags": [],
+        "effects": [],
+        "ancestryId": "pf2e.ancestry.orc"
+      },
+      "packId": "core",
+      "hash": "881a641f0bb312dbb5e900312c61d60a65b2049eb5f0ed3984eaf2eaed4e72cd"
+    },
+    {
+      "entity": {
+        "id": "pf2e.heritage.cavern-elf",
+        "type": "heritage",
+        "name": "Cavern Elf",
+        "summary": "You were born or spent many years in underground tunnels or caverns where light is scarce.",
+        "description": "You were born or spent many years in underground tunnels or caverns where light is scarce. You gain darkvision.\n",
+        "source": {
+          "id": "core-remaster",
+          "page": 38
+        },
+        "rarity": "common",
+        "traits": [
+          "elf"
+        ],
+        "tags": [],
+        "effects": [],
+        "ancestryId": "pf2e.ancestry.elf"
+      },
+      "packId": "core",
+      "hash": "68bdcb2e06aa5a4a9fb9632b0ba11a62a92c477298b153b846e1cb5260ae763c"
+    },
+    {
+      "entity": {
+        "id": "pf2e.heritage.chameleon-gnome",
+        "type": "heritage",
+        "name": "Chameleon Gnome",
+        "summary": "The color of your hair and skin is mutable, possibly due to latent magic.",
+        "description": "The color of your hair and skin is mutable, possibly due to latent magic. You can slowly change the vibrancy and the exact color, and the coloration can be different across your body, allowing you to create patterns or other colorful designs. It takes a single action for minor localized shifts and up to an hour for dramatic shifts throughout your body. While you're asleep, the colors shift on their own in tune with your dreams, giving you an unusual coloration each morning. When you're in an area where your coloration is roughly similar to the environment (for instance, forest green in a forest), you can use the single action to make minor localized shifts designed to help you blend into your surroundings. This grants you a +2 circumstance bonus to Stealth checks until your surroundings shift in coloration or pattern.\n",
+        "source": {
+          "id": "core-remaster",
+          "page": 44
+        },
+        "rarity": "common",
+        "traits": [
+          "gnome"
+        ],
+        "tags": [],
+        "effects": [],
+        "ancestryId": "pf2e.ancestry.gnome"
+      },
+      "packId": "core",
+      "hash": "ba25a026757b64785d157db5d7cb66e71cef2bd70b0983f49c1918b1e56919cd"
+    },
+    {
+      "entity": {
+        "id": "pf2e.heritage.charhide-goblin",
+        "type": "heritage",
+        "name": "Charhide Goblin",
+        "summary": "Your ancestors have always had a connection to fire and a thicker skin, which allows you to resist burning.",
+        "description": "Your ancestors have always had a connection to fire and a thicker skin, which allows you to resist burning. You gain fire resistance equal to half your level (minimum 1). You can also recover from being on fire more easily. Your flat check to remove persistent fire damage is DC 10 instead of DC 15, which is reduced to DC 5 if another creature uses a particularly appropriate action to help.\n",
+        "source": {
+          "id": "core-remaster",
+          "page": 42
+        },
+        "rarity": "common",
+        "traits": [
+          "goblin"
+        ],
+        "tags": [],
+        "effects": [],
+        "ancestryId": "pf2e.ancestry.goblin"
+      },
+      "packId": "core",
+      "hash": "7ef93be5dd05ec63b81aadbb906564c8b35b7ff0f2cd77db9dc1ee9491217233"
+    },
+    {
+      "entity": {
+        "id": "pf2e.heritage.death-warden-dwarf",
+        "type": "heritage",
+        "name": "Death Warden Dwarf",
+        "summary": "Your ancestors have been tomb guardians for generations, and the power they cultivated to ward off undeath has passed on to you.",
+        "description": "Your ancestors have been tomb guardians for generations, and the power they cultivated to ward off undeath has passed on to you. If you roll a success on a saving throw against a void effect or an effect created by an undead creature, you get a critical success instead.\n",
+        "source": {
+          "id": "core-remaster",
+          "page": 32
+        },
+        "rarity": "common",
+        "traits": [
+          "dwarf"
+        ],
+        "tags": [],
+        "effects": [],
+        "ancestryId": "pf2e.ancestry.dwarf"
+      },
+      "packId": "core",
+      "hash": "8f49306e4bffad19b1ac2786b378a8847b814662c269eaf36e5c21ccc111fd02"
+    },
+    {
+      "entity": {
+        "id": "pf2e.heritage.deep-orc",
+        "type": "heritage",
+        "name": "Deep Orc",
+        "summary": "Your calloused hands and red eyes speak to a life spent in the deep darkness of the world's caverns.",
+        "description": "Your calloused hands and red eyes speak to a life spent in the deep darkness of the world's caverns, where you learned to battle on rocky cliffs and survive with minimal resources. You gain darkvision, allowing you to see in darkness and dim light just as well as you can see in bright light. However, in darkness, you see in black and white only.\n",
+        "source": {
+          "id": "orc-remaster",
+          "page": 52
+        },
+        "rarity": "common",
+        "traits": [
+          "orc"
+        ],
+        "tags": [],
+        "effects": [],
+        "ancestryId": "pf2e.ancestry.orc"
+      },
+      "packId": "core",
+      "hash": "0edd6b2278719380377324942b60ec18f0440aab2295b6dceefaaa5dbb207a46"
+    },
+    {
+      "entity": {
+        "id": "pf2e.heritage.fey-touched-gnome",
+        "type": "heritage",
+        "name": "Fey-Touched Gnome",
+        "summary": "The blood of the fey is so strong within you that you're truly one of them.",
+        "description": "The blood of the fey is so strong within you that you're truly one of them. You gain the fey trait, in addition to the gnome and humanoid traits. Choose one cantrip from the primal spell list. You can cast this spell as a primal innate spell at will. A cantrip is heightened to a spell rank equal to half your level rounded up.\n",
+        "source": {
+          "id": "core-remaster",
+          "page": 44
+        },
+        "rarity": "common",
+        "traits": [
+          "gnome"
+        ],
+        "tags": [],
+        "effects": [],
+        "ancestryId": "pf2e.ancestry.gnome"
+      },
+      "packId": "core",
+      "hash": "2148006656c17afbd5dcc1bb5b838fb84156ba94b6ac2b35c5011537dd57a39a"
+    },
+    {
+      "entity": {
+        "id": "pf2e.heritage.forge-dwarf",
+        "type": "heritage",
+        "name": "Forge Dwarf",
+        "summary": "You have a remarkable adaptation to hot environments from ancestors who inhabited blazing deserts or volcanic chambers.",
+        "description": "You have a remarkable adaptation to hot environments from ancestors who inhabited blazing deserts or volcanic chambers beneath the earth. This grants you fire resistance equal to half your level (minimum 1), and you treat environmental heat effects as if they were one step less extreme.\n",
+        "source": {
+          "id": "core-remaster",
+          "page": 32
+        },
+        "rarity": "common",
+        "traits": [
+          "dwarf"
+        ],
+        "tags": [],
+        "effects": [],
+        "ancestryId": "pf2e.ancestry.dwarf"
+      },
+      "packId": "core",
+      "hash": "41ae4a9f61c471675f9e8f78a11e326d2ad51fe6c402469a12598775487c06e6"
+    },
+    {
+      "entity": {
+        "id": "pf2e.heritage.fungus-leshy",
+        "type": "heritage",
+        "name": "Fungus Leshy",
+        "summary": "Your body was born from fungi.",
+        "description": "Your body was born from fungi rather than seeds, and you are able to commune with the fungi around you. You gain a +2 circumstance bonus to Survival checks to Subsist and to Crafting checks to craft items made from fungi. If you succeed at a check to Subsist in a forest or underground, you can feed up to eight additional creatures at your choice. This increases to 16 additional creatures at 7th level and 24 additional creatures at 15th level.\n",
+        "source": {
+          "id": "core-remaster",
+          "page": 50
+        },
+        "rarity": "common",
+        "traits": [
+          "leshy"
+        ],
+        "tags": [],
+        "effects": [],
+        "ancestryId": "pf2e.ancestry.leshy"
+      },
+      "packId": "core",
+      "hash": "870330842e1dd4ba2c26c42ff19d02ff82b9ffc5b0cade9730f31b16bcd0017b"
+    },
+    {
+      "entity": {
+        "id": "pf2e.heritage.gutsy-halfling",
+        "type": "heritage",
+        "name": "Gutsy Halfling",
+        "summary": "Your family line is known for keeping a level head in times of crisis.",
+        "description": "Your family line is known for keeping a level head in times of crisis and your ancestors have passed this resilience onto you. You gain a +2 circumstance bonus to saving throws against emotion effects. If you roll a success on a saving throw against an emotion effect, you get a critical success instead.\n",
+        "source": {
+          "id": "core-remaster",
+          "page": 46
+        },
+        "rarity": "common",
+        "traits": [
+          "halfling"
+        ],
+        "tags": [],
+        "effects": [],
+        "ancestryId": "pf2e.ancestry.halfling"
+      },
+      "packId": "core",
+      "hash": "51d55dea87e6b34b166ce89069855ff0f2ad3f63847398c984f87472cac5625f"
+    },
+    {
+      "entity": {
+        "id": "pf2e.heritage.hillock-halfling",
+        "type": "heritage",
+        "name": "Hillock Halfling",
+        "summary": "You hail from rolling hills and gentle valleys where your people excel at navigating familiar surroundings.",
+        "description": "You hail from rolling hills and gentle valleys where your people excel at navigating familiar surroundings. You gain the Terrain Expertise skill feat for one terrain you're in at the time of character creation.\n",
+        "source": {
+          "id": "core-remaster",
+          "page": 46
+        },
+        "rarity": "common",
+        "traits": [
+          "halfling"
+        ],
+        "tags": [],
+        "effects": [],
+        "ancestryId": "pf2e.ancestry.halfling"
+      },
+      "packId": "core",
+      "hash": "a30fdcd6d5bbca474b766ed1cbdca66e308e6f041f4b121292f582993d27fad8"
+    },
+    {
+      "entity": {
+        "id": "pf2e.heritage.irongut-goblin",
+        "type": "heritage",
+        "name": "Irongut Goblin",
+        "summary": "You can subsist on food that most folks would consider spoiled.",
+        "description": "You can subsist on food that most folks would consider spoiled. You can keep yourself fed with poor meals in a settlement as long as garbage is readily available, without using the Subsist downtime activity. You can eat and drink things when you are sickened. You gain a +2 circumstance bonus to saves against afflictions, against gaining the sickened condition, and to remove the sickened condition. When you roll a success on a Fortitude save affected by this bonus, you get a critical success instead. All these benefits apply only when the affliction or condition resulted from something you ingested.\n",
+        "source": {
+          "id": "core-remaster",
+          "page": 42
+        },
+        "rarity": "common",
+        "traits": [
+          "goblin"
+        ],
+        "tags": [],
+        "effects": [],
+        "ancestryId": "pf2e.ancestry.goblin"
+      },
+      "packId": "core",
+      "hash": "bf76701c10878f6a4e3630a00840e6515f60a7f0fad840f0721184f547cd402c"
+    },
+    {
+      "entity": {
+        "id": "pf2e.heritage.leaf-leshy",
+        "type": "heritage",
+        "name": "Leaf Leshy",
+        "summary": "Your body is made mostly from natural foliage.",
+        "description": "Your body is made mostly from natural foliage, making you particularly susceptible to fire. However, you can constantly draw nutrients from the air through photosynthesis. You gain a +2 circumstance bonus to Survival checks to Subsist, and you can Subsist without needing to attempt checks to find food, even in the wild. You take double damage from fire.\n",
+        "source": {
+          "id": "core-remaster",
+          "page": 50
+        },
+        "rarity": "common",
+        "traits": [
+          "leshy"
+        ],
+        "tags": [],
+        "effects": [],
+        "ancestryId": "pf2e.ancestry.leshy"
+      },
+      "packId": "core",
+      "hash": "7bd247a8fd74f9e00a7f3efbe295b3f4a1a9ee3cf27e0920172968dbb2af1a5f"
+    },
+    {
+      "entity": {
+        "id": "pf2e.heritage.nomadic-halfling",
+        "type": "heritage",
+        "name": "Nomadic Halfling",
+        "summary": "Your ancestors have traveled from place to place for generations, never content to settle down.",
+        "description": "Your ancestors have traveled from place to place for generations, never content to settle down. You gain two additional languages of your choice, chosen from among the common and uncommon languages available to you, and every time you take the Multilingual feat, you gain another new language.\n",
+        "source": {
+          "id": "core-remaster",
+          "page": 46
+        },
+        "rarity": "common",
+        "traits": [
+          "halfling"
+        ],
+        "tags": [],
+        "effects": [],
+        "ancestryId": "pf2e.ancestry.halfling"
+      },
+      "packId": "core",
+      "hash": "6b00fd4ecb9cb0283208077f36a6b1eba4121fb59e2596965521185df02244ce"
+    },
+    {
+      "entity": {
+        "id": "pf2e.heritage.rainfall-orc",
+        "type": "heritage",
+        "name": "Rainfall Orc",
+        "summary": "You were born in a rain forest with only tangles of trees providing protection from torrential rainstorms.",
+        "description": "You were born in a rain forest with only tangles of trees providing protection from torrential rainstorms and flash floods. You've learned to move adeptly through jungle terrain and resist the various ailments common in humid environs. You gain a +2 circumstance bonus to Athletics checks to Climb or Swim and a +1 circumstance bonus to saves against diseases.\n",
+        "source": {
+          "id": "orc-remaster",
+          "page": 52
+        },
+        "rarity": "common",
+        "traits": [
+          "orc"
+        ],
+        "tags": [],
+        "effects": [],
+        "ancestryId": "pf2e.ancestry.orc"
+      },
+      "packId": "core",
+      "hash": "2b0b038059e13d3e6de5ce9eeee69a931b9a6306090450eb0c824b294d5b350c"
+    },
+    {
+      "entity": {
+        "id": "pf2e.heritage.razortooth-goblin",
+        "type": "heritage",
+        "name": "Razortooth Goblin",
+        "summary": "Your family's teeth are formidable weapons.",
+        "description": "Your family's teeth are formidable weapons. You gain a jaws unarmed attack that deals 1d6 piercing damage. Your jaws are in the brawling group and have the finesse and unarmed traits.\n",
+        "source": {
+          "id": "core-remaster",
+          "page": 42
+        },
+        "rarity": "common",
+        "traits": [
+          "goblin"
+        ],
+        "tags": [],
+        "effects": [],
+        "ancestryId": "pf2e.ancestry.goblin"
+      },
+      "packId": "core",
+      "hash": "13794c6acff7148099b1350000e6d1364a2ad2e459d06931d5f9e7396e719a7d"
+    },
+    {
+      "entity": {
+        "id": "pf2e.heritage.rock-dwarf",
+        "type": "heritage",
+        "name": "Rock Dwarf",
+        "summary": "Your ancestors lived and worked among the great ancient stones of the mountains or the depths of the earth.",
+        "description": "Your ancestors lived and worked among the great ancient stones of the mountains or the depths of the earth. This makes you solid as a rock when you plant your feet. You gain a +2 circumstance bonus to your Fortitude or Reflex DC against attempts to Shove or Trip you. This bonus also applies to saving throws against spells or effects that attempt to knock you prone.\n",
+        "source": {
+          "id": "core-remaster",
+          "page": 32
+        },
+        "rarity": "common",
+        "traits": [
+          "dwarf"
+        ],
+        "tags": [],
+        "effects": [],
+        "ancestryId": "pf2e.ancestry.dwarf"
+      },
+      "packId": "core",
+      "hash": "e3b60af23c15c04dc694503f06da14c474fa4245e3554967462eb1a58b26ed58"
+    },
+    {
+      "entity": {
+        "id": "pf2e.heritage.root-leshy",
+        "type": "heritage",
+        "name": "Root Leshy",
+        "summary": "Your body is made from hardy roots that attach you firmly to the ground.",
+        "description": "Your body is made from hardy roots that attach you firmly to the ground. You gain 10 Hit Points from your ancestry instead of 8. You can go without water for twice as long as normal before falling unconscious or dying from thirst. In addition, you gain a +2 circumstance bonus to your Fortitude or Reflex DC against attempts to Shove or Trip you. This bonus also applies to saving throws against spells or effects that attempt to knock you prone.\n",
+        "source": {
+          "id": "core-remaster",
+          "page": 50
+        },
+        "rarity": "common",
+        "traits": [
+          "leshy"
+        ],
+        "tags": [],
+        "effects": [],
+        "ancestryId": "pf2e.ancestry.leshy"
+      },
+      "packId": "core",
+      "hash": "42b2ddd5b962df3ceabff65340a81bbe6f10974421aa67eb72d003d735c36f4e"
+    },
+    {
+      "entity": {
+        "id": "pf2e.heritage.seer-elf",
+        "type": "heritage",
+        "name": "Seer Elf",
+        "summary": "You have an inborn ability to detect and understand magical phenomena.",
+        "description": "You have an inborn ability to detect and understand magical phenomena. You can cast the detect magic cantrip as an arcane innate spell at will. A cantrip is heightened to a spell rank equal to half your level rounded up. In addition, you gain a +1 circumstance bonus to checks to Identify Magic and to Decipher Writing of a magical nature.\n",
+        "source": {
+          "id": "core-remaster",
+          "page": 38
+        },
+        "rarity": "common",
+        "traits": [
+          "elf"
+        ],
+        "tags": [],
+        "effects": [],
+        "ancestryId": "pf2e.ancestry.elf"
+      },
+      "packId": "core",
+      "hash": "0ed57eaa43dba66716d5d859c87a4f80ad557da7d6930181fab924b8abd8c3ab"
+    },
+    {
+      "entity": {
+        "id": "pf2e.heritage.sensate-gnome",
+        "type": "heritage",
+        "name": "Sensate Gnome",
+        "summary": "You see all colors as brighter, hear all sounds as richer, and especially smell all scents with incredible detail.",
+        "description": "You see all colors as brighter, hear all sounds as richer, and especially smell all scents with incredible detail. You gain a special sense: imprecise scent with a range of 30 feet. This means you can use your sense of smell to determine the exact location of a creature. The GM will usually double the range if you're downwind from the creature or halve the range if you're upwind. In addition, you gain a +2 circumstance bonus to Perception checks whenever you're trying to locate an undetected creature that is within the range of your scent.\n",
+        "source": {
+          "id": "core-remaster",
+          "page": 44
+        },
+        "rarity": "common",
+        "traits": [
+          "gnome"
+        ],
+        "tags": [],
+        "effects": [],
+        "ancestryId": "pf2e.ancestry.gnome"
+      },
+      "packId": "core",
+      "hash": "ff4db159ad6e5b959da83a34052e01f01461f06993e606aad828acbf85b1bf87"
+    },
+    {
+      "entity": {
+        "id": "pf2e.heritage.skilled-human",
+        "type": "heritage",
+        "name": "Skilled Human",
+        "summary": "Your ingenuity allows you to train in a wide variety of skills.",
+        "description": "Your ingenuity allows you to train in a wide variety of skills. You become trained in one skill of your choice. At 5th level, you become an expert in the chosen skill.\n",
+        "source": {
+          "id": "core-remaster",
+          "page": 58
+        },
+        "rarity": "common",
+        "traits": [
+          "human"
+        ],
+        "tags": [],
+        "effects": [],
+        "ancestryId": "pf2e.ancestry.human"
+      },
+      "packId": "core",
+      "hash": "0bdc3740fa93cfd0012ea17bb8a6b23f9fc2def80581f4a69617beedd42ed162"
+    },
+    {
+      "entity": {
+        "id": "pf2e.heritage.snow-goblin",
+        "type": "heritage",
+        "name": "Snow Goblin",
+        "summary": "You are acclimated to living in frigid lands and have skin ranging from sky blue to navy in color.",
+        "description": "You are acclimated to living in frigid lands and have skin ranging from sky blue to navy in color, as well as blue fur. You gain cold resistance equal to half your level (minimum 1). You treat environmental cold effects as if they were one step less extreme (incredible cold becomes extreme, extreme cold becomes severe, and so on).\n",
+        "source": {
+          "id": "core-remaster",
+          "page": 42
+        },
+        "rarity": "common",
+        "traits": [
+          "goblin"
+        ],
+        "tags": [],
+        "effects": [],
+        "ancestryId": "pf2e.ancestry.goblin"
+      },
+      "packId": "core",
+      "hash": "fa37d9f73175adab0219aa68da7401e5eabb8b6d06fedba21e08b24ba2a7d408"
+    },
+    {
+      "entity": {
+        "id": "pf2e.heritage.twilight-halfling",
+        "type": "heritage",
+        "name": "Twilight Halfling",
+        "summary": "Your ancestors performed many secret acts under the concealing cover of dusk.",
+        "description": "Your ancestors performed many secret acts under the concealing cover of dusk, whether for good or ill, and over time they developed the ability to see in twilight beyond even the usual keen sight of halflings. You gain low-light vision.\n",
+        "source": {
+          "id": "core-remaster",
+          "page": 46
+        },
+        "rarity": "common",
+        "traits": [
+          "halfling"
+        ],
+        "tags": [],
+        "effects": [],
+        "ancestryId": "pf2e.ancestry.halfling"
+      },
+      "packId": "core",
+      "hash": "6ad0631c81cb546935ec7147a858c5740e1730ffa3e950aff61dba9af77b8754"
+    },
+    {
+      "entity": {
+        "id": "pf2e.heritage.umbral-gnome",
+        "type": "heritage",
+        "name": "Umbral Gnome",
+        "summary": "Whether from a connection to dark or shadowy fey, from the underground deep gnomes also known as svirfneblin, or another source, you can see in complete darkness.",
+        "description": "Whether from a connection to dark or shadowy fey, from the underground deep gnomes also known as svirfneblin, or another source, you can see in complete darkness. You gain darkvision.\n",
+        "source": {
+          "id": "core-remaster",
+          "page": 44
+        },
+        "rarity": "common",
+        "traits": [
+          "gnome"
+        ],
+        "tags": [],
+        "effects": [],
+        "ancestryId": "pf2e.ancestry.gnome"
+      },
+      "packId": "core",
+      "hash": "56a7d8d996e9431859e1d27265df2ce6b1cf08b811dea70d3a4c71fd70addb81"
+    },
+    {
+      "entity": {
+        "id": "pf2e.heritage.versatile-human",
+        "type": "heritage",
+        "name": "Versatile Human",
+        "summary": "Humanity's versatility and ambition have fueled its ascendance to be the most common ancestry.",
+        "description": "Humanity's versatility and ambition have fueled its ascendance to be the most common ancestry in most nations throughout the world. Select a general feat for which you meet the prerequisites (as with your ancestry feat, you can select this general feat at any point during character creation).\n",
+        "source": {
+          "id": "core-remaster",
+          "page": 58
+        },
+        "rarity": "common",
+        "traits": [
+          "human"
+        ],
+        "tags": [],
+        "effects": [],
+        "ancestryId": "pf2e.ancestry.human"
+      },
+      "packId": "core",
+      "hash": "1e09e5f568c7af9dd56cc2145058274fa6ccd0278adf18b0742c3e92bba24158"
+    },
+    {
+      "entity": {
+        "id": "pf2e.heritage.vine-leshy",
+        "type": "heritage",
+        "name": "Vine Leshy",
+        "summary": "The prehensile vines woven into your body grant you unmatched skill at climbing.",
+        "description": "The prehensile vines woven into your body grant you unmatched skill at climbing. You do not need to have any hands free to Climb. Additionally, if you roll a success on an Athletics check to Climb, you get a critical success instead.\n",
+        "source": {
+          "id": "core-remaster",
+          "page": 50
+        },
+        "rarity": "common",
+        "traits": [
+          "leshy"
+        ],
+        "tags": [],
+        "effects": [],
+        "ancestryId": "pf2e.ancestry.leshy"
+      },
+      "packId": "core",
+      "hash": "5a1d30c62019fa9ce7a19efe0411b8a20a7f6e16a3a967331d451980b4e45a28"
+    },
+    {
+      "entity": {
+        "id": "pf2e.heritage.whisper-elf",
+        "type": "heritage",
+        "name": "Whisper Elf",
+        "summary": "Your ears are finely tuned, able to detect even the slightest whispers of sound.",
+        "description": "Your ears are finely tuned, able to detect even the slightest whispers of sound. As long as you can hear normally, you can use the Seek action to sense undetected creatures in a 60-foot cone instead of a 30-foot cone. You also gain a +2 circumstance bonus to locate undetected creatures that you could hear within 30 feet with a Seek action.\n",
+        "source": {
+          "id": "core-remaster",
+          "page": 38
+        },
+        "rarity": "common",
+        "traits": [
+          "elf"
+        ],
+        "tags": [],
+        "effects": [],
+        "ancestryId": "pf2e.ancestry.elf"
+      },
+      "packId": "core",
+      "hash": "6d43d8f5ad55c36c595caf666c9fda8954e0bb9e2f752b8890c8e393e6c9fd95"
+    },
+    {
+      "entity": {
+        "id": "pf2e.heritage.wintertouched-human",
+        "type": "heritage",
+        "name": "Wintertouched Human",
+        "summary": "You gain cold resistance and treat environmental cold effects as less severe.",
+        "description": "The power of winter flows through you. This heritage is most common among the Jadwiga of Irrisen, due to their descent from Baba Yaga, and certain Erutaki touched by the spirits. You gain cold resistance equal to half your level (minimum 1), and you treat environmental cold effects as if they were one step less extreme.\n",
+        "source": {
+          "id": "core-remaster",
+          "page": 58
+        },
+        "rarity": "common",
+        "traits": [
+          "human"
+        ],
+        "tags": [],
+        "effects": [],
+        "ancestryId": "pf2e.ancestry.human"
+      },
+      "packId": "core",
+      "hash": "70198777633de787dd54e06119ae9759635278fda04381ce9776b42668ff649d"
+    },
+    {
+      "entity": {
+        "id": "pf2e.heritage.woodland-elf",
+        "type": "heritage",
+        "name": "Woodland Elf",
+        "summary": "You're adapted to life in the forest or the deep jungle.",
+        "description": "You're adapted to life in the forest or the deep jungle, and you know how to climb trees and use foliage to your advantage. When Climbing trees, vines, and other foliage, you move at half your Speed on a success and at full Speed on a critical success (and you move at full Speed on a success if you have Quick Climb). This doesn't affect you if you're using a climb Speed. You can always use the Take Cover action when you are within forest terrain to gain cover, even if you're not next to an obstacle you can Take Cover behind.\n",
+        "source": {
+          "id": "core-remaster",
+          "page": 38
+        },
+        "rarity": "common",
+        "traits": [
+          "elf"
+        ],
+        "tags": [],
+        "effects": [],
+        "ancestryId": "pf2e.ancestry.elf"
+      },
+      "packId": "core",
+      "hash": "e55420b5d75438607f624155c313f7eadf98e8fe20b8e6c4494e7f5a2c0523bd"
+    },
+    {
+      "entity": {
         "id": "pf2e.spell.acid-splash",
         "type": "spell",
         "name": "Acid Splash",
@@ -8136,6 +8818,31 @@
     },
     {
       "entity": {
+        "id": "pf2e.item.chainmail",
+        "type": "item",
+        "name": "Chain Mail",
+        "summary": "Medium armor of interlocking rings, providing +4 AC bonus with flexibility.",
+        "description": "A suit of chain mail consists of several pieces of armor composed of small metal rings linked together in a protective mesh.\n\n- AC Bonus: +4\n- Dex Cap: +1\n- Check Penalty: -2\n- Speed Penalty: -5 ft.\n- Strength: 16\n- Group: Chain\n- Armor Traits: flexible, noisy\n\nChain mail provides excellent protection. The flexible trait means you can use your full Dexterity modifier on Reflex saves. The noisy trait imposes a -1 penalty to Stealth checks.\n",
+        "source": {
+          "id": "core-remaster",
+          "page": 275
+        },
+        "rarity": "common",
+        "traits": [
+          "flexible",
+          "noisy"
+        ],
+        "tags": [],
+        "effects": [],
+        "level": 0,
+        "price": "6 gp",
+        "bulk": "2"
+      },
+      "packId": "core",
+      "hash": "65f22729622d8889095b02fc3d8131adfe5470a73bb8386adb8104c62e547bb7"
+    },
+    {
+      "entity": {
         "id": "pf2e.item.explorers-clothing",
         "type": "item",
         "name": "Explorer's Clothing",
@@ -8206,10 +8913,11 @@
         "id": "pf2e.item.hide-armor",
         "type": "item",
         "name": "Hide Armor",
-        "summary": "Thick animal hides provide substantial medium armor protection.",
-        "description": "Made from thick animal hide, this armor is favored by barbarians and those who live close to nature. The thick layers provide excellent protection, though they can be somewhat restrictive.\n\n- AC Bonus: +3\n- Dex Cap: +2\n- Check Penalty: -2\n- Speed Penalty: -5 ft\n- Strength: 14\n- Group: Leather\n- Armor Traits: —\n\nHide armor is made from the tanned skin of particularly thick-hided animals, stitched with either multiple overlapping layers of crude leather or exterior pieces of leather stuffed with padding or fur.\n",
+        "summary": "Medium armor made from thick hides, providing +3 AC bonus with moderate mobility.",
+        "description": "A mix of furs, sturdy hide, and sometimes wood or bone, this armor provides protection at the expense of mobility.\n\n- AC Bonus: +3\n- Dex Cap: +2\n- Check Penalty: -2\n- Speed Penalty: -5 ft.\n- Strength: 14\n- Group: Leather\n\nHide armor is favored by warriors who need decent protection but can't afford metal armor or prefer natural materials.\n",
         "source": {
-          "id": "core-remaster"
+          "id": "core-remaster",
+          "page": 275
         },
         "rarity": "common",
         "traits": [],
@@ -8220,20 +8928,23 @@
         "bulk": "2"
       },
       "packId": "core",
-      "hash": "5f6ac519c79c816507d6ddba70677a4686780934aa425a1d15a947dff234cea7"
+      "hash": "03d3daed32918073787d0c625014ff359de0615ce91d5a96de101130ef91b8b4"
     },
     {
       "entity": {
         "id": "pf2e.item.leather-armor",
         "type": "item",
         "name": "Leather Armor",
-        "summary": "Boiled leather provides reliable light armor protection for agile combatants.",
-        "description": "This suit of leather armor consists of multiple pieces of boiled or treated leather, carefully sewn together to provide protection without hindering movement. It's a popular choice for rogues and other agile warriors.\n\n- AC Bonus: +1\n- Dex Cap: +4\n- Check Penalty: -1\n- Speed Penalty: 0 ft\n- Strength: 10\n- Group: Leather\n- Armor Traits: —\n\nLeather armor is made from boiled or specially treated leather. It provides good protection while still allowing for excellent mobility.\n",
+        "summary": "Light armor made of hardened leather, providing +1 AC bonus with excellent mobility.",
+        "description": "A mix of hardened leather and flexible materials, leather armor provides moderate protection with excellent mobility.\n\n- AC Bonus: +1\n- Dex Cap: +4\n- Check Penalty: -1\n- Speed Penalty: —\n- Strength: 10\n- Group: Leather\n- Armor Traits: comfort\n\nLeather armor is the lightest armor with actual protective value. The comfort trait means you can rest normally while wearing it.\n",
         "source": {
-          "id": "core-remaster"
+          "id": "core-remaster",
+          "page": 275
         },
         "rarity": "common",
-        "traits": [],
+        "traits": [
+          "comfort"
+        ],
         "tags": [],
         "effects": [],
         "level": 0,
@@ -8241,7 +8952,7 @@
         "bulk": "1"
       },
       "packId": "core",
-      "hash": "9993502b2b544b193c40e6cbf1e68ae7a983116b52c484b7a5333f2606ebd558"
+      "hash": "2af5205a0f5be26a8dae1f9a9c646d660b6c7e19947204148183f26fbca5dcd5"
     },
     {
       "entity": {
@@ -8268,13 +8979,38 @@
     },
     {
       "entity": {
+        "id": "pf2e.item.plate-armor",
+        "type": "item",
+        "name": "Plate Armor",
+        "summary": "Heavy armor providing maximum +6 AC bonus at the cost of mobility.",
+        "description": "Plate armor consists of interlocking plates that encase nearly the entire body in a carapace of steel.\n\n- AC Bonus: +6\n- Dex Cap: +0\n- Check Penalty: -3\n- Speed Penalty: -10 ft.\n- Strength: 18\n- Group: Plate\n- Armor Traits: bulwark\n\nPlate armor provides the best protection available. The bulwark trait gives you a +3 bonus to Reflex saves against damaging effects, but you get only a +1 bonus if you have a Dexterity modifier of +3 or higher.\n",
+        "source": {
+          "id": "core-remaster",
+          "page": 276
+        },
+        "rarity": "common",
+        "traits": [
+          "bulwark"
+        ],
+        "tags": [],
+        "effects": [],
+        "level": 0,
+        "price": "30 gp",
+        "bulk": "4"
+      },
+      "packId": "core",
+      "hash": "66f5954fd2573c9001574dc3316e577c397b7ed20431378b54b07d8fe0233b20"
+    },
+    {
+      "entity": {
         "id": "pf2e.item.scale-mail",
         "type": "item",
         "name": "Scale Mail",
-        "summary": "Overlapping metal scales provide solid medium armor protection.",
-        "description": "Scale mail consists of many metal scales sewn onto a backing of leather or sturdy cloth. The overlapping scales provide excellent protection while allowing reasonable movement.\n\n- AC Bonus: +3\n- Dex Cap: +2\n- Check Penalty: -2\n- Speed Penalty: -5 ft\n- Strength: 14\n- Group: Composite\n- Armor Traits: —\n\nScale mail is made of dozens of small overlapping metal plates. Each suit is a unique design, with different patterns of overlapping metal.\n",
+        "summary": "Medium armor with metal scales, providing +3 AC bonus with moderate protection.",
+        "description": "Scale mail consists of many metal scales sewn onto a backing of leather or thick cloth.\n\n- AC Bonus: +3\n- Dex Cap: +2\n- Check Penalty: -2\n- Speed Penalty: -5 ft.\n- Strength: 14\n- Group: Composite\n\nScale mail provides solid protection and is lighter than full plate, making it a popular choice for medium armor users.\n",
         "source": {
-          "id": "core-remaster"
+          "id": "core-remaster",
+          "page": 276
         },
         "rarity": "common",
         "traits": [],
@@ -8285,7 +9021,7 @@
         "bulk": "2"
       },
       "packId": "core",
-      "hash": "a413bf2b4f81c15c8e5b098f049f1b92ba0d334538fecc4b7ca8017252d4767d"
+      "hash": "aeb3911ffc1a062bbfb9f40889ab7202ec373ad936284f5317eb869f9c377e77"
     },
     {
       "entity": {
@@ -8334,13 +9070,16 @@
         "id": "pf2e.item.studded-leather",
         "type": "item",
         "name": "Studded Leather Armor",
-        "summary": "Leather armor reinforced with metal studs for enhanced protection.",
-        "description": "This leather armor is reinforced with metal studs and sometimes small metal plates, increasing its protective qualities while still allowing considerable freedom of movement. It's a common choice for light infantry and scouts.\n\n- AC Bonus: +2\n- Dex Cap: +3\n- Check Penalty: -1\n- Speed Penalty: 0 ft\n- Strength: 12\n- Group: Leather\n- Armor Traits: —\n\nStudded leather armor is leather armor with metal studs or spikes embedded in it to provide additional protection without sacrificing too much mobility.\n",
+        "summary": "Light armor reinforced with metal studs, providing +2 AC bonus with good mobility.",
+        "description": "This leather armor is reinforced with metal studs and provides good protection while still allowing for excellent mobility.\n\n- AC Bonus: +2\n- Dex Cap: +3\n- Check Penalty: -1\n- Speed Penalty: —\n- Strength: 12\n- Group: Leather\n- Armor Traits: comfort\n\nStudded leather provides better protection than plain leather while maintaining most of the mobility benefits.\n",
         "source": {
-          "id": "core-remaster"
+          "id": "core-remaster",
+          "page": 275
         },
         "rarity": "common",
-        "traits": [],
+        "traits": [
+          "comfort"
+        ],
         "tags": [],
         "effects": [],
         "level": 0,
@@ -8348,7 +9087,7 @@
         "bulk": "1"
       },
       "packId": "core",
-      "hash": "5c298d3d4cd9742acafa3aac10804fec0e0b566ed40956fc3303224961a6eaa0"
+      "hash": "249b168f0e62fb0e4608e0fe7bf4136408eb87b700e6a53c8e18c58f5889d625"
     },
     {
       "entity": {
@@ -8376,10 +9115,11 @@
         "id": "pf2e.item.backpack",
         "type": "item",
         "name": "Backpack",
-        "summary": "A sturdy leather pack for carrying equipment.",
-        "description": "A backpack holds up to 4 Bulk of items. The first 2 Bulk of these items don't count against your Bulk limits.\n",
+        "summary": "A sturdy pack for carrying adventuring gear, holds up to 4 Bulk of items.",
+        "description": "A backpack holds up to 4 Bulk of items. If you're carrying or stowing a backpack, you can Interact to draw items from it as easily as drawing a weapon.\n\n- Capacity: 4 Bulk\n- Bulk: L (when worn or carried)\n\nA backpack is essential for any adventurer. Items stored in a backpack don't count toward your Bulk limit until you exceed the backpack's capacity.\n",
         "source": {
-          "id": "core-remaster"
+          "id": "core-remaster",
+          "page": 287
         },
         "rarity": "common",
         "traits": [],
@@ -8390,28 +9130,29 @@
         "bulk": "L"
       },
       "packId": "core",
-      "hash": "32ff6e77eea32b9edbad017256d54ae2be0c93d825001d21602f15fe45ba1e88"
+      "hash": "22b36315886a2742130cf8267330df06cef0d100bc4519f86ac8235ff1fda080"
     },
     {
       "entity": {
         "id": "pf2e.item.bedroll",
         "type": "item",
         "name": "Bedroll",
-        "summary": "A sleeping bag with a blanket and cushion.",
-        "description": "A bedroll consists of bedding and a blanket thin enough to be rolled up and tied. It's suited only for people up to 8 feet tall.\n",
+        "summary": "Portable bedding for resting while traveling or camping.",
+        "description": "A bedroll consists of bedding and a blanket thin enough to be rolled up and tied. It's a common item for adventurers.\n\n- Can be rolled up for easy transport\n- Provides basic comfort when sleeping outdoors\n\nA bedroll helps you get a good night's rest even when sleeping on the ground.\n",
         "source": {
-          "id": "core-remaster"
+          "id": "core-remaster",
+          "page": 287
         },
         "rarity": "common",
         "traits": [],
         "tags": [],
         "effects": [],
         "level": 0,
-        "price": "2 cp",
+        "price": "2 sp",
         "bulk": "L"
       },
       "packId": "core",
-      "hash": "37f6cafce3d2cd2b67dea612cb3fde1b521d868e715d3c3741a1ccd2ccf4836b"
+      "hash": "d654bf0b86cce86b61cc1cf2db13ee722f5a7040378867bb2a676cfff0fa0250"
     },
     {
       "entity": {
@@ -8583,6 +9324,28 @@
     },
     {
       "entity": {
+        "id": "pf2e.item.healer-tools",
+        "type": "item",
+        "name": "Healer's Tools",
+        "summary": "Medical supplies for treating wounds, disease, and poison, with 10 uses.",
+        "description": "This kit of bandages, herbs, and suturing tools is necessary for Medicine checks to Administer First Aid, Treat Disease, Treat Poison, or Treat Wounds.\n\n- Uses: 10\n- Required for: Medicine checks\n- Replenish cost: 5 sp per use\n\nYou need healer's tools to use most Medicine skill actions. The kit has 10 uses; when you use the last one, you can refill it with 5 sp worth of supplies.\n",
+        "source": {
+          "id": "core-remaster",
+          "page": 289
+        },
+        "rarity": "common",
+        "traits": [],
+        "tags": [],
+        "effects": [],
+        "level": 0,
+        "price": "5 gp",
+        "bulk": "1"
+      },
+      "packId": "core",
+      "hash": "eafd78018074c2fb4eda86950f91ac11973d3d52c6396740a696ad797638169b"
+    },
+    {
+      "entity": {
         "id": "pf2e.item.healers-tools",
         "type": "item",
         "name": "Healer's Tools",
@@ -8712,13 +9475,16 @@
         "id": "pf2e.item.rations",
         "type": "item",
         "name": "Rations (1 week)",
-        "summary": "A week's worth of dried and preserved food.",
-        "description": "Rations consist of dried foods that can survive long periods of time without spoiling. This purchase includes enough food for one person for 1 week.\n",
+        "summary": "Preserved food for one week of travel or adventuring.",
+        "description": "Rations consist of preserved food for eating while traveling or adventuring. They're necessary if you want to Subsist in the wild.\n\n- Duration: 1 week\n- Type: Preserved food\n\nA week's worth of rations includes items like salted meat, hardtack, dried fruit, and other foods that keep well on the road.\n",
         "source": {
-          "id": "core-remaster"
+          "id": "core-remaster",
+          "page": 290
         },
         "rarity": "common",
-        "traits": [],
+        "traits": [
+          "consumable"
+        ],
         "tags": [],
         "effects": [],
         "level": 0,
@@ -8726,7 +9492,7 @@
         "bulk": "L"
       },
       "packId": "core",
-      "hash": "6019d15f9b9d972084da82d94e3800bf1d82bcacfc817c69893a89534acce9ae"
+      "hash": "6db6d716d0618543f906ce6a18d616c755b7bc95ba0943ce895c025d6ff7cd5b"
     },
     {
       "entity": {
@@ -8753,11 +9519,12 @@
       "entity": {
         "id": "pf2e.item.rope",
         "type": "item",
-        "name": "Rope (50 ft)",
-        "summary": "A length of strong hemp rope.",
-        "description": "This length of strong hemp rope is 50 feet long and has 2 Hit Points. A creature can burst it with a DC 17 Athletics check.\n",
+        "name": "Rope (50 ft.)",
+        "summary": "Fifty feet of sturdy rope for climbing, binding, and various adventuring needs.",
+        "description": "Rope can be made from hemp, silk, or other fibers. It's used for climbing, tying up prisoners, and many other purposes.\n\n- Length: 50 feet\n- DC to burst: 24\n- Hardness: 2\n- HP: 8\n\nA standard length of rope is 50 feet. You can tie knots in it, use it to climb, lower yourself down a cliff, or bind a prisoner.\n",
         "source": {
-          "id": "core-remaster"
+          "id": "core-remaster",
+          "page": 290
         },
         "rarity": "common",
         "traits": [],
@@ -8768,7 +9535,7 @@
         "bulk": "L"
       },
       "packId": "core",
-      "hash": "ac5945985e9cdeb8ae742f43ea2c2d004a8a34ce8cb7b49febbd1a85057e36ca"
+      "hash": "6183048a8d1e4372b63821de5043f7895b4022517cc8362534b31a3ab197d5b8"
     },
     {
       "entity": {
@@ -8838,10 +9605,11 @@
         "id": "pf2e.item.thieves-tools",
         "type": "item",
         "name": "Thieves' Tools",
-        "summary": "Lock picks and tools for bypassing locks and traps.",
-        "description": "This kit contains tools useful for picking locks and disarming traps. You need thieves' tools to use Thievery to Pick Locks or Disable Devices (of some types). If you wear your thieves' tools, you can draw and replace them as part of the action that uses them.\n",
+        "summary": "Tools for picking locks and disabling mechanical devices.",
+        "description": "This kit of small instruments includes a lock pick, tension wrenches, small screwdrivers, and other tools. You need thieves' tools to Pick Locks or Disable Devices (of a mechanical nature).\n\n- Required for: Pick Locks, Disable Device\n- Quality: Standard\n\nWithout thieves' tools, you can't attempt to Pick Locks or Disable mechanical devices, even if you're trained in Thievery.\n",
         "source": {
-          "id": "core-remaster"
+          "id": "core-remaster",
+          "page": 291
         },
         "rarity": "common",
         "traits": [],
@@ -8852,17 +9620,18 @@
         "bulk": "L"
       },
       "packId": "core",
-      "hash": "1e56d004c8c66e003e4aca3f75533f45c1df30048d3de3f22d9549d5a2c0cefa"
+      "hash": "f2bfc59b312f638f86b5623482f3320f5430cdb36337d0123ef7dce7ca73f4d9"
     },
     {
       "entity": {
         "id": "pf2e.item.torch",
         "type": "item",
         "name": "Torch",
-        "summary": "A simple wooden torch that provides light.",
-        "description": "A torch sheds bright light in a 20-foot radius (and dim light to the next 40 feet). It can be used as an improvised weapon that deals 1d4 bludgeoning damage plus 1 fire damage. A torch burns for 1 hour.\n",
+        "summary": "A simple light source burning for 1 hour, providing bright light in 20-foot radius.",
+        "description": "A torch burns for 1 hour, shedding bright light in a 20-foot radius (and dim light to the next 20 feet). You can use an Interact action to touch a torch to a flammable object to light it on fire.\n\n- Duration: 1 hour\n- Light: Bright 20 ft., dim 40 ft.\n\nTorches are the most basic form of portable light. They're cheap and readily available, but they burn out quickly.\n",
         "source": {
-          "id": "core-remaster"
+          "id": "core-remaster",
+          "page": 291
         },
         "rarity": "common",
         "traits": [],
@@ -8873,17 +9642,18 @@
         "bulk": "L"
       },
       "packId": "core",
-      "hash": "d9809bd3b0b9f118b5f79050d3cc52fcbee3558cf06ed34b27eb764b5b78b77d"
+      "hash": "4c6ec33be9066a06024c0bee19101d28af9ba6d41b065d01b84a282fb39cd01c"
     },
     {
       "entity": {
         "id": "pf2e.item.waterskin",
         "type": "item",
         "name": "Waterskin",
-        "summary": "A leather container for carrying water or other liquids.",
-        "description": "A waterskin can hold roughly a half-gallon (2 liters) of liquid. This is enough water to sustain 1 person for 1 day.\n",
+        "summary": "A leather pouch for carrying water or other beverages.",
+        "description": "A waterskin is a leather pouch with a leather cap that can hold liquid. It's used to carry water or other beverages.\n\n- Capacity: About 4 cups (1 quart)\n- Material: Leather\n\nA waterskin is essential for staying hydrated during travel. It holds enough water for one person for most of a day.\n",
         "source": {
-          "id": "core-remaster"
+          "id": "core-remaster",
+          "page": 291
         },
         "rarity": "common",
         "traits": [],
@@ -8894,7 +9664,7 @@
         "bulk": "L"
       },
       "packId": "core",
-      "hash": "b810c05b67f064b84ce62a058c9220b6928328c6631c4adb579a988ed3283f75"
+      "hash": "301e844fe5414a0a62b1daa6271591471c1001dd5aeef3014ab84ddddd485e73"
     },
     {
       "entity": {
@@ -8916,754 +9686,6 @@
       },
       "packId": "core",
       "hash": "d77604bb10d790d8bc19fac5bbc3a0c340f20459977a2725a17444c41e8178b6"
-    },
-    {
-      "entity": {
-        "id": "pf2e.item.battleaxe",
-        "type": "item",
-        "name": "Battleaxe",
-        "summary": "A single-bladed axe dealing 1d8 slashing damage with the sweep trait.",
-        "description": "A sturdy axe with a single blade mounted on a wooden haft. The battleaxe is a reliable martial weapon favored by warriors.\n\n- Damage: 1d8 slashing\n- Hands: 1\n- Group: Axe\n- Weapon Traits: sweep\n\nThe sweep trait grants you a +1 circumstance bonus to attack rolls against a target if you've already attacked a different target that turn with this weapon, making it excellent for fighting multiple opponents.\n",
-        "source": {
-          "id": "core-remaster"
-        },
-        "rarity": "common",
-        "traits": [
-          "sweep"
-        ],
-        "tags": [],
-        "effects": [],
-        "level": 0,
-        "price": "1 gp",
-        "bulk": "1"
-      },
-      "packId": "core",
-      "hash": "e9091dc9856846586c6818a9bd25f992857e9abcf01ed029471c54bc18e19484"
-    },
-    {
-      "entity": {
-        "id": "pf2e.item.club",
-        "type": "item",
-        "name": "Club",
-        "summary": "A simple bludgeoning weapon dealing 1d6 bludgeoning damage, throwable up to 10 feet.",
-        "description": "A heavy piece of shaped wood used as a simple weapon. Clubs are often improvised from available materials.\n\n- Damage: 1d6 bludgeoning\n- Hands: 1\n- Group: Club\n- Weapon Traits: thrown 10 ft.\n\nThe club is one of the simplest weapons available and costs nothing, making it accessible to anyone. Despite its simplicity, it deals respectable damage and can be thrown in a pinch.\n",
-        "source": {
-          "id": "core-remaster"
-        },
-        "rarity": "common",
-        "traits": [
-          "thrown-10"
-        ],
-        "tags": [],
-        "effects": [],
-        "level": 0,
-        "price": "0 cp",
-        "bulk": "1"
-      },
-      "packId": "core",
-      "hash": "1f83a4dd5b0db7e36507a63bb3aa8964baa29b487b343f1264687d903a472003"
-    },
-    {
-      "entity": {
-        "id": "pf2e.item.crossbow",
-        "type": "item",
-        "name": "Crossbow",
-        "summary": "A mechanical ranged weapon dealing 1d8 piercing damage with 120 foot range.",
-        "description": "A mechanical weapon that fires bolts using a trigger mechanism. The crossbow is more powerful and accurate than a bow but takes longer to reload.\n\n- Damage: 1d8 piercing\n- Hands: 2\n- Group: Bow\n- Weapon Traits: range 120 ft., reload 1\n\nThe crossbow's excellent range and damage make it a popular choice for guards and hunters. Reload 1 means you must use an Interact action to reload after each shot, limiting your rate of fire.\n",
-        "source": {
-          "id": "core-remaster"
-        },
-        "rarity": "common",
-        "traits": [
-          "range-120",
-          "reload-1"
-        ],
-        "tags": [],
-        "effects": [],
-        "level": 0,
-        "price": "3 gp",
-        "bulk": "1"
-      },
-      "packId": "core",
-      "hash": "c63de9bb4b30dbba131d17f29f96c9c33aa405abe7ee7e7ee891c8b39d335089"
-    },
-    {
-      "entity": {
-        "id": "pf2e.item.dagger",
-        "type": "item",
-        "name": "Dagger",
-        "summary": "A small, versatile blade dealing 1d4 piercing damage, agile and finesse, throwable up to 10 feet.",
-        "description": "A lightweight stabbing weapon with a short blade, the dagger is a versatile tool used by rogues, spellcasters, and anyone needing a concealable weapon.\n\n- Damage: 1d4 piercing\n- Hands: 1\n- Group: Knife\n- Weapon Traits: agile, finesse, thrown 10 ft., versatile S\n\nThe dagger's agile and finesse traits make it ideal for quick, precise strikes, while its thrown trait allows it to be used at range. The versatile S trait lets you deal slashing damage instead of piercing when advantageous.\n",
-        "source": {
-          "id": "core-remaster"
-        },
-        "rarity": "common",
-        "traits": [
-          "agile",
-          "finesse",
-          "thrown-10",
-          "versatile-S"
-        ],
-        "tags": [],
-        "effects": [],
-        "level": 0,
-        "price": "2 sp",
-        "bulk": "L"
-      },
-      "packId": "core",
-      "hash": "e577c04028ad24847cd9552c9efb5c8892ad4bc5f17afbaef83b1a5e66144293"
-    },
-    {
-      "entity": {
-        "id": "pf2e.item.fist",
-        "type": "item",
-        "name": "Fist",
-        "summary": "Your basic unarmed strike dealing 1d4 bludgeoning damage, agile, finesse, and nonlethal.",
-        "description": "Everyone has a fist attack that represents punching, kicking, headbutting, or similar unarmed attacks.\n\n- Damage: 1d4 bludgeoning\n- Hands: 1\n- Group: Brawling\n- Weapon Traits: agile, finesse, nonlethal, unarmed\n\nFists are always available and can't be disarmed. The nonlethal trait means attacks with this weapon deal nonlethal damage by default, allowing you to subdue foes without killing them. The agile and finesse traits make unarmed strikes effective for quick combatants.\n",
-        "source": {
-          "id": "core-remaster"
-        },
-        "rarity": "common",
-        "traits": [
-          "agile",
-          "finesse",
-          "nonlethal",
-          "unarmed"
-        ],
-        "tags": [],
-        "effects": [],
-        "level": 0,
-        "price": "0 cp",
-        "bulk": "-"
-      },
-      "packId": "core",
-      "hash": "84a885f510f8f7e3cdb03de860d50ac95c1d229ecf8d897574eb057b0f87b1a1"
-    },
-    {
-      "entity": {
-        "id": "pf2e.item.gauntlet",
-        "type": "item",
-        "name": "Gauntlet",
-        "summary": "An armored glove dealing 1d4 bludgeoning damage while keeping your hand free.",
-        "description": "A reinforced metal glove worn over the hand. Unlike most weapons, you can hold items in a hand wearing a gauntlet.\n\n- Damage: 1d4 bludgeoning\n- Hands: 1\n- Group: Brawling\n- Weapon Traits: free-hand\n\nThe free-hand trait means you can use the hand wearing the gauntlet for other purposes, such as holding items or casting spells with somatic components, while still threatening enemies with the weapon.\n",
-        "source": {
-          "id": "core-remaster"
-        },
-        "rarity": "common",
-        "traits": [
-          "free-hand"
-        ],
-        "tags": [],
-        "effects": [],
-        "level": 0,
-        "price": "2 sp",
-        "bulk": "L"
-      },
-      "packId": "core",
-      "hash": "b590554e96a9dbd96f63ed6c7360e696a9184dec176532290b09b1392421cd09"
-    },
-    {
-      "entity": {
-        "id": "pf2e.item.glaive",
-        "type": "item",
-        "name": "Glaive",
-        "summary": "A polearm with a blade dealing 1d8 slashing damage with reach, deadly d8, and forceful.",
-        "description": "A long pole with a curved blade mounted at the end. The glaive combines the reach of a polearm with the cutting power of a blade.\n\n- Damage: 1d8 slashing\n- Hands: 2\n- Group: Polearm\n- Weapon Traits: deadly d8, forceful, reach\n\nThe reach trait lets you attack enemies 10 feet away. Deadly d8 adds extra damage on critical hits. Forceful means your second attack on a turn deals extra damage if your first hit, and even more on subsequent attacks.\n",
-        "source": {
-          "id": "core-remaster"
-        },
-        "rarity": "common",
-        "traits": [
-          "deadly-d8",
-          "forceful",
-          "reach"
-        ],
-        "tags": [],
-        "effects": [],
-        "level": 0,
-        "price": "1 gp",
-        "bulk": "2"
-      },
-      "packId": "core",
-      "hash": "7b4c270fb9aeede47ecde1d962686e1100cb5e73024dde040161e25105dd87ae"
-    },
-    {
-      "entity": {
-        "id": "pf2e.item.greataxe",
-        "type": "item",
-        "name": "Greataxe",
-        "summary": "A massive two-handed axe dealing 1d12 slashing damage with devastating strikes.",
-        "description": "An enormous axe with a large, heavy blade requiring both hands to swing. The greataxe is favored by barbarians and warriors who prioritize raw damage.\n\n- Damage: 1d12 slashing\n- Hands: 2\n- Group: Axe\n- Weapon Traits: sweep\n\nThe greataxe deals massive damage with each hit, and the sweep trait makes it effective against multiple foes. Its heavy bulk and two-handed requirement make it unwieldy but devastating.\n",
-        "source": {
-          "id": "core-remaster"
-        },
-        "rarity": "common",
-        "traits": [
-          "sweep"
-        ],
-        "tags": [],
-        "effects": [],
-        "level": 0,
-        "price": "2 gp",
-        "bulk": "2"
-      },
-      "packId": "core",
-      "hash": "c921349e7eb6b033d4988878d0d2bcab50623dade06ceabe2c2898cb63949ecf"
-    },
-    {
-      "entity": {
-        "id": "pf2e.item.greatclub",
-        "type": "item",
-        "name": "Greatclub",
-        "summary": "A massive two-handed club dealing 1d10 bludgeoning damage with backswing and shove.",
-        "description": "An enormous piece of heavy wood or a tree trunk fashioned into a weapon. The greatclub is a simple but devastating weapon.\n\n- Damage: 1d10 bludgeoning\n- Hands: 2\n- Group: Club\n- Weapon Traits: backswing, shove\n\nThe backswing trait grants a bonus to attack on your second attack if your first missed, representing the momentum of your swing. The shove trait allows you to push enemies back. Despite being a simple weapon, the greatclub deals impressive damage.\n",
-        "source": {
-          "id": "core-remaster"
-        },
-        "rarity": "common",
-        "traits": [
-          "backswing",
-          "shove"
-        ],
-        "tags": [],
-        "effects": [],
-        "level": 0,
-        "price": "1 gp",
-        "bulk": "2"
-      },
-      "packId": "core",
-      "hash": "5cc01b958b6542a50eae1c2dfaeef7836faa56a23b64f00893d13b753dc950b5"
-    },
-    {
-      "entity": {
-        "id": "pf2e.item.greatsword",
-        "type": "item",
-        "name": "Greatsword",
-        "summary": "A massive two-handed blade dealing 1d12 slashing damage with impressive reach.",
-        "description": "An enormous sword with a blade up to 6 feet long, requiring both hands to wield effectively. The greatsword is favored by warriors who want maximum damage.\n\n- Damage: 1d12 slashing\n- Hands: 2\n- Group: Sword\n- Weapon Traits: versatile P\n\nThe greatsword deals the highest base damage of any martial sword and its versatile P trait provides tactical flexibility. However, wielding it requires both hands, preventing you from using a shield.\n",
-        "source": {
-          "id": "core-remaster"
-        },
-        "rarity": "common",
-        "traits": [
-          "versatile-P"
-        ],
-        "tags": [],
-        "effects": [],
-        "level": 0,
-        "price": "2 gp",
-        "bulk": "2"
-      },
-      "packId": "core",
-      "hash": "30f3de5a54996991a639448baf0ec8a7fd845ff34e735a9f5bca9e69669bdb2d"
-    },
-    {
-      "entity": {
-        "id": "pf2e.item.halberd",
-        "type": "item",
-        "name": "Halberd",
-        "summary": "A versatile polearm dealing 1d10 piercing damage with reach and versatile slashing.",
-        "description": "A long pole with an axe blade mounted on top and a spike on the end. The halberd is a versatile weapon that combines multiple weapon types.\n\n- Damage: 1d10 piercing\n- Hands: 2\n- Group: Polearm\n- Weapon Traits: reach, versatile S\n\nThe halberd's reach lets you attack from 10 feet away, while its versatile S trait allows you to deal slashing damage when advantageous. Its higher base damage compared to other reach weapons makes it a popular choice for guards and soldiers.\n",
-        "source": {
-          "id": "core-remaster"
-        },
-        "rarity": "common",
-        "traits": [
-          "reach",
-          "versatile-S"
-        ],
-        "tags": [],
-        "effects": [],
-        "level": 0,
-        "price": "2 gp",
-        "bulk": "2"
-      },
-      "packId": "core",
-      "hash": "1f6cfc8de607947081ab3d67119fa2ff0b9e575c6fdb974b71e102375c5318ca"
-    },
-    {
-      "entity": {
-        "id": "pf2e.item.handwraps-of-mighty-blows",
-        "type": "item",
-        "name": "Handwraps of Mighty Blows",
-        "summary": "Magical cloth wrappings that grant fundamental runes to unarmed attacks.",
-        "description": "These cloth wrappings enfold your hands, granting your unarmed attacks the benefits of weapon runes.\n\n- Damage: As unarmed attack\n- Hands: -\n- Group: Brawling\n- Weapon Traits: invested, magical\n\nWhen you invest these handwraps, they grant their fundamental runes (weapon potency and striking) to all your unarmed attacks. This is essential for martial artists and monks who rely on unarmed strikes. The handwraps don't take up a hand slot.\n",
-        "source": {
-          "id": "core-remaster"
-        },
-        "rarity": "common",
-        "traits": [
-          "invested",
-          "magical"
-        ],
-        "tags": [],
-        "effects": [],
-        "level": 0,
-        "price": "4 gp",
-        "bulk": "-"
-      },
-      "packId": "core",
-      "hash": "7b63b4c7eac15108f956f0bf23fc4ef2c3edf22d7ae5b49a811910fa3baf2ba8"
-    },
-    {
-      "entity": {
-        "id": "pf2e.item.heavy-crossbow",
-        "type": "item",
-        "name": "Heavy Crossbow",
-        "summary": "A powerful crossbow dealing 1d10 piercing damage with excellent range but slow reload.",
-        "description": "A large, powerful crossbow that fires heavy bolts with tremendous force. The heavy crossbow sacrifices rate of fire for damage and range.\n\n- Damage: 1d10 piercing\n- Hands: 2\n- Group: Bow\n- Weapon Traits: range 120 ft., reload 2\n\nThe heavy crossbow deals excellent damage and has superior range, making it ideal for sniping. However, reload 2 means you must use two Interact actions to reload it, significantly limiting your rate of fire.\n",
-        "source": {
-          "id": "core-remaster"
-        },
-        "rarity": "common",
-        "traits": [
-          "range-120",
-          "reload-2"
-        ],
-        "tags": [],
-        "effects": [],
-        "level": 0,
-        "price": "4 gp",
-        "bulk": "2"
-      },
-      "packId": "core",
-      "hash": "e9cda054aee9c2a7bd357d64174e9e402d9cf6be3b7bab80fa6cd5394a9c2a80"
-    },
-    {
-      "entity": {
-        "id": "pf2e.item.javelin",
-        "type": "item",
-        "name": "Javelin",
-        "summary": "A light throwing spear dealing 1d6 piercing damage with 30 foot throwing range.",
-        "description": "A light spear designed specifically for throwing. Javelins are carried in bundles and hurled at enemies.\n\n- Damage: 1d6 piercing\n- Hands: 1\n- Group: Dart\n- Weapon Traits: thrown 30 ft.\n\nThe javelin is lighter than a spear (Light bulk vs 1 bulk) and has a better throwing range (30 feet vs 20 feet), making it superior as a thrown weapon. Many warriors carry several javelins to use before closing to melee.\n",
-        "source": {
-          "id": "core-remaster"
-        },
-        "rarity": "common",
-        "traits": [
-          "thrown-30"
-        ],
-        "tags": [],
-        "effects": [],
-        "level": 0,
-        "price": "1 sp",
-        "bulk": "L"
-      },
-      "packId": "core",
-      "hash": "439de4e77d85dee35179f0bb65e8385635d9c47125dafe2e595f5bae5668eb20"
-    },
-    {
-      "entity": {
-        "id": "pf2e.item.lance",
-        "type": "item",
-        "name": "Lance",
-        "summary": "A cavalry weapon dealing 1d8 piercing damage with reach, deadly d8, and jousting.",
-        "description": "A long, tapered weapon designed for mounted combat. The lance is most effective when charging on horseback.\n\n- Damage: 1d8 piercing\n- Hands: 2\n- Group: Spear\n- Weapon Traits: deadly d8, jousting d6, reach\n\nThe reach trait lets you attack from 10 feet away. Deadly d8 increases critical hit damage. Jousting d6 increases the damage die by one step when charging on a mount, making mounted charges devastating.\n",
-        "source": {
-          "id": "core-remaster"
-        },
-        "rarity": "common",
-        "traits": [
-          "deadly-d8",
-          "jousting-d6",
-          "reach"
-        ],
-        "tags": [],
-        "effects": [],
-        "level": 0,
-        "price": "1 gp",
-        "bulk": "2"
-      },
-      "packId": "core",
-      "hash": "340075e609aeffbdbe39bef17017cf66dae05f614518b017547822c603c36b89"
-    },
-    {
-      "entity": {
-        "id": "pf2e.item.light-hammer",
-        "type": "item",
-        "name": "Light Hammer",
-        "summary": "A small hammer dealing 1d6 bludgeoning damage, agile and throwable up to 20 feet.",
-        "description": "A small hammer that can be wielded with one hand or thrown. The light hammer is popular among crafters who need a versatile tool and weapon.\n\n- Damage: 1d6 bludgeoning\n- Hands: 1\n- Group: Hammer\n- Weapon Traits: agile, thrown 20 ft.\n\nThe agile trait reduces multiple attack penalties, and the thrown trait gives it ranged versatility. Its light bulk makes it easy to carry multiple light hammers.\n",
-        "source": {
-          "id": "core-remaster"
-        },
-        "rarity": "common",
-        "traits": [
-          "agile",
-          "thrown-20"
-        ],
-        "tags": [],
-        "effects": [],
-        "level": 0,
-        "price": "3 sp",
-        "bulk": "L"
-      },
-      "packId": "core",
-      "hash": "8e555719c0cf8a062db7f4797fa2444132d954d90398bea712b2f4e33d75330a"
-    },
-    {
-      "entity": {
-        "id": "pf2e.item.longbow",
-        "type": "item",
-        "name": "Longbow",
-        "summary": "A powerful bow dealing 1d8 piercing damage with 100 foot range and deadly d10.",
-        "description": "A tall bow, as long as a person, designed for maximum range and power. The longbow is the weapon of choice for archers.\n\n- Damage: 1d8 piercing\n- Hands: 1+\n- Group: Bow\n- Weapon Traits: deadly d10, propulsive, range 100 ft., reload 0, volley 30 ft.\n\nThe deadly d10 trait makes critical hits devastating. Propulsive adds half your Strength modifier to damage. Reload 0 means you can shoot repeatedly. Volley 30 ft. imposes a -2 penalty when attacking targets within 30 feet.\n",
-        "source": {
-          "id": "core-remaster"
-        },
-        "rarity": "common",
-        "traits": [
-          "deadly-d10",
-          "propulsive",
-          "range-100",
-          "reload-0",
-          "volley-30"
-        ],
-        "tags": [],
-        "effects": [],
-        "level": 0,
-        "price": "6 gp",
-        "bulk": "2"
-      },
-      "packId": "core",
-      "hash": "ee818515fc00b30ce38c4e203551cd6de17a4a855afbed41f69d86801713e504"
-    },
-    {
-      "entity": {
-        "id": "pf2e.item.longsword",
-        "type": "item",
-        "name": "Longsword",
-        "summary": "A versatile martial blade dealing 1d8 slashing damage, or piercing with versatile.",
-        "description": "A classic knightly weapon with a straight, double-edged blade about 3 feet long. The longsword is the quintessential martial weapon.\n\n- Damage: 1d8 slashing\n- Hands: 1\n- Group: Sword\n- Weapon Traits: versatile P\n\nThe longsword's versatile P trait allows you to deal piercing damage instead of slashing when it would be more effective, such as against armored opponents or creatures with resistance to slashing damage.\n",
-        "source": {
-          "id": "core-remaster"
-        },
-        "rarity": "common",
-        "traits": [
-          "versatile-P"
-        ],
-        "tags": [],
-        "effects": [],
-        "level": 0,
-        "price": "1 gp",
-        "bulk": "1"
-      },
-      "packId": "core",
-      "hash": "5cbce7614be0fb1726623ad965507d549960f55421211441b18d6d41a68e210e"
-    },
-    {
-      "entity": {
-        "id": "pf2e.item.mace",
-        "type": "item",
-        "name": "Mace",
-        "summary": "A weighted metal head on a handle dealing 1d6 bludgeoning damage, capable of shoving foes.",
-        "description": "A metal club with a weighted head, the mace is a simple but effective weapon favored by clerics and warriors who need to deal bludgeoning damage.\n\n- Damage: 1d6 bludgeoning\n- Hands: 1\n- Group: Club\n- Weapon Traits: shove\n\nThe mace's shove trait allows you to push enemies away from you as part of your attack, making it useful for controlling the battlefield. Its simple design makes it easy to use effectively.\n",
-        "source": {
-          "id": "core-remaster"
-        },
-        "rarity": "common",
-        "traits": [
-          "shove"
-        ],
-        "tags": [],
-        "effects": [],
-        "level": 0,
-        "price": "1 gp",
-        "bulk": "1"
-      },
-      "packId": "core",
-      "hash": "2a13d01c248017c910961940576fd3264515074b3b80bbf176d41d5cbc4b71dc"
-    },
-    {
-      "entity": {
-        "id": "pf2e.item.maul",
-        "type": "item",
-        "name": "Maul",
-        "summary": "A heavy two-handed hammer dealing 1d12 bludgeoning damage with the shove trait.",
-        "description": "A massive hammer with an enormous metal head requiring both hands to swing. The maul is designed to crush armor and bones alike.\n\n- Damage: 1d12 bludgeoning\n- Hands: 2\n- Group: Hammer\n- Weapon Traits: shove\n\nThe maul deals the highest base damage among bludgeoning weapons and can shove enemies back. Its bludgeoning damage is particularly effective against constructs and undead vulnerable to crushing attacks.\n",
-        "source": {
-          "id": "core-remaster"
-        },
-        "rarity": "common",
-        "traits": [
-          "shove"
-        ],
-        "tags": [],
-        "effects": [],
-        "level": 0,
-        "price": "3 gp",
-        "bulk": "2"
-      },
-      "packId": "core",
-      "hash": "57fa6ab1e858ad4002fc65e80b57128f47866d87c9c1c1c4c5363a47f3088d85"
-    },
-    {
-      "entity": {
-        "id": "pf2e.item.rapier",
-        "type": "item",
-        "name": "Rapier",
-        "summary": "A precise thrusting sword dealing 1d6 piercing damage with deadly d8, disarm, and finesse.",
-        "description": "A slender, sharply pointed sword designed for thrusting attacks. The rapier is the weapon of choice for duelists and swashbucklers.\n\n- Damage: 1d6 piercing\n- Hands: 1\n- Group: Sword\n- Weapon Traits: deadly d8, disarm, finesse\n\nThe deadly d8 trait adds an extra d8 to critical hit damage, making precise strikes devastating. The disarm trait allows you to knock weapons from enemies' hands, and finesse lets you use Dexterity for attacks.\n",
-        "source": {
-          "id": "core-remaster"
-        },
-        "rarity": "common",
-        "traits": [
-          "deadly-d8",
-          "disarm",
-          "finesse"
-        ],
-        "tags": [],
-        "effects": [],
-        "level": 0,
-        "price": "2 gp",
-        "bulk": "1"
-      },
-      "packId": "core",
-      "hash": "5c032bc3ee4a6e4bc7fbe22ed24c5431d6c9e4708ae97a608cb301daf4a89e47"
-    },
-    {
-      "entity": {
-        "id": "pf2e.item.scimitar",
-        "type": "item",
-        "name": "Scimitar",
-        "summary": "A curved sword dealing 1d6 slashing damage with forceful and sweep traits.",
-        "description": "A curved blade designed for powerful slashing attacks. The scimitar is favored in desert regions and by cavalry.\n\n- Damage: 1d6 slashing\n- Hands: 1\n- Group: Sword\n- Weapon Traits: forceful, sweep\n\nThe forceful trait increases damage on subsequent attacks in a turn, while sweep grants a bonus to hit after attacking a different target. This combination makes the scimitar excellent for fighting multiple opponents.\n",
-        "source": {
-          "id": "core-remaster"
-        },
-        "rarity": "common",
-        "traits": [
-          "forceful",
-          "sweep"
-        ],
-        "tags": [],
-        "effects": [],
-        "level": 0,
-        "price": "1 gp",
-        "bulk": "1"
-      },
-      "packId": "core",
-      "hash": "e47533fdcafec5a9c14c08f3c18ead5c7615fccf5cfdb940a93a1f7026178800"
-    },
-    {
-      "entity": {
-        "id": "pf2e.item.shortbow",
-        "type": "item",
-        "name": "Shortbow",
-        "summary": "A compact bow dealing 1d6 piercing damage with 60 foot range and deadly d10.",
-        "description": "A compact bow suitable for use in confined spaces or on horseback. The shortbow is easier to use than a longbow but has less range.\n\n- Damage: 1d6 piercing\n- Hands: 1+\n- Group: Bow\n- Weapon Traits: deadly d10, range 60 ft., reload 0\n\nThe deadly d10 trait adds an extra d10 to damage when you critically hit. Reload 0 means you can fire repeatedly without needing to reload. The shortbow requires one hand to hold and one hand to shoot.\n",
-        "source": {
-          "id": "core-remaster"
-        },
-        "rarity": "common",
-        "traits": [
-          "deadly-d10",
-          "range-60",
-          "reload-0"
-        ],
-        "tags": [],
-        "effects": [],
-        "level": 0,
-        "price": "3 gp",
-        "bulk": "1"
-      },
-      "packId": "core",
-      "hash": "8a18cf7e593f21afc495c086880cb7ef8286933aaec5a3741df13416d0d85886"
-    },
-    {
-      "entity": {
-        "id": "pf2e.item.shortsword",
-        "type": "item",
-        "name": "Shortsword",
-        "summary": "A quick, light blade dealing 1d6 piercing damage with agile and finesse traits.",
-        "description": "A short blade about 2 feet long, favored by rogues and duelists for its speed and precision. The shortsword is lighter and faster than a longsword.\n\n- Damage: 1d6 piercing\n- Hands: 1\n- Group: Sword\n- Weapon Traits: agile, finesse, versatile S\n\nThe agile trait reduces the penalty for multiple attacks, and finesse lets you use Dexterity for attack rolls. The versatile S trait allows you to deal slashing damage when advantageous.\n",
-        "source": {
-          "id": "core-remaster"
-        },
-        "rarity": "common",
-        "traits": [
-          "agile",
-          "finesse",
-          "versatile-S"
-        ],
-        "tags": [],
-        "effects": [],
-        "level": 0,
-        "price": "9 sp",
-        "bulk": "L"
-      },
-      "packId": "core",
-      "hash": "adbab997c4e52630e6db1d8c81d75af81f0261521e2be251b97c6f07edfa5ee2"
-    },
-    {
-      "entity": {
-        "id": "pf2e.item.sickle",
-        "type": "item",
-        "name": "Sickle",
-        "summary": "A curved farming tool dealing 1d4 slashing damage with agile, finesse, and trip.",
-        "description": "A curved blade on a short handle, traditionally used for harvesting crops. The sickle makes an effective improvised weapon.\n\n- Damage: 1d4 slashing\n- Hands: 1\n- Group: Knife\n- Weapon Traits: agile, finesse, trip\n\nThe sickle's agile and finesse traits make it suitable for quick, dexterous fighters. The trip trait allows you to knock enemies prone, making it useful for setting up attacks by allies.\n",
-        "source": {
-          "id": "core-remaster"
-        },
-        "rarity": "common",
-        "traits": [
-          "agile",
-          "finesse",
-          "trip"
-        ],
-        "tags": [],
-        "effects": [],
-        "level": 0,
-        "price": "2 sp",
-        "bulk": "L"
-      },
-      "packId": "core",
-      "hash": "d947f65acb7f00ea6858985821d2ef69199960eed15e9ffb5c1c7a8a57c603cc"
-    },
-    {
-      "entity": {
-        "id": "pf2e.item.sling",
-        "type": "item",
-        "name": "Sling",
-        "summary": "A simple ranged weapon dealing 1d6 bludgeoning damage with 50 foot range, requires reload.",
-        "description": "A leather strap used to hurl stones or bullets at enemies. The sling is a simple but effective ranged weapon.\n\n- Damage: 1d6 bludgeoning\n- Hands: 1+\n- Group: Sling\n- Weapon Traits: propulsive, range 50 ft., reload 1\n\nThe sling costs nothing and uses easily found ammunition. The propulsive trait adds half your Strength modifier to damage (minimum 0). Reload 1 means you must use an Interact action to reload after each shot.\n",
-        "source": {
-          "id": "core-remaster"
-        },
-        "rarity": "common",
-        "traits": [
-          "propulsive",
-          "range-50",
-          "reload-1"
-        ],
-        "tags": [],
-        "effects": [],
-        "level": 0,
-        "price": "0 cp",
-        "bulk": "L"
-      },
-      "packId": "core",
-      "hash": "489677aecabdb9fec349478c7bed4dec44b5efb58432ea70a16e7e7beff2af3d"
-    },
-    {
-      "entity": {
-        "id": "pf2e.item.spear",
-        "type": "item",
-        "name": "Spear",
-        "summary": "A piercing polearm dealing 1d6 piercing damage, throwable up to 20 feet.",
-        "description": "A simple weapon consisting of a sharpened point mounted on a wooden shaft. The spear is one of humanity's oldest weapons.\n\n- Damage: 1d6 piercing\n- Hands: 1\n- Group: Spear\n- Weapon Traits: thrown 20 ft.\n\nThe spear is versatile and inexpensive, making it a popular choice for militia and guards. Its thrown range of 20 feet is better than most melee weapons, allowing you to engage enemies at range before they close to melee.\n",
-        "source": {
-          "id": "core-remaster"
-        },
-        "rarity": "common",
-        "traits": [
-          "thrown-20"
-        ],
-        "tags": [],
-        "effects": [],
-        "level": 0,
-        "price": "1 sp",
-        "bulk": "1"
-      },
-      "packId": "core",
-      "hash": "87ca5b20b2140902abd46afaa14cdea71dd2e2e4dd9f422e5017c07500c4f16e"
-    },
-    {
-      "entity": {
-        "id": "pf2e.item.staff",
-        "type": "item",
-        "name": "Staff",
-        "summary": "A long wooden pole dealing 1d4 bludgeoning damage, or 1d8 when wielded in two hands.",
-        "description": "A long, straight piece of wood used as both a walking aid and a weapon. The staff is a favored weapon of monks and wizards.\n\n- Damage: 1d4 bludgeoning (1d8 two-handed)\n- Hands: 1\n- Group: Club\n- Weapon Traits: two-hand d8\n\nThe staff costs nothing and can be found almost anywhere. While it deals modest damage in one hand, wielding it with both hands increases its damage die to 1d8, making it surprisingly effective.\n",
-        "source": {
-          "id": "core-remaster"
-        },
-        "rarity": "common",
-        "traits": [
-          "two-hand-d8"
-        ],
-        "tags": [],
-        "effects": [],
-        "level": 0,
-        "price": "0 cp",
-        "bulk": "1"
-      },
-      "packId": "core",
-      "hash": "b2ac27f0eaab4a84869e47c833c39d35db3594b8073e89abfc8605a59d135bf8"
-    },
-    {
-      "entity": {
-        "id": "pf2e.item.starknife",
-        "type": "item",
-        "name": "Starknife",
-        "summary": "A star-shaped blade dealing 1d4 piercing damage with agile, deadly d6, finesse, and thrown.",
-        "description": "A multi-pointed blade shaped like a star that can be wielded in melee or thrown. The starknife is favored by followers of Desna.\n\n- Damage: 1d4 piercing\n- Hands: 1\n- Group: Knife\n- Weapon Traits: agile, deadly d6, finesse, thrown 20 ft., versatile S\n\nThe starknife combines excellent traits: agile and finesse for accuracy, deadly d6 for critical hits, thrown for range, and versatile S for flexibility. Despite its low base damage, these traits make it surprisingly effective.\n",
-        "source": {
-          "id": "core-remaster"
-        },
-        "rarity": "common",
-        "traits": [
-          "agile",
-          "deadly-d6",
-          "finesse",
-          "thrown-20",
-          "versatile-S"
-        ],
-        "tags": [],
-        "effects": [],
-        "level": 0,
-        "price": "2 gp",
-        "bulk": "L"
-      },
-      "packId": "core",
-      "hash": "a1ff3036010e0677ef5729ee9ce92ed757ea76548912de021c854fdd74a434a2"
-    },
-    {
-      "entity": {
-        "id": "pf2e.item.trident",
-        "type": "item",
-        "name": "Trident",
-        "summary": "A three-pronged spear dealing 1d8 piercing damage, throwable up to 20 feet.",
-        "description": "A long weapon with three prongs at the tip, traditionally associated with fishing and sea deities. The trident is similar to a spear but deadlier.\n\n- Damage: 1d8 piercing\n- Hands: 1\n- Group: Spear\n- Weapon Traits: thrown 20 ft.\n\nThe trident deals more damage than a simple spear and maintains the same throwing range, making it a superior choice for those proficient in martial weapons. It's particularly favored by aquatic fighters.\n",
-        "source": {
-          "id": "core-remaster"
-        },
-        "rarity": "common",
-        "traits": [
-          "thrown-20"
-        ],
-        "tags": [],
-        "effects": [],
-        "level": 0,
-        "price": "1 gp",
-        "bulk": "1"
-      },
-      "packId": "core",
-      "hash": "063e791e16df683883bf6057f005ae9a47c1b0ef3bc34c5561f154392205495f"
-    },
-    {
-      "entity": {
-        "id": "pf2e.item.warhammer",
-        "type": "item",
-        "name": "Warhammer",
-        "summary": "A martial hammer dealing 1d8 bludgeoning damage, capable of shoving enemies.",
-        "description": "A metal-headed hammer designed for combat, heavier and more robust than a simple mace. The warhammer is effective against armored foes.\n\n- Damage: 1d8 bludgeoning\n- Hands: 1\n- Group: Hammer\n- Weapon Traits: shove\n\nThe warhammer deals respectable damage and its shove trait allows you to push enemies away. Bludgeoning damage is particularly effective against skeletons and other creatures resistant to slashing or piercing.\n",
-        "source": {
-          "id": "core-remaster"
-        },
-        "rarity": "common",
-        "traits": [
-          "shove"
-        ],
-        "tags": [],
-        "effects": [],
-        "level": 0,
-        "price": "1 gp",
-        "bulk": "1"
-      },
-      "packId": "core",
-      "hash": "b0c39bc196b7302e9bddf665bae3348617e7d8736020b6290b6ceb1f3e4c35c4"
     },
     {
       "entity": {
@@ -10166,7 +10188,762 @@
       },
       "packId": "core",
       "hash": "521662597b092c361e63a7c1b34f71b2b45352088d3b166e9da4ee042d64f380"
+    },
+    {
+      "entity": {
+        "id": "pf2e.item.battleaxe",
+        "type": "item",
+        "name": "Battle Axe",
+        "summary": "A martial axe dealing 1d8 slashing damage with the sweep trait.",
+        "description": "These axes are designed explicitly as weapons, rather than tools. They typically weigh less, with a shaft reinforced with metal bands or bolts, and have a sharper blade.\n\n- Damage: 1d8 slashing\n- Hands: 1\n- Group: Axe\n- Weapon Traits: sweep\n\nThe battle axe is a solid one-handed weapon. Its sweep trait grants a +1 circumstance bonus to attack rolls against a target if you already attacked a different target this turn.\n",
+        "source": {
+          "id": "core-remaster",
+          "page": 280
+        },
+        "rarity": "common",
+        "traits": [
+          "sweep"
+        ],
+        "tags": [],
+        "effects": [],
+        "level": 0,
+        "price": "1 gp",
+        "bulk": "1"
+      },
+      "packId": "core",
+      "hash": "442aac00a86b904066d4d3c5ca5933ac731893afe0aad091a331aa2489e97a35"
+    },
+    {
+      "entity": {
+        "id": "pf2e.item.club",
+        "type": "item",
+        "name": "Club",
+        "summary": "A simple bludgeon dealing 1d6 damage, throwable up to 10 feet.",
+        "description": "This is a piece of stout wood shaped or repurposed for use as a weapon, from a table leg to a tree branch.\n\n- Damage: 1d6 bludgeoning\n- Hands: 1\n- Group: Club\n- Weapon Traits: thrown 10 ft.\n\nThe club is a basic weapon that can be found almost anywhere. It can also be thrown in a pinch.\n",
+        "source": {
+          "id": "core-remaster",
+          "page": 279
+        },
+        "rarity": "common",
+        "traits": [
+          "thrown-10-ft"
+        ],
+        "tags": [],
+        "effects": [],
+        "level": 0,
+        "price": "0 cp",
+        "bulk": "1"
+      },
+      "packId": "core",
+      "hash": "3750bb165e5030031782750963c8e76510cc1ce715491f11fc229e69feecb7b9"
+    },
+    {
+      "entity": {
+        "id": "pf2e.item.crossbow",
+        "type": "item",
+        "name": "Crossbow",
+        "summary": "A simple ranged weapon with 120-foot range, dealing 1d8 piercing damage, reload 1.",
+        "description": "This ranged weapon is loaded with bolts and shoots them with a mechanism called a trigger. It's easier to use than a bow, but not as fast.\n\n- Damage: 1d8 piercing\n- Hands: 2\n- Range: 120 feet\n- Reload: 1\n- Group: Bow\n- Weapon Traits: reload 1\n\nThe crossbow has excellent range and power. The reload 1 trait means you must spend an Interact action to reload after each shot.\n",
+        "source": {
+          "id": "core-remaster",
+          "page": 279
+        },
+        "rarity": "common",
+        "traits": [
+          "reload-1"
+        ],
+        "tags": [],
+        "effects": [],
+        "level": 0,
+        "price": "3 gp",
+        "bulk": "1"
+      },
+      "packId": "core",
+      "hash": "f827875d9966e29fb39cde73f04b65b06407c0b35b73e15c36592cd7c79b0c3a"
+    },
+    {
+      "entity": {
+        "id": "pf2e.item.dagger",
+        "type": "item",
+        "name": "Dagger",
+        "summary": "A small blade for close combat, agile and throwable, dealing 1d4 piercing damage.",
+        "description": "This small, bladed weapon is held in one hand and used to stab a creature in close combat. It can also be thrown.\n\n- Damage: 1d4 piercing\n- Hands: 1\n- Group: Knife\n- Weapon Traits: agile, finesse, thrown 10 ft., versatile S\n\nThe dagger is a simple weapon that's easy to conceal and versatile in combat. Its agile trait makes it excellent for multiple attacks, while finesse allows you to use Dexterity for attack rolls.\n",
+        "source": {
+          "id": "core-remaster",
+          "page": 278
+        },
+        "rarity": "common",
+        "traits": [
+          "agile",
+          "finesse",
+          "thrown-10-ft",
+          "versatile-s"
+        ],
+        "tags": [],
+        "effects": [],
+        "level": 0,
+        "price": "2 sp",
+        "bulk": "L"
+      },
+      "packId": "core",
+      "hash": "bd85b5e09abe61a9f6905b1dc4e5e2b368c539760710ad98629e809821cca175"
+    },
+    {
+      "entity": {
+        "id": "pf2e.item.fist",
+        "type": "item",
+        "name": "Fist",
+        "summary": "Your basic unarmed strike dealing 1d4 bludgeoning damage, agile, finesse, and nonlethal.",
+        "description": "Everyone has a fist attack that represents punching, kicking, headbutting, or similar unarmed attacks.\n\n- Damage: 1d4 bludgeoning\n- Hands: 1\n- Group: Brawling\n- Weapon Traits: agile, finesse, nonlethal, unarmed\n\nFists are always available and can't be disarmed. The nonlethal trait means attacks with this weapon deal nonlethal damage by default, allowing you to subdue foes without killing them. The agile and finesse traits make unarmed strikes effective for quick combatants.\n",
+        "source": {
+          "id": "core-remaster"
+        },
+        "rarity": "common",
+        "traits": [
+          "agile",
+          "finesse",
+          "nonlethal",
+          "unarmed"
+        ],
+        "tags": [],
+        "effects": [],
+        "level": 0,
+        "price": "0 cp",
+        "bulk": "-"
+      },
+      "packId": "core",
+      "hash": "84a885f510f8f7e3cdb03de860d50ac95c1d229ecf8d897574eb057b0f87b1a1"
+    },
+    {
+      "entity": {
+        "id": "pf2e.item.gauntlet",
+        "type": "item",
+        "name": "Gauntlet",
+        "summary": "An armored glove dealing 1d4 bludgeoning damage while keeping your hand free.",
+        "description": "A reinforced metal glove worn over the hand. Unlike most weapons, you can hold items in a hand wearing a gauntlet.\n\n- Damage: 1d4 bludgeoning\n- Hands: 1\n- Group: Brawling\n- Weapon Traits: free-hand\n\nThe free-hand trait means you can use the hand wearing the gauntlet for other purposes, such as holding items or casting spells with somatic components, while still threatening enemies with the weapon.\n",
+        "source": {
+          "id": "core-remaster"
+        },
+        "rarity": "common",
+        "traits": [
+          "free-hand"
+        ],
+        "tags": [],
+        "effects": [],
+        "level": 0,
+        "price": "2 sp",
+        "bulk": "L"
+      },
+      "packId": "core",
+      "hash": "b590554e96a9dbd96f63ed6c7360e696a9184dec176532290b09b1392421cd09"
+    },
+    {
+      "entity": {
+        "id": "pf2e.item.glaive",
+        "type": "item",
+        "name": "Glaive",
+        "summary": "A polearm with a blade dealing 1d8 slashing damage with reach, deadly d8, and forceful.",
+        "description": "A long pole with a curved blade mounted at the end. The glaive combines the reach of a polearm with the cutting power of a blade.\n\n- Damage: 1d8 slashing\n- Hands: 2\n- Group: Polearm\n- Weapon Traits: deadly d8, forceful, reach\n\nThe reach trait lets you attack enemies 10 feet away. Deadly d8 adds extra damage on critical hits. Forceful means your second attack on a turn deals extra damage if your first hit, and even more on subsequent attacks.\n",
+        "source": {
+          "id": "core-remaster"
+        },
+        "rarity": "common",
+        "traits": [
+          "deadly-d8",
+          "forceful",
+          "reach"
+        ],
+        "tags": [],
+        "effects": [],
+        "level": 0,
+        "price": "1 gp",
+        "bulk": "2"
+      },
+      "packId": "core",
+      "hash": "7b4c270fb9aeede47ecde1d962686e1100cb5e73024dde040161e25105dd87ae"
+    },
+    {
+      "entity": {
+        "id": "pf2e.item.greataxe",
+        "type": "item",
+        "name": "Greataxe",
+        "summary": "A massive two-handed axe dealing 1d12 slashing damage with devastating strikes.",
+        "description": "An enormous axe with a large, heavy blade requiring both hands to swing. The greataxe is favored by barbarians and warriors who prioritize raw damage.\n\n- Damage: 1d12 slashing\n- Hands: 2\n- Group: Axe\n- Weapon Traits: sweep\n\nThe greataxe deals massive damage with each hit, and the sweep trait makes it effective against multiple foes. Its heavy bulk and two-handed requirement make it unwieldy but devastating.\n",
+        "source": {
+          "id": "core-remaster"
+        },
+        "rarity": "common",
+        "traits": [
+          "sweep"
+        ],
+        "tags": [],
+        "effects": [],
+        "level": 0,
+        "price": "2 gp",
+        "bulk": "2"
+      },
+      "packId": "core",
+      "hash": "c921349e7eb6b033d4988878d0d2bcab50623dade06ceabe2c2898cb63949ecf"
+    },
+    {
+      "entity": {
+        "id": "pf2e.item.greatclub",
+        "type": "item",
+        "name": "Greatclub",
+        "summary": "A massive two-handed club dealing 1d10 bludgeoning damage with backswing and shove.",
+        "description": "An enormous piece of heavy wood or a tree trunk fashioned into a weapon. The greatclub is a simple but devastating weapon.\n\n- Damage: 1d10 bludgeoning\n- Hands: 2\n- Group: Club\n- Weapon Traits: backswing, shove\n\nThe backswing trait grants a bonus to attack on your second attack if your first missed, representing the momentum of your swing. The shove trait allows you to push enemies back. Despite being a simple weapon, the greatclub deals impressive damage.\n",
+        "source": {
+          "id": "core-remaster"
+        },
+        "rarity": "common",
+        "traits": [
+          "backswing",
+          "shove"
+        ],
+        "tags": [],
+        "effects": [],
+        "level": 0,
+        "price": "1 gp",
+        "bulk": "2"
+      },
+      "packId": "core",
+      "hash": "5cc01b958b6542a50eae1c2dfaeef7836faa56a23b64f00893d13b753dc950b5"
+    },
+    {
+      "entity": {
+        "id": "pf2e.item.greatsword",
+        "type": "item",
+        "name": "Greatsword",
+        "summary": "A massive two-handed blade dealing 1d12 slashing damage with impressive reach.",
+        "description": "An enormous sword with a blade up to 6 feet long, requiring both hands to wield effectively. The greatsword is favored by warriors who want maximum damage.\n\n- Damage: 1d12 slashing\n- Hands: 2\n- Group: Sword\n- Weapon Traits: versatile P\n\nThe greatsword deals the highest base damage of any martial sword and its versatile P trait provides tactical flexibility. However, wielding it requires both hands, preventing you from using a shield.\n",
+        "source": {
+          "id": "core-remaster"
+        },
+        "rarity": "common",
+        "traits": [
+          "versatile-P"
+        ],
+        "tags": [],
+        "effects": [],
+        "level": 0,
+        "price": "2 gp",
+        "bulk": "2"
+      },
+      "packId": "core",
+      "hash": "30f3de5a54996991a639448baf0ec8a7fd845ff34e735a9f5bca9e69669bdb2d"
+    },
+    {
+      "entity": {
+        "id": "pf2e.item.halberd",
+        "type": "item",
+        "name": "Halberd",
+        "summary": "A versatile polearm dealing 1d10 piercing damage with reach and versatile slashing.",
+        "description": "A long pole with an axe blade mounted on top and a spike on the end. The halberd is a versatile weapon that combines multiple weapon types.\n\n- Damage: 1d10 piercing\n- Hands: 2\n- Group: Polearm\n- Weapon Traits: reach, versatile S\n\nThe halberd's reach lets you attack from 10 feet away, while its versatile S trait allows you to deal slashing damage when advantageous. Its higher base damage compared to other reach weapons makes it a popular choice for guards and soldiers.\n",
+        "source": {
+          "id": "core-remaster"
+        },
+        "rarity": "common",
+        "traits": [
+          "reach",
+          "versatile-S"
+        ],
+        "tags": [],
+        "effects": [],
+        "level": 0,
+        "price": "2 gp",
+        "bulk": "2"
+      },
+      "packId": "core",
+      "hash": "1f6cfc8de607947081ab3d67119fa2ff0b9e575c6fdb974b71e102375c5318ca"
+    },
+    {
+      "entity": {
+        "id": "pf2e.item.handwraps-of-mighty-blows",
+        "type": "item",
+        "name": "Handwraps of Mighty Blows",
+        "summary": "Magical cloth wrappings that grant fundamental runes to unarmed attacks.",
+        "description": "These cloth wrappings enfold your hands, granting your unarmed attacks the benefits of weapon runes.\n\n- Damage: As unarmed attack\n- Hands: -\n- Group: Brawling\n- Weapon Traits: invested, magical\n\nWhen you invest these handwraps, they grant their fundamental runes (weapon potency and striking) to all your unarmed attacks. This is essential for martial artists and monks who rely on unarmed strikes. The handwraps don't take up a hand slot.\n",
+        "source": {
+          "id": "core-remaster"
+        },
+        "rarity": "common",
+        "traits": [
+          "invested",
+          "magical"
+        ],
+        "tags": [],
+        "effects": [],
+        "level": 0,
+        "price": "4 gp",
+        "bulk": "-"
+      },
+      "packId": "core",
+      "hash": "7b63b4c7eac15108f956f0bf23fc4ef2c3edf22d7ae5b49a811910fa3baf2ba8"
+    },
+    {
+      "entity": {
+        "id": "pf2e.item.heavy-crossbow",
+        "type": "item",
+        "name": "Heavy Crossbow",
+        "summary": "A powerful crossbow dealing 1d10 piercing damage with excellent range but slow reload.",
+        "description": "A large, powerful crossbow that fires heavy bolts with tremendous force. The heavy crossbow sacrifices rate of fire for damage and range.\n\n- Damage: 1d10 piercing\n- Hands: 2\n- Group: Bow\n- Weapon Traits: range 120 ft., reload 2\n\nThe heavy crossbow deals excellent damage and has superior range, making it ideal for sniping. However, reload 2 means you must use two Interact actions to reload it, significantly limiting your rate of fire.\n",
+        "source": {
+          "id": "core-remaster"
+        },
+        "rarity": "common",
+        "traits": [
+          "range-120",
+          "reload-2"
+        ],
+        "tags": [],
+        "effects": [],
+        "level": 0,
+        "price": "4 gp",
+        "bulk": "2"
+      },
+      "packId": "core",
+      "hash": "e9cda054aee9c2a7bd357d64174e9e402d9cf6be3b7bab80fa6cd5394a9c2a80"
+    },
+    {
+      "entity": {
+        "id": "pf2e.item.javelin",
+        "type": "item",
+        "name": "Javelin",
+        "summary": "A light throwing spear dealing 1d6 piercing damage with 30 foot throwing range.",
+        "description": "A light spear designed specifically for throwing. Javelins are carried in bundles and hurled at enemies.\n\n- Damage: 1d6 piercing\n- Hands: 1\n- Group: Dart\n- Weapon Traits: thrown 30 ft.\n\nThe javelin is lighter than a spear (Light bulk vs 1 bulk) and has a better throwing range (30 feet vs 20 feet), making it superior as a thrown weapon. Many warriors carry several javelins to use before closing to melee.\n",
+        "source": {
+          "id": "core-remaster"
+        },
+        "rarity": "common",
+        "traits": [
+          "thrown-30"
+        ],
+        "tags": [],
+        "effects": [],
+        "level": 0,
+        "price": "1 sp",
+        "bulk": "L"
+      },
+      "packId": "core",
+      "hash": "439de4e77d85dee35179f0bb65e8385635d9c47125dafe2e595f5bae5668eb20"
+    },
+    {
+      "entity": {
+        "id": "pf2e.item.lance",
+        "type": "item",
+        "name": "Lance",
+        "summary": "A cavalry weapon dealing 1d8 piercing damage with reach, deadly d8, and jousting.",
+        "description": "A long, tapered weapon designed for mounted combat. The lance is most effective when charging on horseback.\n\n- Damage: 1d8 piercing\n- Hands: 2\n- Group: Spear\n- Weapon Traits: deadly d8, jousting d6, reach\n\nThe reach trait lets you attack from 10 feet away. Deadly d8 increases critical hit damage. Jousting d6 increases the damage die by one step when charging on a mount, making mounted charges devastating.\n",
+        "source": {
+          "id": "core-remaster"
+        },
+        "rarity": "common",
+        "traits": [
+          "deadly-d8",
+          "jousting-d6",
+          "reach"
+        ],
+        "tags": [],
+        "effects": [],
+        "level": 0,
+        "price": "1 gp",
+        "bulk": "2"
+      },
+      "packId": "core",
+      "hash": "340075e609aeffbdbe39bef17017cf66dae05f614518b017547822c603c36b89"
+    },
+    {
+      "entity": {
+        "id": "pf2e.item.light-hammer",
+        "type": "item",
+        "name": "Light Hammer",
+        "summary": "A small hammer dealing 1d6 bludgeoning damage, agile and throwable up to 20 feet.",
+        "description": "A small hammer that can be wielded with one hand or thrown. The light hammer is popular among crafters who need a versatile tool and weapon.\n\n- Damage: 1d6 bludgeoning\n- Hands: 1\n- Group: Hammer\n- Weapon Traits: agile, thrown 20 ft.\n\nThe agile trait reduces multiple attack penalties, and the thrown trait gives it ranged versatility. Its light bulk makes it easy to carry multiple light hammers.\n",
+        "source": {
+          "id": "core-remaster"
+        },
+        "rarity": "common",
+        "traits": [
+          "agile",
+          "thrown-20"
+        ],
+        "tags": [],
+        "effects": [],
+        "level": 0,
+        "price": "3 sp",
+        "bulk": "L"
+      },
+      "packId": "core",
+      "hash": "8e555719c0cf8a062db7f4797fa2444132d954d90398bea712b2f4e33d75330a"
+    },
+    {
+      "entity": {
+        "id": "pf2e.item.longbow",
+        "type": "item",
+        "name": "Longbow",
+        "summary": "A powerful two-handed bow with 100-foot range, dealing 1d8 piercing damage.",
+        "description": "This 5-foot-tall bow typically requires two hands to fire.\n\n- Damage: 1d8 piercing\n- Hands: 2\n- Range: 100 feet\n- Group: Bow\n- Weapon Traits: deadly d10, propulsive, volley 30 ft.\n\nThe longbow has exceptional range and the deadly d10 trait for devastating critical hits. The volley trait means you take a -2 penalty when attacking targets within 30 feet.\n",
+        "source": {
+          "id": "core-remaster",
+          "page": 281
+        },
+        "rarity": "common",
+        "traits": [
+          "deadly-d10",
+          "propulsive",
+          "volley-30-ft"
+        ],
+        "tags": [],
+        "effects": [],
+        "level": 0,
+        "price": "6 gp",
+        "bulk": "2"
+      },
+      "packId": "core",
+      "hash": "36ec64d028655ce91533438cf2c40a320c8f6e113664203996d0d0ba691f98c4"
+    },
+    {
+      "entity": {
+        "id": "pf2e.item.longsword",
+        "type": "item",
+        "name": "Longsword",
+        "summary": "A classic one-handed sword dealing 1d8 slashing damage, versatile for piercing.",
+        "description": "Longswords can be one-edged or two-edged swords. Their blades are heavy and they're between 3 and 4 feet in length.\n\n- Damage: 1d8 slashing\n- Hands: 1\n- Group: Sword\n- Weapon Traits: versatile P\n\nThe longsword is a versatile martial weapon favored by many warriors. Its versatile P trait allows you to deal piercing damage instead of slashing if that's more effective against your target.\n",
+        "source": {
+          "id": "core-remaster",
+          "page": 281
+        },
+        "rarity": "common",
+        "traits": [
+          "versatile-p"
+        ],
+        "tags": [],
+        "effects": [],
+        "level": 0,
+        "price": "1 gp",
+        "bulk": "1"
+      },
+      "packId": "core",
+      "hash": "2b3e6919fed3d849d5d6f1467fd34e0884067fcfc52cd846c010e827ef32bfa6"
+    },
+    {
+      "entity": {
+        "id": "pf2e.item.mace",
+        "type": "item",
+        "name": "Mace",
+        "summary": "A weighted metal head on a handle dealing 1d6 bludgeoning damage, capable of shoving foes.",
+        "description": "A metal club with a weighted head, the mace is a simple but effective weapon favored by clerics and warriors who need to deal bludgeoning damage.\n\n- Damage: 1d6 bludgeoning\n- Hands: 1\n- Group: Club\n- Weapon Traits: shove\n\nThe mace's shove trait allows you to push enemies away from you as part of your attack, making it useful for controlling the battlefield. Its simple design makes it easy to use effectively.\n",
+        "source": {
+          "id": "core-remaster"
+        },
+        "rarity": "common",
+        "traits": [
+          "shove"
+        ],
+        "tags": [],
+        "effects": [],
+        "level": 0,
+        "price": "1 gp",
+        "bulk": "1"
+      },
+      "packId": "core",
+      "hash": "2a13d01c248017c910961940576fd3264515074b3b80bbf176d41d5cbc4b71dc"
+    },
+    {
+      "entity": {
+        "id": "pf2e.item.maul",
+        "type": "item",
+        "name": "Maul",
+        "summary": "A heavy two-handed hammer dealing 1d12 bludgeoning damage with the shove trait.",
+        "description": "A massive hammer with an enormous metal head requiring both hands to swing. The maul is designed to crush armor and bones alike.\n\n- Damage: 1d12 bludgeoning\n- Hands: 2\n- Group: Hammer\n- Weapon Traits: shove\n\nThe maul deals the highest base damage among bludgeoning weapons and can shove enemies back. Its bludgeoning damage is particularly effective against constructs and undead vulnerable to crushing attacks.\n",
+        "source": {
+          "id": "core-remaster"
+        },
+        "rarity": "common",
+        "traits": [
+          "shove"
+        ],
+        "tags": [],
+        "effects": [],
+        "level": 0,
+        "price": "3 gp",
+        "bulk": "2"
+      },
+      "packId": "core",
+      "hash": "57fa6ab1e858ad4002fc65e80b57128f47866d87c9c1c1c4c5363a47f3088d85"
+    },
+    {
+      "entity": {
+        "id": "pf2e.item.rapier",
+        "type": "item",
+        "name": "Rapier",
+        "summary": "An elegant piercing sword dealing 1d6 damage with deadly d8, disarm, and finesse traits.",
+        "description": "The rapier is a long, slender sword with a blade designed for thrusting attacks, wielded in one hand. Its basket-shaped guard protects your hand.\n\n- Damage: 1d6 piercing\n- Hands: 1\n- Group: Sword\n- Weapon Traits: deadly d8, disarm, finesse\n\nThe rapier is a favorite of duelists and swashbucklers. Its deadly d8 trait increases critical hit damage, while disarm lets you knock weapons from enemies' hands.\n",
+        "source": {
+          "id": "core-remaster",
+          "page": 281
+        },
+        "rarity": "common",
+        "traits": [
+          "deadly-d8",
+          "disarm",
+          "finesse"
+        ],
+        "tags": [],
+        "effects": [],
+        "level": 0,
+        "price": "2 gp",
+        "bulk": "1"
+      },
+      "packId": "core",
+      "hash": "d9e07c04535adf832f4b2584ad697c4f9f988560c3cf32470f685d50cd642a96"
+    },
+    {
+      "entity": {
+        "id": "pf2e.item.scimitar",
+        "type": "item",
+        "name": "Scimitar",
+        "summary": "A curved blade dealing 1d6 slashing damage with forceful and sweep traits.",
+        "description": "This one-handed curved blade is sharp on one side and comes in a variety of different styles.\n\n- Damage: 1d6 slashing\n- Hands: 1\n- Group: Sword\n- Weapon Traits: forceful, sweep\n\nThe scimitar's forceful trait increases damage on subsequent attacks in a turn, while sweep provides a bonus when attacking multiple adjacent foes.\n",
+        "source": {
+          "id": "core-remaster",
+          "page": 281
+        },
+        "rarity": "common",
+        "traits": [
+          "forceful",
+          "sweep"
+        ],
+        "tags": [],
+        "effects": [],
+        "level": 0,
+        "price": "1 gp",
+        "bulk": "1"
+      },
+      "packId": "core",
+      "hash": "2b8016389ffdc5cb1bec87021510fd7d8d01c65e680c5d2d4cd9f5f3937e1492"
+    },
+    {
+      "entity": {
+        "id": "pf2e.item.shortbow",
+        "type": "item",
+        "name": "Shortbow",
+        "summary": "A martial bow with 60-foot range, dealing 1d6 piercing damage with deadly d10.",
+        "description": "This smaller bow is made of a single piece of wood and shoots farther than a crossbow, though not as far as a longbow.\n\n- Damage: 1d6 piercing\n- Hands: 2\n- Range: 60 feet\n- Group: Bow\n- Weapon Traits: deadly d10\n\nThe shortbow is lighter and easier to use than a longbow, making it a good choice for mobile archers.\n",
+        "source": {
+          "id": "core-remaster",
+          "page": 281
+        },
+        "rarity": "common",
+        "traits": [
+          "deadly-d10"
+        ],
+        "tags": [],
+        "effects": [],
+        "level": 0,
+        "price": "3 gp",
+        "bulk": "1"
+      },
+      "packId": "core",
+      "hash": "063788a6a91a9e1455cd657ca69aecdeecb56930b83740b3af7db93555901aa5"
+    },
+    {
+      "entity": {
+        "id": "pf2e.item.shortsword",
+        "type": "item",
+        "name": "Shortsword",
+        "summary": "A short blade designed for thrusting, dealing 1d6 piercing damage with agile and finesse.",
+        "description": "These short, pointed swords are designed for thrusting attacks rather than slashing.\n\n- Damage: 1d6 piercing\n- Hands: 1\n- Group: Sword\n- Weapon Traits: agile, finesse, versatile S\n\nThe shortsword combines the best of both worlds with agile for multiple attacks and finesse for Dexterity-based combat. It's lighter than a longsword but still effective.\n",
+        "source": {
+          "id": "core-remaster",
+          "page": 281
+        },
+        "rarity": "common",
+        "traits": [
+          "agile",
+          "finesse",
+          "versatile-s"
+        ],
+        "tags": [],
+        "effects": [],
+        "level": 0,
+        "price": "9 sp",
+        "bulk": "L"
+      },
+      "packId": "core",
+      "hash": "c3b6cbf0d70aaf65cb1245d726bd15d60aeb8ccec93d97f54ebc39db5a36d883"
+    },
+    {
+      "entity": {
+        "id": "pf2e.item.sickle",
+        "type": "item",
+        "name": "Sickle",
+        "summary": "A curved farming tool dealing 1d4 slashing damage with agile, finesse, and trip.",
+        "description": "A curved blade on a short handle, traditionally used for harvesting crops. The sickle makes an effective improvised weapon.\n\n- Damage: 1d4 slashing\n- Hands: 1\n- Group: Knife\n- Weapon Traits: agile, finesse, trip\n\nThe sickle's agile and finesse traits make it suitable for quick, dexterous fighters. The trip trait allows you to knock enemies prone, making it useful for setting up attacks by allies.\n",
+        "source": {
+          "id": "core-remaster"
+        },
+        "rarity": "common",
+        "traits": [
+          "agile",
+          "finesse",
+          "trip"
+        ],
+        "tags": [],
+        "effects": [],
+        "level": 0,
+        "price": "2 sp",
+        "bulk": "L"
+      },
+      "packId": "core",
+      "hash": "d947f65acb7f00ea6858985821d2ef69199960eed15e9ffb5c1c7a8a57c603cc"
+    },
+    {
+      "entity": {
+        "id": "pf2e.item.sling",
+        "type": "item",
+        "name": "Sling",
+        "summary": "A simple ranged weapon dealing 1d6 bludgeoning damage with 50 foot range, requires reload.",
+        "description": "A leather strap used to hurl stones or bullets at enemies. The sling is a simple but effective ranged weapon.\n\n- Damage: 1d6 bludgeoning\n- Hands: 1+\n- Group: Sling\n- Weapon Traits: propulsive, range 50 ft., reload 1\n\nThe sling costs nothing and uses easily found ammunition. The propulsive trait adds half your Strength modifier to damage (minimum 0). Reload 1 means you must use an Interact action to reload after each shot.\n",
+        "source": {
+          "id": "core-remaster"
+        },
+        "rarity": "common",
+        "traits": [
+          "propulsive",
+          "range-50",
+          "reload-1"
+        ],
+        "tags": [],
+        "effects": [],
+        "level": 0,
+        "price": "0 cp",
+        "bulk": "L"
+      },
+      "packId": "core",
+      "hash": "489677aecabdb9fec349478c7bed4dec44b5efb58432ea70a16e7e7beff2af3d"
+    },
+    {
+      "entity": {
+        "id": "pf2e.item.spear",
+        "type": "item",
+        "name": "Spear",
+        "summary": "A piercing polearm dealing 1d6 piercing damage, throwable up to 20 feet.",
+        "description": "A simple weapon consisting of a sharpened point mounted on a wooden shaft. The spear is one of humanity's oldest weapons.\n\n- Damage: 1d6 piercing\n- Hands: 1\n- Group: Spear\n- Weapon Traits: thrown 20 ft.\n\nThe spear is versatile and inexpensive, making it a popular choice for militia and guards. Its thrown range of 20 feet is better than most melee weapons, allowing you to engage enemies at range before they close to melee.\n",
+        "source": {
+          "id": "core-remaster"
+        },
+        "rarity": "common",
+        "traits": [
+          "thrown-20"
+        ],
+        "tags": [],
+        "effects": [],
+        "level": 0,
+        "price": "1 sp",
+        "bulk": "1"
+      },
+      "packId": "core",
+      "hash": "87ca5b20b2140902abd46afaa14cdea71dd2e2e4dd9f422e5017c07500c4f16e"
+    },
+    {
+      "entity": {
+        "id": "pf2e.item.staff",
+        "type": "item",
+        "name": "Staff",
+        "summary": "A simple wooden staff dealing 1d4 bludgeoning damage, two-hand d8.",
+        "description": "This long piece of wood can aid in walking and deliver a mighty blow.\n\n- Damage: 1d4 bludgeoning (1d8 with two hands)\n- Hands: 1\n- Group: Club\n- Weapon Traits: two-hand d8\n\nThe staff is a versatile weapon. When wielded with two hands, it deals 1d8 damage instead of 1d4.\n",
+        "source": {
+          "id": "core-remaster",
+          "page": 282
+        },
+        "rarity": "common",
+        "traits": [
+          "two-hand-d8"
+        ],
+        "tags": [],
+        "effects": [],
+        "level": 0,
+        "price": "0 cp",
+        "bulk": "1"
+      },
+      "packId": "core",
+      "hash": "855ba141d4dd9c09b54d8a0e7ac984c9ea0a903f01628ce953e457c3234e589b"
+    },
+    {
+      "entity": {
+        "id": "pf2e.item.starknife",
+        "type": "item",
+        "name": "Starknife",
+        "summary": "A star-shaped blade dealing 1d4 piercing damage with agile, deadly d6, finesse, and thrown.",
+        "description": "A multi-pointed blade shaped like a star that can be wielded in melee or thrown. The starknife is favored by followers of Desna.\n\n- Damage: 1d4 piercing\n- Hands: 1\n- Group: Knife\n- Weapon Traits: agile, deadly d6, finesse, thrown 20 ft., versatile S\n\nThe starknife combines excellent traits: agile and finesse for accuracy, deadly d6 for critical hits, thrown for range, and versatile S for flexibility. Despite its low base damage, these traits make it surprisingly effective.\n",
+        "source": {
+          "id": "core-remaster"
+        },
+        "rarity": "common",
+        "traits": [
+          "agile",
+          "deadly-d6",
+          "finesse",
+          "thrown-20",
+          "versatile-S"
+        ],
+        "tags": [],
+        "effects": [],
+        "level": 0,
+        "price": "2 gp",
+        "bulk": "L"
+      },
+      "packId": "core",
+      "hash": "a1ff3036010e0677ef5729ee9ce92ed757ea76548912de021c854fdd74a434a2"
+    },
+    {
+      "entity": {
+        "id": "pf2e.item.trident",
+        "type": "item",
+        "name": "Trident",
+        "summary": "A three-pronged spear dealing 1d8 piercing damage, throwable up to 20 feet.",
+        "description": "A long weapon with three prongs at the tip, traditionally associated with fishing and sea deities. The trident is similar to a spear but deadlier.\n\n- Damage: 1d8 piercing\n- Hands: 1\n- Group: Spear\n- Weapon Traits: thrown 20 ft.\n\nThe trident deals more damage than a simple spear and maintains the same throwing range, making it a superior choice for those proficient in martial weapons. It's particularly favored by aquatic fighters.\n",
+        "source": {
+          "id": "core-remaster"
+        },
+        "rarity": "common",
+        "traits": [
+          "thrown-20"
+        ],
+        "tags": [],
+        "effects": [],
+        "level": 0,
+        "price": "1 gp",
+        "bulk": "1"
+      },
+      "packId": "core",
+      "hash": "063e791e16df683883bf6057f005ae9a47c1b0ef3bc34c5561f154392205495f"
+    },
+    {
+      "entity": {
+        "id": "pf2e.item.warhammer",
+        "type": "item",
+        "name": "Warhammer",
+        "summary": "A heavy hammer dealing 1d8 bludgeoning damage with the shove trait.",
+        "description": "This weapon has a short wooden or metal haft topped by a dense, heavy head. It's designed to bludgeon foes, and its sturdy build makes it good for forcing open doors.\n\n- Damage: 1d8 bludgeoning\n- Hands: 1\n- Group: Hammer\n- Weapon Traits: shove\n\nThe warhammer is excellent against armored foes. Its shove trait lets you push enemies back as part of your attack.\n",
+        "source": {
+          "id": "core-remaster",
+          "page": 282
+        },
+        "rarity": "common",
+        "traits": [
+          "shove"
+        ],
+        "tags": [],
+        "effects": [],
+        "level": 0,
+        "price": "1 gp",
+        "bulk": "1"
+      },
+      "packId": "core",
+      "hash": "2a72d928789b075ed8b6009beae8d0711cb0fe19828d514946b471f73cad2775"
     }
   ],
-  "createdAt": "2025-10-23T07:48:52.596Z"
+  "createdAt": "2025-10-27T22:13:50.865Z"
 }

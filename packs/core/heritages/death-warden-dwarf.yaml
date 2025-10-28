@@ -1,0 +1,13 @@
+id: pf2e.heritage.death-warden-dwarf
+type: heritage
+name: Death Warden Dwarf
+ancestryId: pf2e.ancestry.dwarf
+summary: Your ancestors have been tomb guardians for generations, and the power they cultivated to ward off undeath has passed on to you.
+source:
+  id: core-remaster
+  page: 32
+description: >
+  Your ancestors have been tomb guardians for generations, and the power they cultivated to ward off undeath has passed on to you.
+  If you roll a success on a saving throw against a void effect or an effect created by an undead creature, you get a critical success instead.
+traits:
+  - dwarf

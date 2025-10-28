@@ -1,0 +1,12 @@
+id: pf2e.heritage.fungus-leshy
+type: heritage
+name: Fungus Leshy
+ancestryId: pf2e.ancestry.leshy
+summary: Your body was born from fungi.
+source:
+  id: core-remaster
+  page: 50
+description: >
+  Your body was born from fungi rather than seeds, and you are able to commune with the fungi around you. You gain a +2 circumstance bonus to Survival checks to Subsist and to Crafting checks to craft items made from fungi. If you succeed at a check to Subsist in a forest or underground, you can feed up to eight additional creatures at your choice. This increases to 16 additional creatures at 7th level and 24 additional creatures at 15th level.
+traits:
+  - leshy

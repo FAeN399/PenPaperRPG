@@ -1,0 +1,18 @@
+# Ignore filled character sheets
+# Pattern: [CharacterName]_Character_Sheet.[ext]
+# Examples: Thorin_Ironforge_Character_Sheet.pdf, Aria_Moonwhisper_Character_Sheet.xlsx
+
+# Ignore all character sheets EXCEPT Blank_
+*Character_Sheet.pdf
+*Character_Sheet.xlsx
+*Character_Sheet.docx
+
+# But keep the blank templates
+!Blank_Character_Sheet.pdf
+!Blank_Character_Sheet.xlsx
+!Blank_Character_Sheet.docx
+
+# Ignore temporary files
+*.tmp
+*.temp
+~$*.docx

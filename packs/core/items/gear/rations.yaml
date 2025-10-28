@@ -2,11 +2,17 @@ id: pf2e.item.rations
 type: item
 source:
   id: core-remaster
+  page: 290
 name: Rations (1 week)
 level: 0
 price: 4 sp
 bulk: L
-traits: []
-summary: A week's worth of dried and preserved food.
+traits: [consumable]
+summary: Preserved food for one week of travel or adventuring.
 description: |
-  Rations consist of dried foods that can survive long periods of time without spoiling. This purchase includes enough food for one person for 1 week.
+  Rations consist of preserved food for eating while traveling or adventuring. They're necessary if you want to Subsist in the wild.
+
+  - Duration: 1 week
+  - Type: Preserved food
+
+  A week's worth of rations includes items like salted meat, hardtack, dried fruit, and other foods that keep well on the road.

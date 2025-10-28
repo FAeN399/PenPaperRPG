@@ -1,9 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git log:*)",
-      "Bash(cat:*)",
-      "Bash(md5sum:*)",
+      "Skill(pdf)",
+      "Skill(xlsx)",
+      "Bash(python:*)",
       "Bash(git add:*)"
     ],
     "deny": [],

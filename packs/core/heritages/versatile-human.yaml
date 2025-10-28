@@ -1,0 +1,14 @@
+id: pf2e.heritage.versatile-human
+type: heritage
+name: Versatile Human
+ancestryId: pf2e.ancestry.human
+summary: Humanity's versatility and ambition have fueled its ascendance to be the most common ancestry.
+source:
+  id: core-remaster
+  page: 58
+description: >
+  Humanity's versatility and ambition have fueled its ascendance to be the most common ancestry in most nations
+  throughout the world. Select a general feat for which you meet the prerequisites (as with your ancestry feat,
+  you can select this general feat at any point during character creation).
+traits:
+  - human

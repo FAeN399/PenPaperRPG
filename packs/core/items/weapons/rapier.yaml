@@ -2,18 +2,19 @@ id: pf2e.item.rapier
 type: item
 source:
   id: core-remaster
+  page: 281
 name: Rapier
 level: 0
 price: 2 gp
 bulk: "1"
 traits: [deadly-d8, disarm, finesse]
-summary: A precise thrusting sword dealing 1d6 piercing damage with deadly d8, disarm, and finesse.
+summary: An elegant piercing sword dealing 1d6 damage with deadly d8, disarm, and finesse traits.
 description: |
-  A slender, sharply pointed sword designed for thrusting attacks. The rapier is the weapon of choice for duelists and swashbucklers.
+  The rapier is a long, slender sword with a blade designed for thrusting attacks, wielded in one hand. Its basket-shaped guard protects your hand.
 
   - Damage: 1d6 piercing
   - Hands: 1
   - Group: Sword
   - Weapon Traits: deadly d8, disarm, finesse
 
-  The deadly d8 trait adds an extra d8 to critical hit damage, making precise strikes devastating. The disarm trait allows you to knock weapons from enemies' hands, and finesse lets you use Dexterity for attacks.
+  The rapier is a favorite of duelists and swashbucklers. Its deadly d8 trait increases critical hit damage, while disarm lets you knock weapons from enemies' hands.

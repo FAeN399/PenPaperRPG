@@ -30,7 +30,7 @@ export function SpellSelector({
 }: SpellSelectorProps): JSX.Element {
   // Filter spells by tradition and rank
   const allSpells = catalog.entities.filter((entry) => {
-    const entity = catalogLookup.byId.get(entry.id)?.entity;
+    const entity = entry.entity;
     if (!entity || entity.type !== "spell") return false;
 
     const spell = entity as any;
@@ -41,12 +41,12 @@ export function SpellSelector({
   });
 
   const cantrips = allSpells.filter((entry) => {
-    const spell = catalogLookup.byId.get(entry.id)?.entity as any;
+    const spell = entry.entity as any;
     return spell.rank === 0;
   });
 
   const rank1Spells = allSpells.filter((entry) => {
-    const spell = catalogLookup.byId.get(entry.id)?.entity as any;
+    const spell = entry.entity as any;
     return spell.rank === 1;
   });
 
@@ -159,15 +159,15 @@ export function SpellSelector({
             </p>
           ) : (
             cantrips.map((entry) => {
-              const spell = catalogLookup.byId.get(entry.id)?.entity as any;
-              const isSelected = selectedCantrips.includes(entry.id);
+              const spell = entry.entity as any;
+              const isSelected = selectedCantrips.includes(spell.id);
               const isDisabled = !isSelected && cantripsSelected >= cantripsNeeded;
 
               return (
                 <button
-                  key={entry.id}
+                  key={spell.id}
                   type="button"
-                  onClick={() => handleCantripToggle(entry.id)}
+                  onClick={() => handleCantripToggle(spell.id)}
                   disabled={isDisabled}
                   style={{
                     padding: "0.75rem",
@@ -248,15 +248,15 @@ export function SpellSelector({
             </p>
           ) : (
             rank1Spells.map((entry) => {
-              const spell = catalogLookup.byId.get(entry.id)?.entity as any;
-              const isSelected = selectedRank1Spells.includes(entry.id);
+              const spell = entry.entity as any;
+              const isSelected = selectedRank1Spells.includes(spell.id);
               const isDisabled = !isSelected && rank1Selected >= rank1SpellsNeeded;
 
               return (
                 <button
-                  key={entry.id}
+                  key={spell.id}
                   type="button"
-                  onClick={() => handleRank1Toggle(entry.id)}
+                  onClick={() => handleRank1Toggle(spell.id)}
                   disabled={isDisabled}
                   style={{
                     padding: "0.75rem",

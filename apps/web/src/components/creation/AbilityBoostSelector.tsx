@@ -92,20 +92,20 @@ export function AbilityBoostSelector({
         flexDirection: "column",
         gap: "1.5rem",
         padding: "1.5rem",
-        border: "1px solid #d1d5db",
+        border: "1px solid #444",
         borderRadius: "0.5rem",
-        backgroundColor: "#f9fafb",
+        backgroundColor: "#2d2d2d",
       }}
     >
       {/* Header */}
       <div>
-        <h3 style={{ margin: 0, marginBottom: "0.5rem", fontSize: "1.25rem", fontWeight: "600" }}>
+        <h3 style={{ margin: 0, marginBottom: "0.5rem", fontSize: "1.25rem", fontWeight: "600", color: "#e0e0e0" }}>
           {choice.label}
         </h3>
-        <p style={{ margin: 0, color: "#6b7280", fontSize: "0.875rem" }}>
+        <p style={{ margin: 0, color: "#a0a0a0", fontSize: "0.875rem" }}>
           Select {choice.count} {choice.count === 1 ? "ability" : "abilities"} to boost by +2
         </p>
-        <p style={{ margin: "0.25rem 0 0 0", color: "#059669", fontSize: "0.875rem", fontWeight: "500" }}>
+        <p style={{ margin: "0.25rem 0 0 0", color: "#daa520", fontSize: "0.875rem", fontWeight: "500" }}>
           {selectedAbilities.length} / {choice.count} selected
         </p>
       </div>
@@ -138,17 +138,18 @@ export function AbilityBoostSelector({
                 flexDirection: "column",
                 alignItems: "center",
                 padding: "1rem",
-                border: isSelected ? "2px solid #2563eb" : "1px solid #d1d5db",
+                border: isSelected ? "2px solid #daa520" : "1px solid #444",
                 borderRadius: "0.375rem",
-                backgroundColor: isSelected ? "#dbeafe" : "#ffffff",
+                backgroundColor: isSelected ? "#3a3a2d" : "#1a1a1a",
                 cursor: isSelectable || isSelected ? "pointer" : "not-allowed",
                 opacity: isSelectable || isSelected ? 1 : 0.5,
                 transition: "all 0.2s",
+                color: "#e0e0e0",
               }}
               onMouseEnter={(e) => {
                 if (isSelectable || isSelected) {
                   e.currentTarget.style.transform = "translateY(-2px)";
-                  e.currentTarget.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.1)";
+                  e.currentTarget.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.4)";
                 }
               }}
               onMouseLeave={(e) => {
@@ -157,14 +158,14 @@ export function AbilityBoostSelector({
               }}
             >
               {/* Ability Name */}
-              <div style={{ fontSize: "1.125rem", fontWeight: "700", marginBottom: "0.5rem" }}>
+              <div style={{ fontSize: "1.125rem", fontWeight: "700", marginBottom: "0.5rem", color: "#e0e0e0" }}>
                 {abilityId}
               </div>
 
               {/* Current Score and Modifier */}
               <div style={{ display: "flex", alignItems: "baseline", gap: "0.5rem", marginBottom: "0.25rem" }}>
-                <span style={{ fontSize: "2rem", fontWeight: "600" }}>{currentScore}</span>
-                <span style={{ fontSize: "1rem", color: "#6b7280" }}>
+                <span style={{ fontSize: "2rem", fontWeight: "600", color: "#e0e0e0" }}>{currentScore}</span>
+                <span style={{ fontSize: "1rem", color: "#a0a0a0" }}>
                   ({formatModifier(currentModifier)})
                 </span>
               </div>
@@ -175,19 +176,19 @@ export function AbilityBoostSelector({
                   style={{
                     marginTop: "0.5rem",
                     paddingTop: "0.5rem",
-                    borderTop: "1px solid #d1d5db",
+                    borderTop: "1px solid #444",
                     width: "100%",
                     textAlign: "center",
                   }}
                 >
-                  <div style={{ fontSize: "0.75rem", color: "#6b7280", marginBottom: "0.25rem" }}>
+                  <div style={{ fontSize: "0.75rem", color: "#a0a0a0", marginBottom: "0.25rem" }}>
                     After boost
                   </div>
                   <div style={{ display: "flex", alignItems: "baseline", gap: "0.5rem", justifyContent: "center" }}>
-                    <span style={{ fontSize: "1.5rem", fontWeight: "600", color: "#059669" }}>
+                    <span style={{ fontSize: "1.5rem", fontWeight: "600", color: "#daa520" }}>
                       {predictedScore}
                     </span>
-                    <span style={{ fontSize: "0.875rem", color: "#059669" }}>
+                    <span style={{ fontSize: "0.875rem", color: "#daa520" }}>
                       ({formatModifier(predictedModifier)})
                     </span>
                   </div>
@@ -196,7 +197,7 @@ export function AbilityBoostSelector({
 
               {/* Warning if at cap */}
               {wouldExceedCap && !isSelected && (
-                <div style={{ marginTop: "0.5rem", fontSize: "0.75rem", color: "#dc2626" }}>
+                <div style={{ marginTop: "0.5rem", fontSize: "0.75rem", color: "#8b0000" }}>
                   At maximum
                 </div>
               )}
@@ -213,9 +214,10 @@ export function AbilityBoostSelector({
             onClick={onCancel}
             style={{
               padding: "0.5rem 1rem",
-              border: "1px solid #d1d5db",
+              border: "1px solid #444",
               borderRadius: "0.375rem",
-              backgroundColor: "#ffffff",
+              backgroundColor: "#1a1a1a",
+              color: "#e0e0e0",
               cursor: "pointer",
               fontSize: "0.875rem",
               fontWeight: "500",
@@ -232,8 +234,8 @@ export function AbilityBoostSelector({
             padding: "0.5rem 1rem",
             border: "none",
             borderRadius: "0.375rem",
-            backgroundColor: isComplete ? "#2563eb" : "#d1d5db",
-            color: "#ffffff",
+            backgroundColor: isComplete ? "#daa520" : "#444",
+            color: isComplete ? "#1a1a1a" : "#666",
             cursor: isComplete ? "pointer" : "not-allowed",
             fontSize: "0.875rem",
             fontWeight: "500",

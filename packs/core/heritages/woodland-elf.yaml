@@ -1,0 +1,15 @@
+id: pf2e.heritage.woodland-elf
+type: heritage
+name: Woodland Elf
+ancestryId: pf2e.ancestry.elf
+summary: You're adapted to life in the forest or the deep jungle.
+source:
+  id: core-remaster
+  page: 38
+description: >
+  You're adapted to life in the forest or the deep jungle, and you know how to climb trees and use foliage to your advantage.
+  When Climbing trees, vines, and other foliage, you move at half your Speed on a success and at full Speed on a critical success
+  (and you move at full Speed on a success if you have Quick Climb). This doesn't affect you if you're using a climb Speed.
+  You can always use the Take Cover action when you are within forest terrain to gain cover, even if you're not next to an obstacle you can Take Cover behind.
+traits:
+  - elf

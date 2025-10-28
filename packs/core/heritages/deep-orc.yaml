@@ -1,0 +1,12 @@
+id: pf2e.heritage.deep-orc
+type: heritage
+name: Deep Orc
+ancestryId: pf2e.ancestry.orc
+summary: Your calloused hands and red eyes speak to a life spent in the deep darkness of the world's caverns.
+source:
+  id: orc-remaster
+  page: 52
+description: >
+  Your calloused hands and red eyes speak to a life spent in the deep darkness of the world's caverns, where you learned to battle on rocky cliffs and survive with minimal resources. You gain darkvision, allowing you to see in darkness and dim light just as well as you can see in bright light. However, in darkness, you see in black and white only.
+traits:
+  - orc

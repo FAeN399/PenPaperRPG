@@ -52,11 +52,14 @@ interface BuilderHookResult {
   error: Error | null;
   refresh: () => Promise<void>;
   selectAncestry: (id: string) => void;
+  selectHeritage: (id: string) => void;
   selectBackground: (id: string) => void;
   selectClass: (id: string) => void;
   resolveAbilityBoost: (choiceId: string, selectedAbilities: AbilityId[]) => void;
   trainSkills: (skillIds: string[]) => void;
   learnSpells: (cantrips: string[], rank1Spells: string[]) => void;
+  selectFeats: (selections: Array<{ slotIndex: number; featId: string; grantedBy: string }>) => void;
+  updateEquipment: (equipment: any[], wealthRemaining: number) => void;
   resetCharacter: () => void;
 }
 
@@ -359,6 +362,33 @@ export function useCharacterBuilder(): BuilderHookResult {
   );
 
   const selectAncestry = useCallback((id: string) => selectEntity("ancestry", id), [selectEntity]);
+
+  const selectHeritage = useCallback((id: string) => {
+    let nextCharacter: Character | null = null;
+
+    setState((current) => {
+      if (!current) return current;
+
+      const { character } = current;
+
+      // Simply update the heritageId in character identity
+      const updatedCharacter = {
+        ...character,
+        identity: {
+          ...character.identity,
+          heritageId: id,
+        },
+      };
+
+      nextCharacter = updatedCharacter;
+      return { ...current, character: updatedCharacter };
+    });
+
+    if (nextCharacter) {
+      persistCharacterState(nextCharacter);
+    }
+  }, []);
+
   const selectBackground = useCallback((id: string) => selectEntity("background", id), [selectEntity]);
   const selectClass = useCallback((id: string) => selectEntity("class", id), [selectEntity]);
 
@@ -397,7 +427,7 @@ export function useCharacterBuilder(): BuilderHookResult {
         return current;
       }
 
-      const { character, derivedContext } = current;
+      const { character } = current;
 
       // Update proficiencies with trained skills
       const updatedProficiencies: ProficiencySummary = {
@@ -412,15 +442,11 @@ export function useCharacterBuilder(): BuilderHookResult {
         updatedProficiencies.skills[skillId] = "trained";
       }
 
-      // Create updated character
-      const updatedCharacter = createCharacter({
-        metadata: character.metadata,
-        identity: character.identity,
-        baseAbilities: character.abilityScores.base,
-        abilityAdjustments: character.abilityAdjustments,
+      // Create updated character preserving all existing properties
+      const updatedCharacter = {
+        ...character,
         proficiencies: updatedProficiencies,
-        derivedContext,
-      });
+      };
 
       nextCharacter = updatedCharacter;
 
@@ -509,6 +535,60 @@ export function useCharacterBuilder(): BuilderHookResult {
     }
   }, []);
 
+  const selectFeats = useCallback((selections: Array<{ slotIndex: number; featId: string; grantedBy: string }>) => {
+    let nextCharacter: Character | null = null;
+
+    setState((current) => {
+      if (!current) return current;
+      const { character } = current;
+
+      // Convert selections to CharacterFeatSelection format
+      const featSelections = selections.map((selection, index) => ({
+        id: selection.featId,
+        grantedBy: selection.grantedBy,
+        level: 1, // All level 1 feats at character creation
+        replaced: false,
+        choices: {},
+      }));
+
+      // Create updated character with feat selections
+      const updatedCharacter = {
+        ...character,
+        feats: featSelections,
+      };
+
+      nextCharacter = updatedCharacter;
+      return { ...current, character: updatedCharacter };
+    });
+
+    if (nextCharacter) {
+      persistCharacterState(nextCharacter);
+    }
+  }, []);
+  const updateEquipment = useCallback((equipment: any[], wealthRemaining: number) => {
+    let nextCharacter: Character | null = null;
+
+    setState((current) => {
+      if (!current) return current;
+
+      const { character } = current;
+
+      const updatedCharacter = {
+        ...character,
+        equipment,
+      };
+
+      nextCharacter = updatedCharacter;
+      return { ...current, character: updatedCharacter };
+    });
+
+    if (nextCharacter) {
+      persistCharacterState(nextCharacter);
+    }
+  }, []);
+
+ 
+
   return {
     status,
     state,
@@ -529,11 +609,14 @@ export function useCharacterBuilder(): BuilderHookResult {
       await loadCatalog();
     },
     selectAncestry,
+    selectHeritage,
     selectBackground,
     selectClass,
     resolveAbilityBoost,
     trainSkills,
     learnSpells,
+    selectFeats,
+    updateEquipment,
     resetCharacter,
   };
 }

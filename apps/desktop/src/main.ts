@@ -2,8 +2,8 @@ import { app, BrowserWindow, dialog, ipcMain, shell } from "electron";
 import fs from "fs-extra";
 import path from "node:path";
 import Store from "electron-store";
-import { buildCatalogIndex } from "../../packages/catalog/src/index.js";
-import type { CatalogBuildResult } from "../../packages/catalog/src/index.js";
+import { buildCatalogIndex } from "@pen-paper-rpg/catalog";
+import type { CatalogBuildResult } from "@pen-paper-rpg/catalog";
 
 const store = new Store<{ packsDir: string | null }>({
   name: "pen-paper-rpg",

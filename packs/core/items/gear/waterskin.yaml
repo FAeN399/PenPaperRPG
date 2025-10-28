@@ -2,11 +2,17 @@ id: pf2e.item.waterskin
 type: item
 source:
   id: core-remaster
+  page: 291
 name: Waterskin
 level: 0
 price: 5 cp
 bulk: L
 traits: []
-summary: A leather container for carrying water or other liquids.
+summary: A leather pouch for carrying water or other beverages.
 description: |
-  A waterskin can hold roughly a half-gallon (2 liters) of liquid. This is enough water to sustain 1 person for 1 day.
+  A waterskin is a leather pouch with a leather cap that can hold liquid. It's used to carry water or other beverages.
+
+  - Capacity: About 4 cups (1 quart)
+  - Material: Leather
+
+  A waterskin is essential for staying hydrated during travel. It holds enough water for one person for most of a day.

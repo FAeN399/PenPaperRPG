@@ -1,0 +1,12 @@
+id: pf2e.heritage.fey-touched-gnome
+type: heritage
+name: Fey-Touched Gnome
+ancestryId: pf2e.ancestry.gnome
+summary: The blood of the fey is so strong within you that you're truly one of them.
+source:
+  id: core-remaster
+  page: 44
+description: >
+  The blood of the fey is so strong within you that you're truly one of them. You gain the fey trait, in addition to the gnome and humanoid traits. Choose one cantrip from the primal spell list. You can cast this spell as a primal innate spell at will. A cantrip is heightened to a spell rank equal to half your level rounded up.
+traits:
+  - gnome

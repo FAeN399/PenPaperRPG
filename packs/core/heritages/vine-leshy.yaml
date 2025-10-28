@@ -1,0 +1,12 @@
+id: pf2e.heritage.vine-leshy
+type: heritage
+name: Vine Leshy
+ancestryId: pf2e.ancestry.leshy
+summary: The prehensile vines woven into your body grant you unmatched skill at climbing.
+source:
+  id: core-remaster
+  page: 50
+description: >
+  The prehensile vines woven into your body grant you unmatched skill at climbing. You do not need to have any hands free to Climb. Additionally, if you roll a success on an Athletics check to Climb, you get a critical success instead.
+traits:
+  - leshy

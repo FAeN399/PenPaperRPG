@@ -2,21 +2,21 @@ id: pf2e.item.hide-armor
 type: item
 source:
   id: core-remaster
+  page: 275
 name: Hide Armor
 level: 0
 price: 2 gp
 bulk: "2"
 traits: []
-summary: Thick animal hides provide substantial medium armor protection.
+summary: Medium armor made from thick hides, providing +3 AC bonus with moderate mobility.
 description: |
-  Made from thick animal hide, this armor is favored by barbarians and those who live close to nature. The thick layers provide excellent protection, though they can be somewhat restrictive.
+  A mix of furs, sturdy hide, and sometimes wood or bone, this armor provides protection at the expense of mobility.
 
   - AC Bonus: +3
   - Dex Cap: +2
   - Check Penalty: -2
-  - Speed Penalty: -5 ft
+  - Speed Penalty: -5 ft.
   - Strength: 14
   - Group: Leather
-  - Armor Traits: —
 
-  Hide armor is made from the tanned skin of particularly thick-hided animals, stitched with either multiple overlapping layers of crude leather or exterior pieces of leather stuffed with padding or fur.
+  Hide armor is favored by warriors who need decent protection but can't afford metal armor or prefer natural materials.

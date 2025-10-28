@@ -1,0 +1,12 @@
+id: pf2e.heritage.battle-ready-orc
+type: heritage
+name: Battle-Ready Orc
+ancestryId: pf2e.ancestry.orc
+summary: You descend from generations of warriors who fought to the death.
+source:
+  id: orc-remaster
+  page: 52
+description: >
+  You descend from generations of warriors who fought to the death, and these struggles have granted you a tenacious will to live. You gain the Diehard feat.
+traits:
+  - orc
