@@ -94,6 +94,66 @@ The character creation wizard is now fully functional with all core features:
 
 ---
 
+## Documentation & Templates
+
+### ✅ Player's Handbook (COMPLETE)
+**Location**: `docs/Players_Handbook.docx` (14 KB)
+
+Comprehensive project documentation covering:
+- Introduction and project overview
+- What is PenPaperRPG (5 core components)
+- Features overview (10 complete features)
+- Character Creation Wizard (9 steps detailed)
+- Character Export System (PDF/Excel/Word)
+- Content Library (341 validated entities)
+- Technical Architecture
+- Getting Started guide
+- Future Enhancements roadmap
+- Project Statistics appendix
+
+**Format**: Microsoft Word (.docx) with professional formatting, gold-themed headers, and tables
+
+**Audience**: Players, Game Masters, and Developers
+
+### ✅ Blank Character Sheet Templates (COMPLETE)
+**Location**: `templates/` directory
+
+Three blank character sheet templates for Pathfinder 2e Remaster:
+
+#### Blank_Character_Sheet.pdf (12 KB)
+- 5-page professional PDF template
+- Gold-themed sections with fillable fields
+- Print-ready format
+- All 14 character sections included
+
+#### Blank_Character_Sheet.xlsx (12 KB)
+- Dynamic Excel workbook with 7 sheets
+- **Auto-calculating formulas** (blue inputs, black formulas)
+- Change ability scores → modifiers auto-update!
+- Cross-sheet references for skill calculations
+- Proficiency bonuses calculated automatically
+
+#### Blank_Character_Sheet.docx (11 KB)
+- Professional Word document with formatted tables
+- Compatible with Word 2007+, LibreOffice, Google Docs
+- Gold-themed headers matching PDF style
+
+**All Templates Include:**
+- Character Identity (ancestry, heritage, background, class, deity, alignment)
+- Ability Scores (scores and modifiers)
+- Core Statistics (HP, AC, Class DC, Perception, Speed)
+- Saving Throws (Fortitude, Reflex, Will)
+- Skills (16 core skills + lore skills)
+- Feats & Features
+- Spellcasting (tradition, DC, slots, spell list)
+- Equipment (wealth, items, bulk)
+- Combat (attack profiles, resistances, weaknesses, immunities)
+- Character Notes (appearance, personality, backstory, allies, campaigns)
+
+**See**: `docs/README.md` and `templates/README.md` for detailed usage instructions
+
+---
+
 ## Archived Documentation
 
 ### Completed Work - Sprint 3 Phase 2
@@ -484,11 +544,15 @@ See [CHARACTER_EXPORT_SYSTEM.md](.claude/CHARACTER_EXPORT_SYSTEM.md) for complet
 ## Quick Reference
 
 ### File Locations
-- Equipment Component: `apps/web/src/components/creation/EquipmentSelector.tsx`
-- Character Hook: `apps/web/src/hooks/useCharacterBuilder.ts`
-- Wizard Viewport: `apps/web/src/components/creation/WizardViewport.tsx`
-- Wizard Controller: `apps/web/src/components/creation/CreationWizard.tsx`
-- Item Content: `packs/core/items/weapons/`, `packs/core/items/armor/`, `packs/core/items/gear/`
+- **Documentation**: `docs/` - Player's Handbook and project docs
+- **Templates**: `templates/` - Blank character sheet templates (PDF/Excel/Word)
+- **Equipment Component**: `apps/web/src/components/creation/EquipmentSelector.tsx`
+- **Character Hook**: `apps/web/src/hooks/useCharacterBuilder.ts`
+- **Wizard Viewport**: `apps/web/src/components/creation/WizardViewport.tsx`
+- **Wizard Controller**: `apps/web/src/components/creation/CreationWizard.tsx`
+- **Item Content**: `packs/core/items/weapons/`, `packs/core/items/armor/`, `packs/core/items/gear/`
+- **Export Scripts**: `scripts/create-blank-character-sheet-*.py|.js` - Template generators
+- **Character Export Library**: `apps/web/src/lib/character-export.ts` - Unified export API
 
 ### Commands
 - **Build Catalog**: `npm run catalog:build`
