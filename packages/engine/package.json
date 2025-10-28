@@ -15,7 +15,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "pnpm -w run schemas:publish && tsc -p tsconfig.build.json",
+    "build": "pnpm -w run schemas:publish && tsc --build tsconfig.build.json",
     "dev": "pnpm -w run schemas:publish && tsc -p tsconfig.build.json --watch",
     "lint": "eslint src --ext .ts",
     "test": "pnpm -w run schemas:publish && tsc -p tsconfig.build.json && vitest",

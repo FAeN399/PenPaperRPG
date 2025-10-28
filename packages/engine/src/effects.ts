@@ -21,7 +21,7 @@ import {
   type CatalogLookup,
   type ChoiceResolution,
   type DerivedContext,
-} from "./index";
+} from "./index.js";
 
 /**
  * Result of applying effects from an entity.
